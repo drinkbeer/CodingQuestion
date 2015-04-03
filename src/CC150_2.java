@@ -25,14 +25,26 @@ public class CC150_2 {
         int i = 0;
         int N = chars.length;
         while (i < N / 2) {
-            swap(chars, i, N - i);
+            swap(chars, i, N - 1 - i);
+            ++i;
         }
-        return chars.toString();
+        return String.valueOf(chars);
     }
 
     private static void swap(char[] a, int i, int j) {
         char temp = a[i];
         a[i] = a[j];
-        a[j] = a[i];
+        a[j] = temp;
+    }
+
+    public static void main(String[] args) {
+        String str = "BigBangTheory!";
+        System.out.println("The reverse of the String (solution1): " +
+                str + " is " + reverseString(str));
+        System.out.println("The reverse of the String (solution2): " +
+                str + " is " + reverseString2(str));
+
+        System.out.println();
+
     }
 }
