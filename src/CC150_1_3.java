@@ -10,7 +10,7 @@ import java.util.Arrays;
  * Time Complexity: 1&2. O(N*log(N))     3. O(N^2)
  * Space Complexity: 1&2&3. O(N)
  */
-public class CC150_3 {
+public class CC150_1_3 {
 
     private static void quickSort(char[] a, int lo, int hi) {
         if (lo >= hi) return;

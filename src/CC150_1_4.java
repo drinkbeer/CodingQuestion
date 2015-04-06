@@ -21,7 +21,7 @@
  * Time Complexity: 1. O(N)     2. O(N)     3. O(N)
  * Space Complexity: 1. O(N)    2. O(N)     3. O(1)
  */
-public class CC150_4 {
+public class CC150_1_4 {
 
     private static String replaceSpace(String str) {
         char[] chars = str.toCharArray();

@@ -14,7 +14,7 @@
  * Time Complexity: 1. O(N)     2. O(N)
  * Space Complexity: 1. O(N)    2. O(N)
  */
-public class CC150_2 {
+public class CC150_1_2 {
 
     private static String reverseString(String str) {
         return new StringBuffer(str).reverse().toString();
