@@ -7,7 +7,7 @@
  * Given 1->2->3->3->4->4->5, return 1->2->5.
  * Given 1->1->1->2->3, return 2->3.
  */
-public class LintCode_113_RemoveDuplicatesList {
+public class LintCode_113_RemoveDuplicatesList_2 {
 
     /**
      * @param ListNode head is the head of the linked list
