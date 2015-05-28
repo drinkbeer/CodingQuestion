@@ -55,7 +55,7 @@ public class LintCode_112_RemoveDuplicatesList {
         return head;
     }
 
-    public class ListNode {
+    private class ListNode {
         int val;
         ListNode next;
 

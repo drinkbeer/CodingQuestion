@@ -43,7 +43,7 @@ public class LintCode_113_RemoveDuplicatesList_2 {
         return dummy.next;
     }
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
