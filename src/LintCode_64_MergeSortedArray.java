@@ -24,11 +24,10 @@ public class LintCode_64_MergeSortedArray {
      */
     public void mergeSortedArray(int[] A, int m, int[] B, int n) {
         // write your code here
-
         int len = m + n;
         m--;
         n--;
-        while (m > 0 && n > 0) {
+        while (m >= 0 && n >= 0) {
             if (A[m] > B[n]) {
                 A[--len] = A[m--];
             } else {
@@ -36,13 +35,12 @@ public class LintCode_64_MergeSortedArray {
             }
         }
 
-        while (m > 0) {
+        while (m >= 0) {
             A[--len] = A[m--];
         }
-        while (n > 0) {
-            A[--len] = A[n--];
+        while (n >= 0) {
+            A[--len] = B[n--];
         }
-
     }
 
     @Test
