@@ -14,7 +14,35 @@
  * Time Complexity: 1. O(N)     2. O(N)
  * Space Complexity: 1. O(N)    2. O(N)
  */
-public class CC150_1_2_2 {
-
+public class CC150_1_2 {
+	
+	private static String reverse1(String str){
+		if(str == null || str.length() == 0) return null;
+		return new StringBuffer(str).reverse().toString();
+	}
+	
+	private static String reverse2(String str){
+		if(str == null || str.length() == 0) return null;
+		char[] chars = str.toCharArray();
+		int i = 0;
+		int N = chars.length;
+		while(i < N / 2){
+			swap(chars, i, N - 1 - i);
+			++i;
+		}
+		return String.valueOf(chars);
+	}
+	
+	private static void swap(char[] a, int i , int j){
+		char temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
+	}
+	
+	public static void main(String[] args){
+		String str = "A NCSU student!";
+		System.out.println("Before reversing: " + str + " , after reversing: " + reverse1(str));
+		System.out.println("Before reversing: " + str + " , after reversing: " + reverse2(str));
+	}
 
 }
