@@ -30,7 +30,7 @@ public class CC150_1_1 {
     }
 
     //perhaps wrong, as int max could << 31, but there are 256 chars......
-    public static boolean uniquechar(String str) {
+    public static boolean uniqueChars(String str) {
         int checker = 0;
 
         if (str.length() > 256) return false;
