@@ -1,3 +1,16 @@
+/*
+LeetCode: https://leetcode.com/problems/surrounded-regions/
+LintCode: http://www.lintcode.com/en/problem/surrounded-regions/
+ProgramCreek: http://www.programcreek.com/2014/04/leetcode-surrounded-regions-java/
+JiuZhang: http://www.jiuzhang.com/solutions/surrounded-regions/
+
+Analysis:
+I use search to solve it.
+1.Cells in 4 borders must be 'live'
+2.Search related nodes of boarder live nodes from 4 directions. Replace "O" with "*"
+3.Scan all board, all "O" replaced with "X", all "*" restored with "O"
+DFS will exceed time limit. BFS use a queue to record live node's related nodes.
+*/
 public class Solution {
     //1.DFS
     //Runtime Error Message: Line 43: java.lang.StackOverflowError
