@@ -1,7 +1,9 @@
 ## CodingQuestion
 Sharing common interview questions through this reporsity.
 
-Reference:
+
+###Reference
+
 [LeetCode](https://leetcode.com/)
 
 [LintCode](http://www.lintcode.com/)
