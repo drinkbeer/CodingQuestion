@@ -19,6 +19,8 @@ Sharing common interview questions through this reporsity.
 |[25 Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[LeetCode-25-Reverse-Nodes-in-k-Group.java](src/LeetCode-25-Reverse-Nodes-in-k-Group.java)|LinkedList|
 |[89 Gray Code](https://leetcode.com/problems/gray-code/)|[LeetCode-89-Gray-Code.java](src/LeetCode-89-Gray-Code.java)|Math|
 |[35 Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[LeetCode-35-Search-Insert-Position.java](src/LeetCode-35-Search-Insert-Position.java)|Binary Search|
+|[36 Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)|[LeetCode-36-Valid-Sudoku.java](src/LeetCode-36-Valid-Sudoku.java)|Array|
+
 
 ###Reference
 
