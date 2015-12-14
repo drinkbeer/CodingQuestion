@@ -16,8 +16,8 @@ Sharing common interview questions through this reporsity.
 |[16 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[]()||
 |[259 3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)|[]()||
 |[18 4Sum](https://leetcode.com/problems/4sum/)|[LeetCode-18-4Sum.java](src/LeetCode-18-4Sum.java)|Array, Two Pointers|
-|[25 Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[LeetCode-25-Reverse-Nodes-in-k-Group.java](src/LeetCode-25-Reverse-Nodes-in-k-Group.java)||
-
+|[25 Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[LeetCode-25-Reverse-Nodes-in-k-Group.java](src/LeetCode-25-Reverse-Nodes-in-k-Group.java)|LinkedList|
+|[89 Gray Code](https://leetcode.com/problems/gray-code/)|[LeetCode-89-Gray-Code.java](src/LeetCode-89-Gray-Code.java)|Math|
 
 ###Reference
 
