@@ -9,6 +9,15 @@ Sharing common interview questions through this reporsity.
 |[5 Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[LeetCode-5-Longest-Palindromic-Substring.java](src/LeetCode-5-Longest-Palindromic-Substring.java)|String|
 |[9 Palindrome Number](https://leetcode.com/problems/palindrome-number/)|[LeetCode-9-Palindrome-Number.java](src/LeetCode-9-Palindrome-Number.java)|Math|
 |[11 Container With Most Water](https://leetcode.com/problems/container-with-most-water/)|[LeetCode-11-Container-With-Most-Water.java](src/LeetCode-11-Container-With-Most-Water.java)|Two Pointers|
+|[1 Two Sum](https://leetcode.com/problems/two-sum/)|[]()|HashMap|
+|[167 Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[]()||
+|[170 Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[]()||
+|[15 3Sum](https://leetcode.com/problems/3sum/)|[]()|Array, Two Pointers|
+|[16 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[]()||
+|[259 3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)|[]()||
+|[18 4Sum](https://leetcode.com/problems/4sum/)|[]()||
+
+
 
 ###Reference
 
