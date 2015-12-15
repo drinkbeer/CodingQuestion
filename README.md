@@ -26,6 +26,20 @@ Sharing common interview questions through this reporsity.
 |[46 Permutations](https://leetcode.com/problems/permutations/)|[LeetCode-46-Permutations.java](src/LeetCode-46-Permutations.java)|DFS|
 |[47 Permutations II](https://leetcode.com/problems/permutations-ii/)|[LeetCode-47-Permutations-II.java](src/LeetCode-47-Permutations-II.java)|DFS|
 
+
+
+
+
+
+
+|Question|Solution|Tags|
+|--------|--------|----|
+|[Search in a Big Sorted Array](http://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[LintCode-Search-in-a-Big-Sorted-Array.java](src/LintCode-Search-in-a-Big-Sorted-Array.java)|Binary Search|
+
+
+
+
+
 ###Reference
 
 [LeetCode](https://leetcode.com/)
