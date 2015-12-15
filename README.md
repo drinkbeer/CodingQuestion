@@ -23,7 +23,8 @@ Sharing common interview questions through this reporsity.
 |[38 Count and Say](https://leetcode.com/problems/count-and-say/)|[LeetCode-38-Count-and-Say.java](src/LeetCode-38-Count-and-Say.java)|String|
 |[39 Combination Sum I](https://leetcode.com/problems/combination-sum//)|[LeetCode-39-Combination-Sum-I.java](src/LeetCode-39-Combination-Sum-I.java)|DFS|
 |[40 Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[LeetCode-40-Combination-Sum-II.java](src/LeetCode-40-Combination-Sum-II.java)|DFS|
-
+|[46 Permutations](https://leetcode.com/problems/permutations/)|[LeetCode-46-Permutations.java](src/LeetCode-46-Permutations.java)|DFS|
+|[47 Permutations II](https://leetcode.com/problems/permutations-ii/)|[LeetCode-47-Permutations-II.java](src/LeetCode-47-Permutations-II.java)|DFS|
 
 ###Reference
 
