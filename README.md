@@ -38,7 +38,7 @@ Sharing common interview questions through this reporsity.
 |[92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[LeetCode-92-Reverse-Linked-List-II.java](src/LeetCode-92-Reverse-Linked-List-II.java)|LinkedList|
 |[101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[LeetCode-101-Symmetric-Tree.java](src/LeetCode-101-Symmetric-Tree.java)|Recursive, Iterative|
 |[110 Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|[LeetCode-110-Balanced-Binary-Tree.java](src/LeetCode-110-Balanced-Binary-Tree.java)|DFS|
-
+|[113 Path Sum II](https://leetcode.com/problems/path-sum-ii/)|[LeetCode-113-Path-Sum-II.java](src/LeetCode-113-Path-Sum-II.java)|DFS|
 
 
 
