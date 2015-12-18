@@ -39,7 +39,7 @@ Sharing common interview questions through this reporsity.
 |[101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[LeetCode-101-Symmetric-Tree.java](src/LeetCode-101-Symmetric-Tree.java)|Recursive, Iterative|
 |[110 Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|[LeetCode-110-Balanced-Binary-Tree.java](src/LeetCode-110-Balanced-Binary-Tree.java)|DFS|
 |[113 Path Sum II](https://leetcode.com/problems/path-sum-ii/)|[LeetCode-113-Path-Sum-II.java](src/LeetCode-113-Path-Sum-II.java)|DFS|
-
+|[6 ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/)|[LeetCode-6-ZigZag-Conversion.java](src/LeetCode-6-ZigZag-Conversion.java)|String|
 
 
 
