@@ -42,6 +42,9 @@ Sharing common interview questions through this reporsity.
 |[6 ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/)|[LeetCode-6-ZigZag-Conversion.java](src/LeetCode-6-ZigZag-Conversion.java)|String|
 |[14 Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)|[LeetCode-14-Longest-Common-Prefix.java](src/LeetCode-14-Longest-Common-Prefix.java)|String|
 |[58.Length of Last Word](https://leetcode.com/problems/length-of-last-word/)|[LeetCode-58-Length-of-Last-Word.java](src/LeetCode-58-Length-of-Last-Word.java)|String|
+|[71.Simplify Path](https://leetcode.com/problems/simplify-path/)|[LeetCode-71-Simplify-Path.java](src/LeetCode-71-Simplify-Path.java)|String|
+|[96.Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/)|[LeetCode-96-Unique-Binary-Search-Trees.java](src/LeetCode-96-Unique-Binary-Search-Trees.java)|DP|
+|[95.Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/)|[LeetCode-95-Unique-Binary-Search-Trees-II.java](src/LeetCode-95-Unique-Binary-Search-Trees-II.java)|DFS|
 
 
 
