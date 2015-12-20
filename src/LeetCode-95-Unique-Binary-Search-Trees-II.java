@@ -5,7 +5,9 @@ JiuZhang: http://www.jiuzhang.com/solutions/unique-binary-search-trees-ii/
 ProgramCreek: http://www.programcreek.com/2014/05/leetcode-unique-binary-search-trees-ii-java/
 
 Analysis: 
-Not understand thoroughly
+Root is from min to max
+Left tree is min~i-1, we assume has L unique left trees; right is i+1~max, we assume has R unique right trees.
+We generate all possible left & right tree, and put left tree and right tree to root.
 */
 
 /**

@@ -45,6 +45,10 @@ Sharing common interview questions through this reporsity.
 |[71.Simplify Path](https://leetcode.com/problems/simplify-path/)|[LeetCode-71-Simplify-Path.java](src/LeetCode-71-Simplify-Path.java)|String|
 |[96.Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/)|[LeetCode-96-Unique-Binary-Search-Trees.java](src/LeetCode-96-Unique-Binary-Search-Trees.java)|DP|
 |[95.Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/)|[LeetCode-95-Unique-Binary-Search-Trees-II.java](src/LeetCode-95-Unique-Binary-Search-Trees-II.java)|DFS|
+|[100.Same Tree](https://leetcode.com/problems/same-tree/)|[LeetCode-100-Same-Tree.java](src/LeetCode-100-Same-Tree.java)||
+|[104.Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|[LeetCode-104-Maximum-Depth-of-Binary-Tree.java](src/LeetCode-104-Maximum-Depth-of-Binary-Tree.java)||
+
+
 
 
 
