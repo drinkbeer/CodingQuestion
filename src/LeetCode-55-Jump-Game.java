@@ -8,6 +8,11 @@ Analysis:
 1.DP will exceed time limit.
 2.DP looks like greedy
 3.Greedy also must optimize carefully.
+4.Greedy(better)
+Scan from 0 to nums.length-1
+Divide the scanning process into different phase -- [start, end]
+Get the farthest pace could be reached in curr phase. 
+The start of new phase is end+1 of last phase, end is farthest of last phase.
 */
 public class Solution {
     
@@ -56,20 +61,42 @@ public class Solution {
     // }
     
     // 3.Greedy
+    // public boolean canJump(int[] nums) {
+    //     if(nums == null || nums.length == 0) return false;
+    //     if(nums.length == 1) return true;
+        
+    //     int max = nums[0];
+        
+    //     for(int i = 1; i < nums.length; i++){
+    //         if(max < i) return false;
+            
+    //         max = Math.max(max, i + nums[i]);
+            
+    //         if(max >= nums.length - 1) return true;
+    //     }
+    //     return true;
+    // }
+    
+    // 4.Greedy
     public boolean canJump(int[] nums) {
         if(nums == null || nums.length == 0) return false;
-        if(nums.length == 1) return true;
         
-        int max = nums[0];
+        int start = 0, end = 0;
         
-        for(int i = 1; i < nums.length; i++){
-            if(max < i) return false;
-            
-            max = Math.max(max, i + nums[i]);
-            
-            if(max >= nums.length - 1) return true;
+        while(end < nums.length - 1){
+            int farthest = 0;
+            for(int i = start; i <= end; i++){
+                farthest = Math.max(farthest, i + nums[i]);
+            }
+            if(farthest <= end) return false;
+            if(farthest >= nums.length - 1) return true;
+            start = end + 1; 
+            end = farthest;
         }
+        
         return true;
     }
-
+    
+    
+    
 }
