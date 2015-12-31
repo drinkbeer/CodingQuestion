@@ -5,6 +5,12 @@ JiuZhang: http://www.jiuzhang.com/solutions/balanced-binary-tree/
 ProgramCreek: http://www.programcreek.com/2013/02/leetcode-balanced-binary-tree-java/
 
 Analysis: 
+Balanced Binary Search Tree: (height: maximum # of levels below root)
+    An empty tree is height-balanced. A non-empty binary tree T is balanced if:
+    1) Left subtree of T is balanced
+    2) Right subtree of T is balanced
+    3) The difference between heights of left subtree and right subtree is not more than 1.
+    
 get height, height = Math.max(left, right), if Math.abs(left - right) > 1, return -1
 */
 /**
