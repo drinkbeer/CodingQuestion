@@ -36,7 +36,6 @@ Sharing common interview questions through this reporsity.
 |[80 Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java](src/LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java)|Array, Two Pointers, Sort|
 |[★78 Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
 |[★90 Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
-|[92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[LeetCode-92-Reverse-Linked-List-II.java](src/LeetCode-92-Reverse-Linked-List-II.java)|LinkedList|
 |[101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[LeetCode-101-Symmetric-Tree.java](src/LeetCode-101-Symmetric-Tree.java)|Recursive, Iterative|
 |[110 Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|[LeetCode-110-Balanced-Binary-Tree.java](src/LeetCode-110-Balanced-Binary-Tree.java)|DFS|
 |[113 Path Sum II](https://leetcode.com/problems/path-sum-ii/)|[LeetCode-113-Path-Sum-II.java](src/LeetCode-113-Path-Sum-II.java)|DFS|
@@ -52,12 +51,23 @@ Sharing common interview questions through this reporsity.
 |[111. Minimum Depth of Binary Tree](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[LeetCode-111-Minimum-Depth-of-Binary-Tree.java](src/LeetCode-111-Minimum-Depth-of-Binary-Tree.java)|DFS, BFS|
 |[★120.Triangle](https://leetcode.com/problems/triangle/)|[LeetCode-120-Triangle.java](src/LeetCode-120-Triangle.java)|DP, Array|
 
+|[21.Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[LeetCode-21-Merge-Two-Sorted-Lists.java](src/LeetCode-21-Merge-Two-Sorted-Lists.java)||
 
+23.Merge k Sorted Lists
+https://leetcode.com/problems/merge-k-sorted-lists/
 
+242.Valid Anagram
+https://leetcode.com/problems/valid-anagram/
+49.Group Anagrams
+https://leetcode.com/problems/anagrams/
 
+204.Count Primes
+https://leetcode.com/problems/count-primes/
 
+206.Reverse Linked List
+https://leetcode.com/problems/reverse-linked-list/
 
-
+|[92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[LeetCode-92-Reverse-Linked-List-II.java](src/LeetCode-92-Reverse-Linked-List-II.java)|LinskedList|
 
 |Question|Solution|Tags|
 |--------|--------|----|
@@ -74,3 +84,5 @@ Sharing common interview questions through this reporsity.
 [LintCode](http://www.lintcode.com/)
 
 [JiuZhang](http://www.jiuzhang.com/)
+
+[Top 10 Algorithms for Coding Interview](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)
