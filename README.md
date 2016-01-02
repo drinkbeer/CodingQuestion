@@ -62,9 +62,9 @@ Sharing common interview questions through this reporsity.
 |[144.Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|[LeetCode-144-Binary-Tree-Preorder-Traversal.java](src/LeetCode-144-Binary-Tree-Preorder-Traversal.java)|DFS, BFS|
 |[94.Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|[LeetCode-94-Binary-Tree-Inorder-Traversal.java](src/LeetCode-94-Binary-Tree-Inorder-Traversal.java)|DFS, BFS|
 |[145.Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)|[LeetCode-145-Binary-Tree-Postorder-Traversal.java](src/LeetCode-145-Binary-Tree-Postorder-Traversal.java)|DFS, BFS|
-
-
-
+|[151.Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)|[LeetCode-151-Reverse-Words-in-a-String.java](src/LeetCode-151-Reverse-Words-in-a-String.java)|String|
+|[186.Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii/)|[LeetCode-186-Reverse-Words-in-a-String-II.java](src/LeetCode-186-Reverse-Words-in-a-String-II.java)|String|
+|[189.Rotate Array](https://leetcode.com/problems/rotate-array/)|[LeetCode-189-Rotate-Array.java](src/LeetCode-189-Rotate-Array.java)|Array|
 
 
 
