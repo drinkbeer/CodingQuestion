@@ -10,7 +10,7 @@ Sharing common interview questions through this reporsity.
 |[9 Palindrome Number](https://leetcode.com/problems/palindrome-number/)|[LeetCode-9-Palindrome-Number.java](src/LeetCode-9-Palindrome-Number.java)|Math|
 |[11 Container With Most Water](https://leetcode.com/problems/container-with-most-water/)|[LeetCode-11-Container-With-Most-Water.java](src/LeetCode-11-Container-With-Most-Water.java)|Two Pointers|
 |[★1.Two Sum](https://leetcode.com/problems/two-sum/)|[LeetCode-1-Two-Sum.java](src/LeetCode-1-Two-Sum.java)|HashMap|
-|[167 Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[]()||
+|[167.Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[LeetCode-167-Two-Sum-II-Input-array-is-sorted.java](src/LeetCode-167-Two-Sum-II-Input-array-is-sorted.java)|Two Pointers|
 |[170 Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[]()||
 |[★15.3Sum](https://leetcode.com/problems/3sum/)|[LeetCode-15-3Sum.java](src/LeetCode-15-3Sum.java)|Array, Two Pointers|
 |[16 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[LeetCode-16-3Sum-Closest.java](src/LeetCode-16-3Sum-Closest.java)|Array, Two Pointers|
@@ -38,6 +38,8 @@ Sharing common interview questions through this reporsity.
 |[★90 Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
 |[101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[LeetCode-101-Symmetric-Tree.java](src/LeetCode-101-Symmetric-Tree.java)|Recursive, Iterative|
 |[110 Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|[LeetCode-110-Balanced-Binary-Tree.java](src/LeetCode-110-Balanced-Binary-Tree.java)|DFS|
+112.Path Sum
+https://leetcode.com/problems/path-sum/
 |[113 Path Sum II](https://leetcode.com/problems/path-sum-ii/)|[LeetCode-113-Path-Sum-II.java](src/LeetCode-113-Path-Sum-II.java)|DFS|
 |[6 ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/)|[LeetCode-6-ZigZag-Conversion.java](src/LeetCode-6-ZigZag-Conversion.java)|String|
 |[14 Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)|[LeetCode-14-Longest-Common-Prefix.java](src/LeetCode-14-Longest-Common-Prefix.java)|String|
@@ -50,7 +52,6 @@ Sharing common interview questions through this reporsity.
 |[107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[LeetCode-107-Binary-Tree-Level-Order-Traversal-II.java](src/LeetCode-107-Binary-Tree-Level-Order-Traversal-II.java)|BFS|
 |[111. Minimum Depth of Binary Tree](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[LeetCode-111-Minimum-Depth-of-Binary-Tree.java](src/LeetCode-111-Minimum-Depth-of-Binary-Tree.java)|DFS, BFS|
 |[★120.Triangle](https://leetcode.com/problems/triangle/)|[LeetCode-120-Triangle.java](src/LeetCode-120-Triangle.java)|DP, Array|
-
 |[21.Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[LeetCode-21-Merge-Two-Sorted-Lists.java](src/LeetCode-21-Merge-Two-Sorted-Lists.java)||
 
 23.Merge k Sorted Lists
@@ -69,6 +70,21 @@ https://leetcode.com/problems/reverse-linked-list/
 
 |[92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[LeetCode-92-Reverse-Linked-List-II.java](src/LeetCode-92-Reverse-Linked-List-II.java)|LinskedList|
 
+155.Min Stack
+https://leetcode.com/problems/min-stack/
+
+144.Binary Tree Preorder Traversal
+https://leetcode.com/problems/binary-tree-preorder-traversal/
+
+94.Binary Tree Inorder Traversal
+https://leetcode.com/problems/binary-tree-inorder-traversal/
+
+145.Binary Tree Postorder Traversal
+https://leetcode.com/problems/binary-tree-postorder-traversal/
+
+LeetCode-Two-Sum-II-Input-array-is-sorted.java
+https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+
 |Question|Solution|Tags|
 |--------|--------|----|
 |[Search in a Big Sorted Array](http://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[LintCode-Search-in-a-Big-Sorted-Array.java](src/LintCode-Search-in-a-Big-Sorted-Array.java)|Binary Search|
@@ -79,10 +95,8 @@ https://leetcode.com/problems/reverse-linked-list/
 
 ###Reference
 
-[LeetCode](https://leetcode.com/)
-
-[LintCode](http://www.lintcode.com/)
-
-[JiuZhang](http://www.jiuzhang.com/)
-
-[Top 10 Algorithms for Coding Interview](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)
+[LeetCode](https://leetcode.com/)   |   
+[LintCode](http://www.lintcode.com/)    |   
+[JiuZhang](http://www.jiuzhang.com/)    |   
+[Top 10 Algorithms for Coding Interview](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)   |   
+[Simple Java](http://www.programcreek.com/simple-java/)
