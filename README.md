@@ -38,8 +38,7 @@ Sharing common interview questions through this reporsity.
 |[★90 Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
 |[101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[LeetCode-101-Symmetric-Tree.java](src/LeetCode-101-Symmetric-Tree.java)|Recursive, Iterative|
 |[110 Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|[LeetCode-110-Balanced-Binary-Tree.java](src/LeetCode-110-Balanced-Binary-Tree.java)|DFS|
-112.Path Sum
-https://leetcode.com/problems/path-sum/
+|[112.Path Sum](https://leetcode.com/problems/path-sum/)|[LeetCode-112-Path-Sum.java](src/LeetCode-112-Path-Sum.java)|DFS|
 |[113 Path Sum II](https://leetcode.com/problems/path-sum-ii/)|[LeetCode-113-Path-Sum-II.java](src/LeetCode-113-Path-Sum-II.java)|DFS|
 |[6 ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/)|[LeetCode-6-ZigZag-Conversion.java](src/LeetCode-6-ZigZag-Conversion.java)|String|
 |[14 Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)|[LeetCode-14-Longest-Common-Prefix.java](src/LeetCode-14-Longest-Common-Prefix.java)|String|
@@ -52,35 +51,28 @@ https://leetcode.com/problems/path-sum/
 |[107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[LeetCode-107-Binary-Tree-Level-Order-Traversal-II.java](src/LeetCode-107-Binary-Tree-Level-Order-Traversal-II.java)|BFS|
 |[111. Minimum Depth of Binary Tree](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[LeetCode-111-Minimum-Depth-of-Binary-Tree.java](src/LeetCode-111-Minimum-Depth-of-Binary-Tree.java)|DFS, BFS|
 |[★120.Triangle](https://leetcode.com/problems/triangle/)|[LeetCode-120-Triangle.java](src/LeetCode-120-Triangle.java)|DP, Array|
-|[21.Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[LeetCode-21-Merge-Two-Sorted-Lists.java](src/LeetCode-21-Merge-Two-Sorted-Lists.java)||
+|[21.Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[LeetCode-21-Merge-Two-Sorted-Lists.java](src/LeetCode-21-Merge-Two-Sorted-Lists.java)|Recursive, Iterative|
+|[23.Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)|[LeetCode-23-Merge-k-Sorted-Lists.java](src/LeetCode-23-Merge-k-Sorted-Lists.java)|Merge Sort, Priority Queue|
+|[242.Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[LeetCode-242-Valid-Anagram.java](src/LeetCode-242-Valid-Anagram.java)|Sort, Array Map|
+|[49.Group Anagrams](https://leetcode.com/problems/anagrams/)|[LeetCode-49-Group-Anagrams.java](src/LeetCode-242-Valid-Anagram.java)|Merge Sort, Priority Queue|
+|[206.Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[LeetCode-206-Reverse-Linked-List.java](src/LeetCode-206-Reverse-Linked-List.java)|LinskedList|
+|[92.Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[LeetCode-92-Reverse-Linked-List-II.java](src/LeetCode-92-Reverse-Linked-List-II.java)|LinskedList|
+|[204.Count Primes](https://leetcode.com/problems/count-primes/)|[LeetCode-204-Count-Primes.java](src/LeetCode-204-Count-Primes.java)|Math|
+|[155.Min Stack](https://leetcode.com/problems/min-stack/)|[LeetCode-155-Min-Stack.java](src/LeetCode-155-Min-Stack.java)|Two Stacks|
+|[144.Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/
+)|[LeetCode-144-Binary-Tree-Preorder-Traversal.java](src/LeetCode-144-Binary-Tree-Preorder-Traversal.java)|DFS, BFS|
+|[94.Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/
+)|[LeetCode-94-Binary-Tree-Inorder-Traversal.java](src/LeetCode-94-Binary-Tree-Inorder-Traversal.java)|DFS, BFS|
+|[145.Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/
+)|[LeetCode-145-Binary-Tree-Postorder-Traversal.java](src/LeetCode-145-Binary-Tree-Postorder-Traversal.java)|DFS, BFS|
 
-23.Merge k Sorted Lists
-https://leetcode.com/problems/merge-k-sorted-lists/
 
-242.Valid Anagram
-https://leetcode.com/problems/valid-anagram/
-49.Group Anagrams
-https://leetcode.com/problems/anagrams/
 
-204.Count Primes
-https://leetcode.com/problems/count-primes/
 
-206.Reverse Linked List
-https://leetcode.com/problems/reverse-linked-list/
 
-|[92 Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[LeetCode-92-Reverse-Linked-List-II.java](src/LeetCode-92-Reverse-Linked-List-II.java)|LinskedList|
 
-155.Min Stack
-https://leetcode.com/problems/min-stack/
 
-144.Binary Tree Preorder Traversal
-https://leetcode.com/problems/binary-tree-preorder-traversal/
 
-94.Binary Tree Inorder Traversal
-https://leetcode.com/problems/binary-tree-inorder-traversal/
-
-145.Binary Tree Postorder Traversal
-https://leetcode.com/problems/binary-tree-postorder-traversal/
 
 LeetCode-Two-Sum-II-Input-array-is-sorted.java
 https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
