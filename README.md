@@ -59,23 +59,14 @@ Sharing common interview questions through this reporsity.
 |[92.Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[LeetCode-92-Reverse-Linked-List-II.java](src/LeetCode-92-Reverse-Linked-List-II.java)|LinskedList|
 |[204.Count Primes](https://leetcode.com/problems/count-primes/)|[LeetCode-204-Count-Primes.java](src/LeetCode-204-Count-Primes.java)|Math|
 |[155.Min Stack](https://leetcode.com/problems/min-stack/)|[LeetCode-155-Min-Stack.java](src/LeetCode-155-Min-Stack.java)|Two Stacks|
-|[144.Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/
-)|[LeetCode-144-Binary-Tree-Preorder-Traversal.java](src/LeetCode-144-Binary-Tree-Preorder-Traversal.java)|DFS, BFS|
-|[94.Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/
-)|[LeetCode-94-Binary-Tree-Inorder-Traversal.java](src/LeetCode-94-Binary-Tree-Inorder-Traversal.java)|DFS, BFS|
-|[145.Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/
-)|[LeetCode-145-Binary-Tree-Postorder-Traversal.java](src/LeetCode-145-Binary-Tree-Postorder-Traversal.java)|DFS, BFS|
+|[144.Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|[LeetCode-144-Binary-Tree-Preorder-Traversal.java](src/LeetCode-144-Binary-Tree-Preorder-Traversal.java)|DFS, BFS|
+|[94.Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|[LeetCode-94-Binary-Tree-Inorder-Traversal.java](src/LeetCode-94-Binary-Tree-Inorder-Traversal.java)|DFS, BFS|
+|[145.Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)|[LeetCode-145-Binary-Tree-Postorder-Traversal.java](src/LeetCode-145-Binary-Tree-Postorder-Traversal.java)|DFS, BFS|
 
 
 
 
 
-
-
-
-
-LeetCode-Two-Sum-II-Input-array-is-sorted.java
-https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 
 |Question|Solution|Tags|
 |--------|--------|----|
