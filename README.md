@@ -95,8 +95,8 @@ https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 
 ###Reference
 
-[LeetCode](https://leetcode.com/)   |   
-[LintCode](http://www.lintcode.com/)    |   
-[JiuZhang](http://www.jiuzhang.com/)    |   
-[Top 10 Algorithms for Coding Interview](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)   |   
+[LeetCode](https://leetcode.com/)   |   [LintCode](http://www.lintcode.com/)    |   [JiuZhang](http://www.jiuzhang.com/)
+
+[Top 10 Algorithms for Coding Interview](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)
+
 [Simple Java](http://www.programcreek.com/simple-java/)
