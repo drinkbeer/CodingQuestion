@@ -1,14 +1,13 @@
 
 The major characteristics of the top level interfaces in Java Collections Framwork (under java.util)
 
-|          |Description|Duplicates?|Nulls?|Insertion Order|Sub-interfaces|Implementations|
-|----------|-----------|-----------|------|---------------|--------------|---------------|
-|Collection|A group of objects. Root of collection hierarchy|Implementation dependent|Implementation dependent|Implementation dependent|Set, SortedSet, NavigableSet, List, Queue, Deque||
-|List      |A sequence of objects. Position aware(zero-based)|Y|Y|Append at end or by specific position(inded)||ArrayList, LinkedList|
-|Queue     |A group of objects waiting to be processed|Y|N|FIFO|Deque|PriorityQueue, LinkedList, ArrayDeque|
-|Deque     |A group of objects waiting to be processed|Y|N|FIFO like a queue, or LIFO like a stack||ArrayDeque, LinkedList|
-|Set       |An abstraction of mathematical set|N|At most one|Implementation dependent|SortedSet, navigableSet|HashSet, LinkedHashSet, TreeSet|
-|Map       |A key-value pairing of objects. Not inherit Collection interface.|Keys cannot duplicate|At most one null key, value can be null|Implementation dependent|SortedMap, NavigableMap|HashMap, LinkedHashMap, TreeMap|
+|          |Duplicates?|Nulls?|Insertion Order|Sub-interfaces|Implementations|
+|----------|-----------|------|---------------|--------------|---------------|
+|List      |Y|Y|Append at end or by specific position||ArrayList, LinkedList|
+|Queue     |Y|N|FIFO|Deque|PriorityQueue, LinkedList, ArrayDeque|
+|Deque     |Y|N|FIFO like a queue, or LIFO like a stack||ArrayDeque, LinkedList|
+|Set       |N|At most one|Dependent|SortedSet, navigableSet|HashSet, LinkedHashSet, TreeSet|
+|Map       |N(Keys),Y(Values)|Y(Key, null<=1), Y(Value)|Dependent|SortedMap, NavigableMap|HashMap, LinkedHashMap, TreeMap|
 
 All interfaces, except Collection, share one thing in common: all concrete implementations are resizable, meaning they have an initial capacity that can hold x elements before resizing.
 
