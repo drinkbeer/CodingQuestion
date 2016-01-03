@@ -6,10 +6,10 @@ Sharing common interview questions through this reporsity.
 |[★1.Two Sum](https://leetcode.com/problems/two-sum/)|[LeetCode-1-Two-Sum.java](src/LeetCode-1-Two-Sum.java)|HashMap|
 |[167.Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[LeetCode-167-Two-Sum-II-Input-array-is-sorted.java](src/LeetCode-167-Two-Sum-II-Input-array-is-sorted.java)|Two Pointers|
 |[170 Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[]()||
-|[★15.3Sum](https://leetcode.com/problems/3sum/)|[LeetCode-15-3Sum.java](src/LeetCode-15-3Sum.java)|Array, Two Pointers|
-|[16 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[LeetCode-16-3Sum-Closest.java](src/LeetCode-16-3Sum-Closest.java)|Array, Two Pointers|
+|[★15.3Sum](https://leetcode.com/problems/3sum/)|[LeetCode-15-3Sum.java](src/LeetCode-15-3Sum.java)|Two Pointers|
+|[16 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[LeetCode-16-3Sum-Closest.java](src/LeetCode-16-3Sum-Closest.java)|Two Pointers|
 |[259 3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)|[]()||
-|[18.4Sum](https://leetcode.com/problems/4sum/)|[LeetCode-18-4Sum.java](src/LeetCode-18-4Sum.java)|Array, Two Pointers|
+|[18.4Sum](https://leetcode.com/problems/4sum/)|[LeetCode-18-4Sum.java](src/LeetCode-18-4Sum.java)|Two Pointers|
 |[★20.Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|[LeetCode-20-Valid-Parentheses.java](src/LeetCode-20-Valid-Parentheses.java)|HashMap, Stack|
 |[22.Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)|[LeetCode-22-Generate-Parentheses.java](src/LeetCode-22-Generate-Parentheses.java)|Not Yet|
 |[32.Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)|[LeetCode-32-Longest-Valid-Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
@@ -20,10 +20,10 @@ Sharing common interview questions through this reporsity.
 |[130.Surrounded Region](https://leetcode.com/problems/surrounded-regions/)|[LeetCode-130-Surrounded-Regions.java](src/LeetCode-130-Surrounded-Regions.java)|BFS,DFS|
 |[200.Number of Islands](https://leetcode.com/problems/number-of-islands/)|[LeetCode-200-Number-of-Islands.java](src/LeetCode-200-Number-of-Islands.java)|DFS|
 |[★125.Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[LeetCode-125-Valid-Palindrome.java](src/LeetCode-125-Valid-Palindrome.java)|Two Pointers|
-|[5 Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[LeetCode-5-Longest-Palindromic-Substring.java](src/LeetCode-5-Longest-Palindromic-Substring.java)|String|
+|[5.Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[LeetCode-5-Longest-Palindromic-Substring.java](src/LeetCode-5-Longest-Palindromic-Substring.java)|String|
 |[9 Palindrome Number](https://leetcode.com/problems/palindrome-number/)|[LeetCode-9-Palindrome-Number.java](src/LeetCode-9-Palindrome-Number.java)|Math|
-|[131.Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|[LeetCode-131-Palindrome-Partitioning.java](src/LeetCode-131-Palindrome-Partitioning.java)|DP|
-|[132 Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)|[LeetCode-132-Palindrome-Partitioning-II.java](src/LeetCode-132-Palindrome-Partitioning-II.java)|DP|
+|[131.Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|[LeetCode-131-Palindrome-Partitioning.java](src/LeetCode-131-Palindrome-Partitioning.java)|DFS|
+|[★132 Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)|[LeetCode-132-Palindrome-Partitioning-II.java](src/LeetCode-132-Palindrome-Partitioning-II.java)|DP|
 |[214.Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)|[LeetCode-214-Shortest-Palindrome.java](src/LeetCode-132-Palindrome-Partitioning-II.java)|Not Yet|
 |[234.Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)|[LeetCode-234-Palindrome-Linked-List.java](src/LeetCode-234-Palindrome-Linked-List.java)|Not Yet|
 |[266.Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation/)|[LeetCode-266-Palindrome-Permutation.java](src/LeetCode-234-Palindrome-Linked-List.java)|Not Yet|
@@ -44,10 +44,10 @@ Sharing common interview questions through this reporsity.
 |[59 Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)|[LeetCode-59-Spiral-Matrix-II.java](src/LeetCode-59-Spiral-Matrix-II.java)|Array|
 |[★55.Jump Game](https://leetcode.com/problems/jump-game/)|[LeetCode-55-Jump-Game.java](src/LeetCode-55-Jump-Game.java)|DP, Greedy|
 |[45.Jump Game II](https://leetcode.com/problems/jump-game-ii/)|[LeetCode-45-Jump-Game-II.java](src/LeetCode-45-Jump-Game-II.java)|DP, Greedy|
-|[61 Rotate List](https://leetcode.com/problems/rotate-list/)|[LeetCode-61-Rotate-List.java](src/LeetCode-61-Rotate-List.java)|LinkedList, Two Pointers|
+|[61 Rotate List](https://leetcode.com/problems/rotate-list/)|[LeetCode-61-Rotate-List.java](src/LeetCode-61-Rotate-List.java)|Two Pointers|
 |[66 Plus One](https://leetcode.com/problems/plus-one/)|[LeetCode-66-Plus-One.java](src/LeetCode-66-Plus-One.java)|Math|
 |[75 Sort Colors](https://leetcode.com/problems/sort-colors/)|[LeetCode-75-Sort-Colors.java](src/LeetCode-75-Sort-Colors.java)|Array, Two Pointers, Sort|
-|[80 Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java](src/LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java)|Array, Two Pointers, Sort|
+|[80 Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java](src/LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java)|Two Pointers|
 |[★78 Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
 |[90 Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
 |[101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[LeetCode-101-Symmetric-Tree.java](src/LeetCode-101-Symmetric-Tree.java)|Recursive, Iterative|
