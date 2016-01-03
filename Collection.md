@@ -12,6 +12,7 @@ The major characteristics of the top level interfaces in Java Collections Framwo
 All interfaces, except Collection, share one thing in common: all concrete implementations are resizable, meaning they have an initial capacity that can hold x elements before resizing.
 
 
+Get, Add, Remove Time Complexity
 
 ####Collection.java
 The root interface in the collection hierarchy. All data structures in Java (List, Set, Map, etc).

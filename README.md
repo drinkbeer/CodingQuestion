@@ -3,19 +3,28 @@ Sharing common interview questions through this reporsity.
 
 |Question|Solution|Tags|
 |--------|--------|----|
-|[130 Surrounded Region](https://leetcode.com/problems/surrounded-regions/)|[LeetCode-130-Surrounded-Regions.java](src/LeetCode-130-Surrounded-Regions.java)|BFS,DFS|
-|[132 Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)|[LeetCode-132-Palindrome-Partitioning-II.java](src/LeetCode-132-Palindrome-Partitioning-II.java)|DP|
-|[3 Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[LeetCode-3-Longest-Substring-Without-Repeating-Characters.java](src/LeetCode-3-Longest-Substring-Without-Repeating-Characters.java)|Two Pointers|
-|[5 Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[LeetCode-5-Longest-Palindromic-Substring.java](src/LeetCode-5-Longest-Palindromic-Substring.java)|String|
-|[9 Palindrome Number](https://leetcode.com/problems/palindrome-number/)|[LeetCode-9-Palindrome-Number.java](src/LeetCode-9-Palindrome-Number.java)|Math|
-|[11 Container With Most Water](https://leetcode.com/problems/container-with-most-water/)|[LeetCode-11-Container-With-Most-Water.java](src/LeetCode-11-Container-With-Most-Water.java)|Two Pointers|
 |[★1.Two Sum](https://leetcode.com/problems/two-sum/)|[LeetCode-1-Two-Sum.java](src/LeetCode-1-Two-Sum.java)|HashMap|
 |[167.Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[LeetCode-167-Two-Sum-II-Input-array-is-sorted.java](src/LeetCode-167-Two-Sum-II-Input-array-is-sorted.java)|Two Pointers|
 |[170 Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[]()||
 |[★15.3Sum](https://leetcode.com/problems/3sum/)|[LeetCode-15-3Sum.java](src/LeetCode-15-3Sum.java)|Array, Two Pointers|
 |[16 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[LeetCode-16-3Sum-Closest.java](src/LeetCode-16-3Sum-Closest.java)|Array, Two Pointers|
 |[259 3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)|[]()||
-|[18 4Sum](https://leetcode.com/problems/4sum/)|[LeetCode-18-4Sum.java](src/LeetCode-18-4Sum.java)|Array, Two Pointers|
+|[18.4Sum](https://leetcode.com/problems/4sum/)|[LeetCode-18-4Sum.java](src/LeetCode-18-4Sum.java)|Array, Two Pointers|
+|[★20.Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|[LeetCode-20-Valid-Parentheses.java](src/LeetCode-20-Valid-Parentheses.java)|HashMap, Stack|
+|[22.Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)|[LeetCode-22-Generate-Parentheses.java](src/LeetCode-22-Generate-Parentheses.java)|Not Yet|
+|[32.Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)|[LeetCode-32-Longest-Valid-Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
+|[241.Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)|[LeetCode-241.Different Ways to Add Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
+|[301.Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)|[LeetCode-301.Remove Invalid Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
+|[236.Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/remove-invalid-parentheses/)|[LeetCode-301.Remove Invalid Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
+
+
+|[130.Surrounded Region](https://leetcode.com/problems/surrounded-regions/)|[LeetCode-130-Surrounded-Regions.java](src/LeetCode-130-Surrounded-Regions.java)|BFS,DFS|
+|[200.Number of Islands](https://leetcode.com/problems/number-of-islands/)|[LeetCode-200-Number-of-Islands.java](src/LeetCode-200-Number-of-Islands.java)|DFS|
+|[132 Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)|[LeetCode-132-Palindrome-Partitioning-II.java](src/LeetCode-132-Palindrome-Partitioning-II.java)|DP|
+|[3 Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[LeetCode-3-Longest-Substring-Without-Repeating-Characters.java](src/LeetCode-3-Longest-Substring-Without-Repeating-Characters.java)|Two Pointers|
+|[5 Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[LeetCode-5-Longest-Palindromic-Substring.java](src/LeetCode-5-Longest-Palindromic-Substring.java)|String|
+|[9 Palindrome Number](https://leetcode.com/problems/palindrome-number/)|[LeetCode-9-Palindrome-Number.java](src/LeetCode-9-Palindrome-Number.java)|Math|
+|[11 Container With Most Water](https://leetcode.com/problems/container-with-most-water/)|[LeetCode-11-Container-With-Most-Water.java](src/LeetCode-11-Container-With-Most-Water.java)|Two Pointers|
 |[25 Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[LeetCode-25-Reverse-Nodes-in-k-Group.java](src/LeetCode-25-Reverse-Nodes-in-k-Group.java)|LinkedList|
 |[89 Gray Code](https://leetcode.com/problems/gray-code/)|[LeetCode-89-Gray-Code.java](src/LeetCode-89-Gray-Code.java)|Math|
 |[35 Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[LeetCode-35-Search-Insert-Position.java](src/LeetCode-35-Search-Insert-Position.java)|Binary Search|
@@ -65,12 +74,17 @@ Sharing common interview questions through this reporsity.
 |[151.Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)|[LeetCode-151-Reverse-Words-in-a-String.java](src/LeetCode-151-Reverse-Words-in-a-String.java)|String|
 |[186.Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii/)|[LeetCode-186-Reverse-Words-in-a-String-II.java](src/LeetCode-186-Reverse-Words-in-a-String-II.java)|String|
 |[189.Rotate Array](https://leetcode.com/problems/rotate-array/)|[LeetCode-189-Rotate-Array.java](src/LeetCode-189-Rotate-Array.java)|Array|
+|[199.Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)|[LeetCode-199-Binary-Tree-Right-Side-View.java](src/LeetCode-199-Binary-Tree-Right-Side-View.java)|BFS, DFS|
 
-
+13.Roman to Integer
+22.Generate Parentheses
+33.Search in Rotated Sorted Array
+60.Permutation Sequence
 
 |Question|Solution|Tags|
 |--------|--------|----|
 |[Search in a Big Sorted Array](http://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[LintCode-Search-in-a-Big-Sorted-Array.java](src/LintCode-Search-in-a-Big-Sorted-Array.java)|Binary Search|
+
 
 
 

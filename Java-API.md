@@ -20,8 +20,33 @@ static String   valueOf(X i)        //convert char[], Integer, Object... to Stri
 
 ###[Array]()
 
+
+###[LinkedList]()
+
+###[ArrayList]()
+```Java
+List<Integer> result = new ArrayList<Integer>();
+result.add(a);
+```
+
+###[HashMap]()
+
+```Java
+HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+map.put(key, value);    //If key exists, the latter value will overwrite the former one
+
+```
+
+###[HashTable]()
+
+###[HashSet]()
+
+###[Stack]()
+
 ###[Queue](https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html)
 ```Java
+Queue<TreeNode> currLevel = new LinkedList<TreeNode>();
+int len = currLevel.size();
 boolean add(E e)    //return true is there is enough space, false if no space
 boolean offer(E e)
 E       peek()      //return top without removing
