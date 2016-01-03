@@ -22,10 +22,10 @@ Sharing common interview questions through this reporsity.
 |[★125.Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[LeetCode-125-Valid-Palindrome.java](src/LeetCode-125-Valid-Palindrome.java)|Two Pointers|
 |[5.Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[LeetCode-5-Longest-Palindromic-Substring.java](src/LeetCode-5-Longest-Palindromic-Substring.java)|String|
 |[9 Palindrome Number](https://leetcode.com/problems/palindrome-number/)|[LeetCode-9-Palindrome-Number.java](src/LeetCode-9-Palindrome-Number.java)|Math|
+|[234.Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)|[LeetCode-234-Palindrome-Linked-List.java](src/LeetCode-234-Palindrome-Linked-List.java)|LinkedList|
 |[131.Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|[LeetCode-131-Palindrome-Partitioning.java](src/LeetCode-131-Palindrome-Partitioning.java)|DFS|
 |[★132 Palindrome Partitioning II](https://leetcode.com/problems/palindrome-partitioning-ii/)|[LeetCode-132-Palindrome-Partitioning-II.java](src/LeetCode-132-Palindrome-Partitioning-II.java)|DP|
-|[214.Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)|[LeetCode-214-Shortest-Palindrome.java](src/LeetCode-132-Palindrome-Partitioning-II.java)|Not Yet|
-|[234.Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)|[LeetCode-234-Palindrome-Linked-List.java](src/LeetCode-234-Palindrome-Linked-List.java)|Not Yet|
+|[214.Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)|[LeetCode-214-Shortest-Palindrome.java](src/LeetCode-132-Palindrome-Partitioning-II.java)|Not Yet, Hard|
 |[266.Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation/)|[LeetCode-266-Palindrome-Permutation.java](src/LeetCode-234-Palindrome-Linked-List.java)|Not Yet|
 |[267.Palindrome Permutation II](https://leetcode.com/problems/palindrome-permutation-ii/)|[LeetCode-267-Palindrome-Permutation-II.java](src/LeetCode-267-Palindrome-Permutation-II.java)|Not Yet|
 |[3 Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[LeetCode-3-Longest-Substring-Without-Repeating-Characters.java](src/LeetCode-3-Longest-Substring-Without-Repeating-Characters.java)|Two Pointers|
