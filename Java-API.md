@@ -29,12 +29,32 @@ List<Integer> result = new ArrayList<Integer>();
 result.add(a);
 ```
 
-###[HashMap]()
+###[HashMap](https://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html)
 
 ```Java
 HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-map.put(key, value);    //If key exists, the latter value will overwrite the former one
+map.put(key, value);    //If key exists, overwrite the former one
 
+Iterator iter = map.keySet().iterator();
+while(iter.hasNext()){
+    int key = (int)iter.next();
+    int value = (int)map.get(key);
+}
+
+boolean containsKey(Object key)
+boolean containsValue(Object value)
+
+V       get(Object key)
+V       put(K key, V value)
+V       remove(Object key)
+void    putAll(Map<? extends K,? extends V> m)
+
+Set<Map.Entry<K,V>> entrySet()
+Set<K>              keySet()
+Collection<V>       values()
+
+int     size()
+boolean isEmpty()
 ```
 
 ###[HashTable]()
