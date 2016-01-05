@@ -31,8 +31,9 @@ ArrayList is a better choice if your program is thread-safe. Vector and ArrayLis
 Note: The default initial capacity of an ArrayList is pretty small. It is a good habit to construct the ArrayList with a higher initial capacity. This can avoid the resizing cost.
 
 ####Performance
-||ArrayList|LinkedList|
-|-|--------|----------|
+
+|   |ArrayList|LinkedList|
+|---|--------|----------|
 |get()|O(1)|O(n)|
 |add()|O(1)|O(1) amortized|
 |remove()|O(n)|O(n)|
