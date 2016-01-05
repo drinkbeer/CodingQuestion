@@ -23,6 +23,19 @@ Contents:
 
 + Application
 
+
+### Insertion Sort
++ Idea
+
++ Implementation
+
++ Analysis
+    - Time: `O(N^2)` in average case; `O(N^2)` in worst case(input reverse sorted)
+    - Is insertion sort fast? Moderately so, for small n; Not at all, for large n.
+
++ Application
+    
+
 ### Merge Sort
 + Idea
     - Using divide and conquer paradigm
@@ -30,7 +43,8 @@ Contents:
 + Implementation
 
 + Analysis
-    - Time O(NlogN)
-    - Space O(NlogN)
+    - Time: `O(NlogN)`
+    - Space: `O(NlogN)`
 
 + Application
+

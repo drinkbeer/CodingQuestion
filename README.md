@@ -28,9 +28,20 @@ Sharing common interview questions through this reporsity.
 |[214.Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)|[LeetCode-214-Shortest-Palindrome.java](src/LeetCode-132-Palindrome-Partitioning-II.java)|Not Yet, Hard|
 |[266.Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation/)|[LeetCode-266-Palindrome-Permutation.java](src/LeetCode-234-Palindrome-Linked-List.java)|HashMap|
 |[267.Palindrome Permutation II](https://leetcode.com/problems/palindrome-permutation-ii/)|[LeetCode-267-Palindrome-Permutation-II.java](src/LeetCode-267-Palindrome-Permutation-II.java)|Not Yet|
+|[2.Add Two Numbers](https://leetcode.com/problems/palindrome-permutation-ii/)|[LeetCode-2-Add-Two-Numbers.java](src/LeetCode-2-Add-Two-Numbers.java)|LinkedList|
 |[3 Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[LeetCode-3-Longest-Substring-Without-Repeating-Characters.java](src/LeetCode-3-Longest-Substring-Without-Repeating-Characters.java)|Two Pointers|
+|[8.String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)|[LeetCode-8-String-to-Integer.java](src/LeetCode-8-String-to-Integer.java)|String|
 |[11 Container With Most Water](https://leetcode.com/problems/container-with-most-water/)|[LeetCode-11-Container-With-Most-Water.java](src/LeetCode-11-Container-With-Most-Water.java)|Two Pointers|
-|[25 Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[LeetCode-25-Reverse-Nodes-in-k-Group.java](src/LeetCode-25-Reverse-Nodes-in-k-Group.java)|LinkedList|
+|[12.Integer to Roman](https://leetcode.com/problems/integer-to-roman/)|[LeetCode-12-Integer-to-Roman.java](src/LeetCode-12-Integer-to-Roman.java)|String|
+|[13.Roman to Integer](https://leetcode.com/problems/roman-to-integer/)|[LeetCode-13-Roman-to-Integer.java](src/LeetCode-13-Roman-to-Integer.java)|String|
+|[24.Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)|[LeetCode-24-Swap-Nodes-in-Pairs.java](src/LeetCode-24-Swap-Nodes-in-Pairs.java)|LinkedList|
+|[25.Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[LeetCode-25-Reverse-Nodes-in-k-Group.java](src/LeetCode-25-Reverse-Nodes-in-k-Group.java)|LinkedList|
+|[26.Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)|[LeetCode-26-Remove-Duplicates-from-Sorted-Array.java](src/LeetCode-26-Remove-Duplicates-from-Sorted-Array.java)|Two Pointers|
+|[27.Remove Element](https://leetcode.com/problems/remove-element/)|[LeetCode-27-Remove-Element.java](src/LeetCode-27-Remove-Element.java)|Two Pointers|
+|[203.Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)|[LeetCode-203-Remove-Linked-List-Elements.java](src/LeetCode-203-Remove-Linked-List-Elements.java)|LinkedList|
+
+
+|[28.Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[LeetCode-28-Implement-strStr.java](src/LeetCode-28-Implement-strStr.java)|Two Pointers|
 |[89 Gray Code](https://leetcode.com/problems/gray-code/)|[LeetCode-89-Gray-Code.java](src/LeetCode-89-Gray-Code.java)|Math|
 |[35 Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[LeetCode-35-Search-Insert-Position.java](src/LeetCode-35-Search-Insert-Position.java)|Binary Search|
 |[36 Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)|[LeetCode-36-Valid-Sudoku.java](src/LeetCode-36-Valid-Sudoku.java)|Array|
@@ -40,16 +51,21 @@ Sharing common interview questions through this reporsity.
 |[46 Permutations](https://leetcode.com/problems/permutations/)|[LeetCode-46-Permutations.java](src/LeetCode-46-Permutations.java)|DFS|
 |[47 Permutations II](https://leetcode.com/problems/permutations-ii/)|[LeetCode-47-Permutations-II.java](src/LeetCode-47-Permutations-II.java)|DFS|
 |[48 Rotate Image](https://leetcode.com/problems/permutations-ii/)|[LeetCode-48-Rotate-Image.java](src/LeetCode-48-Rotate-Image.java)|Array|
+|[50.Pow(x, n)](https://leetcode.com/problems/powx-n/)|[LeetCode-50-Pow-n.java](src/LeetCode-LeetCode-50-Pow-n.java)|Binary Search|
 |[54 Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)|[LeetCode-54-Spiral-Matrix.java](src/LeetCode-54-Spiral-Matrix.java)|Array|
 |[59 Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)|[LeetCode-59-Spiral-Matrix-II.java](src/LeetCode-59-Spiral-Matrix-II.java)|Array|
 |[★55.Jump Game](https://leetcode.com/problems/jump-game/)|[LeetCode-55-Jump-Game.java](src/LeetCode-55-Jump-Game.java)|DP, Greedy|
 |[45.Jump Game II](https://leetcode.com/problems/jump-game-ii/)|[LeetCode-45-Jump-Game-II.java](src/LeetCode-45-Jump-Game-II.java)|DP, Greedy|
 |[61 Rotate List](https://leetcode.com/problems/rotate-list/)|[LeetCode-61-Rotate-List.java](src/LeetCode-61-Rotate-List.java)|Two Pointers|
 |[66 Plus One](https://leetcode.com/problems/plus-one/)|[LeetCode-66-Plus-One.java](src/LeetCode-66-Plus-One.java)|Math|
+|[70.Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[LeetCode-70-Climbing-Stairs.java](src/LeetCode-70-Climbing-Stairs.java)|DP|
+|[73.Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)|[LeetCode-73-Set-Matrix-Zeroes.java](src/LeetCode-73-Set-Matrix-Zeroes.java)|Array|
 |[75 Sort Colors](https://leetcode.com/problems/sort-colors/)|[LeetCode-75-Sort-Colors.java](src/LeetCode-75-Sort-Colors.java)|Array, Two Pointers, Sort|
 |[80 Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java](src/LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java)|Two Pointers|
+|[88.Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[LeetCode-88-Merge-Sorted-Array.java](src/LeetCode-88-Merge-Sorted-Array.java)|Two Pointers|
 |[★78 Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
 |[90 Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
+|[98.Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)|[LeetCode-98-Validate-Binary-Search-Tree.java](src/LeetCode-98-Validate-Binary-Search-Tree.java)|DFS, BFS|
 |[101 Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[LeetCode-101-Symmetric-Tree.java](src/LeetCode-101-Symmetric-Tree.java)|Recursive, Iterative|
 |[110 Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)|[LeetCode-110-Balanced-Binary-Tree.java](src/LeetCode-110-Balanced-Binary-Tree.java)|DFS|
 |[112.Path Sum](https://leetcode.com/problems/path-sum/)|[LeetCode-112-Path-Sum.java](src/LeetCode-112-Path-Sum.java)|DFS|
@@ -65,8 +81,8 @@ Sharing common interview questions through this reporsity.
 |[107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[LeetCode-107-Binary-Tree-Level-Order-Traversal-II.java](src/LeetCode-107-Binary-Tree-Level-Order-Traversal-II.java)|BFS|
 |[111. Minimum Depth of Binary Tree](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)|[LeetCode-111-Minimum-Depth-of-Binary-Tree.java](src/LeetCode-111-Minimum-Depth-of-Binary-Tree.java)|DFS, BFS|
 |[★120.Triangle](https://leetcode.com/problems/triangle/)|[LeetCode-120-Triangle.java](src/LeetCode-120-Triangle.java)|DP, Array|
-|[21.Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[LeetCode-21-Merge-Two-Sorted-Lists.java](src/LeetCode-21-Merge-Two-Sorted-Lists.java)|Recursive, Iterative|
-|[23.Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)|[LeetCode-23-Merge-k-Sorted-Lists.java](src/LeetCode-23-Merge-k-Sorted-Lists.java)|Merge Sort, Priority Queue|
+|[★21.Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[LeetCode-21-Merge-Two-Sorted-Lists.java](src/LeetCode-21-Merge-Two-Sorted-Lists.java)|Recursive, Iterative|
+|[★23.Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)|[LeetCode-23-Merge-k-Sorted-Lists.java](src/LeetCode-23-Merge-k-Sorted-Lists.java)|Merge Sort, Priority Queue|
 |[242.Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[LeetCode-242-Valid-Anagram.java](src/LeetCode-242-Valid-Anagram.java)|Sort, Array Map|
 |[49.Group Anagrams](https://leetcode.com/problems/anagrams/)|[LeetCode-49-Group-Anagrams.java](src/LeetCode-242-Valid-Anagram.java)|Merge Sort, Priority Queue|
 |[206.Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[LeetCode-206-Reverse-Linked-List.java](src/LeetCode-206-Reverse-Linked-List.java)|LinskedList|
@@ -80,17 +96,40 @@ Sharing common interview questions through this reporsity.
 |[186.Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii/)|[LeetCode-186-Reverse-Words-in-a-String-II.java](src/LeetCode-186-Reverse-Words-in-a-String-II.java)|String|
 |[189.Rotate Array](https://leetcode.com/problems/rotate-array/)|[LeetCode-189-Rotate-Array.java](src/LeetCode-189-Rotate-Array.java)|Array|
 |[199.Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)|[LeetCode-199-Binary-Tree-Right-Side-View.java](src/LeetCode-199-Binary-Tree-Right-Side-View.java)|BFS, DFS|
+|[205.Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)|[LeetCode-205-Isomorphic-Strings.java](src/LeetCode-205-Isomorphic-Strings.java)|HashMap|
+|[290.Word Pattern](https://leetcode.com/problems/word-pattern/)|[LeetCode-290-Word-Pattern.java](src/LeetCode-290-Word-Pattern.java)|HashMap|
+|[291.Word Pattern II](https://leetcode.com/problems/word-pattern-ii/)|[LeetCode-291-Word-Pattern-II.java](src/LeetCode-291-Word-Pattern-II.java)|Not yet, hard|
 
-13.Roman to Integer
-22.Generate Parentheses
+
 33.Search in Rotated Sorted Array
+
 60.Permutation Sequence
+
+127.Word Ladder
+https://leetcode.com/problems/word-ladder/
+
+126.Word Ladder II
+https://leetcode.com/problems/word-ladder-ii/
+
+Word Break
+https://codesolutiony.wordpress.com/2014/12/07/word-break/
+
 
 |Question|Solution|Tags|
 |--------|--------|----|
 |[Search in a Big Sorted Array](http://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[LintCode-Search-in-a-Big-Sorted-Array.java](src/LintCode-Search-in-a-Big-Sorted-Array.java)|Binary Search|
 
 
+
+/*
+LeetCode: 
+LintCode: 
+JiuZhang: 
+ProgramCreek: 
+
+Analysis: 
+
+*/
 
 
 
