@@ -41,7 +41,7 @@ Note: The default initial capacity of an ArrayList is pretty small. It is a good
 
 +LinkedList has O(n) time complexity for arbitrary indices of add/remove, but O(1) for operation at end/beginning of list(add)
 
-![arraylist-vs-linkedlist-performance](/Data-Structure/arraylist-vs-linkedlist-performance.jpeg/)
+![arraylist-vs-linkedlist-performance](/Data-Structure/arraylist-vs-linkedlist-performance.png/)
 
 Difference of performance is obvious. LinkedList is faster in add and remove, but slower in get. In brief, LinkedList is preferred if:
 + there are no large number of random access of element
