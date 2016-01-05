@@ -102,16 +102,60 @@ for (byte t : bytes) {
 }
 ```
 
-###[LinkedList]()
+###[LinkedList](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
+Double Linked List
+
+```Java
+
+LinkedList可以作为FIFO(先进先出)的队列
+队列方法       等效方法
+add(e)        addLast(e)
+offer(e)      offerLast(e)
+remove()      removeFirst()
+poll()        pollFirst()
+element()     getFirst()
+peek()        peekFirst()
+
+LinkedList可以作为LIFO(后进先出)的栈
+栈方法        等效方法
+push(e)      addFirst(e)
+pop()        removeFirst()
+peek()       peekFirst()
 
 
+for(Iterator iter = list.iterator(); iter.hasNext();)
+    iter.next();
 
-###[ArrayList]()
+for (Integer integ:list) 
+    ;
+
+int size = list.size();
+for (int i=0; i<size; i++) {
+    list.get(i);        
+}
+```
+
+###[ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
 ```Java
 List<Integer> result = new ArrayList<Integer>();
 result.add(a);
 
+Integer value = null;
+Iterator iter = list.iterator();
+while (iter.hasNext()) {
+    value = (Integer)iter.next();
+}
 
+Integer value = null;
+int size = list.size();
+for (int i=0; i<size; i++) {
+    value = (Integer)list.get(i);        
+}
+
+Integer value = null;
+for (Integer integ:list) {
+    value = integ;
+}
 ```
 
 ###[HashMap](https://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html)
