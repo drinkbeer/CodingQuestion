@@ -21,6 +21,7 @@ boolean startsWith(String prefix)
 boolean endsWith(String suffix)
 
 static String   valueOf(X i)        //convert char[], Integer, Object... to String
+int n = Integer.parseInt("10");     //convert string to int
 ```
 
 ###[Array](http://www.programcreek.com/2013/09/top-10-methods-for-java-arrays/)
@@ -63,7 +64,8 @@ System.out.println(set);    //[d, e, b, c, a]
 
 ###[ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
 
-implementation: array
+implementation: array. ArrayList is not thread-safe; Vector is thread-safe.
+
 [ArrayList Tutorial](http://www.cnblogs.com/skywang12345/p/3308556.html)
 
 ```Java
@@ -171,6 +173,7 @@ boolean isEmpty()
 ```
 
 ###[HashTable]()
+
 
 ###[HashSet]()
 
