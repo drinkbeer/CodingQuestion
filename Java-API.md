@@ -103,7 +103,7 @@ Object[]        toArray()
 
 ###[LinkedList](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
 
-implementation: `Double Linked List`
+implementation: Double Linked List
 
 [LinkedList Tutorial](http://www.cnblogs.com/skywang12345/p/3308807.html)
 
@@ -142,15 +142,85 @@ peek()       peekFirst()
 ###[HashMap](https://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html)
 [Top 9 questions about Java Maps](http://www.programcreek.com/2013/09/top-9-questions-for-java-map/)
 
+No order in keys and values.
+
 ```Java
 HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 map.put(key, value);    //If key exists, overwrite the former one
+System.out.println(map.size());
 
 Iterator iter = map.keySet().iterator();
 while(iter.hasNext()){
     int key = (int)iter.next();
     int value = (int)map.get(key);
 }
+
+for(Entry entry : hashMap.entrySet()) {
+    System.out.println(entry.getKey().toString() + " - " + entry.getValue());
+}
+
+
+//0.HashMap is very useful when a counter is required.
+HashMap<String, Integer> countMap = new HashMap<String, Integer>();
+ 
+//.... a lot of a's like the following
+if(countMap.keySet().contains(a)){
+    countMap.put(a, countMap.get(a)+1);
+}else{
+    countMap.put(a, 1);
+}
+
+1. Loop Through HashMap
+Iterator it = mp.entrySet().iterator();
+while (it.hasNext()) {
+    Map.Entry pairs = (Map.Entry)it.next();
+    System.out.println(pairs.getKey() + " = " + pairs.getValue());
+}
+Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+    System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+}
+
+2. Print HashMap
+public static void printMap(Map mp) {
+    Iterator it = mp.entrySet().iterator();
+    while (it.hasNext()) {
+        Map.Entry pairs = (Map.Entry)it.next();
+        System.out.println(pairs.getKey() + " = " + pairs.getValue());
+        it.remove(); // avoids a ConcurrentModificationException
+    }
+}
+
+3. Sort HashMap by Value
+//The following code example take advantage of a constructor of TreeMap here.
+//There are different ways of sorting HashMap, this way has been voted the most in stackoverflow.
+class ValueComparator implements Comparator<String> {
+    Map<String, Integer> base;
+ 
+    public ValueComparator(Map<String, Integer> base) {
+        this.base = base;
+    }
+ 
+    public int compare(String a, String b) {
+        if (base.get(a) >= base.get(b)) {
+            return -1;
+        } else {
+            return 1;
+        } // returning 0 would merge keys
+    }
+}
+HashMap<String, Integer> countMap = new HashMap<String, Integer>();
+//add a lot of entries
+countMap.put("a", 10);
+countMap.put("b", 20);
+
+ValueComparator vc =  new ValueComparator(countMap);
+TreeMap<String,Integer> sortedMap = new TreeMap<String,Integer>(vc);
+
+sortedMap.putAll(countMap);
+printMap(sortedMap);
+
+
 
 boolean containsKey(Object key)
 boolean containsValue(Object value)
@@ -168,12 +238,80 @@ int     size()
 boolean isEmpty()
 ```
 
-###[HashTable]()
+
+###[TreeMap](https://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html)
+TreeMap is 
++ implemented by Red-Black tree
++ sorted according to the order of keys
++ guaranteed log(n) time cost for the containsKey(), get(), put() and remove()
++ Not synchronized
+
+```Java
+class Dog implements Comparable<Dog>{
+    String color;
+    int size;
+ 
+    Dog(String c, int s) {
+        color = c;
+        size = s;
+    }
+ 
+    public String toString(){   
+        return color + " dog";
+    }
+ 
+    @Override
+    public int compareTo(Dog o) {
+        return  o.size - this.size;
+    }
+}
+ 
+public class TestTreeMap {
+    public static void main(String[] args) {
+        Dog d1 = new Dog("red", 30);
+        Dog d2 = new Dog("black", 20);
+        Dog d3 = new Dog("white", 10);
+        Dog d4 = new Dog("white", 10);
+ 
+        TreeMap<Dog, Integer> treeMap = new TreeMap<Dog, Integer>();
+        treeMap.put(d1, 10);
+        treeMap.put(d2, 15);
+        treeMap.put(d3, 5);
+        treeMap.put(d4, 20);
+ 
+        for (Entry<Dog, Integer> entry : treeMap.entrySet()) {
+            System.out.println(entry.getKey() + " - " + entry.getValue());
+        }
+    }
+}
+
+Output:
+red dog - 10
+black dog - 15
+white dog - 20
+```
+
+###[HashTable](https://docs.oracle.com/javase/7/docs/api/java/util/Hashtable.html)
+The HashMap class is roughly equivalent to Hashtable, except that it is unsynchronized and permits nulls.
+
+```Java
+Hashtable<String, Integer> numbers = new Hashtable<String, Integer>();
+numbers.put("one", 1);
+numbers.put("two", 2);
+numbers.put("three", 3);
+Integer n = numbers.get("two");
+```
+
+###[LinkedHashMap]()
+
+
 
 
 ###[HashSet]()
 
+
 ###[Stack]()
+
 
 ###[Queue](https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html)
 ```Java
@@ -185,6 +323,7 @@ E       peek()      //return top without removing
 E       poll()      //remove top and then return it
 E       remove()    //remove top and then return it
 ```
+
 ###[PriorityQueue(Heap)]()
 
 

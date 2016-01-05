@@ -18,13 +18,13 @@ Get, Add, Remove Time Complexity
 ###1.[ArrayList vs. LinkedList vs. Vector](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)
 ![Hierarchy Diagram](/Data-Structure/java-collection-hierarchy.jpeg)
 
-They all implement List interface. `They are very similar to use. Their main difference is their implementation which causes different performance for different operations.`
+They all implement List interface. They are very similar to use. Their main difference is their implementation which causes different performance for different operations.
 
-ArrayList is implemented as a `resizable array`. As more elements are added to ArrayList, its size is increased dynamically. It's elements can be accessed directly by using the get and set methods, since ArrayList is essentially an array.
+ArrayList is implemented as a **resizable array**. As more elements are added to ArrayList, its size is increased dynamically. It's elements can be accessed directly by using the get and set methods, since ArrayList is essentially an array.
 
-LinkedList is implemented as a `double linked list`. Its performance on add and remove is better than Arraylist, but worse on get and set methods.
+LinkedList is implemented as a **double linked list**. Its performance on add and remove is better than Arraylist, but worse on get and set methods.
 
-Vector is similar with ArrayList, but it is `synchronized`.
+Vector is similar with ArrayList, but it is **synchronized**.
 
 ArrayList is a better choice if your program is thread-safe. Vector and ArrayList require more space as more elements are added. Vector each time doubles its array size, while ArrayList grow 50% of its size each time. LinkedList, however, also implements Queue interface which adds more methods than ArrayList and Vector, such as offer(), peek(), poll(), etc.
 
@@ -38,15 +38,33 @@ Note: The default initial capacity of an ArrayList is pretty small. It is a good
 |add()|O(1)|O(1) amortized|
 |remove()|O(n)|O(n)|
 
-+ArrayList has O(n) time complexity for arbitrary indices of remove, but O(1) for operation at the end of list(get/add)
++ ArrayList has O(n) time complexity for arbitrary indices of remove, but O(1) for operation at the end of list(get/add)
 
-+LinkedList has O(n) time complexity for arbitrary indices of add/remove, but O(1) for operation at end/beginning of list(add)
++ LinkedList has O(n) time complexity for arbitrary indices of add/remove, but O(1) for operation at end/beginning of list(add)
 
 ![arraylist-vs-linkedlist-performance](/Data-Structure/arraylist-vs-linkedlist-performance.png/)
 
 Difference of performance is obvious. LinkedList is faster in add and remove, but slower in get. In brief, LinkedList is preferred if:
 + there are no large number of random access of element
 + there are a large number of add/remove operations
+
+###2.[HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap](http://www.programcreek.com/2013/03/hashmap-vs-treemap-vs-hashtable-vs-linkedhashmap/)
+![Map Hierarchy](/Data-Structure/map-hierarchy.jpg/)
+
++ HashMap
+    - implemented as a hash table
+    - no ordering on keys or values.
++ TreeMap
+    - implemented based on red-black tree structure
+    - ordered by the key.
++ LinkedHashMap
+    - preserves the insertion order
++ Hashtable
+    - synchronized, in contrast to HashMap. It has an overhead for synchronization.
+
+This is the reason that HashMap should be used if the program is thread-safe.
+
+
 
 ###Reference
 [Java Collections Framework summary table](http://www.codejava.net/java-core/collections/java-collections-framework-summary-table)
