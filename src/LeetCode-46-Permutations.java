@@ -1,13 +1,16 @@
 /*
 LeetCode: https://leetcode.com/problems/permutations/
-LintCode:
-JiuZhang:
-ProgramCreek:
+LintCode: http://www.lintcode.com/problem/permutations/
+JiuZhang: http://www.jiuzhang.com/solutions/permutations/
+ProgramCreek: http://www.programcreek.com/2013/02/leetcode-permutations-java/
 
 Analysis:
+1.DFS(recursive)
 
+2.BFS(itertive)
 */
 public class Solution {
+    // 1.DFS(recursive)
     public List<List<Integer>> permute(int[] nums) {
         if(nums == null || nums.length == 0) return null;
         
@@ -36,4 +39,6 @@ public class Solution {
             set.remove(set.size() - 1);
         }
     }
+    
+    // 2.BFS(iterative)
 }
