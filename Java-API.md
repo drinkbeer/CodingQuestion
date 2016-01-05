@@ -73,18 +73,14 @@ List<Integer> result = new ArrayList<Integer>();
 result.add(a);
 
 Iterator iter = list.iterator();
-while (iter.hasNext()) {
-    Integer value = (Integer)iter.next();
-}
+while (iter.hasNext()) System.out.println(iter.next());
+
+for(Iterator iter = list.iterator(); iter.hasNext();) System.out.println(iter.next());
 
 int size = list.size();
-for (int i=0; i<size; i++) {
-    Integer value = (Integer)list.get(i);        
-}
+for (int i=0; i<size; i++) System.out.println(list.get(i));
 
-for (Integer integ:list) {
-    Integer value = integ;
-}
+for (Integer elem:list) System.out.println(elem);
 
 boolean         add(E object)
 boolean         addAll(Collection<? extends E> collection)
@@ -113,16 +109,16 @@ implementation: `Double Linked List`
 
 ```Java
 LinkedList list = new LinkedList();
-for(Iterator iter = list.iterator(); iter.hasNext();)
-    iter.next();
 
-for (Integer integ:list) 
-    ;
+Iterator iter = list.iterator();
+while (iter.hasNext()) System.out.println(iter.next());
+
+for(Iterator iter = list.iterator(); iter.hasNext();) System.out.println(iter.next());
 
 int size = list.size();
-for (int i=0; i<size; i++) {
-    list.get(i);        
-}
+for (int i=0; i<size; i++) System.out.println(list.get(i));
+
+for (Integer elem:list) System.out.println(elem);
 
 LinkedList可以作为FIFO(先进先出)的队列
 LinkedList queue = new LinkedList();
@@ -193,6 +189,7 @@ E       remove()    //remove top and then return it
 
 
 ###[Regular Express](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
+
 [Top 10 Questions for Java Regular Expression](http://www.programcreek.com/2013/10/top-10-questions-for-java-regular-expression/)
 
 
@@ -200,11 +197,17 @@ E       remove()    //remove top and then return it
 
 
 [Top 10 questions about Java Collections](http://www.programcreek.com/2013/09/top-10-questions-for-java-collections/)
+
 [HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap](http://www.programcreek.com/2013/03/hashmap-vs-treemap-vs-hashtable-vs-linkedhashmap/)
+
 [ArrayList vs. LinkedList vs. Vector](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)
 
 [Top 10 Books For Advanced Level Java Developers](http://www.programcreek.com/2013/08/top-books-for-advanced-level-java-developers/)
+
 [8 Things Programmers Can Do at Weekends](http://www.programcreek.com/2012/10/8-things-programmers-can-do-at-weekends/)
+
 [Resources for Preparing Coding Interview](http://www.programcreek.com/2013/02/resources-for-preparing-coding-interview/)
+
 [The Most Widely Used Java Libraries](http://www.programcreek.com/2011/08/the-most-widely-used-java-apis/)
+
 [5 Years Experience from a Java Blog](http://www.programcreek.com/2008/12/5-years-experience-of-java-blogging/)
