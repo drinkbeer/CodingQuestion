@@ -1,9 +1,10 @@
 
+
+
 ###[String](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
 [Top 10 questions of Java Strings](http://www.programcreek.com/2013/09/top-10-faqs-of-java-strings/)
 
 ```Java
-
 int     indexOf(int ch)             //first occurance index
 int     lastIndexOf(int ch)         //last occurance index
 int     length()
@@ -59,7 +60,6 @@ arrayList.toArray(stringArr);
 5.Convert an array to a set
 Set<String> set = new HashSet<String>(Arrays.asList(stringArray));
 System.out.println(set);    //[d, e, b, c, a]
-
 ```
 
 ###[ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
@@ -136,7 +136,6 @@ LinkedList stack = new LinkedList();
 push(e)      addFirst(e)
 pop()        removeFirst()
 peek()       peekFirst()
-
 ```
 
 ###[HashMap](https://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html)
@@ -158,7 +157,6 @@ while(iter.hasNext()){
 for(Entry entry : hashMap.entrySet()) {
     System.out.println(entry.getKey().toString() + " - " + entry.getValue());
 }
-
 
 //0.HashMap is very useful when a counter is required.
 HashMap<String, Integer> countMap = new HashMap<String, Integer>();
@@ -238,12 +236,7 @@ boolean isEmpty()
 ```
 
 ###[TreeMap](https://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html)
-TreeMap is 
-+ implemented by Red-Black tree
-+ sorted according to the order of keys
-+ guaranteed log(n) time cost for the containsKey(), get(), put() and remove()
-+ Not synchronized
-
+Order based on key. (Must ensure key has a comparator)
 ```Java
 /*
 sh-4.3$ java -Xmx128M -Xms16M HelloWorld
@@ -278,7 +271,6 @@ class Dog implements Comparable<Dog>{
 }
 
 public class TreeMapDemo2{
-    
      public static void main(String []args){
         Dog d1 = new Dog("red", 30);
         Dog d2 = new Dog("black", 90);
@@ -296,18 +288,10 @@ public class TreeMapDemo2{
         }
      }
 }
+
 ```
 
 ###[HashTable](https://docs.oracle.com/javase/7/docs/api/java/util/Hashtable.html)
-The HashMap API is similar to Hashtable, difference:
-+ HashMap is unsynchronized and not thread-safe, HashTable is synchronized and thread-safe.
-+ HashMap allows one null keys and null values; HashTable not allow null keys and null values.
-+ HashMap is much faster and use less memory than HashTable. (Unsynchronized objects are often much better in performance in compare to synchronized objects in single thread environment.)
-
-When to use HashMap and Hashtable?
-+ HashMap is preferred in unsynchronized or single threaded environment.
-+ HashTable is preferred in multi-thread environment.
-
 ```Java
 Hashtable<String, Integer> numbers = new Hashtable<String, Integer>();
 numbers.put("one", 1);
@@ -316,19 +300,41 @@ numbers.put("three", 3);
 Integer n = numbers.get("two");
 ```
 
+###[HashSet](https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html)
+```Java
+HashSet<Dog> dset = new HashSet<Dog>();
+dset.add(new Dog(2));
+dset.add(new Dog(1));
+dset.add(new Dog(3));
+dset.add(new Dog(5));
+dset.add(new Dog(4));
+Iterator<Dog> iterator = dset.iterator();
+while (iterator.hasNext()) {
+    System.out.print(iterator.next() + " ");
+}
 
+boolean add(E e)
+boolean contains(Object o)
+boolean isEmpty()
+boolean remove(Object o)
 
+int     size()
+Iterator<E> iterator()
+```
 
-###[HashSet]()
-
-
-###[Stack]()
-
+###[Stack](https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html)
+```Java
+boolean empty()
+E       peek()  //get first without removing 
+E       pop()   //get first and remove
+E       push(E item)
+```
 
 ###[Queue](https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html)
 ```Java
 Queue<TreeNode> currLevel = new LinkedList<TreeNode>();
 int len = currLevel.size();
+
 boolean add(E e)    //return true is there is enough space, false if no space
 boolean offer(E e)
 E       peek()      //return top without removing
@@ -336,22 +342,33 @@ E       poll()      //remove top and then return it
 E       remove()    //remove top and then return it
 ```
 
-###[PriorityQueue(Heap)]()
+###[PriorityQueue(Heap)](http://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html)
+```Java
+boolean add(E e)
+boolean offer(E e)
+boolean contains(Object o)
+boolean remove(Object o)
 
+E   peek()  //get top without removing
+E   poll()  //get top and 
+
+int size()
+Object[]    toArray()
+```
 
 ###[Regular Express](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
-
 [Top 10 Questions for Java Regular Expression](http://www.programcreek.com/2013/10/top-10-questions-for-java-regular-expression/)
 
 
-
-
+###Reference
 
 [Top 10 questions about Java Collections](http://www.programcreek.com/2013/09/top-10-questions-for-java-collections/)
 
-[HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap](http://www.programcreek.com/2013/03/hashmap-vs-treemap-vs-hashtable-vs-linkedhashmap/)
-
 [ArrayList vs. LinkedList vs. Vector](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)
+
+[HashSet vs. TreeSet vs. LinkedHashSet](http://www.programcreek.com/2013/03/hashset-vs-treeset-vs-linkedhashset/)
+
+[HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap](http://www.programcreek.com/2013/03/hashmap-vs-treemap-vs-hashtable-vs-linkedhashmap/)
 
 [Top 10 Books For Advanced Level Java Developers](http://www.programcreek.com/2013/08/top-books-for-advanced-level-java-developers/)
 
