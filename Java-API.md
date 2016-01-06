@@ -1,6 +1,16 @@
+- [String](#String)
+- [Array](#Array)
+- [ArrayList](#ArrayList)
+- [LinkedList](#LinkedList)
+- [HashMap](#HashMap)
+- [TreeMap](#TreeMap)
+- [HashTable](#HashTable)
+- [HashSet](#HashSet)
+- [Stack](#Stack)
+- [Queue](#Queue)
+- [PriorityQueue](#PriorityQueue)
 
-
-
+<a name="String"/>
 ###[String](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
 [Top 10 questions of Java Strings](http://www.programcreek.com/2013/09/top-10-faqs-of-java-strings/)
 
@@ -25,6 +35,7 @@ static String   valueOf(X i)        //convert char[], Integer, Object... to Stri
 int n = Integer.parseInt("10");     //convert string to int
 ```
 
+<a name="Array"/>
 ###[Array](http://www.programcreek.com/2013/09/top-10-methods-for-java-arrays/)
 
 ```Java
@@ -61,7 +72,7 @@ arrayList.toArray(stringArr);
 Set<String> set = new HashSet<String>(Arrays.asList(stringArray));
 System.out.println(set);    //[d, e, b, c, a]
 ```
-
+<a name="ArrayList"/>
 ###[ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
 
 implementation: array. ArrayList is not thread-safe; Vector is thread-safe.
@@ -101,6 +112,7 @@ int             size()
 Object[]        toArray()
 ```
 
+<a name="LinkedList"/>
 ###[LinkedList](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
 
 implementation: Double Linked List
@@ -138,6 +150,7 @@ pop()        removeFirst()
 peek()       peekFirst()
 ```
 
+<a name="HashMap"/>
 ###[HashMap](https://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html)
 [Top 9 questions about Java Maps](http://www.programcreek.com/2013/09/top-9-questions-for-java-map/)
 
@@ -234,7 +247,7 @@ Collection<V>       values()
 int     size()
 boolean isEmpty()
 ```
-
+<a name="TreeMap"/>
 ###[TreeMap](https://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html)
 Order based on key. (Must ensure key has a comparator)
 ```Java
@@ -291,6 +304,7 @@ public class TreeMapDemo2{
 
 ```
 
+<a name="HashTable"/>
 ###[HashTable](https://docs.oracle.com/javase/7/docs/api/java/util/Hashtable.html)
 ```Java
 Hashtable<String, Integer> numbers = new Hashtable<String, Integer>();
@@ -300,6 +314,7 @@ numbers.put("three", 3);
 Integer n = numbers.get("two");
 ```
 
+<a name="HashSet"/>
 ###[HashSet](https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html)
 ```Java
 HashSet<Dog> dset = new HashSet<Dog>();
@@ -322,6 +337,7 @@ int     size()
 Iterator<E> iterator()
 ```
 
+<a name="Stack"/>
 ###[Stack](https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html)
 ```Java
 boolean empty()
@@ -330,6 +346,7 @@ E       pop()   //get first and remove
 E       push(E item)
 ```
 
+<a name="Queue"/>
 ###[Queue](https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html)
 ```Java
 Queue<TreeNode> currLevel = new LinkedList<TreeNode>();
@@ -342,6 +359,7 @@ E       poll()      //remove top and then return it
 E       remove()    //remove top and then return it
 ```
 
+<a name="PriorityQueue"/>
 ###[PriorityQueue(Heap)](http://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html)
 ```Java
 boolean add(E e)
@@ -356,6 +374,7 @@ int size()
 Object[]    toArray()
 ```
 
+<a name="Regular Express"/>
 ###[Regular Express](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
 [Top 10 Questions for Java Regular Expression](http://www.programcreek.com/2013/10/top-10-questions-for-java-regular-expression/)
 

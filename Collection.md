@@ -67,6 +67,7 @@ TreeSet is implemented using a tree structure(red-black tree in algorithm book).
 LinkedHashSet is between HashSet and TreeSet. It is implemented as a hash table with a linked list running through it, so it provides the order of insertion. The time complexity of basic methods is O(1).
 
 ![hashset-treeset-linkedhashset-performance](/Data-Structure/hashset-treeset-linkedhashset-performance.png/)
+
 TreeSet is much slower because it is sorted.
 
 <a name = "HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap"/>
