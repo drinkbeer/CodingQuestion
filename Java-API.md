@@ -187,7 +187,7 @@ public static void printMap(Map mp) {
     while (it.hasNext()) {
         Map.Entry pairs = (Map.Entry)it.next();
         System.out.println(pairs.getKey() + " = " + pairs.getValue());
-        it.remove(); // avoids a ConcurrentModificationException
+        it.remove(); // avoids a ConcurrentModificationException(fast-fail iterator, means could remove during iterate)
     }
 }
 
@@ -221,7 +221,6 @@ sortedMap.putAll(countMap);
 printMap(sortedMap);
 
 
-
 boolean containsKey(Object key)
 boolean containsValue(Object value)
 
@@ -238,7 +237,6 @@ int     size()
 boolean isEmpty()
 ```
 
-
 ###[TreeMap](https://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html)
 TreeMap is 
 + implemented by Red-Black tree
@@ -247,52 +245,68 @@ TreeMap is
 + Not synchronized
 
 ```Java
+/*
+sh-4.3$ java -Xmx128M -Xms16M HelloWorld
+black dog - 15
+yellow dog - 20
+red dog - 10
+white dog - 5
+*/
 class Dog implements Comparable<Dog>{
     String color;
     int size;
  
-    Dog(String c, int s) {
+    public Dog(String c, int s) {
         color = c;
         size = s;
     }
+    public boolean equals(Object o) {
+        return ((Dog) o).color.equals(this.color);
+    }
  
+    public int hashCode() {
+        return color.length();
+    }
+    
     public String toString(){   
         return color + " dog";
     }
- 
-    @Override
-    public int compareTo(Dog o) {
-        return  o.size - this.size;
+    
+    public int compareTo(Dog dog){
+        return dog.size - this.size;
     }
 }
- 
-public class TestTreeMap {
-    public static void main(String[] args) {
+
+public class TreeMapDemo2{
+    
+     public static void main(String []args){
         Dog d1 = new Dog("red", 30);
-        Dog d2 = new Dog("black", 20);
+        Dog d2 = new Dog("black", 90);
         Dog d3 = new Dog("white", 10);
-        Dog d4 = new Dog("white", 10);
+        Dog d4 = new Dog("yellow", 50);
  
-        TreeMap<Dog, Integer> treeMap = new TreeMap<Dog, Integer>();
+        java.util.TreeMap<Dog, Integer> treeMap = new java.util.TreeMap<Dog, Integer>();
         treeMap.put(d1, 10);
         treeMap.put(d2, 15);
         treeMap.put(d3, 5);
         treeMap.put(d4, 20);
  
-        for (Entry<Dog, Integer> entry : treeMap.entrySet()) {
+        for (java.util.Map.Entry<Dog, Integer> entry : treeMap.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue());
         }
-    }
+     }
 }
-
-Output:
-red dog - 10
-black dog - 15
-white dog - 20
 ```
 
 ###[HashTable](https://docs.oracle.com/javase/7/docs/api/java/util/Hashtable.html)
-The HashMap class is roughly equivalent to Hashtable, except that it is unsynchronized and permits nulls.
+The HashMap API is similar to Hashtable, difference:
++ HashMap is unsynchronized and not thread-safe, HashTable is synchronized and thread-safe.
++ HashMap allows one null keys and null values; HashTable not allow null keys and null values.
++ HashMap is much faster and use less memory than HashTable. (Unsynchronized objects are often much better in performance in compare to synchronized objects in single thread environment.)
+
+When to use HashMap and Hashtable?
++ HashMap is preferred in unsynchronized or single threaded environment.
++ HashTable is preferred in multi-thread environment.
 
 ```Java
 Hashtable<String, Integer> numbers = new Hashtable<String, Integer>();
@@ -301,8 +315,6 @@ numbers.put("two", 2);
 numbers.put("three", 3);
 Integer n = numbers.get("two");
 ```
-
-###[LinkedHashMap]()
 
 
 

@@ -64,6 +64,7 @@ Difference of performance is obvious. LinkedList is faster in add and remove, bu
 
 This is the reason that HashMap should be used if the program is thread-safe.
 
+###3.[HashSet vs. TreeSet vs. LinkedHashSet](http://www.programcreek.com/2013/03/hashset-vs-treeset-vs-linkedhashset/)
 
 
 ###Reference
