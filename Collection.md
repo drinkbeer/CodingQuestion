@@ -1,17 +1,153 @@
 
+Comparision
 - [ArrayList vs. LinkedList vs. Vector](#ArrayList vs. LinkedList vs. Vector)
 - [HashSet vs. TreeSet vs. LinkedHashSet](#HashSet vs. TreeSet vs. LinkedHashSet)
 - [HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap](#HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap)
 
 The major characteristics of the top level interfaces in Java Collections Framwork (under java.util)
 
-|          |Duplicates?|Nulls?|Insertion Order|Sub-interfaces|Implementations|
-|----------|-----------|------|---------------|--------------|---------------|
-|List      |Y|Y|Append at end or by specific position||ArrayList, LinkedList|
-|Queue     |Y|N|FIFO|Deque|PriorityQueue, LinkedList, ArrayDeque|
-|Deque     |Y|N|FIFO like a queue, or LIFO like a stack||ArrayDeque, LinkedList|
-|Set       |N|At most one|Dependent|SortedSet, navigableSet|HashSet, LinkedHashSet, TreeSet|
-|Map       |N(Keys),Y(Values)|Y(Key, null<=1), Y(Value)|Dependent|SortedMap, NavigableMap|HashMap, LinkedHashMap, TreeMap|
+|          |Duplicates?|Nulls?|Insertion Order|Implementations|
+|----------|-----------|------|---------------|---------------|
+|List      |Y|Y|Append at end or by specific position|ArrayList, LinkedList|
+|Queue     |Y|N|FIFO|PriorityQueue, LinkedList, ArrayDeque|
+|Deque     |Y|N|FIFO like a queue, or LIFO like a stack|ArrayDeque, LinkedList|
+|Set       |N|At most one|Dependent|HashSet, LinkedHashSet, TreeSet|
+|Map       |N(Keys),Y(Values)|Y(Key, null<=1), Y(Value)|Dependent|HashMap, LinkedHashMap, TreeMap|
+
+###ArrayList
++ Implemented by array
++ Advantage
+    - Randomly access(get and set) is constant time
++ Disadvantage
+    - Modification(add and remove) is expensive, except changes are at end of arraylist
+    - Search is inefficient
++ Complexity
+    - Randomly access(get and set): O(1)
+    - Insertion(add to front) and removal: O(n)
+
+###LinkedList
++ Implemented by list of nodes
++ Advantage
+    - Modification(add and remove) is constant time, when position if known
++ Disadvantage
+    - Randomly access(add and set) is expensive
+    - Search is inefficient
+    - Indexable is not easy
++ Complexity
+    - Randomly access(get, set): O(n)
+    - Add, remove: O(1)
+
+###Stack
++ FIFO: operation is all in top of stack. (push and pop)
++ Could be implemented by LinkedList, ArrayList
+    - List: push to front of list, pop is remove front node of list
+    - Array: use a pointer top(initilized as -1), push is arr[++top], pop is arr[top--]  (use top==-1 to check is empty)
++ Complexity
+    - Push: O(1)
+    - Pop: O(1)
++ Application
+    + Balance symbols
+    + Postfix expression
+    + Method calls
+
+###Queue
++ FILO: offer() is at end, poll() is at front
++ Could be implemented by DoubleLinkedList, array
+    - List: Not finished
++ COmplexity:
+    - Enqueue: O(1)
+    - Dequeue: O(1)
+
+###Set
+#####Overview
++ A collection of non-duplicate values
+
+#####Type
++ TreeSet(Sorted Set): value is sorted. Worst time O(logN)
+
+
+###Map
+#####Overview
++ A collection of entries, entry is Key-Value pair.
++ Key is unique, value could duplicate
++ Map itself doesn't provide iterator, but could iterate through Key Set/Value Set/Entry Set's iterator
+
+#####Type
++ TreeMap(Sorted Map): keep keys in sorted order
+
+
+### HashTable/[HashMap](http://www.cnblogs.com/skywang12345/p/3310835.html)
+
+#####Overview
++ Perform **insert, delete, search in average O(1)**
++ Print in sorted order in O(n) not supported
++ Load factor: ratio of # of elements in hash table to table size
+
+#####Hash Function
++ Determinism: given same input, always generate same hash code
++ Uniformity: map inputs as evenly as possible over its output range
++ Defined range: desirable that outputs has fixed size
++ Continuity: two inputs differing a little should be mapped to nearly equal hash values
++ Non-invertible: impossible to reconstruct input from hash code
+
+#####Collision
++ Different input map to the same hash code
++ Solution: **Bucket(use a list to put elements with same hash code)**
+    - insertion: first search for input's hash code, if exists, insert into the front of the existing list; if not, create a new list. (Why insert into front? Because recently inserted elements are more likely to be used in the near future.)
+
+#####Probing???
+
+#####Rehash
++ When # of elements in hash table beyond load factor, we enlarge hash table
++ Solution: build another table with twice size, copy elements to new table
+
+###PriorityQueue(Heap)
+
+#####Overview
++ Heap is a binary tree that is completely filled(except bottom level)
++ Height: O(logN)
++ For element in array index i
+    - Left child: 2i
+    - Right child: 2i + 1
+    - Parent: floor((i-1)/2)
+
+#####Property
++ Smallest element at root(Min Heap) or largest at root(Max Heap)
++ Min Heap: parent <= two children
++ Max Heap: parent >= two children
++ findMin() in Min Heap is O(1)
+
+#####Application???
+
+
+###Binary Tree
+General Tree
+```Java
+class TreeNode{
+    Object element;
+    TreeNode firstChild;
+    TreeNode nextSibling;
+}
+```
+
+Binary Tree Node
+```Java
+class BinaryNode{
+    Object element;
+    BinaryNode left;
+    BinaryNode right;
+}
+````
+
+#####Overview
++ Average depth: O(sqrt(N)), worst depth: N-1
+
+Binary Search Tree
+#####Overview
++ Values in left subtree <= root value
++ Values in right subtree >= root value
++ Time: O(logN)
+
 
 ![Hierarchy Diagram](/Data-Structure/java-collection-hierarchy.jpeg)
 

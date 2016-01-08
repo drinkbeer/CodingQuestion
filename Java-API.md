@@ -383,12 +383,6 @@ Object[]    toArray()
 
 [Top 10 questions about Java Collections](http://www.programcreek.com/2013/09/top-10-questions-for-java-collections/)
 
-[ArrayList vs. LinkedList vs. Vector](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)
-
-[HashSet vs. TreeSet vs. LinkedHashSet](http://www.programcreek.com/2013/03/hashset-vs-treeset-vs-linkedhashset/)
-
-[HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap](http://www.programcreek.com/2013/03/hashmap-vs-treemap-vs-hashtable-vs-linkedhashmap/)
-
 [Top 10 Books For Advanced Level Java Developers](http://www.programcreek.com/2013/08/top-books-for-advanced-level-java-developers/)
 
 [8 Things Programmers Can Do at Weekends](http://www.programcreek.com/2012/10/8-things-programmers-can-do-at-weekends/)

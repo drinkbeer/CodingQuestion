@@ -1,25 +1,26 @@
-/**
- * Created by chen on 15/4/1.
+/*
+Created by chen on 15/4/1.
+Time O(NlogN)
  */
-public class MergeSort {
+class MergeSort {
 
-    public static void sort(Comparable[] a) {
-        Comparable[] tmp = new Comparable[a.length];
-        sort(a, tmp, 0, a.length - 1);
+    public static void sort(int[] arr) {
+        int[] tmp = new int[arr.length];
+        sort(arr, tmp, 0, arr.length - 1);
     }
 
-    private static void sort(Comparable[] a, Comparable[] tmp, int lo, int hi) {
+    private static void sort(int[] arr, int[] tmp, int lo, int hi) {
         if (lo >= hi) return;
         int mid = lo + (hi - lo) / 2;
-        sort(a, tmp, lo, mid);          //sort left part
-        sort(a, tmp, mid + 1, hi);      //sort right part
-        merge(a, tmp, lo, mid, hi);     //merge left and right parts
+        sort(arr, tmp, lo, mid);          //sort left part
+        sort(arr, tmp, mid + 1, hi);      //sort right part
+        merge(arr, tmp, lo, mid, hi);     //merge left and right parts
     }
     
-    public static void merge(Comparable[] a, Comparable[] tmp, int lo, int mid, int hi) {
+    public static void merge(int[] arr, int[] tmp, int lo, int mid, int hi) {
 
         for (int k = lo; k <= hi; k++) {
-            tmp[k] = a[k];
+            tmp[k] = arr[k];
         }
 
         int i = lo;
@@ -30,27 +31,22 @@ public class MergeSort {
             // else if (tmp[i].compareTo(tmp[j]) < 0)  a[k] = tmp[i++];
             // else                                a[k] = tmp[j++];
             // Another version of code
-            if(j > hi || (i <= mid && tmp[i].compareTo(tmp[j]) < 0)){
-                a[k] = tmp[i++];
+            if(j > hi || (i <= mid && tmp[i] < tmp[j])){
+                arr[k] = tmp[i++];
             }else{
-                a[k] = tmp[j++];
+                arr[k] = tmp[j++];
             }
         }
 
     }
 
-    private static boolean isSorted(Comparable[] a, int lo, int hi) {
-        for (int i = lo; i < hi - 1; i++) {
-            if (a[i + 1].compareTo(a[i]) < 0) return false;
-        }
-        return true;
-    }
-
     public static void main(String[] args) {
-        Integer[] a = {6, 3, 6, 4, 2, 3, 9, 5, 3, 2, 0};
-        // Integer[] a = {2, 6, 3, 5, 1};
-        sort(a);
-        System.out.println(java.util.Arrays.toString(a));
+        int[] arr = {6, 3, 6, 4, 2, 3, 9, 5, 3, 2, 0};
+        // int[] a = {2, 6, 3, 5, 1};
+        sort(arr);
+        for(int ele : arr){
+            System.out.print(ele + " ");
+        }
     }
 
 }
