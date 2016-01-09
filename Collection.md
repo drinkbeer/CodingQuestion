@@ -121,12 +121,22 @@ The major characteristics of the top level interfaces in Java Collections Framwo
 
 
 ###Binary Tree
-General Tree
+General Tree(From Java API-String)
 ```Java
-class TreeNode{
-    Object element;
-    TreeNode firstChild;
-    TreeNode nextSibling;
+public class Tree<T> {
+    private Node<T> root;
+
+    public Tree(T rootData) {
+        root = new Node<T>();
+        root.data = rootData;
+        root.children = new ArrayList<Node<T>>();
+    }
+
+    public static class Node<T> {
+        private T data;
+        private Node<T> parent;
+        private List<Node<T>> children;
+    }
 }
 ```
 

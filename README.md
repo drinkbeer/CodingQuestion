@@ -139,21 +139,16 @@ Sharing common interview questions through this reporsity.
 |[205.Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)|[LeetCode-205-Isomorphic-Strings.java](src/LeetCode-205-Isomorphic-Strings.java)|HashMap|
 |[290.Word Pattern](https://leetcode.com/problems/word-pattern/)|[LeetCode-290-Word-Pattern.java](src/LeetCode-290-Word-Pattern.java)|HashMap|
 |[291.Word Pattern II](https://leetcode.com/problems/word-pattern-ii/)|[LeetCode-291-Word-Pattern-II.java](src/LeetCode-291-Word-Pattern-II.java)|Not yet, hard|
-
-
-127.Word Ladder
-https://leetcode.com/problems/word-ladder/
-
-126.Word Ladder II
-https://leetcode.com/problems/word-ladder-ii/
-
-Word Break
-https://codesolutiony.wordpress.com/2014/12/07/word-break/
+|[127.Word Ladder](https://leetcode.com/problems/word-ladder/)|[LeetCode-127-Word-Ladder.java](src/LeetCode-127-Word-Ladder.java)|BFS|
+|[126.Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[LeetCode-126-Word-Ladder-II.java](src/LeetCode-126-Word-Ladder-II.java)|Not yet, hard|
+|[139.Word Break](https://leetcode.com/problems/word-break/)|[LeetCode-139-Word-Break.java](src/LeetCode-139-Word-Break.java)|DFS, DP|
+|[140.Word Break II](https://leetcode.com/problems/word-break-ii/)|[LeetCode-140-Word-Break-II.java](src/LeetCode-140-Word-Break-II.java)|Not yet, hard|
+|[★146.LRU Cache](https://leetcode.com/problems/lru-cache/)|[LeetCode-146-LRU-Cache.java](src/LeetCode-146-LRU-Cache.java)|HashMap, List|
 
 
 60.Permutation Sequence
 
-
+314. Binary Tree Vertical Order Traversal
 
 
 |Question|Solution|Tags|

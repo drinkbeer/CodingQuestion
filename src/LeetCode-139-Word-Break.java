@@ -1,0 +1,66 @@
+/*
+LeetCode: https://leetcode.com/problems/word-break/
+LintCode: http://www.lintcode.com/problem/word-break/
+JiuZhang: http://www.jiuzhang.com/solutions/word-break/
+ProgramCreek: http://www.programcreek.com/2012/12/leetcode-solution-word-break/
+
+Analysis: 
+1.DFS
+Time Limit Exceed
+Time O(N^2*wordDict Size) ???
+
+2.DP
+Time O(N*dict size)
+*/
+public class Solution {
+    // 1.DFS
+    // Time Limit Exceed
+    // public boolean wordBreak(String s, Set<String> wordDict) {
+    //     return wordBreak(s, wordDict, 0);
+    // }
+    
+    // private boolean wordBreak(String s, Set<String> wordDict, int start){
+    //     // end codition
+    //     if(start == s.length()) return true;
+        
+    //     for(String str : wordDict){
+    //         int len = str.length();
+    //         int end = start + len - 1;  //Notice, start is the first letter, we should -1
+            
+    //         if(end >= s.length()) continue;
+            
+    //         if(s.substring(start, end + 1).equals(str)){
+    //             if(wordBreak(s, wordDict, end + 1)) return true;
+    //         }
+    //     }
+        
+    //     return false;
+    // }
+    
+    // 2.DP
+    public boolean wordBreak(String s, Set<String> wordDict) {
+        // state
+        boolean[] state = new boolean[s.length() + 1];
+        state[0] = true;    //why initialized true? state[0] has function of dummy node in List problem
+        
+        // canculate state
+        for(int i = 0; i <= s.length(); i++){
+            if(!state[i]) continue;  //if start char is not true, don't need to continue calculating
+            
+            for(String word : wordDict){
+                int len = word.length();
+                int end = i + len;  //notice, i is start, end is the next char index of next word
+                if(end > s.length()) continue;
+                
+                if(state[end]) continue;    //optimize: if has already true, we don't need to calculate
+                
+                if(s.substring(i, end).equals(word)){
+                    state[end] = true;
+                }
+            }
+        }
+        
+        return state[s.length()];
+    }
+    
+}
