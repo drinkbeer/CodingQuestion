@@ -13,29 +13,6 @@ Time O(N^2*wordDict Size) ???
 Time O(N*dict size)
 */
 public class Solution {
-    // 1.DFS
-    // Time Limit Exceed
-    // public boolean wordBreak(String s, Set<String> wordDict) {
-    //     return wordBreak(s, wordDict, 0);
-    // }
-    
-    // private boolean wordBreak(String s, Set<String> wordDict, int start){
-    //     // end codition
-    //     if(start == s.length()) return true;
-        
-    //     for(String str : wordDict){
-    //         int len = str.length();
-    //         int end = start + len - 1;  //Notice, start is the first letter, we should -1
-            
-    //         if(end >= s.length()) continue;
-            
-    //         if(s.substring(start, end + 1).equals(str)){
-    //             if(wordBreak(s, wordDict, end + 1)) return true;
-    //         }
-    //     }
-        
-    //     return false;
-    // }
     
     // 2.DP
     public boolean wordBreak(String s, Set<String> wordDict) {
@@ -62,5 +39,30 @@ public class Solution {
         
         return state[s.length()];
     }
+    
+    // 1.DFS
+    // Time Limit Exceed
+// 	public boolean wordBreak(String s, Set<String> wordDict) {
+// 		return wordBreak(s, wordDict, 0);
+// 	}
+	
+// 	private boolean wordBreak(String s, Set<String> wordDict, int start){
+// 		// end condition
+// 		if(start == s.length()) return true;
+		
+// 		for(int i = start; i < s.length(); i++){
+			
+// 			for(String str : wordDict){
+// 				int end = i + str.length();     //Corner case: think carefully the end
+				
+// 				if(end > s.length()) continue;
+				
+// 				if(s.substring(i, end).equals(str)){
+// 					if(wordBreak(s, wordDict, end)) return true;
+// 				}
+// 			}
+// 		}
+// 		return false;
+// 	}
     
 }
