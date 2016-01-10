@@ -4,6 +4,7 @@ Sharing common interview questions through this reporsity.
 #####String & Array
 Array includes NSum series, operation to array(rotate)
 String includes Parentheness series, Palindrome series, some statistic problems.
+
 |Question|Solution|Tags|
 |--------|--------|----|
 |[★1.Two Sum](https://leetcode.com/problems/two-sum/)|[LeetCode-1-Two-Sum.java](src/LeetCode-1-Two-Sum.java)|HashMap|
@@ -46,6 +47,7 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 #####Search(Tree, Binary Search, DFS, BFS, DP)
 Search in Tree, in Binary Tree, Binary Search Tree, in String, in Array
 Search a required set, search Maximum/Minimu result
+
 |Question|Solution|Tags|
 |--------|--------|----|
 |[130.Surrounded Region](https://leetcode.com/problems/surrounded-regions/)|[LeetCode-130-Surrounded-Regions.java](src/LeetCode-130-Surrounded-Regions.java)|BFS,DFS|
@@ -127,6 +129,7 @@ Search a required set, search Maximum/Minimu result
 
 #####List
 Change Order(Reverse, Swap) & Remove
+
 |Question|Solution|Tags|
 |--------|--------|----|
 |[3 Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[LeetCode-3-Longest-Substring-Without-Repeating-Characters.java](src/LeetCode-3-Longest-Substring-Without-Repeating-Characters.java)|Two Pointers|
@@ -154,6 +157,7 @@ Change Order(Reverse, Swap) & Remove
 #####Math
 Prime
 Operations between strings, between big numbers(larger than RAM)
+
 |Question|Solution|Tags|
 |--------|--------|----|
 |[2.Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[LeetCode-2-Add-Two-Numbers.java](src/LeetCode-2-Add-Two-Numbers.java)|LinkedList|
@@ -168,6 +172,9 @@ Operations between strings, between big numbers(larger than RAM)
 
 
 #####Design
+
+|Question|Solution|Tags|
+|--------|--------|----|
 |[★146.LRU Cache](https://leetcode.com/problems/lru-cache/)|[LeetCode-146-LRU-Cache.java](src/LeetCode-146-LRU-Cache.java)|HashMap, List|
 |[155.Min Stack](https://leetcode.com/problems/min-stack/)|[LeetCode-155-Min-Stack.java](src/LeetCode-155-Min-Stack.java)|Two Stacks|
 
