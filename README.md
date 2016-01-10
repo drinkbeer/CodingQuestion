@@ -2,8 +2,8 @@
 Sharing common interview questions through this reporsity.
 
 #####String & Array
-Array includes NSum series, operation to array(rotate)
-String includes Parentheness series, Palindrome series, some statistic problems.
+Array includes NSum series, operation to array(rotate)  
+String includes Parentheness series, Palindrome series, some statistic problems.  
 
 |Question|Solution|Tags|
 |--------|--------|----|
@@ -45,8 +45,8 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 |[13.Roman to Integer](https://leetcode.com/problems/roman-to-integer/)|[LeetCode-13-Roman-to-Integer.java](src/LeetCode-13-Roman-to-Integer.java)|String|
 
 #####Search(Tree, Binary Search, DFS, BFS, DP)
-Search in Tree, in Binary Tree, Binary Search Tree, in String, in Array
-Search a required set, search Maximum/Minimu result
+Search in Tree, in Binary Tree, Binary Search Tree, in String, in Array  
+Search a required set, search Maximum/Minimu result  
 
 |Question|Solution|Tags|
 |--------|--------|----|
@@ -128,7 +128,7 @@ Search a required set, search Maximum/Minimu result
 
 
 #####List
-Change Order(Reverse, Swap) & Remove
+Change Order(Reverse, Swap) & Remove  
 
 |Question|Solution|Tags|
 |--------|--------|----|
@@ -155,8 +155,8 @@ Change Order(Reverse, Swap) & Remove
 
 
 #####Math
-Prime
-Operations between strings, between big numbers(larger than RAM)
+Prime  
+Operations between strings, between big numbers(larger than RAM)  
 
 |Question|Solution|Tags|
 |--------|--------|----|
@@ -179,19 +179,19 @@ Operations between strings, between big numbers(larger than RAM)
 |[155.Min Stack](https://leetcode.com/problems/min-stack/)|[LeetCode-155-Min-Stack.java](src/LeetCode-155-Min-Stack.java)|Two Stacks|
 
 
-60.Permutation Sequence
+60.Permutation Sequence  
 
-314. Binary Tree Vertical Order Traversal
+314. Binary Tree Vertical Order Traversal  
 
 
 
 /*
-LeetCode: 
-LintCode: 
-JiuZhang: 
-ProgramCreek: 
+LeetCode:  
+LintCode:  
+JiuZhang:  
+ProgramCreek:  
 
-Analysis: 
+Analysis:  
 
 */
 
