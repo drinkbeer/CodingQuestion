@@ -48,32 +48,54 @@ public class Solution {
     // }
     
     // 3.BFS
-    public List<Integer> postorderTraversal(TreeNode root) {
+    // public List<Integer> postorderTraversal(TreeNode root) {
+    //     List<Integer> result = new ArrayList<Integer>();
+    //     if(root == null) return result;
+        
+    //     Stack<TreeNode> stack = new Stack<TreeNode>();
+    //     TreeNode prev = null, curr = root;
+    //     stack.push(root);
+        
+    //     while(!stack.isEmpty()){
+    //         curr = stack.peek();
+    //         // traverse down the tree
+    //         if(prev == null || curr == prev.left || curr == prev.right){
+    //             if(curr.left != null) stack.push(curr.left);
+    //             else if(curr.right != null) stack.push(curr.right);
+    //         }else if(prev == curr.left){
+    //             // traverse up the tree from left
+    //             if(curr.right != null) stack.push(curr.right);
+    //         }else{
+    //             // else 和 else if(prev == curr.right) 有什么区别？
+    //             // traverse up the tree from right
+    //             result.add(curr.val);
+    //             // curr = 
+    //             stack.pop();
+    //         }
+    //         prev = curr;
+    //     }
+        
+    //     return result;
+    // }
+    
+    // 4.BFS
+    public List<Integer> postorderTraversal(TreeNode root){
         List<Integer> result = new ArrayList<Integer>();
         if(root == null) return result;
-        
+
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        TreeNode prev = null, curr = root;
+        Stack<TreeNode> out = new Stack<TreeNode>();
         stack.push(root);
-        
+
         while(!stack.isEmpty()){
-            curr = stack.peek();
-            // traverse down the tree
-            if(prev == null || curr == prev.left || curr == prev.right){
-                if(curr.left != null) stack.push(curr.left);
-                else if(curr.right != null) stack.push(curr.right);
-            }else if(prev == curr.left){
-                // traverse up the tree from left
-                if(curr.right != null) stack.push(curr.right);
-            }else{
-                // else 和 else if(prev == curr.right) 有什么区别？
-                // traverse up the tree from right
-                result.add(curr.val);
-                // curr = 
-                stack.pop();
-            }
-            prev = curr;
+            TreeNode curr = stack.pop();
+            out.push(curr);
+
+            if(curr.left != null) stack.push(curr.left);
+            if(curr.right != null) stack.push(curr.right);
         }
+
+        while(!out.isEmpty()) result.add(out.pop().val);
         
         return result;
     }
