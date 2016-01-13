@@ -372,6 +372,17 @@ E   poll()  //get top and
 
 int size()
 Object[]    toArray()
+
+
+Queue<ListNode> heap = new PriorityQueue<ListNode>(lists.length, listNodeComparator);
+
+private Comparator<ListNode> listNodeComparator = new Comparator<ListNode>(){
+    public int compare(ListNode l1, ListNode l2){
+        if(l1 == null) return 1;
+        else if(l2 == null) return -1;
+        return l1.val - l2.val;
+    }
+};
 ```
 
 <a name="Regular Express"/>

@@ -48,6 +48,120 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 Search in Tree, in Binary Tree, Binary Search Tree, in String, in Array  
 Search a required set, search Maximum/Minimu result  
 
+[Tree大总结](https://github.com/yuzhangcmu/LeetCode_algorithm/blob/master/tree/TreeDemo.java)  
+1. 求二叉树中的节点个数: getNodeNumRec（递归），getNodeNum（迭代）  
+2. 求二叉树的深度: getDepthRec（递归），getDepth   
+3. 前序遍历，中序遍历，后序遍历: preorderTraversalRec, preorderTraversal, inorderTraversalRec, postorderTraversalRec  
+4. 分层遍历二叉树（按层次从上往下，从左往右）:levelTraversal, levelTraversalRec（递归解法）  
+5. 将二叉查找树变为有序的双向链表: convertBST2DLLRec, convertBST2DLL  
+6. 求二叉树第K层的节点个数：getNodeNumKthLevelRec, getNodeNumKthLevel  
+7. 求二叉树中叶子节点的个数：getNodeNumLeafRec, getNodeNumLeaf  
+8. 判断两棵二叉树是否相同的树：isSameRec, isSame  
+9. 判断二叉树是不是平衡二叉树：isAVLRec  
+10. 求二叉树的镜像（破坏和不破坏原来的树两种情况）：  
+     mirrorRec, mirrorCopyRec  
+     mirror, mirrorCopy  
+10.1 判断两个树是否互相镜像：isMirrorRec isMirror  
+11. 求二叉树中两个节点的最低公共祖先节点：  
+         LAC        求解最小公共祖先, 使用list来存储path  
+         LCABstRec  递归求解BST树  
+         LCARec     递归算法  
+12. 求二叉树中节点的最大距离：getMaxDistanceRec  
+13. 由前序遍历序列和中序遍历序列重建二叉树：rebuildBinaryTreeRec  
+14. 判断二叉树是不是完全二叉树：isCompleteBinaryTree, isCompleteBinaryTreeRec  
+15. 找出二叉树中最长连续子串(即全部往左的连续节点，或是全部往右的连续节点）: findLongest  
+
+[面试大总结之二：Java搞定面试中的二叉树题目](http://blog.csdn.net/fightforyourdream/article/details/16843303)  
+[轻松搞定面试中的二叉树题目](http://blog.csdn.net/luckyxiaoqiang/article/details/7518888)  
+[算法大全(3)二叉树](http://www.cnblogs.com/Jax/archive/2009/12/28/1633691.html)  
+
+Recursive, Backtracking, DFS, BFS
+LeetCode 里面很大一部分题目都是属于这个范围，例如Path Sum用的就是递归+DFS，Path Sum2用的是递归+DFS+回溯
+
+这里参考了一些网上写得很不错的文章，总结一下理解与模板
+递归：就是出现这种情况的代码： （或者说是用到了栈）
+解答树角度：在dfs遍历一棵解答树      
+优点：结构简洁
+缺点：效率低，可能栈溢出
+
+递归的一般结构：
+void f()  
+{  
+     if(符合边界条件)  
+    {  
+       ///////  
+        return;  
+    }  
+      
+     //某种形式的调用  
+     f();  
+}  
+
+回溯：递归的一种，或者说是通过递归这种代码结构来实现回溯这个目的。回溯法可以被认为是一个有过剪枝的DFS过程。
+解答树角度：带回溯的dfs遍历一棵解答树
+回溯的一般结构：
+[java] view plaincopy
+void dfs(int 当前状态)  
+{  
+      if(当前状态为边界状态)  
+      {  
+        记录或输出  
+        return;  
+      }  
+      for(i=0;i
+     {  
+           //扩展出一个子状态。  
+           修改了全局变量  
+           if(子状态满足约束条件)  
+            {  
+              dfs(子状态)  
+           }  
+            恢复全局变量//回溯部分  
+        }  
+} 
+
+BFS和DFS是相似。
+BFS（显式用队列）
+DFS（隐式用栈）（即递归）
+当然，对于DFS，用递归可能会造成栈溢出，所以也可以更改为显示栈。
+BFS：典型例题：P101 对于二叉树的层次遍历，P108对于图的走迷宫最短路径
+
+将（起始）首节点加入队列:   q.push(head);  
+标记首节点已经被访问：     isvisited[head]=true;  
+以下自动反应：                        while(!q.empty())  
+                                    {  
+                                          int temp=q.front();  
+                                           q.pop();  
+                                          访问temp，并标记temp已被访问过，将temp的子相关节点加入队列  
+                                          q.push(temp相关节点);  
+                                    }
+
+DFS:典型例题：P107黑白图像
+格式：将所有节点遍历一遍，在遍历每个节点是，DFS的遍历该节点相关的所有节点
+[cpp] view plaincopy
+void dfs(int x, int y)  
+{  
+if(!mat[x][y] || vis[x][y]) return;     // 曾经访问过这个格子，或者当前格子是白色  
+vis[x][y] = 1;                          // 标记(x,y)已访问过  
+dfs(x-1,y-1); dfs(x-1,y); dfs(x-1,y+1);  
+dfs(x-1,y);               dfs(x,y+1);  
+dfs(x+1,y-1); dfs(x+1,y); dfs(x+1,y+1); // 递归访问周围的八个格子  
+}  
+主循环：  
+for(int i = 1; i <= n; i++)  
+for(int j = 1; j <= n; j++)  
+if(!vis[i][j] && mat[i][j])  
+{  
+count++;  
+dfs(i,j);  
+} // 找到没有访问过的黑格  
+
+Ref:
+http://hi.baidu.com/silverxinger/item/cdcd900ca34e988402ce1ba0
+http://hi.baidu.com/lvhuyh/item/960c5b163c4d7cd539cb309b
+http://www.cnblogs.com/HectorInsanE/archive/2010/11/09/1872656.html
+
+
 |Question|Solution|Tags|
 |--------|--------|----|
 |[130.Surrounded Region](https://leetcode.com/problems/surrounded-regions/)|[LeetCode-130-Surrounded-Regions.java](src/LeetCode-130-Surrounded-Regions.java)|BFS,DFS|
@@ -66,7 +180,7 @@ Search a required set, search Maximum/Minimu result
 |[81.Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[LeetCode-81-Search-in-Rotated-Sorted-Array-II.java](src/LeetCode-81-Search-in-Rotated-Sorted-Array-II.java)|Array|
 |[74.Search a 2D Matrix](https://leetcode.com/problems/set-matrix-zeroes/)|[LeetCode-74-Search-a-2D-Matrix.java](src/LeetCode-74-Search-a-2D-Matrix.java)|Binary Search|
 |[240.Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)|[LeetCode-240-Search-a-2D-Matrix-II.java](src/LeetCode-240-Search-a-2D-Matrix-II.java)|not yet|
-|[★55.Jump Game](https://leetcode.com/problems/jump-game/)|[LeetCode-55-Jump-Game.java](src/LeetCode-55-Jump-Game.java)|DP, Greedy|
+|[★★★55.Jump Game](https://leetcode.com/problems/jump-game/)|[LeetCode-55-Jump-Game.java](src/LeetCode-55-Jump-Game.java)|DP, Greedy|
 |[45.Jump Game II](https://leetcode.com/problems/jump-game-ii/)|[LeetCode-45-Jump-Game-II.java](src/LeetCode-45-Jump-Game-II.java)|DP, Greedy|
 |[★53.Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[LeetCode-53-Maximum-Subarray.java](src/LeetCode-53-Maximum-Subarray.java)|DP, Greedy|
 |[Maximum Subarray II](http://www.lintcode.com/en/problem/maximum-subarray-ii/)|[LintCode-Maximum-Subarray-II.java](src/LintCode-Maximum-Subarray-II.java)|DP, Greedy|
@@ -117,7 +231,7 @@ Search a required set, search Maximum/Minimu result
 |[129.Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)|[LeetCode-129-Sum-Root-to-Leaf-Numbers.java](src/LeetCode-129-Sum-Root-to-Leaf-Numbers.java)|DFS|
 |[124.Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)|[LeetCode-124-Binary-Tree-Maximum-Path-Sum.java](src/LeetCode-124-Binary-Tree-Maximum-Path-Sum.java)|not yet, hard|
 |[257.Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[LeetCode-257-Binary-Tree-Paths.java](src/LeetCode-257-Binary-Tree-Paths.java)|not yet|
-|[★120.Triangle](https://leetcode.com/problems/triangle/)|[LeetCode-120-Triangle.java](src/LeetCode-120-Triangle.java)|DP, Array|
+|[★★★120.Triangle](https://leetcode.com/problems/triangle/)|[LeetCode-120-Triangle.java](src/LeetCode-120-Triangle.java)|DP, Array|
 |[144.Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|[LeetCode-144-Binary-Tree-Preorder-Traversal.java](src/LeetCode-144-Binary-Tree-Preorder-Traversal.java)|DFS, BFS|
 |[94.Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|[LeetCode-94-Binary-Tree-Inorder-Traversal.java](src/LeetCode-94-Binary-Tree-Inorder-Traversal.java)|DFS, BFS|
 |[145.Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)|[LeetCode-145-Binary-Tree-Postorder-Traversal.java](src/LeetCode-145-Binary-Tree-Postorder-Traversal.java)|DFS, BFS|
@@ -129,6 +243,13 @@ Search a required set, search Maximum/Minimu result
 
 #####List
 Change Order(Reverse, Swap) & Remove  
+The use of dummy node, use pointer Next to store next node(Merge Two Sort Lists, Merge K Sorted Lists, Reverse List, Reverse Nodes in K-groups)  
+Find/Remove Kth biggest node from end: use two pointers, one run k step, and then two pointers run parallelly until one reach null.
+Find the middle of a list: fast-slow pointers, one run one step, another run two steps. Be carefully of initialization, slow = header, fast = header.next.(Find intersection point, Detect circle)   
+
+[面试大总结之链表](http://blog.csdn.net/fightforyourdream/article/details/16353519)  
+[轻松搞定面试中的链表题目](http://blog.csdn.net/luckyxiaoqiang/article/details/7393134)  
+[算法大全（1）单链表](http://www.cnblogs.com/jax/archive/2009/12/11/1621504.html)  
 
 |Question|Solution|Tags|
 |--------|--------|----|
