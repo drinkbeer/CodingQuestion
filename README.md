@@ -9,7 +9,7 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 |--------|--------|----|
 |[★1.Two Sum](https://leetcode.com/problems/two-sum/)|[LeetCode-1-Two-Sum.java](src/LeetCode-1-Two-Sum.java)|HashMap|
 |[167.Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[LeetCode-167-Two-Sum-II-Input-array-is-sorted.java](src/LeetCode-167-Two-Sum-II-Input-array-is-sorted.java)|Two Pointers|
-|[170 Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[]()||
+|[170.Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[LeetCode-170-Two-Sum-III-Data-structure-design.java](src/LeetCode-170-Two-Sum-III-Data-structure-design.java/)|HashMap|
 |[★15.3Sum](https://leetcode.com/problems/3sum/)|[LeetCode-15-3Sum.java](src/LeetCode-15-3Sum.java)|Two Pointers|
 |[16 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[LeetCode-16-3Sum-Closest.java](src/LeetCode-16-3Sum-Closest.java)|Two Pointers|
 |[259 3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)|[]()||
@@ -43,6 +43,9 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 |[267.Palindrome Permutation II](https://leetcode.com/problems/palindrome-permutation-ii/)|[LeetCode-267-Palindrome-Permutation-II.java](src/LeetCode-267-Palindrome-Permutation-II.java)|Not Yet|
 |[12.Integer to Roman](https://leetcode.com/problems/integer-to-roman/)|[LeetCode-12-Integer-to-Roman.java](src/LeetCode-12-Integer-to-Roman.java)|String|
 |[13.Roman to Integer](https://leetcode.com/problems/roman-to-integer/)|[LeetCode-13-Roman-to-Integer.java](src/LeetCode-13-Roman-to-Integer.java)|String|
+|[165.Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)|[LeetCode-165-Compare-Version-Numbers.java](src/LeetCode-165-Compare-Version-Numbers.java)|String|
+|[288.Unique Word Abbreviation](https://leetcode.com/problems/unique-word-abbreviation/)|[LeetCode-288-Unique-Word-Abbreviation.java](src/LeetCode-288-Unique-Word-Abbreviation.java)|String|
+
 
 #####Search(Tree, Binary Search, DFS, BFS, DP)
 Search in Tree, in Binary Tree, Binary Search Tree, in String, in Array  
@@ -160,6 +163,7 @@ Ref:
 http://hi.baidu.com/silverxinger/item/cdcd900ca34e988402ce1ba0
 http://hi.baidu.com/lvhuyh/item/960c5b163c4d7cd539cb309b
 http://www.cnblogs.com/HectorInsanE/archive/2010/11/09/1872656.html
+http://www.cnblogs.com/springfor/p/3874591.html
 
 
 |Question|Solution|Tags|
@@ -185,6 +189,11 @@ http://www.cnblogs.com/HectorInsanE/archive/2010/11/09/1872656.html
 |[★53.Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[LeetCode-53-Maximum-Subarray.java](src/LeetCode-53-Maximum-Subarray.java)|DP, Greedy|
 |[Maximum Subarray II](http://www.lintcode.com/en/problem/maximum-subarray-ii/)|[LintCode-Maximum-Subarray-II.java](src/LintCode-Maximum-Subarray-II.java)|DP, Greedy|
 |[Maximum Subarray III](http://www.lintcode.com/en/problem/maximum-subarray-iii/)|[LintCode-Maximum-Subarray-III.java](src/LintCode-Maximum-Subarray-III.java)|not yet, hard|
+|[121.Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.java](src/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.java)|DP, Greedy|
+|[122.Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[LeetCode-122-Best-Time-to-Buy-and-Sell-Stock-II.java](src/LeetCode-122-Best-Time-to-Buy-and-Sell-Stock-II.java)|Array|
+|[123.Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)|[LeetCode-123-Best-Time-to-Buy-and-Sell-Stock-III.java](src/LeetCode-123-Best-Time-to-Buy-and-Sell-Stock-III.java)|hard,not yet???|
+|[188.Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)|[LeetCode-188-Best-Time-to-Buy-and-Sell-Stock-IV.java](src/LeetCode-188-Best-Time-to-Buy-and-Sell-Stock-IV.java)|hard, not yet???|
+|[309.Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|[LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java](src/LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java)|not yet???|
 |[★62.Unique Paths](https://leetcode.com/problems/unique-paths/)|[LeetCode-62-Unique-Paths.java](src/LeetCode-62-Unique-Paths.java)|DP|
 |[63.Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)|[LeetCode-63-Unique-Paths-II.java](src/LeetCode-63-Unique-Paths-II.java)|DP|
 |[64.Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[LeetCode-64-Minimum-Path-Sum.java](src/LeetCode-64-Minimum-Path-Sum.java)|DP|
@@ -239,6 +248,7 @@ http://www.cnblogs.com/HectorInsanE/archive/2010/11/09/1872656.html
 |[235.Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)|[LeetCode-235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree.java](src/LeetCode-235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree.java)|Tree, Recursive|
 |[236.Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|[LeetCode-236-Lowest-Common-Ancestor-of-a-Binary-Tree.java](src/LeetCode-236-Lowest-Common-Ancestor-of-a-Binary-Tree.java)|Tree, Recursive|
 |[Search in a Big Sorted Array](http://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[LintCode-Search-in-a-Big-Sorted-Array.java](src/LintCode-Search-in-a-Big-Sorted-Array.java)|Binary Search|
+|[133.Clone Graph](https://leetcode.com/problems/clone-graph/)|[LeetCode-133-Clone-Graph.java](src/LeetCode-133-Clone-Graph.java)|BFS, DFS|
 
 
 #####List
@@ -273,6 +283,10 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 |[★21.Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)|[LeetCode-21-Merge-Two-Sorted-Lists.java](src/LeetCode-21-Merge-Two-Sorted-Lists.java)|Recursive, Iterative|
 |[★23.Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)|[LeetCode-23-Merge-k-Sorted-Lists.java](src/LeetCode-23-Merge-k-Sorted-Lists.java)|Merge Sort, Priority Queue|
 |[88.Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[LeetCode-88-Merge-Sorted-Array.java](src/LeetCode-88-Merge-Sorted-Array.java)|Two Pointers|
+|[141.Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[LeetCode-141-Linked-List-Cycle.java](src/LeetCode-141-Linked-List-Cycle.java)|Two Pointers|
+|[142.Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|[LeetCode-142-Linked-List-Cycle-II.java](src/LeetCode-142-Linked-List-Cycle-II.java)|Two Pointers|
+
+
 
 
 #####Math
@@ -290,6 +304,9 @@ Operations between strings, between big numbers(larger than RAM)
 |[69.Sqrt(x)](https://leetcode.com/problems/sqrtx/)|[LeetCode-69-Sqrt-x.java](src/LeetCode-69-Sqrt-x.java)|Binary Search|
 |[89 Gray Code](https://leetcode.com/problems/gray-code/)|[LeetCode-89-Gray-Code.java](src/LeetCode-89-Gray-Code.java)|Math|
 |[204.Count Primes](https://leetcode.com/problems/count-primes/)|[LeetCode-204-Count-Primes.java](src/LeetCode-204-Count-Primes.java)|Math|
+|[60.Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)|[LeetCode-60-Permutation-Sequence.java](src/LeetCode-60-Permutation-Sequence.java)|Math|
+|[168.Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)|[LeetCode-168-Excel-Sheet-Column-Title.java](src/LeetCode-168-Excel-Sheet-Column-Title.java)|Math|
+|[171.Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/)|[LeetCode-171-Excel-Sheet-Column-Number.java](src/LeetCode-171-Excel-Sheet-Column-Number.java)|Math|
 
 
 #####Design
@@ -300,7 +317,6 @@ Operations between strings, between big numbers(larger than RAM)
 |[155.Min Stack](https://leetcode.com/problems/min-stack/)|[LeetCode-155-Min-Stack.java](src/LeetCode-155-Min-Stack.java)|Two Stacks|
 
 
-60.Permutation Sequence  
 
 314. Binary Tree Vertical Order Traversal  
 

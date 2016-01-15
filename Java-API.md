@@ -389,6 +389,11 @@ private Comparator<ListNode> listNodeComparator = new Comparator<ListNode>(){
 ###[Regular Express](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
 [Top 10 Questions for Java Regular Expression](http://www.programcreek.com/2013/10/top-10-questions-for-java-regular-expression/)
 
+```Java
+// \s is whitespace in regex, and we need \\ to express \ 
+s = s.replaceAll("[^a-zA-Z0-9]", "");
+```
+
 
 ###Reference
 
