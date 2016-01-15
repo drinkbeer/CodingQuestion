@@ -23,7 +23,7 @@ public class Solution {
             }else if(nums[i] == 1){
                 i++;
             }else{
-                // When nums[i]==1, we swap to right. But in pos right, we haven't checked it's value, so we cannot i++
+                // When nums[i]==2, we swap to right. But in pos right, we haven't checked it's value, so we cannot i++
                 swap(nums, i, right);
                 right--;
             }
