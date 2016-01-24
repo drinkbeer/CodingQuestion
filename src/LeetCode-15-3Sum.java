@@ -4,9 +4,11 @@ LintCode: http://www.lintcode.com/problem/3sum/
 JiuZhang: http://www.jiuzhang.com/solutions/3sum/
 ProgramCreek: http://www.programcreek.com/2012/12/leetcode-3sum/
 
-Analysis:
+Analysis: 
+KEY POINT: must filter duplicates in all three pointers: i, lo, hi
+
 1.sort array
-2.Pointer1 scan from left to right. Record the first number.
+2.Pointer1 scan from left to right. Record the first number. (Must filter duplicates)
 3.Pointer2 and 3 scan from P1+1 and Len-1, respectively, to center. 
     If P1+P2+P3 = 0, record the result. and continue(skip duplicate numbers)
     If P1+P2+P3 < 0, P2 right move, P3 not move

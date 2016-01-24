@@ -1,6 +1,6 @@
 /*
 LeetCode: https://leetcode.com/problems/3sum-closest/
-LintCode: 
+LintCode: http://www.lintcode.com/en/problem/3sum-closest/
 JiuZhang: http://blog.sina.com.cn/s/blog_eb52001d0102v2de.html
 ProgramCreek: http://www.programcreek.com/2013/02/leetcode-3sum-closest-java/
 
