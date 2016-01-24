@@ -104,12 +104,20 @@
         - help in debugging or testing programs
         - can call method by name when we do not know the method in advance
 
+10. heap memory vs. stack memory
+    + heap memory is memory that allocated to objects and classes
+        - when an object is created, it is in heap memory
+        - garbage collection runs on heap memory to free the memory of object without any reference
+    + stack memory is memory that allocated to a funciton
+        - hold local primitives, reference to other objects
+        - created when function created; once the function returns, the stack memory is closed
+
 ###OOP
 1. [polymorphism](http://www.java-made-easy.com/polymorphism-in-java.html)
     + define more than one function with the same name
     + compile time polymorphism(overloading) and runtime polymorphism(overriding)
     + [override](http://www.programcreek.com/2009/02/overriding-and-overloading-in-java-with-examples/): two methods with same name and parameters, but one in parent class, one in child class
-        - `read object`, not `reference type` determines which overridden method is called at `run time`
+        - `real object`, not `reference type` determines which overridden method is called at `run time`
     + overload: two or more methods in one class with same name, but different parameters
         - `reference type` deptermines which overloaded method is called at `compile time`
 
