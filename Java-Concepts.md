@@ -2,6 +2,16 @@
 
 ###Data Types
 ####Primitive Types：8 types
+    | Primitive Type |  Length  |       Range       |
+    |----------------|----------|-------------------|
+    |   byte         |    1B    | -128 ~ 127        |
+    |   short        |    2B    | -2^15 ~ 2^15-1    |
+    |   int          |    4B    | -2^31 ~ 2^31-1    |
+    |   long         |    8B    | -2^63 ~ 2^63-1    |
+    |   float        |    4B    |                   |
+    |   double       |    8B    |                   |
+    |   char         |    2B    |                   |
+    |   boolean      |    1B    |  true/false       |
 
 ###Java Keywords
 1. Access modifiers
@@ -95,11 +105,13 @@
         - can call method by name when we do not know the method in advance
 
 ###OOP
-1. polymorphism
+1. [polymorphism](http://www.java-made-easy.com/polymorphism-in-java.html)
     + define more than one function with the same name
     + compile time polymorphism(overloading) and runtime polymorphism(overriding)
-    + method override: a class method has same name and signature as a method in parent class, JVM determines the proper method to call at runtime
-    + method overloading: method with same name but different signature, determined at compile time
+    + [override](http://www.programcreek.com/2009/02/overriding-and-overloading-in-java-with-examples/): two methods with same name and parameters, but one in parent class, one in child class
+        - `read object`, not `reference type` determines which overridden method is called at `run time`
+    + overload: two or more methods in one class with same name, but different parameters
+        - `reference type` deptermines which overloaded method is called at `compile time`
 
 2. inheritance
     + allow a child class to inherit some properties from its parent class

@@ -54,7 +54,7 @@ The major characteristics of the top level interfaces in Java Collections Framwo
 + FILO: offer() is at end, poll() is at front
 + Could be implemented by DoubleLinkedList, array
     - List: Not finished
-+ COmplexity:
++ Complexity:
     - Enqueue: O(1)
     - Dequeue: O(1)
 
@@ -92,36 +92,91 @@ The major characteristics of the top level interfaces in Java Collections Framwo
 
 #####Collision
 + Different input map to the same hash code
-+ Solution: **Bucket(use a list to put elements with same hash code)**
-    - insertion: first search for input's hash code, if exists, insert into the front of the existing list; if not, create a new list. (Why insert into front? Because recently inserted elements are more likely to be used in the near future.)
-
-#####Probing???
++ Solution: **Separate Chaining HashTable(keep a list of elements that hash to same hashcode)**
+    - insert: first check if list exists based on hashcode, if exist, insert into the front of the list; if not, create a new list. If element exists in list, we do nothing.(Why insert into front? Because recently inserted elements are more likely to be used in the near future.)
+    - search: first determine which list to traverse according to hashcode, then search the list.
+    - disadvantage:
+        - using linkedlist
+        - slow down time to allocate new cells
+        - require implementation of another data structure
+    - In Java API, HashSet and HashMap are separate chaining.
++ Solution: **Probing HashTable (probing next place to get an empty space)**
+    - hash function: h_i(x) = (hash(x) + f(i)) % TABLE_SIZE, f(0) = 0
+    - Disadvantage: primary clustering. As long as table is large enough, a free cell can always be found but might take a long time; when table is relatively empty, blocks of occupied cells start forming.
+    - insert and unsuccessful search require the same number of probes
+    - on average, successful search takes less time than unsuccessful search
++ Solution: **Quadratic Probing Hashtable (probing next quadratic place to get an empty space)**
+    - f(i) = i^2
+    - eliminate the primary clustering
+    - no guarantee finding free cell when table gets more than half full or even before if table size is not prime because at most half of the table can be used as alternative locations to resolve collisions
+    - table size must be prime, otherwise insertion might fail
+    - secondary clustering
++ Solution: **Double hashing**
+    - f(i) = i*hash_2(x)
 
 #####Rehash
-+ When # of elements in hash table beyond load factor, we enlarge hash table
-+ Solution: build another table with twice size, copy elements to new table
++ When # of elements in hash table beyond load factor, we enlarge hash table (mostly to the twice size)
++ Solution: build another table with *twice size*, copy elements to new table
+
+##### Binary Search Tree vs. HashTable
++ Both can insert and contains operation
++ BST can getMin() quickly, HashTable cannot (HashTable not support order related operation)
++ BST can get elements in a range, HashTable cannot
++ Search Time: BST O(logN), HashTable O(1)
 
 ###PriorityQueue(Heap)
 
 #####Overview
-+ Heap is a binary tree that is completely filled(except bottom level)
-+ Height: O(logN)
-+ For element in array index i
++ Heap is a complete binary tree(completely filled except bottom level)
++ average height: O(logN)
++ implement by an `array`, for element in array index i
     - Left child: 2i
     - Right child: 2i + 1
     - Parent: floor((i-1)/2)
++ time complexity
+    - enqueing and dequeing methods (offer, poll, remove() and add): average `O(logN)`, worst `O(logN)`
+    - remove(Object) and contains(Object): O(1)
+    - retrieval methods (peek, element, and size): O(1)
 
 #####Property
 + Smallest element at root(Min Heap) or largest at root(Max Heap)
-+ Min Heap: parent <= two children
-+ Max Heap: parent >= two children
++ min Heap: parent <= two children; max Heap: parent >= two children
 + findMin() in Min Heap is O(1)
 
-#####Application???
+#####Operations
++ insert()
+    - create a hole in next available position, if order not violated, done; Otherwise, heapify up
+    - time: O(logN)
++ deleteMin()
+    - find minimum is easy
+    - removing minimum will create a hole in the root, we must move last element X in the heap to correct position
+    - put X in correct spot along a path from the root containing minimum children(heapify down)
+    - time: worst O(logN), average O(logN)
++ decreaseKey()
+    - lowers the value of item at position p by positive amount
+    - if violate order, heapify up
+    - application: make something higher priority
++ increaseKey()
+    - increase the value of item at position p by positive amount
+    - if violoate order property, heapify down
+    - application: scheduler drops the priority of a process that is consuming excessive CPU time
++  delete()
+    - remove node at position p
+    - first perform decreaseKey(p, infinity) then perform deleteMin()
+    - application: process terminated by user
++ buildHeap()
+    - done with N successive inserts
+    - insert takes O(1) average, O(logN) worst
+    - build takes O(N) average, O(NlogN) worst
+
+#####Application: Kth smallest elements
++ Build a min heap, delete k times
++ Build heap O(N), delete min O(logN), so total O(N + klogN)
+
 
 
 ###Binary Tree
-General Tree(From Java API-String)
+General Tree(From Java API-String)  
 ```Java
 public class Tree<T> {
     private Node<T> root;
@@ -140,7 +195,7 @@ public class Tree<T> {
 }
 ```
 
-#####Binary Tree Node
+Binary Tree Node  
 ```Java
 class BinaryNode{
     Object element;
@@ -154,6 +209,7 @@ class BinaryNode{
 
 Binary Search Tree
 #####Overview
++ Average depth: O(logN)
 + Values in left subtree <= root value
 + Values in right subtree >= root value
 + Time: O(logN)

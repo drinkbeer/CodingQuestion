@@ -383,6 +383,21 @@ private Comparator<ListNode> listNodeComparator = new Comparator<ListNode>(){
         return l1.val - l2.val;
     }
 };
+
+```
+
+Comparator interface
+```Java
+https://leetcode.com/problems/merge-intervals/
+
+java.util.Collections.sort(intervals, new IntervalComparator());
+
+
+private class IntervalComparator implements Comparator<Interval>{
+    public int compare(Interval p, Interval q){
+        return p.start - q.start;
+    }
+}
 ```
 
 <a name="Regular Express"/>

@@ -5,6 +5,9 @@ Sharing common interview questions through this reporsity.
 Array includes NSum series, operation to array(rotate)  
 String includes Parentheness series, Palindrome series, some statistic problems.  
 
+http://blog.csdn.net/suwei19870312/article/details/12857103
+
+
 |Question|Solution|Tags|
 |--------|--------|----|
 |[★1.Two Sum](https://leetcode.com/problems/two-sum/)|[LeetCode-1-Two-Sum.java](src/LeetCode-1-Two-Sum.java)|HashMap|
@@ -12,7 +15,7 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 |[170.Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[LeetCode-170-Two-Sum-III-Data-structure-design.java](src/LeetCode-170-Two-Sum-III-Data-structure-design.java/)|HashMap|
 |[★15.3Sum](https://leetcode.com/problems/3sum/)|[LeetCode-15-3Sum.java](src/LeetCode-15-3Sum.java)|Two Pointers|
 |[16 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[LeetCode-16-3Sum-Closest.java](src/LeetCode-16-3Sum-Closest.java)|Two Pointers|
-|[259 3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)|[]()||
+|[259.3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)|[LeetCode-259-3Sum-Smaller.java](src/LeetCode-259-3Sum-Smaller.java)|Two Pointers|
 |[18.4Sum](https://leetcode.com/problems/4sum/)|[LeetCode-18-4Sum.java](src/LeetCode-18-4Sum.java)|Two Pointers|
 |[6 ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/)|[LeetCode-6-ZigZag-Conversion.java](src/LeetCode-6-ZigZag-Conversion.java)|String|
 |[14 Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)|[LeetCode-14-Longest-Common-Prefix.java](src/LeetCode-14-Longest-Common-Prefix.java)|String|
@@ -45,6 +48,11 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 |[13.Roman to Integer](https://leetcode.com/problems/roman-to-integer/)|[LeetCode-13-Roman-to-Integer.java](src/LeetCode-13-Roman-to-Integer.java)|String|
 |[165.Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)|[LeetCode-165-Compare-Version-Numbers.java](src/LeetCode-165-Compare-Version-Numbers.java)|String|
 |[288.Unique Word Abbreviation](https://leetcode.com/problems/unique-word-abbreviation/)|[LeetCode-288-Unique-Word-Abbreviation.java](src/LeetCode-288-Unique-Word-Abbreviation.java)|String|
+|[283.Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[LeetCode-283-Move-Zeroes.java](src/LeetCode-283-Move-Zeroes.java)|Array|
+|[56.Merge Intervals](https://leetcode.com/problems/merge-intervals/)|[LeetCode-56-Merge-Intervals.java](src/LeetCode-56-Merge-Intervals.java)|Array|
+|[57.Insert Interval](https://leetcode.com/problems/insert-interval/)|[LeetCode-57-Insert-Interval.java](src/LeetCode-57-Insert-Interval.java)|Array|
+|[252.Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)|[LeetCode-252-Meeting-Rooms.java](src/LeetCode-252-Meeting-Rooms.java)|Array|
+|[253.Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)|[LeetCode-253-Meeting-Rooms-II.java](src/LeetCode-253-Meeting-Rooms-II.java)|Array|
 
 
 #####Search(Tree, Binary Search, DFS, BFS, DP)
@@ -131,13 +139,13 @@ BFS：典型例题：P101 对于二叉树的层次遍历，P108对于图的走�
 
 将（起始）首节点加入队列:   q.push(head);  
 标记首节点已经被访问：     isvisited[head]=true;  
-以下自动反应：                        while(!q.empty())  
-                                    {  
-                                          int temp=q.front();  
-                                           q.pop();  
-                                          访问temp，并标记temp已被访问过，将temp的子相关节点加入队列  
-                                          q.push(temp相关节点);  
-                                    }
+以下自动反应：            while(!q.empty())  
+                        {  
+                              int temp=q.front();  
+                               q.pop();  
+                              访问temp，并标记temp已被访问过，将temp的子相关节点加入队列  
+                              q.push(temp相关节点);  
+                        }
 
 DFS:典型例题：P107黑白图像
 格式：将所有节点遍历一遍，在遍历每个节点是，DFS的遍历该节点相关的所有节点
@@ -249,6 +257,7 @@ http://www.cnblogs.com/springfor/p/3874591.html
 |[236.Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|[LeetCode-236-Lowest-Common-Ancestor-of-a-Binary-Tree.java](src/LeetCode-236-Lowest-Common-Ancestor-of-a-Binary-Tree.java)|Tree, Recursive|
 |[Search in a Big Sorted Array](http://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[LintCode-Search-in-a-Big-Sorted-Array.java](src/LintCode-Search-in-a-Big-Sorted-Array.java)|Binary Search|
 |[133.Clone Graph](https://leetcode.com/problems/clone-graph/)|[LeetCode-133-Clone-Graph.java](src/LeetCode-133-Clone-Graph.java)|BFS, DFS|
+|[270.Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)|[LeetCode-270-Closest-Binary-Search-Tree-Value.java](src/LeetCode-270-Closest-Binary-Search-Tree-Value.java)|BFS, DFS|
 
 
 #####List
@@ -317,18 +326,22 @@ Operations between strings, between big numbers(larger than RAM)
 |[155.Min Stack](https://leetcode.com/problems/min-stack/)|[LeetCode-155-Min-Stack.java](src/LeetCode-155-Min-Stack.java)|Two Stacks|
 
 
+[173.Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+[284.Peeking Iterator](https://leetcode.com/problems/peeking-iterator/)
+[281.Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/)
+
 
 314. Binary Tree Vertical Order Traversal  
 
 
 
 /*
-LeetCode:  
-LintCode:  
-JiuZhang:  
-ProgramCreek:  
+LeetCode: 
+LintCode: 
+JiuZhang: 
+ProgramCreek: 
 
-Analysis:  
+Analysis: 
 
 */
 
