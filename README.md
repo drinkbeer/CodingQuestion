@@ -300,7 +300,7 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 
 #####Math
 Prime  
-Operations between strings, between big numbers(larger than RAM)  
+Operations between strings, between big numbers(larger than RAM: First external sorting (split into several parts), then K-way merge.)  
 
 |Question|Solution|Tags|
 |--------|--------|----|
@@ -332,6 +332,10 @@ Operations between strings, between big numbers(larger than RAM)
 
 
 [209.Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
+
+[301.Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)
+[238.Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+
 
 
 /*
