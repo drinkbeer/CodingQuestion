@@ -86,7 +86,7 @@ Search a required set, search Maximum/Minimu result
 [轻松搞定面试中的二叉树题目](http://blog.csdn.net/luckyxiaoqiang/article/details/7518888)  
 [算法大全(3)二叉树](http://www.cnblogs.com/Jax/archive/2009/12/28/1633691.html)  
 
-Recursive, Backtracking, DFS, BFS
+[Recursive, Backtracking, DFS, BFS](http://articles.leetcode.com/printing-binary-tree-in-level-order/)
 LeetCode 里面很大一部分题目都是属于这个范围，例如Path Sum用的就是递归+DFS，Path Sum2用的是递归+DFS+回溯
 
 这里参考了一些网上写得很不错的文章，总结一下理解与模板
@@ -259,6 +259,7 @@ http://www.cnblogs.com/springfor/p/3874591.html
 |[133.Clone Graph](https://leetcode.com/problems/clone-graph/)|[LeetCode-133-Clone-Graph.java](src/LeetCode-133-Clone-Graph.java)|BFS, DFS|
 |[270.Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)|[LeetCode-270-Closest-Binary-Search-Tree-Value.java](src/LeetCode-270-Closest-Binary-Search-Tree-Value.java)|BFS, DFS|
 
+[97.Interleaving String](https://leetcode.com/problems/interleaving-string/)
 
 #####List
 Change Order(Reverse, Swap) & Remove  
@@ -336,7 +337,8 @@ Operations between strings, between big numbers(larger than RAM: First external 
 [301.Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)
 [238.Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 
-
+[157.Read N Characters Given Read4](https://leetcode.com/problems/read-n-characters-given-read4/)
+[158.Read N Characters Given Read4 II - Call multiple times](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/)
 
 /*
 LeetCode: 
