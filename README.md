@@ -342,14 +342,14 @@ Operations between strings, between big numbers(larger than RAM: First external 
 
 
 
-[136.Single Number](https://leetcode.com/problems/single-number/)
-[137.Single Number II](https://leetcode.com/problems/single-number-ii/)
-[260.Single Number III](https://leetcode.com/problems/single-number-iii/)
-[268.Missing Number](https://leetcode.com/problems/missing-number/)
-[287.Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+[136.Single Number](https://leetcode.com/problems/single-number/)  
+[137.Single Number II](https://leetcode.com/problems/single-number-ii/)  
+[260.Single Number III](https://leetcode.com/problems/single-number-iii/)  
+[268.Missing Number](https://leetcode.com/problems/missing-number/)  
+[287.Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)  
 
 
-162.Find Peak Element
+[162.Find Peak Element]()  
 
 
 /*
