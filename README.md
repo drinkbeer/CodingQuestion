@@ -340,6 +340,18 @@ Operations between strings, between big numbers(larger than RAM: First external 
 [157.Read N Characters Given Read4](https://leetcode.com/problems/read-n-characters-given-read4/)
 [158.Read N Characters Given Read4 II - Call multiple times](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/)
 
+
+
+[136.Single Number](https://leetcode.com/problems/single-number/)
+[137.Single Number II](https://leetcode.com/problems/single-number-ii/)
+[260.Single Number III](https://leetcode.com/problems/single-number-iii/)
+[268.Missing Number](https://leetcode.com/problems/missing-number/)
+[287.Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+
+
+162.Find Peak Element
+
+
 /*
 LeetCode: 
 LintCode: 

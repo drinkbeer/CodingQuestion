@@ -409,6 +409,23 @@ private class IntervalComparator implements Comparator<Interval>{
 s = s.replaceAll("[^a-zA-Z0-9]", "");
 ```
 
+<a name="Type Convertor">
+```Java
+Object to int
+HashSet<Integer> set = new HashSet<Integer>();
+Iterator iter = set.iterator();
+while(iter.hasNext()){
+    int num = (int)iter.next();
+}
+
+String to int
+int num = Integer.parseInt(iter.next());
+
+
+
+
+```
+
 
 ###Reference
 
