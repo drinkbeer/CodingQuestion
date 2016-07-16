@@ -73,7 +73,7 @@ public class Solution {
     //     }
     // }
     
-    // 3.Iterative Solution. add string to result circle by circle
+    // 3.BFS. Iterative Solution. add string to result circle by circle
     public List<String> letterCombinations(String digits) {
         List<String> result = new ArrayList<String>();
         if(digits == null || digits.length() == 0) return result;
