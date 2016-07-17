@@ -1,5 +1,7 @@
 /*
+1.Recursive (DFS)
 
+2.Iterative (BFS) ??
 */
 public class Solution {
     public List<String> generateParenthesis(int n) {
