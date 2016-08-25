@@ -326,6 +326,9 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[★146.LRU Cache](https://leetcode.com/problems/lru-cache/)|[LeetCode-146-LRU-Cache.java](src/LeetCode-146-LRU-Cache.java)|HashMap, List|
 |[155.Min Stack](https://leetcode.com/problems/min-stack/)|[LeetCode-155-Min-Stack.java](src/LeetCode-155-Min-Stack.java)|Two Stacks|
 
+[225.Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)  
+[232.Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)  
+
 
 [173.Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)  
 [284.Peeking Iterator](https://leetcode.com/problems/peeking-iterator/)  
@@ -367,8 +370,9 @@ Analysis:
 
 ###Reference
 
-[LeetCode](https://leetcode.com/)   |   [LintCode](http://www.lintcode.com/)    |   [JiuZhang](http://www.jiuzhang.com/)
+[LeetCode](https://leetcode.com/)   |   [LintCode](http://www.lintcode.com/)    |   [JiuZhang](http://www.jiuzhang.com/)  
+[Top 10 Algorithms for Coding Interview](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)  
+[Top 10 algorithms in Interview Questions(G4G)](http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)  
 
-[Top 10 Algorithms for Coding Interview](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)
 
 [Simple Java](http://www.programcreek.com/simple-java/)
