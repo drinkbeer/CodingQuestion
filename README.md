@@ -6,7 +6,10 @@ Array includes NSum series, operation to array(rotate)
 String includes Parentheness series, Palindrome series, some statistic problems.  
 
 http://blog.csdn.net/suwei19870312/article/details/12857103
-
+[回文串问题总结](http://blog.csdn.net/fangjian1204/article/details/38084165)  
+[LeetCode总结 —— Palindrome 回文总结](http://mm.fancymore.com/reading/%E5%9B%9E%E6%96%87%E9%97%AE%E9%A2%98.html)  
+[最长回文字符串、二重循环](http://aniylj.leanote.com/post/f4405becd46c)  
+[「LeetCode」试题总结 - 回文数汇总](http://nillhex.com/2015/06/12/leetcode-palindrome-summary/)  
 
 |Question|Solution|Tags|
 |--------|--------|----|
