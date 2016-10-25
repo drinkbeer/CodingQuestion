@@ -340,6 +340,8 @@ Iterator<E> iterator()
 <a name="Stack"/>
 ###[Stack](https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html)
 ```Java
+Stack<Integer> stack = new Stack<Integer>();
+
 boolean empty()
 E       peek()  //get first without removing 
 E       pop()   //get first and remove

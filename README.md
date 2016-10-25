@@ -176,6 +176,8 @@ Search a required set, search Maximum/Minimu result
 
 [97.Interleaving String](https://leetcode.com/problems/interleaving-string/)
 
+[17.Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+
 #####List
 Change Order(Reverse, Swap) & Remove  
 The use of dummy node, use pointer Next to store next node(Merge Two Sort Lists, Merge K Sorted Lists, Reverse List, Reverse Nodes in K-groups)  
@@ -268,6 +270,9 @@ Operations between strings, between big numbers(larger than RAM: First external 
 
 
 [162.Find Peak Element]()  
+
+[30.Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)  
+[31.Next Permutation](https://leetcode.com/problems/next-permutation/)  
 
 
 /*
