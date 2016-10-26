@@ -16,7 +16,7 @@ class TreeDemo{
         
     }
     
-    //Calculate the # of nodes
+    // 1. Calculate # of nodes
     public static int getNodeNumRec(TreeNode root){
         if(root == null) return 0;
         return getNodeNumRec(root.left) + getNodeNumRec(root.right) + 1;
@@ -39,7 +39,7 @@ class TreeDemo{
         return result;
     }
 
-    //Calculate the depth of tree (root depth = 0, tree's depth is the max leaf's depth)
+    // 2. Calculate the depth of tree (root depth = 0, tree's depth is the max leaf's depth)
     public static int getDepthRec(TreeNode root){
         if(root == null) return -1;     //Why -1? As root depth is 0, we need -1 finally.
         return Math.max(getDepthRec(root.left), getDepthRec(root.right)) + 1;
@@ -63,7 +63,7 @@ class TreeDemo{
         return depth;
     }
 
-    // Preorder Traversal
+    // 3. Preorder Traversal
     public static void preorderTraversalRec(TreeNode root){
         if(root == null) return;
 
@@ -87,7 +87,7 @@ class TreeDemo{
         }
     }
 
-    // Inorder Traversal
+    // 4. Inorder Traversal
     public static void inorderTraversalRec(TreeNode root){
         if(root == null) return;
 
@@ -132,7 +132,7 @@ class TreeDemo{
         }
     }
 
-    // Postorder Traversal
+    // 5. Postorder Traversal
     public void postorderTraversalRec(TreeNode root){
         if(root == null) return;
 
@@ -141,26 +141,53 @@ class TreeDemo{
         System.out.print(root.val + " ");
     }
 
+    // Wrong Solution
+    // public void postorderTraversalIte(TreeNode root){
+    //     if(root == null) return;
+
+    //     Stack<TreeNode> stack = new Stack<TreeNode>();
+    //     Stack<TreeNode> out = new Stack<TreeNode>();
+    //     stack.push(root);
+
+    //     while(!stack.isEmpty()){
+    //         TreeNode curr = stack.pop();
+    //         out.push(curr);
+
+    //         if(curr.left != null) stack.push(curr.left);
+    //         if(curr.right != null) stack.push(curr.right);
+    //     }
+
+    //     while(!out.isEmpty()) System.out.println(out.pop().val + " ");
+    // }
+
+    // http://www.programcreek.com/2012/12/leetcode-solution-of-iterative-binary-tree-postorder-traversal-in-java/
     public void postorderTraversalIte(TreeNode root){
         if(root == null) return;
 
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        Stack<TreeNode> out = new Stack<TreeNode>();
         stack.push(root);
 
-        while(!stack.isEmpty()){
-            TreeNode curr = stack.pop();
-            out.push(curr);
+        while(!isEmpty()){
+            TreeNode curr = stack.peek();
+            if(curr.left == null && curr.right == null){
+                // curr is a leaf
+                System.out.print(stack.pop().val + " ");
+            }else{
+                if(curr.right != null){
+                    stack.push(curr.right);
+                    curr.right = null;
+                }
 
-            if(curr.left != null) stack.push(curr.left);
-            if(curr.right != null) stack.push(curr.right);
+                if(curr.left != null){
+                    stack.push(curr.left);
+                    curr.left = null;
+                }
+            }
         }
-
-        while(!out.isEmpty()) System.out.println(out.pop().val + " ");
     }
 
-    //Level Traversal
-    public void levelTraversalIte(TreeNode root){
+    // 6. Level Traversal
+    public static void levelTraversalIte(TreeNode root){
         if(root == null)return;
 
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
@@ -175,8 +202,8 @@ class TreeDemo{
         }
     }
 
-    //Calculate the # of nodes in Kth Level
-    public stack int getNodeNumKthLevelIte(TreeNode root, int K){
+    // 7. Calculate the # of nodes in Kth Level
+    public static int getNodeNumKthLevelIte(TreeNode root, int K){
         if(root == null || K == 0) return 0;
 
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
@@ -189,7 +216,7 @@ class TreeDemo{
 
             int size = queue.size();
             for(int i = 0; i < size; i++){
-                ListNode curr = queue.poll();
+                TreeNode curr = queue.poll();
                 if(curr.left != null) queue.offer(curr.left);
                 if(curr.right != null) queue.offer(curr.right);
             }
@@ -199,7 +226,7 @@ class TreeDemo{
     }
 
     //Calculate the # of nodes in Kth level
-    public stack int getNodeNumKthLevelRec(TreeNode root, int K){
+    public static int getNodeNumKthLevelRec(TreeNode root, int K){
         if(root == null || K == 0) return 0;
 
         if(K == 1) return 1;
@@ -207,8 +234,8 @@ class TreeDemo{
         return getNodeNumKthLevelRec(root.left, K - 1) + getNodeNumKthLevelRec(root.right, K - 1);
     }
 
-    //Calculate the # of leaf nodes
-    public stack int getNodeNumLeafIte(TreeNode root){
+    // 8. Calculate the # of leaf nodes(All preorder iter, inorder iter, postorder iter can be used here.)
+    public int getNodeNumLeafIte(TreeNode root){
         if(root == null) return 0;
 
         Stack<TreeNode> stack = new Stack<TreeNode>();
@@ -216,18 +243,18 @@ class TreeDemo{
         int count = 0;
 
         while(!stack.isEmpty()){
-            int size = queue.size();
-            for(int i = 0; i < size; i++){
-                ListNode curr = stack.poll();
-                if(curr.left == null && curr.right == null)count++;
-                if(curr.left != null)queue.offer(curr.left);
-                if(curr.right != null) queue.offer(curr.right);
+            TreeNode curr = stack.pop();
+
+            if(curr.left == null && curr.right == null) {
+                count++;
+                continue;
             }
+            if(curr.right != null) stack.push(curr);    // preorder must push right node first, as it needs pop left node first
+            if(curr.left != null) stack.push(curr);
         }
-        return count;
     }
 
-    public stack int getNodeNumLeafRec(TreeNode root){
+    public static int getNodeNumLeafRec(TreeNode root){
         if(root == null) return 0;
 
         if(root.left == null && root.right == null) return 1;
@@ -235,7 +262,8 @@ class TreeDemo{
         return getNodeNumLeafRec(root.left) + getNodeNumLeafRec(root.right);
     }
 
-    //If two trees are the same
+    //////////////////// Part 2. Mirror of Tree ////////////////////
+    //9. If two trees are the same
     public static boolean isSameTreeRec(TreeNode r1, TreeNode r2){
         if(r1 == null && r2 == null) return true;
         if(r1 == null || r2 == null) return false;
@@ -253,8 +281,8 @@ class TreeDemo{
         stack2.offer(r2);
 
         while(!stack1.isEmpty() && !stack2.isEmpty()){
-            TreeNode n1 = stack1.poll();
-            TreeNode n2 = stack2.poll();
+            TreeNode n1 = stack1.pop();
+            TreeNode n2 = stack2.pop();
 
             if(n1.val != n2.val) return false;
             if((n1.left == null && n2.left != null) || (n1.left != null && n2.left == null)) return false;
@@ -274,7 +302,7 @@ class TreeDemo{
         return true;
     }
 
-    //Get mirror of Tree.(Original tree is destroyed)
+    //10. Get mirror of Tree.(Original tree is destroyed)
     public static TreeNode mirrowRec(TreeNode root){
         if(root == null) return null;
 
@@ -399,6 +427,125 @@ class TreeDemo{
         return true;
     }
 
-    //End before LCA
+    //////////////////// Part3. Lowest Common Ancestor(LCA) & Distance in Tree ////////////////////
+    //11.Get Lowest Common Ancestor(LCA) in Binary Tree
+    public static TreeNode LCARec(TreeNode root, TreeNode n1, TreeNode n2){
+        if(root == null || n1 == null || n2 == null) return null;
 
+        if(n1 == root || n2 == root) return root;
+
+        TreeNode left = LCARec(root.left, node1, node2);
+        TreeNode right = LCARec(root.right, node1, node2);
+
+        // If not find in left tree, just return from right tree; not find in right tree, just return from left tree
+        if(left == null) return right;
+        else if(right == null) return left;
+
+        // If both left and right find a node, return the root as common ancestor
+        return root;
+    }
+
+    // Get LCA in Binary Search Tree
+    public static TreeNode LCABstRec(TreeNode root, TreeNode n1, TreeNode n2){
+        if(root == null || n1 == null || n2 == null) return null;
+
+        if(n1 == root || n2 == root) return root;
+
+        int min = Math.min(n1.val, n2.val);
+        int max = Math.max(n1.val, n2.val);
+
+        // If both values of two nodes are smaller than root value, LCA should in left tree.
+        // If both values of two nodes are larger than root value, LCA should in right tree.
+        if(root.val > max) return LCABstRec(root.left, n1, n2);
+        else if(root.val < min) return LCABstRec(root.right, n1, n2);
+
+        // If root is in the middle, just return the root.
+        return root;
+    }
+
+    // LCA in Binary Tree Iteratively
+    // http://www.geeksforgeeks.org/lowest-common-ancestor-binary-tree-set-1/
+    // Record the path of root -> node
+    public static TreeNode LCAIte(TreeNode root, TreeNode n1, TreeNode n2){
+        if(root == null || n1 == null || n2 == null) return null;
+
+        List<TreeNode> l1 = new ArrayList<TreeNode>();
+        List<TreeNode> l2 = new ArrayList<TreeNode>();
+
+        boolean find1 = LCAPathFinder(root, n1, l1);
+        boolean find2 = LCAPathFinder(root, n2, l2);
+        // If either node is not find, just return null
+        if(!find1 || !find2) return null;
+
+        // Notice: Iterator could accelerate the speed of List operation
+        Iterator<TreeNode> iter1 = l1.iterator();
+        Iterator<TreeNode> iter2 = l2.iterator();
+
+        // Iterate from root to LCA, the first diff node's prev node is LCA
+        TreeNode last = null;
+        while(iter1.hasNext() && iter2.hasNext()){
+            TreeNode tmp1 = iter1.next();
+            TreeNode tmp2 = iter2.next();
+
+            if(tmp1 != tmp2) return last;
+            last = tmp1;
+        }
+
+        // If never find any node which is different, means Node1 and Node2 are the same one, so just return the last one.
+        return last;
+    }
+
+    // Find the path from root->node, if found return true else return false. 
+    public static boolean LCAPathFinder(TreeNode root, TreeNode node, List<TreeNode> path){
+        if(root == null || node == null) return false;
+
+        // First add root node.
+        path.add(root);
+
+        // If the node is in the left side.
+        if(root != node && !LCAPathFinder(root.left, node, path) && !LCAPathFinder(root.right, node, path)){
+            //Not find the node. remove the node added before
+            paht.remove(root);
+            return false;
+        }
+
+        return true;
+    }
+
+    // 12. Get max distance in Binary Tree (There is bug in this algo, ignore it now)
+    // public static int getMaxDistanceRec(TreeNode root){
+    //     return getMaxDistanceRecHelp(root).maxDistance;
+    // }
+
+    // public static Result getMaxDistanceRecHelp(TreeNode root){
+    //     Result ret = new Result(-1, -1);
+
+    //     if(root == null) return ret;
+
+    //     Result left = getMaxDistanceRecHelp(root.left);
+    //     Result right = getMaxDistanceRecHelp(root.right);
+
+    //     // depth+1 from the larger depth of either subtree (larger depth of left tree or right tree)
+    //     ret.depth = Math.max(left.depth, right.depth) + 1;
+
+    //     // HeiRenWenHaoLian??? Dist of cross root route. Left tree/ right tree to root'd distance should +1, so totally route from left to right should +1 (not understand here)
+    //     int crossLen = left.depth + right.depth + 2;
+
+    //     // HeiRenWenHaoLian??? Max dist is the maximum of cross root route dist, max dist of left subtree, max dist of right subtree
+    //     ret.maxDistance = Math.max(left.maxDistance, right.maxDistance);
+    //     ret.maxDistance = Math.max(ret.maxDistance, crossLen);
+
+    //     return ret;
+    // }
+
+    // private static class Result{
+    //     int depth;
+    //     int maxDistance;
+    //     public Result(int depth, int maxDistance){
+    //         this.depth = depth;
+    //         this.maxDistance = maxDistance;
+    //     }
+    // }
+
+    // End before 13.Rebuild Binary Tree Recursively
 }
