@@ -286,7 +286,10 @@ Analysis:
 */
 
 
-
+[Category](http://www.mitbbs.com/article_t/JobHunting/32564237.html)  
+[经典面试题总结 —— Binary Search 及其变种](http://blog.csdn.net/hopeztm/article/details/7880646)  
+[BFS/DFS总结](http://cuijing.org/2013/07/summary-of-dfs-and-bfs-in-leetcode/)  
+[转一些我blog上一些常见的二叉树面试问题和总结 (更新)](http://smartlhc.blogspot.com/2012/10/repost-blog.html)  
 
 ###Reference
 [LeetCode](https://leetcode.com/)   |   [LintCode](http://www.lintcode.com/)    |   [JiuZhang](http://www.jiuzhang.com/)  
