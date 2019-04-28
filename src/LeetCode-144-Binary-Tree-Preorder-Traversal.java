@@ -27,13 +27,14 @@ public class Solution {
     // 1.DFS
     // public List<Integer> preorderTraversal(TreeNode root) {
     //     List<Integer> result = new ArrayList<Integer>();
-        
+    //     if(root == null) return result;
+    //
     //     DFS(root, result);
     //     return result;
     // }
     
     // private void DFS(TreeNode root, List<Integer> result){
-    //     if(root == null) return;
+    //     //if(root == null) return;
         
     //     result.add(root.val);
     //     DFS(root.left, result);
