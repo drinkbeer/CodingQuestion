@@ -50,3 +50,82 @@ public class Solution {
         return result;
     }
 }
+
+class Solution {
+    // 1.DFS
+    /*
+    Stack:
+    [3] - 0 - [3]
+    [9, 20] - 1 - [20 -> 9]
+    [15, 7] - 2
+    
+    if level is even, push to stack from left child to right child (pop: right -> left)
+    if level is odd, push to stack from right child to left child (pop: left -> right)
+    */
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        if (root == null) return result;
+        
+        Stack<TreeNode> currLevel = new Stack<>();
+        currLevel.push(root);
+        
+        while (!currLevel.isEmpty()) {
+            int level = result.size(); // 1
+            int levelSize = currLevel.size();
+            List<Integer> levelResult = new ArrayList<>();
+            Stack<TreeNode> nextLevel = new Stack<>();
+            
+            for (int i = 0; i < levelSize; i++) {
+                TreeNode curr = currLevel.pop();
+                if (level % 2 == 0) {
+                    // odd level
+                    if (curr.left != null) nextLevel.push(curr.left);
+                    if (curr.right != null) nextLevel.push(curr.right);
+                } else {
+                    // even level
+                    if (curr.right != null) nextLevel.push(curr.right);
+                    if (curr.left != null) nextLevel.push(curr.left);
+                }
+                levelResult.add(curr.val);
+            }
+            
+            result.add(levelResult);
+            currLevel = nextLevel;
+        }
+        
+        return result;
+    }
+    
+    // 2. DFS
+    /*
+    Level starts from 0.
+    If even level, add result from left to right,
+    if odd level, add result from right to left (add the value at the beginning of the list)
+    
+    https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/discuss/278680/Java-recursive-beats-100
+    */
+//     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+//         List<List<Integer>> result = new ArrayList<List<Integer>>();
+//         if (root == null) return result;
+        
+//         zigzagLevelOrder(root, 0, result);
+        
+//         return result;
+//     }
+    
+//     public void zigzagLevelOrder(TreeNode node, int level, List<List<Integer>> result) {
+//         if (result.size() == level) {
+//             result.add(new ArrayList<Integer>());
+//         }
+        
+//         if (level % 2 == 0) {
+//             result.get(level).add(node.val);
+//         } else {
+//             result.get(level).add(0, node.val);
+//         }
+        
+//         if (node.left != null) zigzagLevelOrder(node.left, level + 1, result);
+//         if (node.right != null) zigzagLevelOrder(node.right, level + 1, result);
+//         // If both left and right child are null, then we return to the above level
+//     }
+}
