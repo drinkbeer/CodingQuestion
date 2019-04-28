@@ -27,9 +27,7 @@ public class Solution {
     //     return result;
     // }
     
-    // private void DFS(TreeNode root, List<Integer> result){
-    //     if(root == null) return;
-        
+    // private void DFS(TreeNode root, List<Integer> result){        
     //     if(root.left != null) DFS(root.left, result);
     //     if(root.right != null) DFS(root.right, result);
     //     result.add(root.val);
