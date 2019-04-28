@@ -57,3 +57,37 @@ public class Solution {
         }
     }
 }
+
+// https://leetcode.com/problems/merge-intervals/discuss/21222/A-simple-Java-solution
+class Solution {
+    public int[][] merge(int[][] intervals) {
+        if (intervals == null || intervals.length <= 1) return intervals;
+        
+        List<int[]> result = new ArrayList<>();
+        Arrays.sort(intervals, Comparator.comparing((int[] arr) -> arr[0]));
+        
+        int start = intervals[0][0], end = intervals[0][1];
+        for (int i = 0; i < intervals.length; i++) {
+            int[] interval = intervals[i];
+            if (end >= interval[0]) {
+                // means the [start, end] and interval is overlapped, we could merge them
+                end = Math.max(end, interval[1]);
+            } else {
+                // means the [start, end] and interval is not overlapping, we could add the result to 
+                result.add(new int[]{start, end});
+                start = interval[0];
+                end = interval[1];
+            }
+        }
+        
+        result.add(new int[]{start, end});
+        
+        // Convert List<int[]> result to int[][]
+        int[][] r = new int[result.size()][2];
+        for(int i = 0; i < result.size(); i++) {
+            r[i] = result.get(i);
+        }
+        
+        return r;
+    }
+}
