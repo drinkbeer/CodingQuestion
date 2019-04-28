@@ -85,6 +85,8 @@ public class Solution {
         Stack<TreeNode> out = new Stack<TreeNode>();
         stack.push(root);
 
+        // The input order of "stack" is: root -> left -> right
+        // The input order of "out" is: right tree -> left tree -> curr (which is root)
         while(!stack.isEmpty()){
             TreeNode curr = stack.pop();
             out.push(curr);
