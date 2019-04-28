@@ -48,7 +48,26 @@ public class Solution {
     }
     
     // 2.DFS
-    // public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        if (root == null) return result;
         
-    // }
+        levelOrder(root, 0, result);
+        return result;
+    }
+    
+    private void levelOrder(TreeNode node, int level, List<List<Integer>> result) {
+        if (result.size() == level) {
+            result.add(new ArrayList<Integer>());
+        }
+        
+        result.get(level).add(node.val);
+        
+        // return situation: when node is a leaf
+        if (node.left == null && node.right == null) {
+            return;
+        }
+        if (node.left != null) levelOrder(node.left, level + 1, result);
+        if (node.right != null) levelOrder(node.right, level + 1, result);
+    }
 }
