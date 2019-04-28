@@ -18,7 +18,7 @@ Iterative solution is a little complex.
  * }
  */
 public class Solution {
-    // 1.Recursive solution
+    // 1.DFS. Recursive solution
     // public boolean isSymmetric(TreeNode root) {
     //     if(root == null) return true;
         
@@ -62,5 +62,38 @@ public class Solution {
         // Since left queue and right queue have the same size, so at here both of them are empty.
         return true;
         
+    }
+    
+    // 3.BFS (similar to inorder traversal)
+    public boolean isSymmetric(TreeNode root) {
+        if (root == null) return true;
+        
+        Stack<TreeNode> lStack = new Stack<>();
+        Stack<TreeNode> rStack = new Stack<>();
+        lStack.push(root.left);
+        rStack.push(root.right);
+        
+        while(!lStack.isEmpty() && !rStack.isEmpty()) {
+            TreeNode l = lStack.pop();
+            TreeNode r = rStack.pop();
+            
+            if (l == null && r == null) {
+                // do nothing
+            } else if (l == null || r == null) {
+                return false;
+            } else {
+                if (l.val != r.val) {
+                    return false;
+                }
+                
+                lStack.push(l.left);
+                rStack.push(r.right);
+                
+                lStack.push(l.right);
+                rStack.push(r.left);
+            }
+        }
+        
+        return true;
     }
 }
