@@ -45,8 +45,7 @@ class Solution {
         first.push(p);
         second.push(q);
         
-        while(!first.isEmpty()) {
-            if(second.isEmpty()) return false;
+        while(!first.isEmpty() && !second.isEmpty()) {
             
             p = first.pop();
             q = second.pop();
