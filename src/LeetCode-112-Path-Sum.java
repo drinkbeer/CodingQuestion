@@ -8,7 +8,7 @@ Analysis:
 1.DFS
 
 2.BFS
-
+level order traversal, and find sum to the leaf
 */
 /**
  * Definition for a binary tree node.
@@ -51,4 +51,69 @@ public class Solution {
     
     // 3.BFS
     
+}
+
+
+class Solution {
+    // 1.DFS
+//     public boolean hasPathSum(TreeNode root, int sum) {
+//         if (root == null) return false;
+        
+//         return hasPathSum(root, sum, 0);
+//     }
+    
+//     private boolean hasPathSum(TreeNode root, int target, int preSum) {
+        
+//         // find leaf
+//         if (root.left == null && root.right == null) {
+//             if (root.val + preSum == target) return true;
+//             else return false;
+//         }
+        
+//         if (root.left == null) return hasPathSum(root.right, target, preSum + root.val);
+//         if (root.right == null) return hasPathSum(root.left, target, preSum + root.val);
+//         return hasPathSum(root.left, target, preSum + root.val) || hasPathSum(root.right, target, preSum + root.val);
+//     }
+    
+    // 2.DFS(easier one)
+//     public boolean hasPathSum(TreeNode root, int sum) {
+//         if (root == null) return false;
+        
+//         if (root.left == null && root.right == null && root.val == sum) return true;
+        
+//         return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
+//     }
+    
+    // 3.BFS (level order traversal, and find sum to the leaf)
+    public boolean hasPathSum(TreeNode root, int sum) {
+        if (root == null) return false;
+        
+        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<Integer> sumList = new LinkedList<>();
+        queue.add(root);
+        sumList.add(0);
+        
+        while(!queue.isEmpty()) {
+            // process one level
+            int size = queue.size();
+            
+            for (int i = 0; i < size; i++) {
+                TreeNode curr = queue.poll();
+                int val = sumList.poll();
+                
+                if (curr.left == null && curr.right == null && (val + curr.val) == sum) return true;
+                
+                if (curr.left != null) {
+                    queue.add(curr.left);
+                    sumList.add(val + curr.val);
+                }
+                if (curr.right != null) {
+                    queue.add(curr.right);
+                    sumList.add(val + curr.val);
+                }
+            }
+        }
+        
+        return false;
+    }
 }
