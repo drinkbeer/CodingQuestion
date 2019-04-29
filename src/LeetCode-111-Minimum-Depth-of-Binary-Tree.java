@@ -10,6 +10,7 @@ Depth: # of nodes from root to the leaf(leaf is node whose both right and left a
 1.DFS(backstrap)
 easy
 2.BFS(Iterative)
+level order traversal and find the first leaf's height (using a count variable as height).
 
 */
 /**
