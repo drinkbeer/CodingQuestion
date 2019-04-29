@@ -82,4 +82,39 @@ public class Solution {
         return result;
     }
     
+        // BFS, trying to do it without additional pointer (This approach will add null to the stack.)
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        
+        if (root == null) return result;
+        
+        Stack<TreeNode> stack =  new Stack<>();
+        stack.push(root);
+        
+        while (!stack.isEmpty()) {
+            TreeNode curr = stack.peek();
+            
+            if (curr != null) {
+                stack.push(curr.left);
+                curr = curr.left;
+            } else {
+                // Means no left node, pop last left node, and process it
+                // then left curr point to right node
+                stack.pop(); // pop last null element
+                
+                if (!stack.isEmpty()) {
+                    curr = stack.pop();
+                    result.add(curr.val);
+
+                    // After we proceed the last left element, let's move right
+                    stack.push(curr.right);
+                    curr = curr.right;
+                }
+                
+            }
+        }
+        
+        return result;
+    }
+    
 }
