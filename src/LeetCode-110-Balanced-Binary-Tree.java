@@ -42,3 +42,23 @@ public class Solution {
         return Math.max(l, r) + 1;
     }
 }
+
+
+class Solution {
+    // DFS
+    public boolean isBalanced(TreeNode root) {
+        if (root == null) return true;
+        if (root.left == null && root.right == null) return true;
+        
+        if (Math.abs(getHeight(root.left) - getHeight(root.right)) > 1) return false;
+        
+        return isBalanced(root.left) && isBalanced(root.right);
+    }
+    
+    // Helper function to get the height of a tree
+    private int getHeight(TreeNode node) {
+        if (node == null) return 0;
+        
+        return Math.max(getHeight(node.left), getHeight(node.right)) + 1;
+    }
+}
