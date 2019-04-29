@@ -40,4 +40,33 @@ public class Solution {
             next = parent.left;
         }
     }
+    
+    // 1. BFS (do level order traversal, but add a prev node)
+    public Node connect(Node root) {
+        if (root == null) return null;
+        
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        
+        while(!queue.isEmpty()) {
+            Node prev = null;
+            int size = queue.size();
+            
+            for (int i = 0; i < size; i++) {
+                Node curr = queue.poll();
+                if (prev != null) {
+                    prev.next = curr;
+                }
+                prev = curr;
+                
+                if (curr.left != null) queue.add(curr.left);
+                if (curr.right != null) queue.add(curr.right);
+                
+                curr.next = null;
+            }
+            
+        }
+        
+        return root;
+    }
 }
