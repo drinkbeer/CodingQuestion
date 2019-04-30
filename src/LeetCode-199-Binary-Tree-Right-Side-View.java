@@ -67,6 +67,28 @@ public class Solution {
     //     return result;
     // }
     
+    // 1.BFS (level order traversal, using a Queue)
+//     public List<Integer> rightSideView(TreeNode root) {
+//         List<Integer> result = new ArrayList<Integer>();
+//         if (root == null) return result;
+        
+//         Queue<TreeNode> queue = new LinkedList<>();
+//         queue.add(root);
+        
+//         while(!queue.isEmpty()) {
+//             int size = queue.size();
+//             TreeNode curr = null;
+//             for (int i = 0; i < size; i++) {
+//                 curr = queue.poll();
+//                 if (curr.left != null) queue.add(curr.left);
+//                 if (curr.right != null) queue.add(curr.right);
+//             }
+//             result.add(curr.val);
+//         }
+        
+//         return result;
+//     }
+    
     // 3.DFS
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> result = new ArrayList<Integer>();
