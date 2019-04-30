@@ -177,6 +177,7 @@ Search a required set, search Maximum/Minimu result
 |[173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)|[LeetCode-173-Binary-Search-Tree-Iterator.java](/src/LeetCode-173-Binary-Search-Tree-Iterator.java)|BFS|
 |[222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[LeetCode-222-Count-Complete-Tree-Nodes.java](src/LeetCode-222-Count-Complete-Tree-Nodes.java)|BFS, DFS|
 |[226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree)|[LeetCode-226-Invert-Binary-Tree.java](src/LeetCode-226-Invert-Binary-Tree.java)|BFS, DFS|
+|[230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)|[LeetCode-230-Kth-Smallest-Element-in-a-BST.java](src/LeetCode-230-Kth-Smallest-Element-in-a-BST.java)|BFS, DFS|
 
 
 
