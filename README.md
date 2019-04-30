@@ -176,6 +176,9 @@ Search a required set, search Maximum/Minimu result
 |[156. Binary Tree Upside Down](https://leetcode.com/problems/binary-tree-upside-down/)|[LeetCode-156-Binary-Tree-Upside-Down.java](src/LeetCode-156-Binary-Tree-Upside-Down.java)|BFS, DFS|
 |[173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)|[LeetCode-173-Binary-Search-Tree-Iterator.java](/src/LeetCode-173-Binary-Search-Tree-Iterator.java)|BFS|
 |[222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[LeetCode-222-Count-Complete-Tree-Nodes.java](src/LeetCode-222-Count-Complete-Tree-Nodes.java)|BFS, DFS|
+|[226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree)|[LeetCode-226-Invert-Binary-Tree.java](src/LeetCode-226-Invert-Binary-Tree.java)|BFS, DFS|
+
+
 
 
 [97.Interleaving String](https://leetcode.com/problems/interleaving-string/)
