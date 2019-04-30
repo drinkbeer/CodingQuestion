@@ -24,7 +24,8 @@ class BSTIterator {
     /** @return the next smallest number */
     public int next() {
         int next = 0;
-        if (curr != null || !stack.isEmpty()) {
+        // This if is not necessary, as we are sure "curr" is out from a stack.
+        // if (curr != null || !stack.isEmpty()) {
             // push all the left nodes into the stack
             while(curr != null) {
                 stack.push(curr);
@@ -34,7 +35,7 @@ class BSTIterator {
             curr = stack.pop();
             next = curr.val;
             curr = curr.right;
-        }
+        // }
         return next;
     }
     
