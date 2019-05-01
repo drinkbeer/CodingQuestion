@@ -178,6 +178,11 @@ Search a required set, search Maximum/Minimu result
 |[222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[LeetCode-222-Count-Complete-Tree-Nodes.java](src/LeetCode-222-Count-Complete-Tree-Nodes.java)|BFS, DFS|
 |[226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree)|[LeetCode-226-Invert-Binary-Tree.java](src/LeetCode-226-Invert-Binary-Tree.java)|BFS, DFS|
 |[230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)|[LeetCode-230-Kth-Smallest-Element-in-a-BST.java](src/LeetCode-230-Kth-Smallest-Element-in-a-BST.java)|BFS, DFS|
+|[250. Count Univalue Subtrees](https://leetcode.com/problems/count-univalue-subtrees/)|[LeetCode-250-Count-Univalue-Subtrees.java](src/LeetCode-250-Count-Univalue-Subtrees.java)|DFS|
+
+
+
+
 
 
 
