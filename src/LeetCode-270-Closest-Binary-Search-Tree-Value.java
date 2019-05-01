@@ -64,4 +64,22 @@ public class Solution {
         closest(root.left, target);
         closest(root.right, target);
     }
+    
+    // 3.Iterative
+    public int closestValue(TreeNode root, double target) {
+        int val = root.val;
+        while (root != null) {
+            if (Math.abs(root.val - target) < Math.abs(val - target)) {
+                // find a new cloest value
+                val = root.val;
+            }
+            if (root.val > target) {
+                root = root.left;
+            } else {
+                root = root.right;
+            }
+        }        
+        
+        return val;
+    }
 }
