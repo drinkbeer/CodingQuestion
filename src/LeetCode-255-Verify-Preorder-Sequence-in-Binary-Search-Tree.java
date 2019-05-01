@@ -5,6 +5,8 @@ preorder    root | left | right
 preorder[0] is root
 left < root < right
 
+
+https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/discuss/68142/Java-O(n)-and-O(1)-extra-space
 */
 
 class Solution {
