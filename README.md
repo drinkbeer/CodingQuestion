@@ -181,6 +181,7 @@ Search a required set, search Maximum/Minimu result
 |[250. Count Univalue Subtrees](https://leetcode.com/problems/count-univalue-subtrees/)|[LeetCode-250-Count-Univalue-Subtrees.java](src/LeetCode-250-Count-Univalue-Subtrees.java)|DFS|
 |[255. Verify Preorder Sequence in Binary Search Tree](https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/submissions/)|[LeetCode-255-Verify-Preorder-Sequence-in-Binary-Search-Tree.java](src/LeetCode-255-Verify-Preorder-Sequence-in-Binary-Search-Tree.java)|DFS|
 |[285. Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/)|[LeetCode-285-Inorder-Successor-in-BST.java](src/LeetCode-285-Inorder-Successor-in-BST.java)|BFS|
+|[298. Binary Tree Longest Consecutive Sequence](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/)|[LeetCode-298-Binary-Tree-Longest-Consecutive-Sequence.java](src/LeetCode-298-Binary-Tree-Longest-Consecutive-Sequence.java)|DFS|
 
 
 
