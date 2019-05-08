@@ -1,7 +1,7 @@
 ## CodingQuestion
 Sharing common interview questions through this reporsity.
 
-####String & Array
+#### String & Array
 Array includes NSum series, operation to array(rotate)  
 String includes Parentheness series, Palindrome series, some statistic problems.  
 
@@ -58,7 +58,7 @@ http://blog.csdn.net/suwei19870312/article/details/12857103
 |[253.Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)|[LeetCode-253-Meeting-Rooms-II.java](src/LeetCode-253-Meeting-Rooms-II.java)|Array|
 
 
-####Search(Tree, Binary Search, DFS, BFS, DP)
+#### Search(Tree, Binary Search, DFS, BFS, DP)
 Search in Tree, in Binary Tree, Binary Search Tree, in String, in Array  
 Search a required set, search Maximum/Minimu result  
 
@@ -202,7 +202,7 @@ Search a required set, search Maximum/Minimu result
 
 [17.Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 
-####List
+#### List
 Change Order(Reverse, Swap) & Remove  
 The use of dummy node, use pointer Next to store next node(Merge Two Sort Lists, Merge K Sorted Lists, Reverse List, Reverse Nodes in K-groups)  
 Find/Remove Kth biggest node from end: use two pointers, one run k step, and then two pointers run parallelly until one reach null.
@@ -240,7 +240,7 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 
 
 
-####Math
+#### Math
 Prime  
 Operations between strings, between big numbers(larger than RAM: First external sorting (split into several parts), then K-way merge.)  
 
@@ -260,7 +260,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[171.Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/)|[LeetCode-171-Excel-Sheet-Column-Number.java](src/LeetCode-171-Excel-Sheet-Column-Number.java)|Math|
 
 
-####Design
+#### Design
 
 |Question|Solution|Tags|
 |--------|--------|----|
