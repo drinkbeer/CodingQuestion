@@ -194,6 +194,7 @@ Search a required set, search Maximum/Minimu result
 |[513. Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/)|[LeetCode-513-Find-Bottom-Left-Tree-Value.java](src/LeetCode-513-Find-Bottom-Left-Tree-Value.java)|DFS, BFS|
 |[515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)|[LeetCode-515-Find-Largest-Value-in-Each-Tree-Row.java](src/LeetCode-515-Find-Largest-Value-in-Each-Tree-Row.java)|DFS, BFS|
 |[530. Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)|[LeetCode-530-Minimum-Absolute-Difference-in-BST.java](src/LeetCode-530-Minimum-Absolute-Difference-in-BST.java)|DFS, BFS|
+|[538. Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/)|[LeetCode-538-Convert-BST-to-Greater-Tree.java](src/LeetCode-538-Convert-BST-to-Greater-Tree.java)|inorder traversal|
 
 
 
