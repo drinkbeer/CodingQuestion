@@ -191,6 +191,7 @@ Search a required set, search Maximum/Minimu result
 |[501. Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/)|[LeetCode-501-Find-Mode-in-Binary-Search-Tree.java](src/LeetCode-501-Find-Mode-in-Binary-Search-Tree.java)|DFS|
 |[508. Most Frequent Subtree Sum](https://leetcode.com/problems/most-frequent-subtree-sum/)|[LeetCode-508-Most-Frequent-Subtree-Sum.java](src/LeetCode-508-Most-Frequent-Subtree-Sum.java)|DFS, similar to 501|
 |[510. Inorder Successor in BST II](https://leetcode.com/problems/inorder-successor-in-bst-ii/)|[LeetCode-510-Inorder-Successor-in-BST-II.java](src/LeetCode-510-Inorder-Successor-in-BST-II.java)|DFS, similar to 285|
+|[513. Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/)|[LeetCode-513-Find-Bottom-Left-Tree-Value.java](src/LeetCode-513-Find-Bottom-Left-Tree-Value.java)|DFS, BFS|
 
 
 
