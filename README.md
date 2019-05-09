@@ -193,6 +193,7 @@ Search a required set, search Maximum/Minimu result
 |[510. Inorder Successor in BST II](https://leetcode.com/problems/inorder-successor-in-bst-ii/)|[LeetCode-510-Inorder-Successor-in-BST-II.java](src/LeetCode-510-Inorder-Successor-in-BST-II.java)|DFS, similar to 285|
 |[513. Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/)|[LeetCode-513-Find-Bottom-Left-Tree-Value.java](src/LeetCode-513-Find-Bottom-Left-Tree-Value.java)|DFS, BFS|
 |[515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)|[LeetCode-515-Find-Largest-Value-in-Each-Tree-Row.java](src/LeetCode-515-Find-Largest-Value-in-Each-Tree-Row.java)|DFS, BFS|
+|[530. Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)|[LeetCode-530-Minimum-Absolute-Difference-in-BST.java](src/LeetCode-530-Minimum-Absolute-Difference-in-BST.java)|DFS, BFS|
 
 
 
