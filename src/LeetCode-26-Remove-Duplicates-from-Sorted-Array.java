@@ -29,16 +29,17 @@ public class Solution {
     //     return result;
     // }
     
-    
-    public int removeDuplicates(int[] A) {
-        if (A == null || A.length == 0) return 0;
+    public int removeDuplicates(int[] nums) {
+        // The index of curr value that are under duplication testing
+        int curr = 0;
         
-        int size = 0;
-        for (int i = 0; i < A.length; i++) {
-            if (A[i] != A[size]) {
-                A[++size] = A[i];
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[curr] != nums[i]) {
+                nums[++curr] = nums[i];
             }
         }
-        return size + 1;
+        
+        // return the size
+        return curr + 1;
     }
 }
