@@ -35,4 +35,32 @@ public class Solution {
         
         return result;
     }
+    
+    // Another solution I wrote. It's a simplified version of 3-Sum. Just record the min diff, and sum, and scan all the value.
+    public int threeSumClosest(int[] nums, int target) {
+        int cloestDiff= Integer.MAX_VALUE;
+        int sum = Integer.MAX_VALUE;
+        
+        Arrays.sort(nums);
+        
+        for (int i = 0; i < nums.length - 2; i++) {
+            int lo = i + 1, hi = nums.length - 1;
+            
+            // skip duplicate elements
+            if (i != 0 && nums[i] == nums[i - 1]) continue;
+            
+            while (lo < hi) {
+                if (cloestDiff > Math.abs(nums[i] + nums[lo] + nums[hi] - target)) {
+                    sum = nums[i] + nums[lo] + nums[hi];
+                    cloestDiff = Math.abs(nums[i] + nums[lo] + nums[hi] - target);
+                }
+                                
+                if (nums[i] + nums[lo] + nums[hi] == target) return target;
+                else if (nums[i] + nums[lo] + nums[hi] < target) lo++;
+                else if (nums[i] + nums[lo] + nums[hi] > target) hi--;
+            }
+        }
+        
+        return sum;
+    }
 }
