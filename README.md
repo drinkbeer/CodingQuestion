@@ -18,7 +18,6 @@ Binary Search is also a hot topic for sorted array. When see the coding problem 
 |[18.4Sum](https://leetcode.com/problems/4sum/)|[LeetCode-18-4Sum.java](src/LeetCode-18-4Sum.java)|Four Pointers|
 |[26.Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)|[LeetCode-26-Remove-Duplicates-from-Sorted-Array.java](src/LeetCode-26-Remove-Duplicates-from-Sorted-Array.java)|One Pointers|
 |[27.Remove Element](https://leetcode.com/problems/remove-element/)|[LeetCode-27-Remove-Element.java](src/LeetCode-27-Remove-Element.java)|One or Two Pointers|
-
 |[31.Next Permutation](https://leetcode.com/problems/next-permutation/)|[LeetCode-31-Next-Permutation.java](src/LeetCode-31-Next-Permutation.java)|Array, Hard to Understand|
  
 
