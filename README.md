@@ -5,7 +5,7 @@ Sharing common interview questions through this reporsity.
 Array includes NSum series, operation to array(rotate).  
 Binary Search is also a hot topic for sorted array. When see the coding problem requires O(logN) time complexity to search something in a sorted array, then it's probably using Binary Search.
 
-http://blog.csdn.net/suwei19870312/article/details/12857103
+K-Sum problem summary: http://blog.csdn.net/suwei19870312/article/details/12857103
 
 
 |Question|Solution|Tags|
