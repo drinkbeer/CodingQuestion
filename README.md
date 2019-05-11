@@ -19,6 +19,9 @@ Binary Search is also a hot topic for sorted array. When see the coding problem 
 |[26.Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)|[LeetCode-26-Remove-Duplicates-from-Sorted-Array.java](src/LeetCode-26-Remove-Duplicates-from-Sorted-Array.java)|One Pointers|
 |[27.Remove Element](https://leetcode.com/problems/remove-element/)|[LeetCode-27-Remove-Element.java](src/LeetCode-27-Remove-Element.java)|One or Two Pointers|
 
+|[31.Next Permutation](https://leetcode.com/problems/next-permutation/)|[LeetCode-31-Next-Permutation.java](src/LeetCode-31-Next-Permutation.java)|Array, Hard to Understand|
+ 
+
 
 ### String 
 String includes Parentheness series, Palindrome series, some statistic problems.  
@@ -312,7 +315,6 @@ Operations between strings, between big numbers(larger than RAM: First external 
 [162.Find Peak Element]()  
 
 [30.Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)  
-[31.Next Permutation](https://leetcode.com/problems/next-permutation/)  
 
 
 /*
