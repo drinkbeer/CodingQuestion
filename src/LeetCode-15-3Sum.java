@@ -15,44 +15,52 @@ KEY POINT: must filter duplicates in all three pointers: i, lo, hi
     If P1+P2+P3 > 0, P2 not move, P3 left move
 */
 public class Solution {
+    
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        if(nums == null || nums.length == 0) return result;
+        if (nums == null || nums.length < 3) return result;
         
-        java.util.Arrays.sort(nums);
-        for(int i = 0; i < nums.length - 2; i++){
-            // filter duplicate numbers
-            if(i == 0 || nums[i] > nums[i - 1]){
-                int neg = -nums[i];
-                
-                int lo = i + 1;
-                int hi = nums.length - 1;
-                
-                while(lo < hi){
-                    if(nums[lo] + nums[hi] == neg){
-                        List<Integer> temp = new ArrayList<Integer>();
-                        temp.add(nums[i]);
-                        temp.add(nums[lo]);
-                        temp.add(nums[hi]);
-                        result.add(temp);
-                        
-                        lo++;
-                        hi--;
-                        
-                        while(lo < hi && nums[lo] <= nums[lo-1]){
-                            lo++;
-                        }
-                        while(lo < hi && nums[hi] >= nums[hi+1]){
-                            hi--;
-                        }
-                    }else if(nums[lo] + nums[hi] > neg){
-                        hi--;
-                    }else if(nums[lo] + nums[hi] < neg){
-                        lo++;
-                    }
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 2; i++) {
+            
+            // We must skip the duplicates of "i"
+            if (i != 0 && nums[i] == nums[i - 1]) continue;
+            
+            int lo = i + 1, hi = nums.length - 1;
+            int target = 0 - nums[i];
+
+            while (lo < hi) {
+                if (nums[lo] + nums[hi] == target) {
+                    List<Integer> list = new ArrayList<>();
+                    list.add(nums[i]);
+                    list.add(nums[lo]);
+                    list.add(nums[hi]);
+                    result.add(list);
+
+                    lo++;
+                    hi--;
+
+                    // skip the duplicates of "lo"
+                    while(lo < hi && nums[lo] == nums[lo - 1]) lo++;
+                    // skip the duplicates of "hi"
+                    while(lo < hi && nums[hi] == nums[hi + 1]) hi--;
+                } else if (nums[lo] + nums[hi] < target) {
+                    // should move lo to right;
+                    lo++;
+
+                    // not required to skipp duplicates here, as anyway it will not be added to result. But adding it has not harm.
+                    // while(lo < hi && nums[lo] == nums[lo - 1]) lo++;
+
+                } else {
+                    // should move hi to left
+                    hi--;
+
+                    // not required to skipp duplicates here, as anyway it will not be added to result. But adding it has not harm.
+                    // while(lo < hi && nums[hi] == nums[hi + 1]) hi--;
                 }
             }
         }
+        
         return result;
     }
 }
