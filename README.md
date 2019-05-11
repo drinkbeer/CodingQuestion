@@ -1,11 +1,20 @@
 ## CodingQuestion
 Sharing common interview questions through this reporsity.
 
-### String & Array
+### Array
 Array includes NSum series, operation to array(rotate)  
-String includes Parentheness series, Palindrome series, some statistic problems.  
 
 http://blog.csdn.net/suwei19870312/article/details/12857103
+
+
+|Question|Solution|Tags|
+|--------|--------|----|
+|[★1.Two Sum](https://leetcode.com/problems/two-sum/)|[LeetCode-1-Two-Sum.java](src/LeetCode-1-Two-Sum.java)|Array, HashMap|
+|[4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)|[LeetCode-4-Median-of-Two-Sorted-Arrays.java](src/LeetCode-4-Median-of-Two-Sorted-Arrays.java)|Array|
+
+### String 
+String includes Parentheness series, Palindrome series, some statistic problems.  
+
 [回文串问题总结](http://blog.csdn.net/fangjian1204/article/details/38084165)  
 [LeetCode总结 —— Palindrome 回文总结](http://mm.fancymore.com/reading/%E5%9B%9E%E6%96%87%E9%97%AE%E9%A2%98.html)  
 [最长回文字符串、二重循环](http://aniylj.leanote.com/post/f4405becd46c)  
@@ -13,7 +22,6 @@ http://blog.csdn.net/suwei19870312/article/details/12857103
 
 |Question|Solution|Tags|
 |--------|--------|----|
-|[★1.Two Sum](https://leetcode.com/problems/two-sum/)|[LeetCode-1-Two-Sum.java](src/LeetCode-1-Two-Sum.java)|HashMap|
 |[167.Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[LeetCode-167-Two-Sum-II-Input-array-is-sorted.java](src/LeetCode-167-Two-Sum-II-Input-array-is-sorted.java)|Two Pointers|
 |[170.Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[LeetCode-170-Two-Sum-III-Data-structure-design.java](src/LeetCode-170-Two-Sum-III-Data-structure-design.java/)|HashMap|
 |[★15.3Sum](https://leetcode.com/problems/3sum/)|[LeetCode-15-3Sum.java](src/LeetCode-15-3Sum.java)|Two Pointers|
