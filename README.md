@@ -17,6 +17,7 @@ Binary Search is also a hot topic for sorted array. When see the coding problem 
 |[16 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[LeetCode-16-3Sum-Closest.java](src/LeetCode-16-3Sum-Closest.java)|Array, Three Pointers|
 |[18.4Sum](https://leetcode.com/problems/4sum/)|[LeetCode-18-4Sum.java](src/LeetCode-18-4Sum.java)|Four Pointers|
 |[26.Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)|[LeetCode-26-Remove-Duplicates-from-Sorted-Array.java](src/LeetCode-26-Remove-Duplicates-from-Sorted-Array.java)|One Pointers|
+|[27.Remove Element](https://leetcode.com/problems/remove-element/)|[LeetCode-27-Remove-Element.java](src/LeetCode-27-Remove-Element.java)|One or Two Pointers|
 
 
 ### String 
@@ -238,7 +239,6 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 |[24.Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)|[LeetCode-24-Swap-Nodes-in-Pairs.java](src/LeetCode-24-Swap-Nodes-in-Pairs.java)|LinkedList|
 |[25.Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[LeetCode-25-Reverse-Nodes-in-k-Group.java](src/LeetCode-25-Reverse-Nodes-in-k-Group.java)|LinkedList|
 |[80.Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java](src/LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java)|Two Pointers|
-|[27.Remove Element](https://leetcode.com/problems/remove-element/)|[LeetCode-27-Remove-Element.java](src/LeetCode-27-Remove-Element.java)|Two Pointers|
 |[19.Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)|[LeetCode-19-Remove-Nth-Node-From-End-of-List.java](src/LeetCode-19-Remove-Nth-Node-From-End-of-List.java)|Two Pointers|
 |[203.Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)|[LeetCode-203-Remove-Linked-List-Elements.java](src/LeetCode-203-Remove-Linked-List-Elements.java)|LinkedList|
 |[83.Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|[LeetCode-83-Remove-Duplicates-from-Sorted-List.java](src/LeetCode-83-Remove-Duplicates-from-Sorted-List.java)|LinkedList|
