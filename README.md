@@ -32,7 +32,7 @@ Note:
 |[42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)|[LeetCode-42-Trapping-Rain-Water.java](src/LeetCode-42-Trapping-Rain-Water.java)|Two Pointers, Two Way Scanning|
 |[46.Permutations](https://leetcode.com/problems/permutations/)|[LeetCode-46-Permutations.java](src/LeetCode-46-Permutations.java)|DFS, BFS|
 |[47.Permutations II](https://leetcode.com/problems/permutations-ii/)|[LeetCode-47-Permutations-II.java](src/LeetCode-47-Permutations-II.java)|DFS, BFS|
-|[48 Rotate Image](https://leetcode.com/problems/permutations-ii/)|[LeetCode-48-Rotate-Image.java](src/LeetCode-48-Rotate-Image.java)|Array|
+|[48 Rotate Image](https://leetcode.com/problems/rotate-image/)|[LeetCode-48-Rotate-Image.java](src/LeetCode-48-Rotate-Image.java)|Array|
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
 |[90.Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
 
