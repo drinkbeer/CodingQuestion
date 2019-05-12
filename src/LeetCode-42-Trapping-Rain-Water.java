@@ -7,7 +7,12 @@ Compare:
 
 1.Use Stack
 
-2.Two Pointers.
+2.Two way scanning the array
+
+https://www.programcreek.com/2014/06/leetcode-trapping-rain-water-java/
+
+
+3.Two Pointers.
 Cumulative each bar. Use maxLeft to record the max height of left side of current bar, maxRight records max height of right side of curr bar. For curr bar, the water can store in curr bar is maxRight - curr, or maxRight - curr. Accumulate each bar's water.
 */
 class Solution {
@@ -29,7 +34,7 @@ class Solution {
     //     return maxWater;
     // }
     
-    // 1.Scanning from left view and scanning from right view
+    // 2. Two Way scanning. Scanning from left view and scanning from right view
     // https://www.programcreek.com/2014/06/leetcode-trapping-rain-water-java/
 //     public int trap(int[] height) {
 //         if (height == null || height.length <= 1) return 0;
@@ -56,7 +61,7 @@ class Solution {
 //         return sum;
 //     }
     
-    // 2.Two pointers
+    // 3.Two pointers
     public int trap(int[] height) {
         if (height == null || height.length <= 1) return 0;
         
