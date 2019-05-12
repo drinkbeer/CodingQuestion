@@ -6,6 +6,9 @@ Array includes N-Sum series, operation to array(rotate or pivot). DFS or BFS sea
 Binary Search is also a hot topic for sorted array. When see the coding problem requires O(logN) time complexity to search something in a sorted array, then it's probably using Binary Search.  
 Give an array, always ask interview: if the array is sorted? Could we sort the array if necessary? If the array is empty or null? If that could be huge array that will be out of memory?
 
+Note:
+1. If a topic is about DP or Greedy, it's put to DP section.
+
 [K-Sum problem summary](http://blog.csdn.net/suwei19870312/article/details/12857103)
 
 
