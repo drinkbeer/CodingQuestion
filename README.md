@@ -24,6 +24,7 @@ Give an array, always ask interview: if the array is sorted? Could we sort the a
 |[34.Search for a Range](https://leetcode.com/problems/search-for-a-range/)|[LeetCode-34-Search-for-a-Range.java](src/LeetCode-34-Search-for-a-Range.java)|Binary Search|
 |[35 Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[LeetCode-35-Search-Insert-Position.java](src/LeetCode-35-Search-Insert-Position.java)|Binary Search|
 |[39.Combination Sum I](https://leetcode.com/problems/combination-sum/)|[LeetCode-39-Combination-Sum-I.java](src/LeetCode-39-Combination-Sum-I.java)|DFS|
+|[40.Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[LeetCode-40-Combination-Sum-II.java](src/LeetCode-40-Combination-Sum-II.java)|DFS|
 
 
 
@@ -113,7 +114,6 @@ Search a required set, search Maximum/Minimu result
 |--------|--------|----|
 |[130.Surrounded Region](https://leetcode.com/problems/surrounded-regions/)|[LeetCode-130-Surrounded-Regions.java](src/LeetCode-130-Surrounded-Regions.java)|BFS,DFS|
 |[200.Number of Islands](https://leetcode.com/problems/number-of-islands/)|[LeetCode-200-Number-of-Islands.java](src/LeetCode-200-Number-of-Islands.java)|DFS|
-|[40.Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[LeetCode-40-Combination-Sum-II.java](src/LeetCode-40-Combination-Sum-II.java)|DFS|
 |[216.Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)|[LeetCode-216-Combination-Sum-III.java](src/LeetCode-216-Combination-Sum-III.java)|Not yet|
 |[77.Combinations](https://leetcode.com/problems/combinations/)|[LeetCode-77-Combinations.java](src/LeetCode-77-Combinations.java)|DFS|
 |[46.Permutations](https://leetcode.com/problems/permutations/)|[LeetCode-46-Permutations.java](src/LeetCode-46-Permutations.java)|DFS|
