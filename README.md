@@ -26,6 +26,7 @@ Give an array, always ask interview: if the array is sorted? Could we sort the a
 |[39.Combination Sum I](https://leetcode.com/problems/combination-sum/)|[LeetCode-39-Combination-Sum-I.java](src/LeetCode-39-Combination-Sum-I.java)|DFS|
 |[40.Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[LeetCode-40-Combination-Sum-II.java](src/LeetCode-40-Combination-Sum-II.java)|DFS|
 |[41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)|[LeetCode-41-First-Missing-Positive.java](src/LeetCode-41-First-Missing-Positive.java)|Array, rearrange the array|
+|[42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)|[LeetCode-42-Trapping-Rain-Water.java](src/LeetCode-42-Trapping-Rain-Water.java)|Two Pointers, Two Way Scanning|
 
 
 
