@@ -11,6 +11,31 @@ Time O(logN)
 */
 
 public class Solution {
+
+    
+    
+    // 1.Brute Force solution
+    // O(N)
+//     public int[] searchRange(int[] nums, int target) {
+//         int[] res = new int[] {-1, -1};
+//         if (nums == null || nums.length == 0) return res;
+        
+//         for (int i = 0; i < nums.length; i++) {
+//             if (nums[i] == target) {
+//                 if (res[0] == -1) {
+//                     res[0] = i;
+//                     res[1] = i;
+//                 } else {
+//                     res[1] = i;
+//                 }
+//             }
+//         }
+        
+//         return res;
+//     }
+    
+    // 2. Do two binary search
+    // O(logN)
     public int[] searchRange(int[] nums, int target) {
         
         int[] result = {-1, -1};
