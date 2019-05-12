@@ -12,6 +12,19 @@ Hard problem.
 [-1,4,2,1,9,10]     // nums[i] <= nums.length
 
 
+
+1.Brute Force, using a HashSet
+
+这道题让我们找缺失的首个正数，由于限定了O(n)的时间，所以一般的排序方法都不能用，最开始我没有看到还限制了空间复杂度，所以想到了用HashSet来解，
+这个思路很简单，第一遍遍历数组把所有的数都存入HashSet中，并且找出数组的最大值，下次循环从1开始递增找数字，哪个数字找不到就返回哪个数字，
+如果一直找到了最大的数字，则返回最大值+1.
+
+
+
+
+2.Rearrange the array
+
+
 https://leetcode.com/problems/first-missing-positive/discuss/17083/O(1)-space-Java-Solution
 
 
@@ -50,33 +63,52 @@ public class Solution {
 //         return nums.length + 1;
 //     }
     
+    // 1.Brute Force, using a HashSet, Space O(N)
     public int firstMissingPositive(int[] nums) {
         if (nums == null || nums.length == 0) return 1;
         
-        int i = 0;
-        while (i < nums.length) {
-            if (nums[i] <= 0 || nums[i] > nums.length || nums[i] == i + 1){
-                i++;
-            } else if (nums[nums[i] - 1] != nums[i]) {
-                // check if the destination (nums[i] - 1) is eligible for swapping
-                // if the destination already has the value to be nums[i], then we don't swap it.
-                // Destination Index: nums[i] - 1, destination target value: nums[i]
-                swap(nums, i, nums[i] - 1);
-            } else {
-                // which means the destination has already been in the correct value, we just "continue" here.
-                i++;
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0 && nums[i] <= nums.length) {
+                set.add(nums[i]);
             }
         }
         
-        i = 0;
-        while (i < nums.length && nums[i] == i + 1) i++;
+        for (int i = 1; i <= nums.length; i++) {
+            if (!set.contains(i)) return i;
+        }
         
-        return i + 1;
+        return nums.length + 1;
     }
     
-    private void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-    }
+    // 2.Space O(1), rearrange the array
+//     public int firstMissingPositive(int[] nums) {
+//         if (nums == null || nums.length == 0) return 1;
+        
+//         int i = 0;
+//         while (i < nums.length) {
+//             if (nums[i] <= 0 || nums[i] > nums.length || nums[i] == i + 1){
+//                 i++;
+//             } else if (nums[nums[i] - 1] != nums[i]) {
+//                 // check if the destination (nums[i] - 1) is eligible for swapping
+//                 // if the destination already has the value to be nums[i], then we don't swap it.
+//                 // Destination Index: nums[i] - 1, destination target value: nums[i]
+//                 swap(nums, i, nums[i] - 1);
+//             } else {
+//                 // which means the destination has already been in the correct value, we just "continue" here.
+//                 i++;
+//             }
+//         }
+        
+//         i = 0;
+//         while (i < nums.length && nums[i] == i + 1) i++;
+        
+//         return i + 1;
+//     }
+    
+//     private void swap(int[] nums, int i, int j) {
+//         int temp = nums[i];
+//         nums[i] = nums[j];
+//         nums[j] = temp;
+//     }
 }
