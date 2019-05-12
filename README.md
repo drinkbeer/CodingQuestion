@@ -2,7 +2,7 @@
 Sharing common interview questions through this reporsity.
 
 ### Array
-Array includes NSum series, operation to array(rotate).  
+Array includes N-Sum series, operation to array(rotate).  
 Binary Search is also a hot topic for sorted array. When see the coding problem requires O(logN) time complexity to search something in a sorted array, then it's probably using Binary Search.  
 Give an array, always ask interview: if the array is sorted? If the array is empty or null? If that could be huge array that will be out of memory?
 
