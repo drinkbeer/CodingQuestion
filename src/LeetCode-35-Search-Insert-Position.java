@@ -42,4 +42,32 @@ public class Solution {
     //     else return lo + 1;
     // }
     
+    
+    // 1.Brute Force
+    // O(N)
+    // public int searchInsert(int[] nums, int target) {
+    //     int i = 0;
+    //     for (; i < nums.length; i++) {
+    //         if (nums[i] >= target) return i;
+    //     }
+    //     return i;
+    // }
+    
+    // 2.Binary Search. get first position >= target
+    public int searchInsert(int[] nums, int target) {
+        int lo = 0, hi = nums.length - 1;
+        
+        while (lo + 1 < hi) {
+            int mid = lo + (hi - lo) / 2;
+            
+            if (nums[mid] == target) hi = mid;
+            else if (nums[mid] < target) lo = mid + 1;
+            else hi = mid - 1;
+        }
+        
+        if (nums[lo] >= target) return lo;
+        if (nums[hi] >= target) return hi;
+        return hi + 1;
+    }
+    
 }
