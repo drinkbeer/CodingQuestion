@@ -30,6 +30,7 @@ Note:
 |[40.Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[LeetCode-40-Combination-Sum-II.java](src/LeetCode-40-Combination-Sum-II.java)|DFS|
 |[41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)|[LeetCode-41-First-Missing-Positive.java](src/LeetCode-41-First-Missing-Positive.java)|Array, rearrange the array|
 |[42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)|[LeetCode-42-Trapping-Rain-Water.java](src/LeetCode-42-Trapping-Rain-Water.java)|Two Pointers, Two Way Scanning|
+|[48 Rotate Image](https://leetcode.com/problems/permutations-ii/)|[LeetCode-48-Rotate-Image.java](src/LeetCode-48-Rotate-Image.java)|Array|
 
 
 
@@ -52,7 +53,6 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 |[38 Count and Say](https://leetcode.com/problems/count-and-say/)|[LeetCode-38-Count-and-Say.java](src/LeetCode-38-Count-and-Say.java)|String|
 |[58.Length of Last Word](https://leetcode.com/problems/length-of-last-word/)|[LeetCode-58-Length-of-Last-Word.java](src/LeetCode-58-Length-of-Last-Word.java)|String|
 |[71.Simplify Path](https://leetcode.com/problems/simplify-path/)|[LeetCode-71-Simplify-Path.java](src/LeetCode-71-Simplify-Path.java)|String|
-|[48 Rotate Image](https://leetcode.com/problems/permutations-ii/)|[LeetCode-48-Rotate-Image.java](src/LeetCode-48-Rotate-Image.java)|Array|
 |[54 Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)|[LeetCode-54-Spiral-Matrix.java](src/LeetCode-54-Spiral-Matrix.java)|Array|
 |[59 Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)|[LeetCode-59-Spiral-Matrix-II.java](src/LeetCode-59-Spiral-Matrix-II.java)|Array|
 |[73.Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)|[LeetCode-73-Set-Matrix-Zeroes.java](src/LeetCode-73-Set-Matrix-Zeroes.java)|Array|
