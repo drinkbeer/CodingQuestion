@@ -25,6 +25,7 @@ https://shmilyaw-hotmail-com.iteye.com/blog/2292710
 
 */
 public class Solution {
+    // 1.
     public void rotate(int[][] matrix) {
         if(matrix == null || matrix.length <= 1 || matrix.length != matrix[0].length) return;
         
@@ -38,5 +39,23 @@ public class Solution {
                 matrix[j][len - 1 - i] = temp;
             }
         }
+    }
+    
+    //2. More clear, and easier to understand. It's just rotate a small area of the matrix.
+    public void rotate(int[][] matrix) {
+        if (matrix == null || matrix.length <= 1) return;
+        
+        int n = matrix.length;
+        
+        for (int i = 0; i < n / 2; i++) {
+            for (int j = i; j < n - i - 1; j++) {
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[n - j - 1][i];
+                matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1];
+                matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1];
+                matrix[j][n - i - 1] = temp;
+            }
+        }
+        
     }
 }
