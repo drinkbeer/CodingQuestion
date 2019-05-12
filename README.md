@@ -7,7 +7,7 @@ Binary Search is also a hot topic for sorted array. When see the coding problem 
 Give an array, always ask interview: if the array is sorted? Could we sort the array if necessary? If the array is empty or null? If that could be huge array that will be out of memory?
 
 Note:
-1. If a topic is about DP or Greedy, it's put to DP section.
+1. If a topic is about DP or Greedy, it's put to DP section, e.g. [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/)
 
 [K-Sum problem summary](http://blog.csdn.net/suwei19870312/article/details/12857103)
 
