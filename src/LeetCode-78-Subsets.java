@@ -29,6 +29,9 @@ public class Solution {
 
 If the order doesn't matter and no duplicate, then don't need sort. For the combination sum, we may need sort.
 
+2.Iterative.
+
+Appending each value in nums to the existing lists in the result.
 */
 
 class Solution {
@@ -53,20 +56,21 @@ class Solution {
 //     }
     
     // 2.Iterative
-    public List<List<Integer>> subsets(int[] S) {
-        List<List<Integer>> res = new ArrayList<>();
-        res.add(new ArrayList<Integer>());
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        if (nums == null || nums.length == 0) return result;
         
-        Arrays.sort(S);
-        for(int i : S) {
-            List<List<Integer>> tmp = new ArrayList<>();
-            for(List<Integer> sub : res) {
-                List<Integer> a = new ArrayList<>(sub);
-                a.add(i);
-                tmp.add(a);
+        result.add(new ArrayList<>());
+        
+        for (int i : nums) {
+            List<List<Integer>> temp = new ArrayList<List<Integer>>();
+            for (List<Integer> sub : result) {
+                List<Integer> list = new ArrayList<>(sub);  // have to create a copy of the sub list, otherwise the next line will pollute the existing result.
+                list.add(i);
+                temp.add(list);
             }
-            res.addAll(tmp);
+            result.addAll(temp);  // we have to add the temp after we finished the above for-loop, as it's loop the result.
         }
-        return res;
+        return result;
     }
 }
