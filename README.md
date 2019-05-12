@@ -20,6 +20,7 @@ Binary Search is also a hot topic for sorted array. When see the coding problem 
 |[27.Remove Element](https://leetcode.com/problems/remove-element/)|[LeetCode-27-Remove-Element.java](src/LeetCode-27-Remove-Element.java)|One or Two Pointers|
 |[31.Next Permutation](https://leetcode.com/problems/next-permutation/)|[LeetCode-31-Next-Permutation.java](src/LeetCode-31-Next-Permutation.java)|Array, Hard to Understand|
 |[33.Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[LeetCode-33-Search-in-Rotated-Sorted-Array.java](src/LeetCode-33-Search-in-Rotated-Sorted-Array.java)|Binary Search|
+|[34.Search for a Range](https://leetcode.com/problems/search-for-a-range/)|[LeetCode-34-Search-for-a-Range.java](src/LeetCode-34-Search-for-a-Range.java)|Binary Search|
 
 
 
@@ -117,7 +118,6 @@ Search a required set, search Maximum/Minimu result
 |[47.Permutations II](https://leetcode.com/problems/permutations-ii/)|[LeetCode-47-Permutations-II.java](src/LeetCode-47-Permutations-II.java)|DFS|
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
 |[90.Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
-|[34.Search for a Range](https://leetcode.com/problems/search-for-a-range/)|[LeetCode-34-Search-for-a-Range.java](src/LeetCode-34-Search-for-a-Range.java)|Binary Search|
 |[278.First Bad Version](https://leetcode.com/problems/first-bad-version/)|[LeetCode-278-First-Bad-Version.java](src/LeetCode-278-First-Bad-Version.java)|Binary Search|
 |[81.Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[LeetCode-81-Search-in-Rotated-Sorted-Array-II.java](src/LeetCode-81-Search-in-Rotated-Sorted-Array-II.java)|Array|
 |[74.Search a 2D Matrix](https://leetcode.com/problems/set-matrix-zeroes/)|[LeetCode-74-Search-a-2D-Matrix.java](src/LeetCode-74-Search-a-2D-Matrix.java)|Binary Search|
