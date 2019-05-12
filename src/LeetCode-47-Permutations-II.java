@@ -13,8 +13,9 @@ We must optimize it in loops!!!!!!
 ProgramCreek's solution 2 is simple, but I don't understand the solution.
 
 */
-public class Solution {
-    // 1.DFS(recursive)
+class Solution {
+    
+    // 1.DFS (recursive)
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if(nums == null) return result;
@@ -30,7 +31,9 @@ public class Solution {
     private void DFS(int[] nums, boolean[] visited, List<List<Integer>> result, List<Integer> set){
         // end condition
         if(set.size() == nums.length){
-            result.add(new ArrayList<Integer>(set));
+            if(!result.contains(set)){
+                result.add(new ArrayList<Integer>(set));
+            }
             return;
         }
         
@@ -42,14 +45,40 @@ public class Solution {
             as we scan from i = 0, so i = 0->i = 1 must has already be recorded in result. Also, as we optimized
             here, we don't need to check if it is already exisited in end condition.
             */
-            if(visited[i] || (i != 0 && nums[i] == nums[i - 1] && !visited[i - 1]) ) continue;
-            visited[i] = true;
+            if(visited[i] || (i > 0 && nums[i] == nums[i - 1] && !visited[i - 1]) ) continue;
             set.add(nums[i]);
+            visited[i] = true;
             DFS(nums, visited, result, set);
             set.remove(set.size() - 1);
             visited[i] = false;
         }
     }
-    
-    // 2.BFS(iterative)
+        
+    // 2.BFS (iterative). Inserting the numbers row by row to different positions in the row.
+//     public List<List<Integer>> permuteUnique(int[] nums) {
+//         List<List<Integer>> result = new ArrayList<List<Integer>>();
+//         if (nums == null || nums.length == 0) return result;
+        
+//         result.add(new ArrayList<>());
+        
+//         // Start inserting the numbers in nums row by row
+//         for (int i = 0; i < nums.length; i++) {
+//             List<List<Integer>> tempResult = new ArrayList<List<Integer>>();
+            
+//             for (int insertPos = 0; insertPos <= i; insertPos++) {
+                
+//                 for (List<Integer> sub : result) {
+//                     List<Integer> row = new ArrayList<>(sub);
+//                     row.add(insertPos, nums[i]);
+//                     if (result.contains(row) || tempResult.contains(row)) continue;
+//                     tempResult.add(row);
+//                 }
+                
+//             }
+            
+//             result = tempResult;
+//         }
+        
+//         return result;
+//     }
 }
