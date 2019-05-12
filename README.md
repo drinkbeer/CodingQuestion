@@ -21,6 +21,7 @@ Binary Search is also a hot topic for sorted array. When see the coding problem 
 |[31.Next Permutation](https://leetcode.com/problems/next-permutation/)|[LeetCode-31-Next-Permutation.java](src/LeetCode-31-Next-Permutation.java)|Array, Hard to Understand|
 |[33.Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[LeetCode-33-Search-in-Rotated-Sorted-Array.java](src/LeetCode-33-Search-in-Rotated-Sorted-Array.java)|Binary Search|
 |[34.Search for a Range](https://leetcode.com/problems/search-for-a-range/)|[LeetCode-34-Search-for-a-Range.java](src/LeetCode-34-Search-for-a-Range.java)|Binary Search|
+|[35 Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[LeetCode-35-Search-Insert-Position.java](src/LeetCode-35-Search-Insert-Position.java)|Binary Search|
 
 
 
@@ -149,7 +150,6 @@ Search a required set, search Maximum/Minimu result
 |[126.Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[LeetCode-126-Word-Ladder-II.java](src/LeetCode-126-Word-Ladder-II.java)|Not yet, hard|
 |[139.Word Break](https://leetcode.com/problems/word-break/)|[LeetCode-139-Word-Break.java](src/LeetCode-139-Word-Break.java)|DFS, DP|
 |[140.Word Break II](https://leetcode.com/problems/word-break-ii/)|[LeetCode-140-Word-Break-II.java](src/LeetCode-140-Word-Break-II.java)|Not yet, hard|
-|[35 Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[LeetCode-35-Search-Insert-Position.java](src/LeetCode-35-Search-Insert-Position.java)|Binary Search|
 |[91.Decode Ways](https://leetcode.com/problems/decode-ways/)|[LeetCode-91-Decode-Ways.java](src/LeetCode-91-Decode-Ways.java)|DP|
 |[93.Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)|[LeetCode-93-Restore-IP-Addresses.java](src/LeetCode-93-Restore-IP-Addresses.java)|DFS|
 |[98.Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)|[LeetCode-98-Validate-Binary-Search-Tree.java](src/LeetCode-98-Validate-Binary-Search-Tree.java)|DFS, BFS|
