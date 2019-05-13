@@ -37,6 +37,7 @@ Note:
 |[59 Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)|[LeetCode-59-Spiral-Matrix-II.java](src/LeetCode-59-Spiral-Matrix-II.java)|Array|
 |[56.Merge Intervals](https://leetcode.com/problems/merge-intervals/)|[LeetCode-56-Merge-Intervals.java](src/LeetCode-56-Merge-Intervals.java)|Array|
 |[57.Insert Interval](https://leetcode.com/problems/insert-interval/)|[LeetCode-57-Insert-Interval.java](src/LeetCode-57-Insert-Interval.java)|Array|
+|[66.Plus One](https://leetcode.com/problems/plus-one/)|[LeetCode-66-Plus-One.java](src/LeetCode-66-Plus-One.java)|Array|
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
 |[90.Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
 |[283.Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[LeetCode-283-Move-Zeroes.java](src/LeetCode-283-Move-Zeroes.java)|Array|
@@ -278,7 +279,6 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |--------|--------|----|
 |[2.Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[LeetCode-2-Add-Two-Numbers.java](src/LeetCode-2-Add-Two-Numbers.java)|LinkedList|
 |[43.Multiply Strings](https://leetcode.com/problems/multiply-strings/)|[LeetCode-43-Multiply-Strings.java](src/LeetCode-43-Multiply-Strings.java)|String|
-|[66.Plus One](https://leetcode.com/problems/plus-one/)|[LeetCode-66-Plus-One.java](src/LeetCode-66-Plus-One.java)|Array|
 |[67.Add Binary](https://leetcode.com/problems/add-binary/)|[LeetCode-67-Add-Binary.java](src/LeetCode-67-Add-Binary.java)|String|
 |[29.Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)|[LeetCode-29-Divide-Two-Integers.java](src/LeetCode-29-Divide-Two-Integers.java)|Binary Search|
 |[50.Pow(x, n)](https://leetcode.com/problems/powx-n/)|[LeetCode-50-Pow-n.java](src/LeetCode-LeetCode-50-Pow-n.java)|Binary Search|
