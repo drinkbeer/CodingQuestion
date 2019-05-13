@@ -92,7 +92,19 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 
 |Question|Solution|Tags|
 |--------|--------|----|
-
+|[★★★55.Jump Game](https://leetcode.com/problems/jump-game/)|[LeetCode-55-Jump-Game.java](src/LeetCode-55-Jump-Game.java)|DP, Greedy|
+|[45.Jump Game II](https://leetcode.com/problems/jump-game-ii/)|[LeetCode-45-Jump-Game-II.java](src/LeetCode-45-Jump-Game-II.java)|DP, Greedy|
+|[★53.Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[LeetCode-53-Maximum-Subarray.java](src/LeetCode-53-Maximum-Subarray.java)|DP, Greedy|
+|[Maximum Subarray II](http://www.lintcode.com/en/problem/maximum-subarray-ii/)|[LintCode-Maximum-Subarray-II.java](src/LintCode-Maximum-Subarray-II.java)|DP, Greedy|
+|[Maximum Subarray III](http://www.lintcode.com/en/problem/maximum-subarray-iii/)|[LintCode-Maximum-Subarray-III.java](src/LintCode-Maximum-Subarray-III.java)|not yet, hard|
+|[121.Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.java](src/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.java)|DP, Greedy|
+|[122.Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[LeetCode-122-Best-Time-to-Buy-and-Sell-Stock-II.java](src/LeetCode-122-Best-Time-to-Buy-and-Sell-Stock-II.java)|Array|
+|[123.Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)|[LeetCode-123-Best-Time-to-Buy-and-Sell-Stock-III.java](src/LeetCode-123-Best-Time-to-Buy-and-Sell-Stock-III.java)|hard,not yet???|
+|[188.Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)|[LeetCode-188-Best-Time-to-Buy-and-Sell-Stock-IV.java](src/LeetCode-188-Best-Time-to-Buy-and-Sell-Stock-IV.java)|hard, not yet???|
+|[309.Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|[LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java](src/LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java)|not yet???|
+|[★62.Unique Paths](https://leetcode.com/problems/unique-paths/)|[LeetCode-62-Unique-Paths.java](src/LeetCode-62-Unique-Paths.java)|DP|
+|[63.Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)|[LeetCode-63-Unique-Paths-II.java](src/LeetCode-63-Unique-Paths-II.java)|DP|
+|[64.Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[LeetCode-64-Minimum-Path-Sum.java](src/LeetCode-64-Minimum-Path-Sum.java)|DP|
 
 
 ### Search(Tree, Binary Search, DFS, BFS, DP)
@@ -136,19 +148,6 @@ Search a required set, search Maximum/Minimu result
 |[81.Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[LeetCode-81-Search-in-Rotated-Sorted-Array-II.java](src/LeetCode-81-Search-in-Rotated-Sorted-Array-II.java)|Array|
 |[74.Search a 2D Matrix](https://leetcode.com/problems/set-matrix-zeroes/)|[LeetCode-74-Search-a-2D-Matrix.java](src/LeetCode-74-Search-a-2D-Matrix.java)|Binary Search|
 |[240.Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)|[LeetCode-240-Search-a-2D-Matrix-II.java](src/LeetCode-240-Search-a-2D-Matrix-II.java)|not yet|
-|[★★★55.Jump Game](https://leetcode.com/problems/jump-game/)|[LeetCode-55-Jump-Game.java](src/LeetCode-55-Jump-Game.java)|DP, Greedy|
-|[45.Jump Game II](https://leetcode.com/problems/jump-game-ii/)|[LeetCode-45-Jump-Game-II.java](src/LeetCode-45-Jump-Game-II.java)|DP, Greedy|
-|[★53.Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[LeetCode-53-Maximum-Subarray.java](src/LeetCode-53-Maximum-Subarray.java)|DP, Greedy|
-|[Maximum Subarray II](http://www.lintcode.com/en/problem/maximum-subarray-ii/)|[LintCode-Maximum-Subarray-II.java](src/LintCode-Maximum-Subarray-II.java)|DP, Greedy|
-|[Maximum Subarray III](http://www.lintcode.com/en/problem/maximum-subarray-iii/)|[LintCode-Maximum-Subarray-III.java](src/LintCode-Maximum-Subarray-III.java)|not yet, hard|
-|[121.Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.java](src/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.java)|DP, Greedy|
-|[122.Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[LeetCode-122-Best-Time-to-Buy-and-Sell-Stock-II.java](src/LeetCode-122-Best-Time-to-Buy-and-Sell-Stock-II.java)|Array|
-|[123.Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)|[LeetCode-123-Best-Time-to-Buy-and-Sell-Stock-III.java](src/LeetCode-123-Best-Time-to-Buy-and-Sell-Stock-III.java)|hard,not yet???|
-|[188.Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)|[LeetCode-188-Best-Time-to-Buy-and-Sell-Stock-IV.java](src/LeetCode-188-Best-Time-to-Buy-and-Sell-Stock-IV.java)|hard, not yet???|
-|[309.Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|[LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java](src/LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java)|not yet???|
-|[★62.Unique Paths](https://leetcode.com/problems/unique-paths/)|[LeetCode-62-Unique-Paths.java](src/LeetCode-62-Unique-Paths.java)|DP|
-|[63.Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)|[LeetCode-63-Unique-Paths-II.java](src/LeetCode-63-Unique-Paths-II.java)|DP|
-|[64.Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[LeetCode-64-Minimum-Path-Sum.java](src/LeetCode-64-Minimum-Path-Sum.java)|DP|
 |[61 Rotate List](https://leetcode.com/problems/rotate-list/)|[LeetCode-61-Rotate-List.java](src/LeetCode-61-Rotate-List.java)|Two Pointers|
 |[70.Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[LeetCode-70-Climbing-Stairs.java](src/LeetCode-70-Climbing-Stairs.java)|DP|
 |[28.Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[LeetCode-28-Implement-strStr.java](src/LeetCode-28-Implement-strStr.java)|Two Pointers|
