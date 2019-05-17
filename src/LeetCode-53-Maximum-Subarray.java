@@ -57,7 +57,7 @@ public class Solution {
 //      return max;
 //  }
     
-//  4.Greedy(Sliding Windows)
+//  4.Greedy(Sliding Windows)  这个和第二种方法是一样的。
 //  public int maxSubArray(int[] nums) {
 //         if (nums == null || nums.length == 0) return 0;
         
