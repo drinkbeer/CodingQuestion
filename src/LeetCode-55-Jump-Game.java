@@ -35,10 +35,13 @@ public class Solution {
 //             for (int j = 0; j <= i; j++) {
 //                 if (state[j] && j + nums[j] >= i) {
 //                     state[i] = true;
-//                     break;    //optimize: here we must break as soon as we can jump from this j to i
+//                     break;
 //                 }
 //             }
 //         }
+        
+//         return state[nums.length - 1];
+//     }
     
     // 2.DP
 //     public boolean canJump(int[] nums) {
