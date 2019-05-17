@@ -108,7 +108,11 @@ public class Solution {
     
         // 7. Divide & Conquer
     /*
-    The Divide-and-Conquer algorithm breaks nums into two halves and find the maximum subarray sum in them recursively. Well, the most tricky part is to handle the case that the maximum subarray spans the two halves. For this case, we use a linear algorithm: starting from the middle element and move to both ends (left and right ends), record the maximum sum we have seen. In this case, the maximum sum is finally equal to the middle element plus the maximum sum of moving leftwards and the maximum sum of moving rightwards.
+    The Divide-and-Conquer algorithm breaks nums into two halves and find the maximum subarray sum in them recursively. 
+    Well, the most tricky part is to handle the case that the maximum subarray spans the two halves. For this case,
+    we use a linear algorithm: starting from the middle element and move to both ends (left and right ends), record 
+    the maximum sum we have seen. In this case, the maximum sum is finally equal to the middle element plus the maximum 
+    sum of moving leftwards and the maximum sum of moving rightwards.
     */
     public int maxSubArray(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
