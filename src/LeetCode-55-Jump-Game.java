@@ -107,19 +107,35 @@ class Solution {
     // 5. Greedy
     // Time O(N)
     // Space O(1)
-    // This one is super faster than the third solution, as it skipped a lot of calculation. This one should be the best solution I have ever saw.
+    /*
+    This one is super faster than the third solution, as it skipped a lot of calculation. This one should be the best solution I have ever saw.
+    
+    start is the start index, end is the end index of one step.
+    
+    each step go through the [start, end]
+    
+    end condition is:
+    1.end >= nums.length - 1
+    2.fastest <= end
+    3.fastest >= nums.length - 1
+    
+    */
     public boolean canJump(int[] nums) {
         if(nums == null || nums.length == 0) return false;
         if(nums.length <= 1) return true;
         
         int start = 0, end = 0;
-        while (end < nums.length) {
-            int fastest = 0;
+        while (end < nums.length - 1) {
+            int fastest = end;
             for (int i = start; i <= end; i++) {
                 fastest = Math.max(fastest, i + nums[i]);
             }
+            
+            // before proceed to next new [start, end], let's check the end condition.
             if (fastest <= end) return false; // means no step forward, we are blocking in current run
             if (fastest >= nums.length - 1) return true;
+            
+            // proceed to next new [start, end]
             start = end + 1;
             end = fastest;
         }
