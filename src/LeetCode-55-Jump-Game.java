@@ -3,24 +3,26 @@ LeetCode: https://leetcode.com/problems/jump-game/
 LintCode: http://www.lintcode.com/problem/jump-game/
 JiuZhang: http://www.jiuzhang.com/solutions/jump-game/
 ProgramCreek: http://www.programcreek.com/2014/03/leetcode-jump-game-java/
-
 Analysis:
-1.DP will exceed time limit.
 
-2.DP looks like greedy
+1.Dynamic Programming (Forward)
 
-3.Greedy also must optimize carefully.
+2. DP (backward)
 
-4.Greedy(better)
+3.DP looks like greedy
+
+4.Greedy also must optimize carefully.
+
+5.Greedy(better)
+
 Scan from 0 to nums.length-1
 Divide the scanning process into different phase -- [start, end]
 Get the farthest pace could be reached in curr phase. 
 The start of new phase is end+1 of last phase, end is farthest of last phase.
 */
-public class Solution {
+class Solution {
     
-    // 1.Dynamic Programming
-    // Time Limit Exceeded
+    // 1.Dynamic Programming (Forward)
     // Space O(N)
     // Time O(N)
 //     public boolean canJump(int[] nums) {
@@ -43,7 +45,32 @@ public class Solution {
 //         return state[nums.length - 1];
 //     }
     
-    // 2.DP
+    // 2. DP (backward)
+    /* 
+    very slow
+    Runtime: 214 ms, faster than 19.91% of Java online submissions for Jump Game.
+    Time O(N)
+    Space O(N)
+    */
+//     public boolean canJump(int[] nums) {
+//         if(nums == null || nums.length == 0) return false;
+//         if(nums.length <= 1) return true;
+        
+//         // means if curr pace can be reached
+//         boolean[] state = new boolean[nums.length];
+//         state[0] = true;
+        
+//         for(int i = 0; i < nums.length; i++){
+//             for (int j = i + 1; j <= i + nums[i] && j < nums.length; j++) {
+//                 // means the jth block is reachable from ith, but we must ensure ith block itself is reachable.
+//                 state[j] = state[i];
+//             }
+//         }
+        
+//         return state[nums.length - 1];
+//     }
+    
+    // 3.DP
 //     public boolean canJump(int[] nums) {
 //         if(nums == null || nums.length == 0) return false;
 //         if(nums.length <= 1) return true;
@@ -53,15 +80,15 @@ public class Solution {
 //         state[0] = nums[0];
         
 //         for (int i = 1; i < nums.length; i++) {
-//             if (i > state[i - 1]) return false;
-//             state[i] = Math.max(state[i - 1], i + nums[i]);
+//             if (i > state[i - 1]) return false;  // ensure i is reachable
+//             state[i] = Math.max(state[i - 1], i + nums[i]);  // update state matrix with the max place block i can reach
 //             if (state[i] >= nums.length - 1) return true;
 //         }
         
 //         return state[nums.length - 1] >= nums.length - 1;
 //     }
     
-    // 3.Greedy
+    // 4.Greedy
 //     public boolean canJump(int[] nums) {
 //         if(nums == null || nums.length == 0) return false;
 //         if(nums.length <= 1) return true;
@@ -76,11 +103,11 @@ public class Solution {
         
 //         return max >= nums.length - 1;
 //     }
-
-    // 4. Greedy
+    
+    // 5. Greedy
     // Time O(N)
     // Space O(1)
-    // This one is super faster than the third solution, as it skipped a lot of calculation.
+    // This one is super faster than the third solution, as it skipped a lot of calculation. This one should be the best solution I have ever saw.
     public boolean canJump(int[] nums) {
         if(nums == null || nums.length == 0) return false;
         if(nums.length <= 1) return true;
@@ -99,7 +126,5 @@ public class Solution {
         
         return true;
     }
-    
-    
     
 }
