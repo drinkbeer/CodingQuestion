@@ -31,4 +31,53 @@ public class Solution {
         
         return paths[m - 1][n - 1];
     }
+    
+        // 1. DP, Time O(M*N), Space O(M*N)
+//     public int minPathSum(int[][] grid) {
+//         if (grid == null) return 0;
+//         int n = grid.length, m = grid[0].length;
+//         if (m == 1 && n == 1) return grid[0][0];
+        
+//         int[][] path = new int[n][m];
+//         path[0][0] = grid[0][0];
+        
+//         for (int i = 1; i < n; i++) {
+//             path[i][0] = path[i - 1][0] + grid[i][0];
+//         }
+        
+//         for (int j = 1; j < m; j++) {
+//             path[0][j] = path[0][j - 1] + grid[0][j];
+//         }
+        
+//         for (int i = 1; i < n; i++) {
+//             for (int j = 1; j < m; j++) {
+//                 path[i][j] = Math.min(path[i - 1][j], path[i][j - 1]) + grid[i][j];
+//             }
+//         }
+        
+//         return path[n - 1][m - 1];
+//     }
+    
+    // 2. DP, inplace, Time O(M*N), Space O(M*N)
+    public int minPathSum(int[][] grid) {
+        if (grid == null) return 0;
+        int n = grid.length, m = grid[0].length;
+        if (m == 1 && n == 1) return grid[0][0];
+    
+        for (int i = 1; i < n; i++) {
+            grid[i][0] += grid[i - 1][0];
+        }
+        
+        for (int j = 1; j < m; j++) {
+            grid[0][j] += grid[0][j - 1];
+        }
+        
+        for (int i = 1; i < n; i++) {
+            for (int j = 1; j < m; j++) {
+                grid[i][j] = Math.min(grid[i - 1][j], grid[i][j - 1]) + grid[i][j];
+            }
+        }
+        
+        return grid[n - 1][m - 1];
+    }
 }
