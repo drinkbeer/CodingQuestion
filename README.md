@@ -98,14 +98,15 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 |[★53.Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)|[LeetCode-53-Maximum-Subarray.java](src/LeetCode-53-Maximum-Subarray.java)|DP, Greedy|
 |[Maximum Subarray II](http://www.lintcode.com/en/problem/maximum-subarray-ii/)|[LintCode-Maximum-Subarray-II.java](src/LintCode-Maximum-Subarray-II.java)|DP, Greedy|
 |[Maximum Subarray III](http://www.lintcode.com/en/problem/maximum-subarray-iii/)|[LintCode-Maximum-Subarray-III.java](src/LintCode-Maximum-Subarray-III.java)|not yet, hard|
+|[★62.Unique Paths](https://leetcode.com/problems/unique-paths/)|[LeetCode-62-Unique-Paths.java](src/LeetCode-62-Unique-Paths.java)|DP|
+|[63.Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)|[LeetCode-63-Unique-Paths-II.java](src/LeetCode-63-Unique-Paths-II.java)|DP|
+|[64.Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[LeetCode-64-Minimum-Path-Sum.java](src/LeetCode-64-Minimum-Path-Sum.java)|DP|
 |[121.Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.java](src/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.java)|DP, Greedy|
 |[122.Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[LeetCode-122-Best-Time-to-Buy-and-Sell-Stock-II.java](src/LeetCode-122-Best-Time-to-Buy-and-Sell-Stock-II.java)|Array|
 |[123.Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)|[LeetCode-123-Best-Time-to-Buy-and-Sell-Stock-III.java](src/LeetCode-123-Best-Time-to-Buy-and-Sell-Stock-III.java)|hard,not yet???|
 |[188.Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)|[LeetCode-188-Best-Time-to-Buy-and-Sell-Stock-IV.java](src/LeetCode-188-Best-Time-to-Buy-and-Sell-Stock-IV.java)|hard, not yet???|
 |[309.Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|[LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java](src/LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java)|not yet???|
-|[★62.Unique Paths](https://leetcode.com/problems/unique-paths/)|[LeetCode-62-Unique-Paths.java](src/LeetCode-62-Unique-Paths.java)|DP|
-|[63.Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)|[LeetCode-63-Unique-Paths-II.java](src/LeetCode-63-Unique-Paths-II.java)|DP|
-|[64.Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[LeetCode-64-Minimum-Path-Sum.java](src/LeetCode-64-Minimum-Path-Sum.java)|DP|
+
 
 
 ### Search(Tree, Binary Search, DFS, BFS, DP)
