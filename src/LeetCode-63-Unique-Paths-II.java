@@ -39,4 +39,7 @@ public class Solution {
         
         return paths[m - 1][n - 1];
     }
+    
+    // DP, do it in place, similar to second one of:
+    // https://github.com/drinkbeer/CodingQuestion/blob/master/src/LeetCode-64-Minimum-Path-Sum.java
 }
