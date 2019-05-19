@@ -20,7 +20,7 @@ Note:
 |[★15.3Sum](https://leetcode.com/problems/3sum/)|[LeetCode-15-3Sum.java](src/LeetCode-15-3Sum.java)|Array, Three Pointers|
 |[16 3Sum Closest](https://leetcode.com/problems/3sum-closest/)|[LeetCode-16-3Sum-Closest.java](src/LeetCode-16-3Sum-Closest.java)|Array, Three Pointers|
 |[18.4Sum](https://leetcode.com/problems/4sum/)|[LeetCode-18-4Sum.java](src/LeetCode-18-4Sum.java)|Four Pointers|
-|[26.Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)|[LeetCode-26-Remove-Duplicates-from-Sorted-Array.java](src/LeetCode-26-Remove-Duplicates-from-Sorted-Array.java)|One Pointers|
+|[26.Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)|[LeetCode-26-Remove-Duplicates-from-Sorted-Array.java](src/LeetCode-26-Remove-Duplicates-from-Sorted-Array.java)|One Pointers, LC80|
 |[27.Remove Element](https://leetcode.com/problems/remove-element/)|[LeetCode-27-Remove-Element.java](src/LeetCode-27-Remove-Element.java)|One or Two Pointers|
 |[31.Next Permutation](https://leetcode.com/problems/next-permutation/)|[LeetCode-31-Next-Permutation.java](src/LeetCode-31-Next-Permutation.java)|Array, Hard to Understand|
 |[33.Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[LeetCode-33-Search-in-Rotated-Sorted-Array.java](src/LeetCode-33-Search-in-Rotated-Sorted-Array.java)|Binary Search|
@@ -42,7 +42,7 @@ Note:
 |[74.Search a 2D Matrix](https://leetcode.com/problems/set-matrix-zeroes/)|[LeetCode-74-Search-a-2D-Matrix.java](src/LeetCode-74-Search-a-2D-Matrix.java)|Array, Binary Search|
 |[75 Sort Colors](https://leetcode.com/problems/sort-colors/)|[LeetCode-75-Sort-Colors.java](src/LeetCode-75-Sort-Colors.java)|Array, Two Pointers|
 |[79.Word Search](https://leetcode.com/problems/word-search/)|[LeetCode-79-Word-Search.java](src/LeetCode-79-Word-Search.java)|Array, DFS|
-|[80.Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java](src/LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java)|Array, Two Pointers|
+|[80.Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java](src/LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java)|Array, One Pointer, LC26|
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
 |[90.Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
