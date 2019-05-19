@@ -45,6 +45,8 @@ Note:
 |[80.Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java](src/LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java)|Array, One Pointer, LC26|
 |[81.Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[LeetCode-81-Search-in-Rotated-Sorted-Array-II.java](src/LeetCode-81-Search-in-Rotated-Sorted-Array-II.java)|Array, Binary Search, LC33|
 |[88.Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[LeetCode-88-Merge-Sorted-Array.java](src/LeetCode-88-Merge-Sorted-Array.java)|Array, Two Pointers|
+|[118.Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|[LeetCode-118-Pascals-Triangle.java](src/LeetCode-118-Pascals-Triangle.java)|Array|
+|[119.Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)|[LeetCode-119-Pascals-Triangle-II.java](src/LeetCode-119-Pascals-Triangle-II.java)|Array|
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
 |[90.Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
@@ -190,8 +192,6 @@ Search a required set, search Maximum/Minimu result
 |[117.Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/)|[LeetCode-117-Populating-Next-Right-Pointers-in-Each-Node-II.java](src/LeetCode-117-Populating-Next-Right-Pointers-in-Each-Node-II.java)|BFS, DFS|
 |[★112.Path Sum](https://leetcode.com/problems/path-sum/)|[LeetCode-112-Path-Sum.java](src/LeetCode-112-Path-Sum.java)|DFS, BFS|
 |[113.Path Sum II](https://leetcode.com/problems/path-sum-ii/)|[LeetCode-113-Path-Sum-II.java](src/LeetCode-113-Path-Sum-II.java)|DFS|
-|[118.Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|[LeetCode-118-Pascals-Triangle.java](src/LeetCode-118-Pascals-Triangle.java)|DP|
-|[119.Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)|[LeetCode-119-Pascals-Triangle-II.java](src/LeetCode-119-Pascals-Triangle-II.java)|DP|
 |[129.Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)|[LeetCode-129-Sum-Root-to-Leaf-Numbers.java](src/LeetCode-129-Sum-Root-to-Leaf-Numbers.java)|DFS|
 |[124.Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)|[LeetCode-124-Binary-Tree-Maximum-Path-Sum.java](src/LeetCode-124-Binary-Tree-Maximum-Path-Sum.java)|not yet, hard|
 |[257.Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[LeetCode-257-Binary-Tree-Paths.java](src/LeetCode-257-Binary-Tree-Paths.java)|not yet|
