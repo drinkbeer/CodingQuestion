@@ -25,6 +25,24 @@ public class Solution {
     }
     
     // 2. Two Pointers
+    /*
+    http://bangbingsyb.blogspot.com/2014/11/leetcode-sort-colors.html
+    
+    这里要求one pass完成排序，需要利用只有数组元素只有3个数的特性，否则无法完成。
+    排序完成后一定是0...01...12....2，所以可以扫描数组，当遇到0时，交换到前部，当遇到1时，交换到后部。
+    用双指针left, right来记录当前已经就位的0序列和2序列的边界位置。
+
+假设已经完成到如下所示的状态：
+
+0......0   1......1  x1 x2 .... xm   2.....2
+              |           |               |
+            left        cur          right
+
+(1) A[cur] = 1：已经就位，cur++即可
+(2) A[cur] = 0：交换A[cur]和A[left]。由于A[left]=1或left=cur，所以交换以后A[cur]已经就位，cur++，left++
+(3) A[cur] = 2：交换A[cur]和A[right]，right--。由于xm的值未知，cur不能增加，继续判断xm。
+cur > right扫描结束。
+    */
     public void sortColors(int[] nums) {
         if(nums == null || nums.length <= 1) return;
         // left is the 0's right bound+1, right is 1's left bound-1
