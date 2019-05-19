@@ -42,4 +42,27 @@ public class Solution {
         // return the size
         return curr + 1;
     }
+    
+    
+    // 2. One Pointer
+    
+    /*
+    https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/discuss/27976/3-6-easy-lines-C%2B%2B-Java-Python-Ruby
+    https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/discuss/27987/Short-and-Simple-Java-solution-(easy-to-understand)
+    
+    Smart and fast. This could also apply to LeetCode-26-Remove-Duplicates-from-Sorted-Array.java
+    80. Remove Duplicates from Sorted Array II
+    
+    */
+    public int removeDuplicates(int[] nums) {
+        
+        int curr = 0;
+        for (int num : nums) {
+            if (curr < 1 || num > nums[curr - 1]) {
+                nums[curr++] = num;
+            }
+        }
+        
+        return curr;
+    }    
 }
