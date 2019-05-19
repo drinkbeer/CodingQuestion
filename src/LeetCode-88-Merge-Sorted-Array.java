@@ -8,6 +8,7 @@ Analysis:
 
 */
 public class Solution {
+    // 1.
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int curr = m + n - 1;
         
@@ -30,6 +31,22 @@ public class Solution {
         if(m >= 0 && n < 0){
             while(m >= 0){
                 nums1[curr--] = nums1[m--];
+            }
+        }
+    }
+    
+    // 2.
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int i = m - 1, j = n - 1, len = m + n - 1;
+        while (i >= 0 || j >= 0) {
+            if (i < 0) nums1[len--] = nums2[j--];
+            else if (j < 0) nums1[len--] = nums1[i--];
+            else {
+                if (nums1[i] < nums2[j]) {
+                    nums1[len--] = nums2[j--];
+                } else {
+                    nums1[len--] = nums1[i--];
+                }
             }
         }
     }
