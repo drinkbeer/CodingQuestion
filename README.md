@@ -23,7 +23,7 @@ Note:
 |[26.Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)|[LeetCode-26-Remove-Duplicates-from-Sorted-Array.java](src/LeetCode-26-Remove-Duplicates-from-Sorted-Array.java)|One Pointers, LC80|
 |[27.Remove Element](https://leetcode.com/problems/remove-element/)|[LeetCode-27-Remove-Element.java](src/LeetCode-27-Remove-Element.java)|One or Two Pointers|
 |[31.Next Permutation](https://leetcode.com/problems/next-permutation/)|[LeetCode-31-Next-Permutation.java](src/LeetCode-31-Next-Permutation.java)|Array, Hard to Understand|
-|[33.Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[LeetCode-33-Search-in-Rotated-Sorted-Array.java](src/LeetCode-33-Search-in-Rotated-Sorted-Array.java)|Binary Search|
+|[33.Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[LeetCode-33-Search-in-Rotated-Sorted-Array.java](src/LeetCode-33-Search-in-Rotated-Sorted-Array.java)|Binary Search, LC81|
 |[34.Search for a Range](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|[LeetCode-34-Search-for-a-Range.java](src/LeetCode-34-Search-for-a-Range.java)|Binary Search|
 |[35 Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[LeetCode-35-Search-Insert-Position.java](src/LeetCode-35-Search-Insert-Position.java)|Binary Search|
 |[39.Combination Sum I](https://leetcode.com/problems/combination-sum/)|[LeetCode-39-Combination-Sum-I.java](src/LeetCode-39-Combination-Sum-I.java)|DFS|
@@ -43,6 +43,7 @@ Note:
 |[75 Sort Colors](https://leetcode.com/problems/sort-colors/)|[LeetCode-75-Sort-Colors.java](src/LeetCode-75-Sort-Colors.java)|Array, Two Pointers|
 |[79.Word Search](https://leetcode.com/problems/word-search/)|[LeetCode-79-Word-Search.java](src/LeetCode-79-Word-Search.java)|Array, DFS|
 |[80.Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java](src/LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java)|Array, One Pointer, LC26|
+|[81.Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[LeetCode-81-Search-in-Rotated-Sorted-Array-II.java](src/LeetCode-81-Search-in-Rotated-Sorted-Array-II.java)|Array, Binary Search, LC33|
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
 |[90.Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
@@ -152,7 +153,6 @@ Search a required set, search Maximum/Minimu result
 |[216.Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)|[LeetCode-216-Combination-Sum-III.java](src/LeetCode-216-Combination-Sum-III.java)|Not yet|
 |[77.Combinations](https://leetcode.com/problems/combinations/)|[LeetCode-77-Combinations.java](src/LeetCode-77-Combinations.java)|DFS|
 |[278.First Bad Version](https://leetcode.com/problems/first-bad-version/)|[LeetCode-278-First-Bad-Version.java](src/LeetCode-278-First-Bad-Version.java)|Binary Search|
-|[81.Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[LeetCode-81-Search-in-Rotated-Sorted-Array-II.java](src/LeetCode-81-Search-in-Rotated-Sorted-Array-II.java)|Array|
 |[240.Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)|[LeetCode-240-Search-a-2D-Matrix-II.java](src/LeetCode-240-Search-a-2D-Matrix-II.java)|not yet|
 |[61 Rotate List](https://leetcode.com/problems/rotate-list/)|[LeetCode-61-Rotate-List.java](src/LeetCode-61-Rotate-List.java)|Two Pointers|
 |[70.Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[LeetCode-70-Climbing-Stairs.java](src/LeetCode-70-Climbing-Stairs.java)|DP|
