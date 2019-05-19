@@ -54,7 +54,7 @@ public class Solution {
 //     }
     
     // 3.This solution process the element equals to val, like a fast-short pointer solution.
-    // But we must ask if the order maters? If the order matters, we cannot do this way. Because we are replacing the removable elements with
+    // But we must ask if the order matters? If the order matters, we cannot do this way. Because we are replacing the removable elements with
     // elements in the tail. (The previous two solutions can keep the order.)
     public int removeElement(int[] nums, int val) {
         int len = nums.length;
