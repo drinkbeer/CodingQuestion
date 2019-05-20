@@ -118,6 +118,7 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 |[123.Best Time to Buy and Sell Stock III](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/)|[LeetCode-123-Best-Time-to-Buy-and-Sell-Stock-III.java](src/LeetCode-123-Best-Time-to-Buy-and-Sell-Stock-III.java)|hard,not yet???|
 |[188.Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)|[LeetCode-188-Best-Time-to-Buy-and-Sell-Stock-IV.java](src/LeetCode-188-Best-Time-to-Buy-and-Sell-Stock-IV.java)|hard, not yet???|
 |[309.Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|[LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java](src/LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java)|not yet???|
+|[152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)|[LeetCode-152-Maximum-Product-Subarray.java](src/LeetCode-152-Maximum-Product-Subarray.java)|DP|
 
 
 
