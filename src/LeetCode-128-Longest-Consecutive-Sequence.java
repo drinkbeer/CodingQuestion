@@ -70,4 +70,36 @@ class Solution {
         }
         return res;
     }
+    
+    /*
+    Wrong Answer
+    
+    
+    Input
+    [1,2,0,1]
+    Output
+    2
+    Expected
+    3
+    
+    
+    */
+    public int longestConsecutive(int[] nums) {
+        int result = 0;
+        Arrays.sort(nums);
+        
+        int count = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i == 0 || nums[i - 1] + 1 == nums[i]) {
+                // find one consecutive number
+                count++;
+                result = Math.max(result, count);
+                continue;
+            }
+            count = 0;
+        }
+        
+        return result;
+    }
+    
 }
