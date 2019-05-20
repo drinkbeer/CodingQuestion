@@ -48,7 +48,8 @@ Note:
 |[118.Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|[LeetCode-118-Pascals-Triangle.java](src/LeetCode-118-Pascals-Triangle.java)|Array|
 |[119.Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)|[LeetCode-119-Pascals-Triangle-II.java](src/LeetCode-119-Pascals-Triangle-II.java)|Array|
 |[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|[LeetCode-128-Longest-Consecutive-Sequence.java](src/LeetCode-128-Longest-Consecutive-Sequence.java)|Array|
-|[153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[LeetCode-153-Find-Minimum in-Rotated-Sorted-Array.java](src/LeetCode-153-Find-Minimum in-Rotated-Sorted-Array.java)|Array|
+|[153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[LeetCode-153-Find-Minimum-in-Rotated-Sorted-Array.java](src/LeetCode-153-Find-Minimum-in-Rotated-Sorted-Array.java)|Array|
+|[154. Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[LeetCode-154-Find-Minimum-in-Rotated-Sorted-Array-II.java](src/LeetCode-154-Find-Minimum-in-Rotated-Sorted-Array-II.java)|Array|
 
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
