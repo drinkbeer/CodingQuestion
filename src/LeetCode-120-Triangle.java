@@ -63,4 +63,40 @@ public class Solution {
         
         return f[0][0];
     }
+    
+    // 3. DP (Inplace Bottom-up)
+//     public int minimumTotal(List<List<Integer>> triangle) {
+//         if (triangle == null || triangle.size() == 0) return -1;
+//         if (triangle.get(0) == null || triangle.get(0).size() == 0) return -1;
+//         int n = triangle.size();
+        
+//         for (int i = n - 2; i >= 0; i--) {
+//             for (int j = 0; j <= i; j++) {
+//                 triangle.get(i).set(j, Math.min(triangle.get(i + 1).get(j), triangle.get(i + 1).get(j + 1)) + triangle.get(i).get(j));
+//             }
+//         }
+        
+//         return triangle.get(0).get(0);
+//     }
+    
+    // 4. DP (In-place Top-Down)
+    public int minimumTotal(List<List<Integer>> triangle) {
+        if (triangle == null || triangle.size() == 0) return -1;
+        if (triangle.get(0) == null || triangle.get(0).size() == 0) return -1;
+        int n = triangle.size();
+        
+        for (int i = 1; i < n; i++) {
+            triangle.get(i).set(0, triangle.get(i - 1).get(0) + triangle.get(i).get(0));
+            for (int j = 1; j <= i - 1; j++) {
+                triangle.get(i).set(j, Math.min(triangle.get(i - 1).get(j - 1), triangle.get(i - 1).get(j)) + triangle.get(i).get(j));
+            }
+            triangle.get(i).set(i, triangle.get(i - 1).get(i - 1) + triangle.get(i).get(i));
+        }
+        
+        int min = triangle.get(n - 1).get(0);
+        for (int i = 1; i <= n - 1; i++) {
+            min = Math.min(min, triangle.get(n - 1).get(i));
+        }
+        return min;
+    }
 }
