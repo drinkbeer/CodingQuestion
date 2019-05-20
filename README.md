@@ -50,6 +50,8 @@ Note:
 |[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|[LeetCode-128-Longest-Consecutive-Sequence.java](src/LeetCode-128-Longest-Consecutive-Sequence.java)|Array|
 |[153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[LeetCode-153-Find-Minimum-in-Rotated-Sorted-Array.java](src/LeetCode-153-Find-Minimum-in-Rotated-Sorted-Array.java)|Array|
 |[154. Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[LeetCode-154-Find-Minimum-in-Rotated-Sorted-Array-II.java](src/LeetCode-154-Find-Minimum-in-Rotated-Sorted-Array-II.java)|Array|
+|[162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[LeetCode-162-Find-Peak-Element.java](src/LeetCode-162-Find-Peak-Element.java)|Array, Binary Search|
+
 
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
@@ -330,7 +332,6 @@ Operations between strings, between big numbers(larger than RAM: First external 
 [287.Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)  
 
 
-[162.Find Peak Element]()  
 
 [30.Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)  
 
