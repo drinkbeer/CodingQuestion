@@ -47,6 +47,8 @@ Note:
 |[88.Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[LeetCode-88-Merge-Sorted-Array.java](src/LeetCode-88-Merge-Sorted-Array.java)|Array, Two Pointers|
 |[118.Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|[LeetCode-118-Pascals-Triangle.java](src/LeetCode-118-Pascals-Triangle.java)|Array|
 |[119.Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)|[LeetCode-119-Pascals-Triangle-II.java](src/LeetCode-119-Pascals-Triangle-II.java)|Array|
+|[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|[LeetCode-128-Longest-Consecutive-Sequence.java](src/LeetCode-128-Longest-Consecutive-Sequence.java)|Array|
+
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
 |[90.Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
