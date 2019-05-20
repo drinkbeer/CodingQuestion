@@ -52,7 +52,9 @@ Note:
 |[154. Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[LeetCode-154-Find-Minimum-in-Rotated-Sorted-Array-II.java](src/LeetCode-154-Find-Minimum-in-Rotated-Sorted-Array-II.java)|Array|
 |[162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[LeetCode-162-Find-Peak-Element.java](src/LeetCode-162-Find-Peak-Element.java)|Array, Binary Search|
 |[163. Missing Ranges](https://leetcode.com/problems/missing-ranges/)|[LeetCode-163-Missing-Ranges.java](src/LeetCode-163-Missing-Ranges.java)|Array|
-
+|[167.Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[LeetCode-167-Two-Sum-II-Input-array-is-sorted.java](src/LeetCode-167-Two-Sum-II-Input-array-is-sorted.java)|Two Pointers|
+|[170.Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[LeetCode-170-Two-Sum-III-Data-structure-design.java](src/LeetCode-170-Two-Sum-III-Data-structure-design.java/)|HashMap|
+|[259.3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)|[LeetCode-259-3Sum-Smaller.java](src/LeetCode-259-3Sum-Smaller.java)|Two Pointers|
 
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
@@ -73,9 +75,6 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 
 |Question|Solution|Tags|
 |--------|--------|----|
-|[167.Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[LeetCode-167-Two-Sum-II-Input-array-is-sorted.java](src/LeetCode-167-Two-Sum-II-Input-array-is-sorted.java)|Two Pointers|
-|[170.Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[LeetCode-170-Two-Sum-III-Data-structure-design.java](src/LeetCode-170-Two-Sum-III-Data-structure-design.java/)|HashMap|
-|[259.3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)|[LeetCode-259-3Sum-Smaller.java](src/LeetCode-259-3Sum-Smaller.java)|Two Pointers|
 |[6 ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/)|[LeetCode-6-ZigZag-Conversion.java](src/LeetCode-6-ZigZag-Conversion.java)|String|
 |[14 Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)|[LeetCode-14-Longest-Common-Prefix.java](src/LeetCode-14-Longest-Common-Prefix.java)|String|
 |[36 Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)|[LeetCode-36-Valid-Sudoku.java](src/LeetCode-36-Valid-Sudoku.java)|Array|
