@@ -25,7 +25,7 @@ Time O(N)
  */
 public class Solution {
     
-    //1.Iterative
+    //1.Iterative (Level Order Traversal)
     // public int closestValue(TreeNode root, double target) {
     //     if(root == null) return -1;
         
@@ -44,7 +44,7 @@ public class Solution {
     //     return val;
     // }
     
-    // 2.Recursive
+    // 2.DFS Recursive (Pre-ordder Traversal)
     int val = 0;
     public int closestValue(TreeNode root, double target) {
         if(root == null) return -1;
@@ -81,5 +81,48 @@ public class Solution {
         }        
         
         return val;
+    }
+    
+    // 1. BFS (Inorder Traversal)
+//     public int closestValue(TreeNode root, double target) {
+        
+//         Stack<TreeNode> stack = new Stack<>();
+//         TreeNode curr = root;
+//         double min = Double.MAX_VALUE;
+//         int minValue = Integer.MAX_VALUE;
+        
+//         while (curr != null || !stack.isEmpty()) {
+//             if (curr != null) {
+//                 stack.push(curr);
+//                 curr = curr.left;
+//             } else {
+//                 curr = stack.pop();
+                
+//                 if (Math.abs(curr.val - target) < min) {
+//                     // find a new smaller node
+//                     min = Math.abs(curr.val - target);
+//                     minValue = curr.val;
+//                 }
+                
+//                 curr = curr.right;
+//             }
+//         }
+        
+//         return minValue;
+//     }
+    
+    // 2.DFS (Inorder Traversal)
+    int minValue = Integer.MAX_VALUE;
+    double minDiff = Double.MAX_VALUE;
+    public int closestValue(TreeNode root, double target) {
+        
+        if (root.left != null) closestValue(root.left, target);
+        if (Math.abs(root.val - target) < minDiff) {
+            minDiff = Math.abs(root.val - target);
+            minValue = root.val;
+        }
+        if (root.right != null) closestValue(root.right, target);
+        
+        return minValue;
     }
 }
