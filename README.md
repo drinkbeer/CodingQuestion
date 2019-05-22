@@ -358,6 +358,10 @@ Analysis:
 
 [Backtracking Porblems总结(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)](https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning))
 
+[O(N) template for Minimum Size Subarray Sum & Minimum Window Substring & Longest Substring Without Repeating Characters](https://leetcode.com/problems/minimum-size-subarray-sum/discuss/59110/O(N)-template-for-Minimum-Size-Subarray-Sum-and-Minimum-Window-Substring-and-Longest-Substring-Without-Repeating-Characters)
+
+
+
 刷题总结：
 http://joshuablog.herokuapp.com/Leetcode-%E6%80%BB%E7%BB%93.html
 
