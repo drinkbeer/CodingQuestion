@@ -213,7 +213,6 @@ Search a required set, search Maximum/Minimu result
 |[236.Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)|[LeetCode-236-Lowest-Common-Ancestor-of-a-Binary-Tree.java](src/LeetCode-236-Lowest-Common-Ancestor-of-a-Binary-Tree.java)|Tree, Recursive|
 |[Search in a Big Sorted Array](http://www.lintcode.com/en/problem/search-in-a-big-sorted-array/)|[LintCode-Search-in-a-Big-Sorted-Array.java](src/LintCode-Search-in-a-Big-Sorted-Array.java)|Binary Search|
 |[133.Clone Graph](https://leetcode.com/problems/clone-graph/)|[LeetCode-133-Clone-Graph.java](src/LeetCode-133-Clone-Graph.java)|BFS, DFS|
-|[270.Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)|[LeetCode-270-Closest-Binary-Search-Tree-Value.java](src/LeetCode-270-Closest-Binary-Search-Tree-Value.java)|BFS, DFS, Traversal|
 |[156. Binary Tree Upside Down](https://leetcode.com/problems/binary-tree-upside-down/)|[LeetCode-156-Binary-Tree-Upside-Down.java](src/LeetCode-156-Binary-Tree-Upside-Down.java)|BFS, DFS|
 |[173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)|[LeetCode-173-Binary-Search-Tree-Iterator.java](/src/LeetCode-173-Binary-Search-Tree-Iterator.java)|BFS|
 |[222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/)|[LeetCode-222-Count-Complete-Tree-Nodes.java](src/LeetCode-222-Count-Complete-Tree-Nodes.java)|BFS, DFS|
@@ -221,6 +220,7 @@ Search a required set, search Maximum/Minimu result
 |[230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)|[LeetCode-230-Kth-Smallest-Element-in-a-BST.java](src/LeetCode-230-Kth-Smallest-Element-in-a-BST.java)|BFS, DFS|
 |[250. Count Univalue Subtrees](https://leetcode.com/problems/count-univalue-subtrees/)|[LeetCode-250-Count-Univalue-Subtrees.java](src/LeetCode-250-Count-Univalue-Subtrees.java)|DFS|
 |[255. Verify Preorder Sequence in Binary Search Tree](https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/submissions/)|[LeetCode-255-Verify-Preorder-Sequence-in-Binary-Search-Tree.java](src/LeetCode-255-Verify-Preorder-Sequence-in-Binary-Search-Tree.java)|DFS|
+|[270.Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)|[LeetCode-270-Closest-Binary-Search-Tree-Value.java](src/LeetCode-270-Closest-Binary-Search-Tree-Value.java)|BFS, DFS, Traversal|
 |[285. Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/)|[LeetCode-285-Inorder-Successor-in-BST.java](src/LeetCode-285-Inorder-Successor-in-BST.java)|BFS|
 |[298. Binary Tree Longest Consecutive Sequence](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/)|[LeetCode-298-Binary-Tree-Longest-Consecutive-Sequence.java](src/LeetCode-298-Binary-Tree-Longest-Consecutive-Sequence.java)|DFS|
 |[333. Largest BST Subtree](https://leetcode.com/problems/largest-bst-subtree/)|[LeetCode-333-Largest-BST-Subtree.java](src/LeetCode-333-Largest-BST-Subtree.java)|DFS|
