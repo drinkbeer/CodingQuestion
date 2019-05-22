@@ -72,6 +72,8 @@ The algorithm first determines the frequency of each bit in the input array. If 
 
 The majority number can be recreated from the frequency table by masking together all the majority bits. This relies on there being a majority. If there is not guaranteed to be a majority a second pass to check the result is required.
     
+     位运算方法：统计32位每个位上出现1的次数大于n/2的，如果是则直接赋值为1，否则为0。
+    
     */
 //     public static int majorityElement(int[] nums) {
 //         // Bit frequency table 
