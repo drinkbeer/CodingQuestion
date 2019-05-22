@@ -56,6 +56,7 @@ Note:
 |[170.Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[LeetCode-170-Two-Sum-III-Data-structure-design.java](src/LeetCode-170-Two-Sum-III-Data-structure-design.java/)|HashMap|
 |[259.3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)|[LeetCode-259-3Sum-Smaller.java](src/LeetCode-259-3Sum-Smaller.java)|Two Pointers|
 |[169. Majority Element](https://leetcode.com/problems/majority-element/)|[LeetCode-169-Majority-Element.java](src/LeetCode-169-Majority-Element.java)|Array, Bit Manipulation|
+|[189.Rotate Array](https://leetcode.com/problems/rotate-array/)|[LeetCode-189-Rotate-Array.java](src/LeetCode-189-Rotate-Array.java)|Array|
 
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
@@ -84,7 +85,6 @@ String includes Parentheness series, Palindrome series, some statistic problems.
 |[71.Simplify Path](https://leetcode.com/problems/simplify-path/)|[LeetCode-71-Simplify-Path.java](src/LeetCode-71-Simplify-Path.java)|String|
 |[242.Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[LeetCode-242-Valid-Anagram.java](src/LeetCode-242-Valid-Anagram.java)|Sort, Array Map|
 |[49.Group Anagrams](https://leetcode.com/problems/anagrams/)|[LeetCode-49-Group-Anagrams.java](src/LeetCode-242-Valid-Anagram.java)|Merge Sort, Priority Queue|
-|[189.Rotate Array](https://leetcode.com/problems/rotate-array/)|[LeetCode-189-Rotate-Array.java](src/LeetCode-189-Rotate-Array.java)|Array|
 |[★20.Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|[LeetCode-20-Valid-Parentheses.java](src/LeetCode-20-Valid-Parentheses.java)|HashMap, Stack|
 |[22.Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)|[LeetCode-22-Generate-Parentheses.java](src/LeetCode-22-Generate-Parentheses.java)|Not Yet|
 |[32.Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)|[LeetCode-32-Longest-Valid-Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
