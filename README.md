@@ -55,6 +55,7 @@ Note:
 |[167.Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)|[LeetCode-167-Two-Sum-II-Input-array-is-sorted.java](src/LeetCode-167-Two-Sum-II-Input-array-is-sorted.java)|Two Pointers|
 |[170.Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/)|[LeetCode-170-Two-Sum-III-Data-structure-design.java](src/LeetCode-170-Two-Sum-III-Data-structure-design.java/)|HashMap|
 |[259.3Sum Smaller](https://leetcode.com/problems/3sum-smaller/)|[LeetCode-259-3Sum-Smaller.java](src/LeetCode-259-3Sum-Smaller.java)|Two Pointers|
+|[169. Majority Element](https://leetcode.com/problems/majority-element/)|[LeetCode-169-Majority-Element.java](src/LeetCode-169-Majority-Element.java)|Two Pointers|
 
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
