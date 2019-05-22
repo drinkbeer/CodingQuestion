@@ -358,6 +358,9 @@ Analysis:
 
 [Backtracking Porblems总结(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)](https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning))
 
+刷题总结：
+http://joshuablog.herokuapp.com/Leetcode-%E6%80%BB%E7%BB%93.html
+
 ###Reference
 [LeetCode](https://leetcode.com/)   |   [LintCode](http://www.lintcode.com/)    |   [JiuZhang](http://www.jiuzhang.com/)  
 [Top 10 Algorithms for Coding Interview](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)  
