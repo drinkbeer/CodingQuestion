@@ -32,6 +32,7 @@ public class Solution {
     //     return Math.max(result, s.length() - slow);
     // }
     
+    // 2. Two Pointers
     public int lengthOfLongestSubstring(String s) {
         if(s == null || s.length() == 0) return 0;
         
@@ -53,5 +54,25 @@ public class Solution {
         }
         
         return result;
+    }
+    
+    // 3. Two Pointers
+    public int lengthOfLongestSubstring(String s) {
+        Set<Character> set = new HashSet<>();
+        
+        int lo = 0, hi = 0, max = 0;
+        while(hi < s.length()) {
+            
+            if (!set.contains(s.charAt(hi))) {
+                set.add(s.charAt(hi));
+                max = Math.max(max, hi - lo + 1);
+                hi++;
+            } else {
+                set.remove(s.charAt(lo));
+                lo++;
+            }
+        }
+        
+        return max;
     }
 }
