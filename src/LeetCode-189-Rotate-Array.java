@@ -8,7 +8,7 @@ ProgramCreek: http://www.programcreek.com/2015/03/rotate-array-in-java/
 
 https://leetcode.com/problems/rotate-array/discuss/54250/Easy-to-read-Java-solution
 
-
+https://leetcode.com/problems/rotate-array/discuss/54308/Simple-and-Most-elegant-logic
 
 */
 public class Solution {
