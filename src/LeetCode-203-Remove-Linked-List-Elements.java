@@ -34,4 +34,31 @@ public class Solution {
         }
         return dummy.next;
     }
+    
+    // 2. Using two pointers.
+    public ListNode removeElements(ListNode head, int val) {
+        if (head == null) return null;
+        
+        ListNode dummy =  new ListNode(-1);
+        ListNode prev = dummy;
+        prev.next = head;
+        ListNode curr = head;
+        
+        while (curr != null) {
+            if (curr.val == val) {
+                curr = remove(prev, curr);
+            } else {
+                prev = curr;
+                curr = curr.next;
+            }
+        }
+        
+        return dummy.next;
+    }
+    
+    private ListNode remove(ListNode prev, ListNode curr) {
+        prev.next = curr.next;
+        curr.next = null;
+        return prev.next;
+    }
 }
