@@ -50,6 +50,26 @@ public class Solution {
         return result == Integer.MIN_VALUE ? 0 : result;
     }
     
+    // Using int[] as mask
+    public int lengthOfLongestSubstring(String s) {
+        if (s == null || s.length() == 0) return 0;
+        
+        int start = 0, end = 0, max = Integer.MIN_VALUE;
+        int[] arr = new int[256];
+        while (end < s.length()) {
+            if (arr[s.charAt(end)] == 0) {
+                arr[s.charAt(end)] = 1;
+                max = Math.max(max, end - start + 1);
+                end++;
+            } else {
+                arr[s.charAt(start)] = 0;
+                start++;
+            }
+        }
+        
+        return max;
+    }
+    
     // 3. Two Pointers
     public int lengthOfLongestSubstring(String s) {
         if(s == null || s.length() == 0) return 0;
