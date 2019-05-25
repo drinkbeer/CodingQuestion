@@ -69,7 +69,7 @@ Note:
 
 
 ### String 
-String includes Parentheness series, Palindrome series, some statistic problems.  
+String includes Parentheness series, Palindrome series, Anagram series, some statistic problems.  
 
 [回文串问题总结](http://blog.csdn.net/fangjian1204/article/details/38084165)  
 [LeetCode总结 —— Palindrome 回文总结](http://mm.fancymore.com/reading/%E5%9B%9E%E6%96%87%E9%97%AE%E9%A2%98.html)  
