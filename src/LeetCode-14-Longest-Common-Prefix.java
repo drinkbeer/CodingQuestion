@@ -24,4 +24,22 @@ public class Solution {
         
         return prefix;
     }
+    
+    public String longestCommonPrefix(String[] strs) {
+        if (strs.length == 0) return "";
+        if (strs.length == 1) return strs[0];
+        
+        String str = strs[0];
+        int k = str.length() - 1;
+        for (int i = 1; i < strs.length; i++) {
+            int j = 0;
+            while (j <= k && j < strs[i].length()) {
+                if (str.charAt(j) != strs[i].charAt(j)) break;
+                j++;
+            }
+            k = j - 1;
+        }
+        
+        return str.substring(0, k + 1);
+    }
 }
