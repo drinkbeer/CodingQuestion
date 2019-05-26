@@ -81,6 +81,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[3 Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|[LeetCode-3-Longest-Substring-Without-Repeating-Characters.java](src/LeetCode-3-Longest-Substring-Without-Repeating-Characters.java)|Two Pointers|
 |[5.Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[LeetCode-5-Longest-Palindromic-Substring.java](src/LeetCode-5-Longest-Palindromic-Substring.java)|String|
 |[6 ZigZag Conversion](https://leetcode.com/problems/zigzag-conversion/)|[LeetCode-6-ZigZag-Conversion.java](src/LeetCode-6-ZigZag-Conversion.java)|String|
+|[8.String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)|[LeetCode-8-String-to-Integer.java](src/LeetCode-8-String-to-Integer.java)|String|
 |[14 Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)|[LeetCode-14-Longest-Common-Prefix.java](src/LeetCode-14-Longest-Common-Prefix.java)|String|
 |[36 Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)|[LeetCode-36-Valid-Sudoku.java](src/LeetCode-36-Valid-Sudoku.java)|Array|
 |[38 Count and Say](https://leetcode.com/problems/count-and-say/)|[LeetCode-38-Count-and-Say.java](src/LeetCode-38-Count-and-Say.java)|String|
@@ -263,7 +264,6 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 |Question|Solution|Tags|
 |--------|--------|----|
 |[7.Reverse Integer](https://leetcode.com/problems/reverse-integer/)|[LeetCode-7-Reverse-Integer.java](src/LeetCode-7-Reverse-Integer.java)|Integer|
-|[8.String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/)|[LeetCode-8-String-to-Integer.java](src/LeetCode-8-String-to-Integer.java)|String|
 |[24.Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)|[LeetCode-24-Swap-Nodes-in-Pairs.java](src/LeetCode-24-Swap-Nodes-in-Pairs.java)|LinkedList|
 |[25.Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[LeetCode-25-Reverse-Nodes-in-k-Group.java](src/LeetCode-25-Reverse-Nodes-in-k-Group.java)|LinkedList|
 |[19.Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)|[LeetCode-19-Remove-Nth-Node-From-End-of-List.java](src/LeetCode-19-Remove-Nth-Node-From-End-of-List.java)|Two Pointers|
