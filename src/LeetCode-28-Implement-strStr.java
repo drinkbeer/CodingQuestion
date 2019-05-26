@@ -5,6 +5,14 @@ JiuZhang: http://www.jiuzhang.com/solutions/implement-strstr/
 ProgramCreek: http://www.programcreek.com/2012/12/leetcode-implement-strstr-java/
 
 Analysis: 
+Be careful that if needle is empty, then no matter what haystack is, return 0.
+If haystack is empty, then if needle is empty return 0, if needle is not empty return -1.
+
+Edge cases:
+"", ""
+"", "a"
+"a", ""
+"a", "a"  <-- if make "i < haystack.length() - needle.length()", this case will fail
 
 */
 public class Solution {
