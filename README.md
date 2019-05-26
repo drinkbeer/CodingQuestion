@@ -86,6 +86,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[12.Integer to Roman](https://leetcode.com/problems/integer-to-roman/)|[LeetCode-12-Integer-to-Roman.java](src/LeetCode-12-Integer-to-Roman.java)|String|
 |[13.Roman to Integer](https://leetcode.com/problems/roman-to-integer/)|[LeetCode-13-Roman-to-Integer.java](src/LeetCode-13-Roman-to-Integer.java)|String|
 |[14 Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)|[LeetCode-14-Longest-Common-Prefix.java](src/LeetCode-14-Longest-Common-Prefix.java)|String|
+|[17.Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)|[LeetCode-17-Letter-Combinations-of-a-Phone-Number.java](src/LeetCode-17-Letter-Combinations-of-a-Phone-Number.java)|DFS, BFS|
 |[36 Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)|[LeetCode-36-Valid-Sudoku.java](src/LeetCode-36-Valid-Sudoku.java)|Array|
 |[38 Count and Say](https://leetcode.com/problems/count-and-say/)|[LeetCode-38-Count-and-Say.java](src/LeetCode-38-Count-and-Say.java)|String|
 |[58.Length of Last Word](https://leetcode.com/problems/length-of-last-word/)|[LeetCode-58-Length-of-Last-Word.java](src/LeetCode-58-Length-of-Last-Word.java)|String|
@@ -250,7 +251,6 @@ Search a required set, search Maximum/Minimu result
 
 [97.Interleaving String](https://leetcode.com/problems/interleaving-string/)
 
-[17.Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 
 ### List
 Change Order(Reverse, Swap) & Remove  
