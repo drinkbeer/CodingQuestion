@@ -89,6 +89,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[17.Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)|[LeetCode-17-Letter-Combinations-of-a-Phone-Number.java](src/LeetCode-17-Letter-Combinations-of-a-Phone-Number.java)|DFS, BFS|
 |[★20.Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|[LeetCode-20-Valid-Parentheses.java](src/LeetCode-20-Valid-Parentheses.java)|HashMap, Stack|
 |[★22.Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)|[LeetCode-22-Generate-Parentheses.java](src/LeetCode-22-Generate-Parentheses.java)|DFS, BFS|
+|[28.Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[LeetCode-28-Implement-strStr.java](src/LeetCode-28-Implement-strStr.java)|String, Two Pointers|
 |[36 Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)|[LeetCode-36-Valid-Sudoku.java](src/LeetCode-36-Valid-Sudoku.java)|Array|
 |[38 Count and Say](https://leetcode.com/problems/count-and-say/)|[LeetCode-38-Count-and-Say.java](src/LeetCode-38-Count-and-Say.java)|String|
 |[58.Length of Last Word](https://leetcode.com/problems/length-of-last-word/)|[LeetCode-58-Length-of-Last-Word.java](src/LeetCode-58-Length-of-Last-Word.java)|String|
@@ -173,7 +174,6 @@ Search a required set, search Maximum/Minimu result
 |[240.Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)|[LeetCode-240-Search-a-2D-Matrix-II.java](src/LeetCode-240-Search-a-2D-Matrix-II.java)|not yet|
 |[61 Rotate List](https://leetcode.com/problems/rotate-list/)|[LeetCode-61-Rotate-List.java](src/LeetCode-61-Rotate-List.java)|Two Pointers|
 |[70.Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[LeetCode-70-Climbing-Stairs.java](src/LeetCode-70-Climbing-Stairs.java)|DP|
-|[28.Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[LeetCode-28-Implement-strStr.java](src/LeetCode-28-Implement-strStr.java)|Two Pointers|
 |[212.Word Search II](https://leetcode.com/problems/word-search-ii/)|[LeetCode-212-Word-Search-II.java](src/LeetCode-212-Word-Search-II.java)|Not yet, hard|
 |[86.Partition List](https://leetcode.com/problems/partition-list/)|[LeetCode-86-Partition-List.java](src/LeetCode-86-Partition-List.java)|Two Pointers|
 |[205.Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)|[LeetCode-205-Isomorphic-Strings.java](src/LeetCode-205-Isomorphic-Strings.java)|HashMap|
