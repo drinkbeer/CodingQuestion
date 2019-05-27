@@ -42,7 +42,11 @@ public class Solution {
         return sb.length() == 0 ? "0" : sb.toString();
     }
     
-    // 2. 
+    // 2.
+    /*
+    https://www.cnblogs.com/grandyang/p/4395356.html
+    https://leetcode.com/problems/multiply-strings/discuss/17605/Easiest-JAVA-Solution-with-Graph-Explanation
+    */
     public String multiply(String num1, String num2) {
         int[] result = new int[num1.length() + num2.length()];
         
