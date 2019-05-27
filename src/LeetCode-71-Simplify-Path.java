@@ -11,6 +11,7 @@ First, split path by "/"
     else, add into list
 */
 public class Solution {
+    // 1.Using List
     public String simplifyPath(String path) {
         if(path == null || path.length() <= 1) return path;
         
@@ -32,6 +33,33 @@ public class Solution {
         if(result.length() > 1) return result.substring(0, result.length() - 1);
         
         return result;
+    }
+    
+    // 2.Using stack
+    public String simplifyPath(String path) {
+        String[] strs = path.split("/");
+        Stack<String> stack = new Stack<>();
+        for (String str : strs) {
+            if (str.length() > 0) stack.push(str);
+        }
+        
+        String result = "";
+        int back = 0;
+        while (!stack.isEmpty()) {
+            String str = stack.pop();
+            if (".".equals(str)) {
+                continue;
+            } else if ("..".equals(str)) {
+                back++;
+            } else {
+                if (back > 0) {
+                    back--;
+                } else {
+                    result = "/" + str + result;
+                }
+            }
+        }
+        return result.length() == 0 ? "/" : result;
     }
     
 }
