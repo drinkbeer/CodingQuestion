@@ -51,6 +51,7 @@ public class Solution {
     
     /*
     https://blog.csdn.net/tingting256/article/details/49804527
+    https://shmilyaw-hotmail-com.iteye.com/blog/2302045
     */
     public List<String> fullJustify(String[] words, int maxWidth) {
         List<String> result = new ArrayList<>();
