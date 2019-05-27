@@ -8,6 +8,7 @@ Analysis:
 Scan from tail to head. Notice if several tail character is ' '
 */
 public class Solution {
+    // 1.
     public int lengthOfLastWord(String s) {
         if(s == null || s.length() == 0) return 0;
         
@@ -23,5 +24,17 @@ public class Solution {
             }
         }
         return length;
+    }
+    
+    // 2.
+    public int lengthOfLastWord(String s) {
+        if (s == null || s.length() == 0) return 0;
+        
+        String[] strs = s.split(" ");
+        if (strs.length > 0) {
+            return strs[strs.length - 1].length();
+        }
+        
+        return 0;
     }
 }
