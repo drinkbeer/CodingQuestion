@@ -41,4 +41,30 @@ public class Solution {
         while(sb.length() > 0 && sb.charAt(0) == '0') sb.deleteCharAt(0);
         return sb.length() == 0 ? "0" : sb.toString();
     }
+    
+    // 2. 
+    public String multiply(String num1, String num2) {
+        int[] result = new int[num1.length() + num2.length()];
+        
+        for (int i = num1.length() - 1; i >= 0; i--) {
+            for (int j = num2.length() - 1; j >= 0; j--) {
+                int p1 = i + j, p2 = i + j + 1;
+                int mul = (num1.charAt(i) - '0') * (num2.charAt(j) - '0') + result[p2];
+                result[p2] = mul % 10;
+                result[p1] += mul / 10;
+            }
+        }
+        
+        int i = 0;
+        for (; i < result.length; i++) {
+            if (result[i] != 0) break;
+        }
+        if (i == result.length) return "0";
+        
+        String res = "";
+        for (; i < result.length; i++) {
+            res += result[i];
+        }
+        return res;
+    }
 }
