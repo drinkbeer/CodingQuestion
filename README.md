@@ -95,6 +95,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[49.Group Anagrams](https://leetcode.com/problems/anagrams/)|[LeetCode-49-Group-Anagrams.java](src/LeetCode-49-Group-Anagrams.java)|String, HashMap|
 |[58.Length of Last Word](https://leetcode.com/problems/length-of-last-word/)|[LeetCode-58-Length-of-Last-Word.java](src/LeetCode-58-Length-of-Last-Word.java)|String|
 |[65. Valid Number](https://leetcode.com/problems/valid-number/)|[LeetCode-65-Valid-Number.java](src/LeetCode-65-Valid-Number.java)|String|
+|[68. Text Justification](https://leetcode.com/problems/text-justification/)|[LeetCode-68-Text-Justification.java](src/LeetCode-68-Text-Justification.java)|String|
 |[71.Simplify Path](https://leetcode.com/problems/simplify-path/)|[LeetCode-71-Simplify-Path.java](src/LeetCode-71-Simplify-Path.java)|String|
 |[242.Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[LeetCode-242-Valid-Anagram.java](src/LeetCode-242-Valid-Anagram.java)|Sort, Array Map|
 |[32.Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)|[LeetCode-32-Longest-Valid-Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
