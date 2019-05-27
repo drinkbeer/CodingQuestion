@@ -92,7 +92,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[28.Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[LeetCode-28-Implement-strStr.java](src/LeetCode-28-Implement-strStr.java)|String, Two Pointers|
 |[38 Count and Say](https://leetcode.com/problems/count-and-say/)|[LeetCode-38-Count-and-Say.java](src/LeetCode-38-Count-and-Say.java)|String|
 |[44. Wildcard Matching](https://leetcode.com/problems/wildcard-matching/)|[LeetCode-44-Wildcard-Matching.java](src/LeetCode-44-Wildcard-Matching.java)|String|
-|[49.Group Anagrams](https://leetcode.com/problems/anagrams/)|[LeetCode-49-Group-Anagrams.java](src/LeetCode-242-Valid-Anagram.java)|Merge Sort, Priority Queue|
+|[49.Group Anagrams](https://leetcode.com/problems/anagrams/)|[LeetCode-49-Group-Anagrams.java](src/LeetCode-49-Group-Anagrams.java)|Merge Sort, Priority Queue|
 |[58.Length of Last Word](https://leetcode.com/problems/length-of-last-word/)|[LeetCode-58-Length-of-Last-Word.java](src/LeetCode-58-Length-of-Last-Word.java)|String|
 |[71.Simplify Path](https://leetcode.com/problems/simplify-path/)|[LeetCode-71-Simplify-Path.java](src/LeetCode-71-Simplify-Path.java)|String|
 |[242.Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[LeetCode-242-Valid-Anagram.java](src/LeetCode-242-Valid-Anagram.java)|Sort, Array Map|
