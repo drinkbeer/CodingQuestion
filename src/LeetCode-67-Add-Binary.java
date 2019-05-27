@@ -8,11 +8,10 @@ Analysis:
 
 */
 public class Solution {
+    // 1.
     public String addBinary(String a, String b) {
-        if(a == null || a.length() == 0)
-            return b;
-        if(b == null || b.length() == 0)
-            return a;
+        if(a == null || a.length() == 0) return b;
+        if(b == null || b.length() == 0) return a;
         
         int carry = 0;
         int i = a.length() - 1;
@@ -37,10 +36,49 @@ public class Solution {
             carry = val / 2;
         }
         
-        if(carry == 1){
-            result = carry + result;
-        }
+        if(carry == 1) result = carry + result;
         
         return result;
     }
+    
+    // 2.
+//     public String addBinary(String a, String b) {
+//         int[] sum = new int[Math.max(a.length(), b.length())];
+//         int k = sum.length - 1;
+//         int carry = 0;
+        
+//         int i = a.length() - 1, j = b.length() - 1;
+//         while (i >= 0 && j >= 0) {
+//             int first = a.charAt(i) - '0';
+//             int second = b.charAt(j) - '0';
+//             int s = first + second + carry;
+//             carry = s / 2;
+//             sum[k--] = s % 2;
+//             i--;
+//             j--;
+//         }
+        
+//         while (i >= 0) {
+//             int first = a.charAt(i) - '0';
+//             int s = first + carry;
+//             carry = s / 2;
+//             sum[k--] = s % 2;
+//             i--;
+//         }
+        
+//         while (j >= 0) {
+//             int second = b.charAt(j) - '0';
+//             int s = second + carry;
+//             carry = s / 2;
+//             sum[k--] = s % 2;
+//             j--;
+//         }
+        
+//         String res = "";
+//         for (int num : sum) res += num;
+//         if (carry > 0) {
+//             res = carry + res;
+//         }
+//         return res;
+//     }
 }
