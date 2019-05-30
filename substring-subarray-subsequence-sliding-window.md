@@ -45,3 +45,6 @@ int findSubstring(string s){
 
 ### Reference
 [Here is a 10-line template that can solve most 'substring' problems](https://discuss.leetcode.com/topic/30941/here-is-a-10-line-template-that-can-solve-most-substring-problems)  
+[O(N)  template for Minimum Size Subarray Sum & Minimum Window Substring & Longest Substring Without Repeating Characters
+](https://leetcode.com/problems/minimum-size-subarray-sum/discuss/59110/O(N)-template-for-Minimum-Size-Subarray-Sum-and-Minimum-Window-Substring-and-Longest-Substring-Without-Repeating-Characters)  
+
