@@ -31,6 +31,30 @@ int findSubstring(string s){
 [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)  
 
 [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)  
+```
+    public String longestPalindrome(String s) {
+        int max = Integer.MIN_VALUE;
+        String result = "";
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i + 1; j <= s.length(); j++) {
+                if (isPalindromic(s, i, j - 1)) {
+                    if (max < j - i) {
+                        max = j - i;
+                        result = s.substring(i, j);
+                    }
+                }
+            }
+        }
+        return result;
+    }
+    
+    private boolean isPalindromic(String s, int lo, int hi) {
+        while (lo < hi) {
+            if (s.charAt(lo++) != s.charAt(hi--)) return false;
+        }
+        return true;
+    }
+```
 
 [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)  
 
