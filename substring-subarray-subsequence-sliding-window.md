@@ -38,6 +38,32 @@ int findSubstring(string s){
 
 [159. Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)  
 
+[209. Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)
+```
+    public int minSubArrayLen(int s, int[] nums) {
+        int start = 0, end = 0, minStart = -1, minLen = Integer.MAX_VALUE, sum = 0;
+        while (end < nums.length) {
+            sum += nums[end];
+            
+            while (sum >= s) {
+                // successfully get one subarray sum >= s, but not sure if it's the smallest one
+                if (minLen > end - start + 1) {
+                    minStart = start;
+                    minLen = end - minStart + 1;
+                }
+                
+                // move start to get a smaller window
+                sum -= nums[start];
+                start++;
+            }
+            
+            end++;
+        }
+        
+        return minStart == -1 ? 0 : minLen;
+    }
+```
+
 [340. Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)  
 
 [395. Longest Substring with At Least K Repeating Characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/)  
