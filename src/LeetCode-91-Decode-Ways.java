@@ -8,6 +8,7 @@ Analysis:
 DP
 */
 public class Solution {
+    // 1.DP
     public int numDecodings(String s) {
         if(s == null || s.length() == 0 || s.charAt(0) == '0') return 0;
         if(s.length() == 1) return 1;
@@ -39,5 +40,25 @@ public class Solution {
         int val = Integer.parseInt(s);
         if(val >= 1 && val <= 26) return true;
         return false;
+    }
+    
+    // 2. DP
+    public int numDecodings(String s) {
+        if (s == null || s.length() == 0) return 0;
+        
+        int[] state = new int[s.length() + 1];
+        state[0] = 1;
+        state[1] = s.charAt(0) != '0' ? 1 : 0;
+        
+        for (int i = 2; i <= s.length(); i++) {
+            int one = Integer.parseInt(s.substring(i - 1, i));
+            int two = Integer.parseInt(s.substring(i - 2, i));
+            System.out.println("one: " + one + " two: " + two);
+            
+            if (one >= 1 && one <= 9) state[i] += state[i - 1]; 
+            if (two >= 10 && two <= 26) state[i] += state[i - 2];
+        }
+        
+        return state[s.length()];
     }
 }
