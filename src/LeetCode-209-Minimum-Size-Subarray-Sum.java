@@ -2,23 +2,30 @@
 https://leetcode.com/problems/minimum-size-subarray-sum/discuss/59110/O(N)-template-for-Minimum-Size-Subarray-Sum-and-Minimum-Window-Substring-and-Longest-Substring-Without-Repeating-Characters
 */
 class Solution {
-    // 1. Two Pointers
+    // 1. Two Pointers (SLIDING WINDOW)
 //     public int minSubArrayLen(int s, int[] nums) {
-//         int left = 0, right = 0, sum = 0, n = nums.length, res = Integer.MAX_VALUE;
-//         while (right < n) {
-//             while (sum < s && right < n) {
-//                 sum += nums[right];
-//                 right++;
+        
+//         int start = 0, end = 0, minStart = -1, minLen = Integer.MAX_VALUE, sum = 0;
+//         while (end < nums.length) {
+//             sum += nums[end];
+            
+//             while (sum >= s) {
+//                 // successfully get one subarray sum >= s, but not sure if it's the smallest one
+//                 if (minLen > end - start + 1) {
+//                     minStart = start;
+//                     minLen = end - minStart + 1;
+//                 }
+                
+//                 // move start to get a smaller window
+//                 sum -= nums[start];
+//                 start++;
 //             }
             
-//             while (sum >= s && left <= right) {
-//                 sum -= nums[left];
-//                 left++;
-//                 res = Math.min(res, right - left + 1);
-//             }
+//             end++;
 //         }
         
-//         return res == Integer.MAX_VALUE ? 0 : res;
+//         return minStart == -1 ? 0 : minLen;
+        
 //     }
     
     // 2. Binary Search
