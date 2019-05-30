@@ -35,6 +35,40 @@ int findSubstring(string s){
 [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)  
 
 [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)  
+```
+    public String minWindow(String s, String t) {
+        if (s == null || t == null) return "";
+        
+        int[] map = new int[256];
+        for (char ch : t.toCharArray()) map[ch]++;
+        
+        int sLen = s.length(), tLen = t.length();
+        int sStart = 0, sEnd = 0, minStart = -1, minLen = Integer.MAX_VALUE, count = t.length();
+        while (sEnd < sLen) {
+            char ch = s.charAt(sEnd);
+            if (map[ch] > 0) count--;
+            map[ch]--;
+            
+            while (count == 0) {
+                // update the min window if necessary
+                if (minLen > sEnd - sStart + 1) {
+                    minLen = sEnd - sStart + 1;
+                    minStart = sStart;
+                }
+                
+                // try to move sStart to shrink the window
+                char ch2 = s.charAt(sStart);
+                map[ch2]++;
+                if (map[ch2] > 0) count++;
+                
+                sStart++;
+            }
+            
+            sEnd++;
+        }
+        return minStart == -1 ? "" : s.substring(minStart, minStart + minLen);
+    }
+```
 
 [159. Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)  
 
