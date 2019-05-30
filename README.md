@@ -127,6 +127,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[63.Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)|[LeetCode-63-Unique-Paths-II.java](src/LeetCode-63-Unique-Paths-II.java)|DP|
 |[64.Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[LeetCode-64-Minimum-Path-Sum.java](src/LeetCode-64-Minimum-Path-Sum.java)|DP|
 |[72. Edit Distance](https://leetcode.com/problems/edit-distance/)|[LeetCode-72-Edit-Distance.java](src/LeetCode-72-Edit-Distance.java)|DP|
+|[91.Decode Ways](https://leetcode.com/problems/decode-ways/)|[LeetCode-91-Decode-Ways.java](src/LeetCode-91-Decode-Ways.java)|DP|
 |[★★★120.Triangle](https://leetcode.com/problems/triangle/)|[LeetCode-120-Triangle.java](src/LeetCode-120-Triangle.java)|DP, Array|
 |[121.Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|[LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.java](src/LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.java)|DP, Greedy|
 |[122.Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)|[LeetCode-122-Best-Time-to-Buy-and-Sell-Stock-II.java](src/LeetCode-122-Best-Time-to-Buy-and-Sell-Stock-II.java)|Array|
@@ -195,7 +196,6 @@ Search a required set, search Maximum/Minimu result
 |[126.Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[LeetCode-126-Word-Ladder-II.java](src/LeetCode-126-Word-Ladder-II.java)|Not yet, hard|
 |[139.Word Break](https://leetcode.com/problems/word-break/)|[LeetCode-139-Word-Break.java](src/LeetCode-139-Word-Break.java)|DFS, DP|
 |[140.Word Break II](https://leetcode.com/problems/word-break-ii/)|[LeetCode-140-Word-Break-II.java](src/LeetCode-140-Word-Break-II.java)|Not yet, hard|
-|[91.Decode Ways](https://leetcode.com/problems/decode-ways/)|[LeetCode-91-Decode-Ways.java](src/LeetCode-91-Decode-Ways.java)|DP|
 |[93.Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)|[LeetCode-93-Restore-IP-Addresses.java](src/LeetCode-93-Restore-IP-Addresses.java)|DFS|
 |[98.Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)|[LeetCode-98-Validate-Binary-Search-Tree.java](src/LeetCode-98-Validate-Binary-Search-Tree.java)|DFS, BFS|
 |[101.Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[LeetCode-101-Symmetric-Tree.java](src/LeetCode-101-Symmetric-Tree.java)|Recursive, Iterative|
