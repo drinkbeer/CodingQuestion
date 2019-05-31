@@ -100,7 +100,7 @@ public class Solution {
     // 3. Using a graph to mark neighborhood relationship
     /*
     https://www.youtube.com/watch?v=mgICIVXu2sQ
-    It will TLE.
+    It will TLE. But the idea is great.
     */
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
         
