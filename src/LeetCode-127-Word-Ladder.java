@@ -94,4 +94,66 @@ public class Solution {
         
         return 0;
     }
+    
+    
+    
+    // 3. Using a graph to mark neighborhood relationship
+    /*
+    https://www.youtube.com/watch?v=mgICIVXu2sQ
+    It will TLE.
+    */
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        
+        HashMap<String, List<String>> map = buildMap(beginWord, wordList);
+        
+        Queue<String> queue = new LinkedList<>();
+        Set<String> doneSet = new HashSet<>();
+        queue.add(beginWord);
+        int level = 0; // initialize the level to be 1
+        
+        while(!queue.isEmpty()) {
+            // process a new level
+            int size = queue.size();
+            level++;
+            for (int l = 0; l < size; l++) {
+                String str = queue.poll();
+                
+                if (endWord.equals(str)) {
+                    return level;
+                }
+                
+                for (String nxt : map.get(str)) {
+                    queue.add(nxt);
+                }
+            }
+        }
+        
+        return 0;
+    }
+    
+    private HashMap<String, List<String>> buildMap(String beginWord, List<String> wordList) {
+        HashMap<String, List<String>> map = new HashMap<>();
+        for (String str : wordList) {
+            map.put(str, new ArrayList<>());
+            for (String nxt : wordList) {
+                if (diff(str, nxt)) map.get(str).add(nxt);
+            }
+        }
+        // special case: have to add beginWord to the graph
+        if (!map.containsKey(beginWord)) {
+            map.put(beginWord, new ArrayList<>());
+            for (String nxt : wordList) {
+                if (diff(beginWord, nxt)) map.get(beginWord).add(nxt);
+            }
+        }
+        return map;
+    }
+    
+    private boolean diff(String s1, String s2) {
+        int count = 0;
+        for (int i = 0; i < s1.length(); i++) {
+            if (s1.charAt(i) != s2.charAt(i)) count++;
+        }
+        return count == 1;
+    }
 }
