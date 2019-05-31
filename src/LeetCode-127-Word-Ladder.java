@@ -10,44 +10,88 @@ BFS.
 It's just like Binary Tree Level Order Traversal. Each level
 */
 public class Solution {
-    public int ladderLength(String beginWord, String endWord, Set<String> wordList) {
-        if(beginWord.equals(endWord)) return 0;
+    // 1. BFS. Time Limit Exceeded as the wordList is too large.
+//     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+//         if (beginWord == null || endWord == null || beginWord.length() != endWord.length()) return 0;
+//         if (!wordList.contains(endWord)) return 0;
         
+//         Queue<String> queue = new LinkedList<>();
+//         queue.add(beginWord);
+        
+//         int count = 1;
+//         while(!queue.isEmpty()) {
+//             int len = queue.size();
+//             count++;
+//             for (int i = 0; i < len; i++) {
+//                 String str = queue.poll();
+//                 for (int j = 0; j < str.length(); j++) {
+//                     for (char ch = 'a'; ch <= 'z'; ch++) {
+//                         if (ch == str.charAt(j)) continue; // skip duplicate case;
+//                         String temp = replace(str, j, ch);
+                        
+//                         if (temp.equals(endWord)) {
+//                             // find one ladder
+//                             return count;
+//                         } 
+                        
+//                         if (wordList.contains(temp)) {
+//                             queue.add(temp);
+//                             wordList.remove(temp);
+//                         }
+//                     }
+//                 }
+//             }
+            
+//         }
+        
+//         return 0;
+//     }
+    
+//     private String replace(String str, int i, char ch) {
+//         char[] arr = str.toCharArray();
+//         arr[i] = ch;
+//         return new String(arr);
+//     }
+    
+    // 2,BFS
+    /*
+    This will pass the OJ because the remove operation in Set is much faster than List.
+    
+    */
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        if(beginWord.equals(endWord)) return 1;
+        
+        Set<String> dict = new HashSet<>(wordList); // O(N) space        
         Queue<String> queue = new LinkedList<String>();
         
-        queue.offer(beginWord);
-        int count = 1;
+        queue.add(beginWord);
+        int level = 1;
         
-        while(!queue.isEmpty()){
-            int size = queue.size();
-            count++;
-            for(int i = 0; i < size; i++){
-                String curr = queue.poll();
-                
-                for(char c = 'a'; c < 'z'; c++){
+        while (!queue.isEmpty()) {
+            int levelSize = queue.size();
+            
+            for(int l=0; l < levelSize; l++) { // check level by level to find optimal path
+                char[] current = queue.poll().toCharArray();
+            
+                for(int i=0; i < current.length; i++) { // check a new word by changing each char
+                    char temp = current[i];
+                    for (char chr = 'a'; chr <= 'z'; chr++) {
+                        current[i] = chr; 
+                        String result = new String(current);
                     
-                    for(int j = 0; j < curr.length(); j++){
-                        if(c == curr.charAt(j)) continue;
-                        String temp = replace(curr, j, c);
-                        if(temp.equals(endWord)) return count;
+                        if(dict.contains(result)) { 
+                            if(result.equals(endWord)) return level+1;
                         
-                        if(wordList.contains(temp)){
-                            queue.offer(temp);
-                            wordList.remove(temp);
+                            queue.add(result);
+                            dict.remove(result);
                         }
                     }
-                    
+                    current[i] = temp; // restore changed character
                 }
             }
-            
+            level++;
         }
         
         return 0;
-    }
-    
-    private static String replace(String str, int i, char c){
-        char[] chars = str.toCharArray();
-        chars[i] = c;
-        return new String(chars);
     }
 }
