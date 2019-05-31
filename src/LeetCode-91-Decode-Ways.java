@@ -42,7 +42,7 @@ public class Solution {
         return false;
     }
     
-    // 2. DP
+    // 2. DP, Time O(N), Space O(N)
     public int numDecodings(String s) {
         if (s == null || s.length() == 0) return 0;
         
@@ -60,5 +60,24 @@ public class Solution {
         }
         
         return state[s.length()];
+    }
+    
+    // 3. DP Time O(N), Space O(1)    
+    public int numDecodings(String s) {
+        if (s == null || s.length() == 0) return 0;
+        
+        int[] state = new int[3];
+        state[0] = 1;
+        state[1] = s.charAt(0) != '0' ? 1 : 0;
+        
+        for (int i = 2; i <= s.length(); i++) {
+            int one = Integer.parseInt(s.substring(i - 1, i));
+            int two = Integer.parseInt(s.substring(i - 2, i));
+            state[i % 3] = 0;
+            if (one >= 1 && one <= 9) state[i % 3] += state[(i - 1) % 3];
+            if (two >= 10 && two <= 26) state[i % 3] += state[(i - 2) % 3];
+        }
+        
+        return state[s.length() % 3];
     }
 }
