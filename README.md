@@ -100,7 +100,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)|[LeetCode-76-Minimum-Window-Substring.java](src/LeetCode-76-Minimum-Window-Substring.java)|String|
 |[★125.Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[LeetCode-125-Valid-Palindrome.java](src/LeetCode-125-Valid-Palindrome.java)|Two Pointers|
 |[★127.Word Ladder](https://leetcode.com/problems/word-ladder/)|[LeetCode-127-Word-Ladder.java](src/LeetCode-127-Word-Ladder.java)|BFS|
-|[126.Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[LeetCode-126-Word-Ladder-II.java](src/LeetCode-126-Word-Ladder-II.java)|Not yet, hard|
+|[★126.Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[LeetCode-126-Word-Ladder-II.java](src/LeetCode-126-Word-Ladder-II.java)|DFS+BFS|
 |[242.Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[LeetCode-242-Valid-Anagram.java](src/LeetCode-242-Valid-Anagram.java)|Sort, Array Map|
 |[32.Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)|[LeetCode-32-Longest-Valid-Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
 |[241.Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)|[LeetCode-241.Different Ways to Add Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
