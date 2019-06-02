@@ -95,9 +95,9 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[49.Group Anagrams](https://leetcode.com/problems/anagrams/)|[LeetCode-49-Group-Anagrams.java](src/LeetCode-49-Group-Anagrams.java)|String, HashMap|
 |[58.Length of Last Word](https://leetcode.com/problems/length-of-last-word/)|[LeetCode-58-Length-of-Last-Word.java](src/LeetCode-58-Length-of-Last-Word.java)|String|
 |[65. Valid Number](https://leetcode.com/problems/valid-number/)|[LeetCode-65-Valid-Number.java](src/LeetCode-65-Valid-Number.java)|String|
-|[68. Text Justification](https://leetcode.com/problems/text-justification/)|[LeetCode-68-Text-Justification.java](src/LeetCode-68-Text-Justification.java)|String|
+|[★68. Text Justification](https://leetcode.com/problems/text-justification/)|[LeetCode-68-Text-Justification.java](src/LeetCode-68-Text-Justification.java)|String|
 |[71.Simplify Path](https://leetcode.com/problems/simplify-path/)|[LeetCode-71-Simplify-Path.java](src/LeetCode-71-Simplify-Path.java)|String|
-|[76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)|[LeetCode-76-Minimum-Window-Substring.java](src/LeetCode-76-Minimum-Window-Substring.java)|String|
+|[★76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)|[LeetCode-76-Minimum-Window-Substring.java](src/LeetCode-76-Minimum-Window-Substring.java)|String|
 |[93.Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)|[LeetCode-93-Restore-IP-Addresses.java](src/LeetCode-93-Restore-IP-Addresses.java)|String, DFS|
 |[★125.Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[LeetCode-125-Valid-Palindrome.java](src/LeetCode-125-Valid-Palindrome.java)|Two Pointers|
 |[★127.Word Ladder](https://leetcode.com/problems/word-ladder/)|[LeetCode-127-Word-Ladder.java](src/LeetCode-127-Word-Ladder.java)|BFS|
