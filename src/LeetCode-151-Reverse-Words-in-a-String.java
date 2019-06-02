@@ -7,7 +7,31 @@ ProgramCreek: http://www.programcreek.com/2014/02/leetcode-reverse-words-in-a-st
 Analysis: 
 
 */
-public class Solution {
+class Solution {
+    
+    // 1.
+    /*
+    Runtime: 1 ms, faster than 99.93% of Java online submissions for Reverse Words in a String.
+    */
+//     public String reverseWords(String s) {
+//         s = s.trim();
+//         String[] arr = s.split(" ");
+//         StringBuilder sb = new StringBuilder();
+        
+//         for (int i = arr.length - 1; i >= 0; i--) {
+//             if ("".equals(arr[i])) continue;
+            
+//             sb.append(arr[i]);
+//             if (i != 0) sb.append(" ");
+//         }
+        
+//         return sb.toString();
+//     }
+    
+    // 2.
+    /*
+    Runtime: 1 ms, faster than 99.93% of Java online submissions for Reverse Words in a String.
+    */
     public String reverseWords(String s) {
         if(s == null || s.length() == 0) return s;
         
@@ -23,4 +47,6 @@ public class Solution {
         
         return sb.length() == 0 ? "" : sb.substring(0, sb.length() - 1);    //remove the last " "
     }
+    
+    
 }
