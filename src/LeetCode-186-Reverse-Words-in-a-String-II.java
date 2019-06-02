@@ -10,6 +10,7 @@ Analysis:
 Be careful, the last subarray should also be reversed. For example, "hi!" should be reversed in second step.
 */
 public class Solution {
+    // 1.
     public void reverseWords(char[] s) {
         if(s == null || s.length <= 1)return;
         reverseWords(s, 0, s.length - 1);
@@ -32,4 +33,33 @@ public class Solution {
             hi--;
         }
     }
+    
+    // 2.
+//     public void reverseWords(char[] str) {
+//         int begin = 0, end = 0;
+//         while (end < str.length) {
+//             if (str[end] == ' ') {
+//                 reverse(str, begin, end - 1);
+//                 begin = end + 1;
+//                 end = begin;
+//             } else {
+//                 end++;
+//             }
+//         }
+        
+//         if (begin < end) reverse(str, begin, end - 1);
+        
+//         reverse(str, 0, str.length - 1);
+//     }
+    
+//     private void reverse(char[] str, int i, int j) {
+//         while(i < j) {
+//             char temp = str[i];
+//             str[i] = str[j];
+//             str[j] = temp;
+//             i++;
+//             j--;
+//         }
+//     }
+    
 }
