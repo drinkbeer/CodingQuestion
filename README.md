@@ -106,6 +106,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[★158.Read N Characters Given Read4 II - Call multiple times](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/)|[LeetCode-158-Read-N-Characters-Given-Read4II-Call-multiple-times.java](src/LeetCode-158-Read-N-Characters-Given-Read4II-Call-multiple-times.java)|String|
 |[159. Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)|[LeetCode-159-Longest-Substring-with-At-Most-Two-Distinct-Characters.java](src/LeetCode-159-Longest-Substring-with-At-Most-Two-Distinct-Characters.java)|String, SubString|
 |[161. One Edit Distance](https://leetcode.com/problems/one-edit-distance/)|[LeetCode-161-One-Edit-Distance.java](src/LeetCode-161-One-Edit-Distance.java)|String|
+|[165.Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)|[LeetCode-165-Compare-Version-Numbers.java](src/LeetCode-165-Compare-Version-Numbers.java)|String|
 |[242.Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[LeetCode-242-Valid-Anagram.java](src/LeetCode-242-Valid-Anagram.java)|Sort, Array Map|
 |[32.Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)|[LeetCode-32-Longest-Valid-Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
 |[241.Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)|[LeetCode-241.Different Ways to Add Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
@@ -117,7 +118,6 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[214.Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/)|[LeetCode-214-Shortest-Palindrome.java](src/LeetCode-132-Palindrome-Partitioning-II.java)|Not Yet, Hard|
 |[266.Palindrome Permutation](https://leetcode.com/problems/palindrome-permutation/)|[LeetCode-266-Palindrome-Permutation.java](src/LeetCode-234-Palindrome-Linked-List.java)|HashMap|
 |[267.Palindrome Permutation II](https://leetcode.com/problems/palindrome-permutation-ii/)|[LeetCode-267-Palindrome-Permutation-II.java](src/LeetCode-267-Palindrome-Permutation-II.java)|Not Yet|
-|[165.Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)|[LeetCode-165-Compare-Version-Numbers.java](src/LeetCode-165-Compare-Version-Numbers.java)|String|
 |[288.Unique Word Abbreviation](https://leetcode.com/problems/unique-word-abbreviation/)|[LeetCode-288-Unique-Word-Abbreviation.java](src/LeetCode-288-Unique-Word-Abbreviation.java)|String|
 
 
