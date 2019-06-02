@@ -96,15 +96,15 @@ public class Solution {
     }
     
     
-    
     // 3. Using a graph to mark neighborhood relationship
+    // Using a graph to mark neighborhood relationship, it will TLE, but the approach is worth learning
     /*
     https://www.youtube.com/watch?v=mgICIVXu2sQ
     It will TLE. But the idea is great.
     */
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        
-        HashMap<String, List<String>> map = buildMap(beginWord, wordList);
+        wordList.add(beginWord);
+        HashMap<String, List<String>> map = buildMap(wordList);
         
         Queue<String> queue = new LinkedList<>();
         Set<String> doneSet = new HashSet<>();
@@ -131,29 +131,61 @@ public class Solution {
         return 0;
     }
     
-    private HashMap<String, List<String>> buildMap(String beginWord, List<String> wordList) {
+    // Optimized: buid a graph, it will still TLE
+    private HashMap<String, List<String>> buildMap(List<String> wordList) {
+        // The tricky park here is. the time complexity of List.contains() is O(N), but Set.contains() is O(1), so we 
+        // want to convert the List to Set.
+        Set<String> wordSet = new HashSet<>();
+        for (String str : wordList) wordSet.add(str);
+        
         HashMap<String, List<String>> map = new HashMap<>();
-        for (String str : wordList) {
-            map.put(str, new ArrayList<>());
-            for (String nxt : wordList) {
-                if (diff(str, nxt)) map.get(str).add(nxt);
-            }
-        }
-        // special case: have to add beginWord to the graph
-        if (!map.containsKey(beginWord)) {
-            map.put(beginWord, new ArrayList<>());
-            for (String nxt : wordList) {
-                if (diff(beginWord, nxt)) map.get(beginWord).add(nxt);
-            }
+        for (String s1 : wordList) {
+            map.put(s1, new ArrayList<>());
+            diff(s1, wordSet, map);
         }
         return map;
     }
     
-    private boolean diff(String s1, String s2) {
-        int count = 0;
-        for (int i = 0; i < s1.length(); i++) {
-            if (s1.charAt(i) != s2.charAt(i)) count++;
+    private void diff(String str, Set<String> wordSet, HashMap<String, List<String>> map) {
+        char[] arr = str.toCharArray();
+        for (int i = 0; i < arr.length; i++) {
+            char temp = arr[i];
+            for (char ch = 'a'; ch <= 'z'; ch++) {
+                if (ch == temp) continue; // skip duplicates
+                arr[i] = ch;
+                String newStr = new String(arr);
+                if (wordSet.contains(newStr)) {
+                    map.get(str).add(newStr);
+                }
+                arr[i] = temp;
+            }
         }
-        return count == 1;
     }
+    
+    // First approach to build map, which is naive, and cause TLE
+//     private HashMap<String, List<String>> buildMap(String beginWord, List<String> wordList) {
+//         HashMap<String, List<String>> map = new HashMap<>();
+//         for (String str : wordList) {
+//             map.put(str, new ArrayList<>());
+//             for (String nxt : wordList) {
+//                 if (diff(str, nxt)) map.get(str).add(nxt);
+//             }
+//         }
+//         // special case: have to add beginWord to the graph
+//         if (!map.containsKey(beginWord)) {
+//             map.put(beginWord, new ArrayList<>());
+//             for (String nxt : wordList) {
+//                 if (diff(beginWord, nxt)) map.get(beginWord).add(nxt);
+//             }
+//         }
+//         return map;
+//     }
+    
+//     private boolean diff(String s1, String s2) {
+//         int count = 0;
+//         for (int i = 0; i < s1.length(); i++) {
+//             if (s1.charAt(i) != s2.charAt(i)) count++;
+//         }
+//         return count == 1;
+//     }
 }
