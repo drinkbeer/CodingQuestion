@@ -284,10 +284,9 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 
 |Question|Solution|Tags|
 |--------|--------|----|
-|[7.Reverse Integer](https://leetcode.com/problems/reverse-integer/)|[LeetCode-7-Reverse-Integer.java](src/LeetCode-7-Reverse-Integer.java)|Integer|
+|[19.Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)|[LeetCode-19-Remove-Nth-Node-From-End-of-List.java](src/LeetCode-19-Remove-Nth-Node-From-End-of-List.java)|Two Pointers|
 |[24.Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)|[LeetCode-24-Swap-Nodes-in-Pairs.java](src/LeetCode-24-Swap-Nodes-in-Pairs.java)|LinkedList|
 |[25.Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)|[LeetCode-25-Reverse-Nodes-in-k-Group.java](src/LeetCode-25-Reverse-Nodes-in-k-Group.java)|LinkedList|
-|[19.Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)|[LeetCode-19-Remove-Nth-Node-From-End-of-List.java](src/LeetCode-19-Remove-Nth-Node-From-End-of-List.java)|Two Pointers|
 |[203.Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)|[LeetCode-203-Remove-Linked-List-Elements.java](src/LeetCode-203-Remove-Linked-List-Elements.java)|LinkedList|
 |[83.Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|[LeetCode-83-Remove-Duplicates-from-Sorted-List.java](src/LeetCode-83-Remove-Duplicates-from-Sorted-List.java)|LinkedList|
 |[82.Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)|[LeetCode-82-Remove-Duplicates-from-Sorted-List-II.java](src/LeetCode-82-Remove-Duplicates-from-Sorted-List-II.java)|LinkedList|
@@ -308,6 +307,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |Question|Solution|Tags|
 |--------|--------|----|
 |[2.Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|[LeetCode-2-Add-Two-Numbers.java](src/LeetCode-2-Add-Two-Numbers.java)|LinkedList|
+|[7.Reverse Integer](https://leetcode.com/problems/reverse-integer/)|[LeetCode-7-Reverse-Integer.java](src/LeetCode-7-Reverse-Integer.java)|Integer|
 |[43.Multiply Strings](https://leetcode.com/problems/multiply-strings/)|[LeetCode-43-Multiply-Strings.java](src/LeetCode-43-Multiply-Strings.java)|String|
 |[67.Add Binary](https://leetcode.com/problems/add-binary/)|[LeetCode-67-Add-Binary.java](src/LeetCode-67-Add-Binary.java)|String|
 |[29.Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)|[LeetCode-29-Divide-Two-Integers.java](src/LeetCode-29-Divide-Two-Integers.java)|Binary Search|
