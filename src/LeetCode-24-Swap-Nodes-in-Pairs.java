@@ -6,6 +6,10 @@ ProgramCreek: http://www.programcreek.com/2014/04/leetcode-swap-nodes-in-pairs-j
 
 Analysis: 
 Two pointers
+
+
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Swap Nodes in Pairs.
+
 */
 /**
  * Definition for singly-linked list.
@@ -16,6 +20,28 @@ Two pointers
  * }
  */
 public class Solution {
+    // 1.
+//     public ListNode swapPairs(ListNode head) {
+//         if (head == null || head.next == null) return head;
+        
+//         ListNode dummy = new ListNode(-1);
+//         dummy.next = head;
+//         ListNode slow = dummy, fast = head;
+        
+//         while(fast != null && fast.next != null) {
+//             ListNode temp = fast.next;
+//             fast.next = fast.next.next;
+//             slow.next = temp;
+//             temp.next = fast;
+            
+//             slow = slow.next.next;
+//             fast = fast.next;
+//         }
+        
+//         return dummy.next;
+//     }
+    
+    // 2.
     public ListNode swapPairs(ListNode head) {
         if(head == null || head.next == null) return head;
         
