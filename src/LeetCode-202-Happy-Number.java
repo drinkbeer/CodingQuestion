@@ -39,6 +39,8 @@ another large number O3 > O1. This means we process on some number W <= 999 that
 because the outcome of W can be at most 9^2*3 < 300 < O1.
 
 Done.
+
+For any number with D digits, 9^2*D is the boundary. (9^2*D < 100D)
 */
 class Solution {
     // 1.
