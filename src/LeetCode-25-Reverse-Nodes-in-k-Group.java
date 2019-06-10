@@ -7,6 +7,8 @@
  * }
  */
 public class Solution {
+    
+    // 1. Iterative
     // public ListNode reverseKGroup(ListNode head, int k) {
     //     if(head == null || head.next == null || k <= 1) return head;
         
@@ -42,8 +44,7 @@ public class Solution {
     //     return curr;
     // }
     
-    
-    
+    // 2.Iterative
     public ListNode reverseKGroup(ListNode head, int k) {
         if (head ==null || k==1) return head;
         
@@ -96,5 +97,43 @@ public class Solution {
         }
         
         return last;
+    }
+    
+    
+    // 3.Recursively
+    public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode prev = new ListNode(-1);
+        prev.next = head;
+        
+        ListNode next = prev.next;   // next is the last node in k group
+        int count = 1;
+        // get the Kth node or null if there is no enough K nodes left in the list
+        while (next != null && count < k) {
+            next = next.next;
+            count++;
+        }
+        
+        // means there is no enough K nodes in this group, directly return head
+        if (next == null) return head;
+        
+        next.next = reverseKGroup(next.next, k);  // next is the last node in this k group, next.next is first node in next k group
+        reverse(prev, next.next);
+        
+        return prev.next;
+    }
+    
+    private ListNode reverse(ListNode prev, ListNode next) {
+        ListNode last = prev.next;
+        ListNode curr = last.next;
+        
+        while (curr != next) {
+            last.next = curr.next;
+            curr.next = prev.next;
+            prev.next = curr;
+            
+            curr = last.next;
+        }
+        
+        return prev.next;
     }
 }
