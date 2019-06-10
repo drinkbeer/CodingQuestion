@@ -63,4 +63,67 @@ public class Solution {
         }
         return len;
     }
+    
+    
+//     public ListNode rotateRight(ListNode head, int k) {
+//         if (k == 0 || head == null) return head;
+//         if (head.next == null) return head;
+        
+//         ListNode curr = head;
+//         int len = 0;
+//         ListNode last = null;
+//         while (curr != null) {
+//             len++;
+//             if (curr.next == null) last = curr;
+//             curr = curr.next;
+//         }
+        
+//         // System.out.println("len: " + len + "  K: " + k);
+//         k = len - k % len;
+//         System.out.println("len: " + len + "  K: " + k);
+        
+//         curr = head;
+//         int i = 0;
+//         while(curr != null && i < k - 1) {
+//             curr = curr.next;
+//             i++;
+//         }
+        
+//         if (curr.next == null) return head;
+        
+//         ListNode newHead = curr.next;
+//         curr.next = null;
+//         last.next = head;
+        
+//         return newHead;
+//     }
+    
+    
+    public ListNode rotateRight(ListNode head, int k) {
+        if (head == null || k < 1) return head;
+        
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode slow = dummy, fast = dummy;
+        
+        // Step 1: Move fast to the tail, and count the numebr of elements
+        int len = 0;
+        while (fast.next != null) {
+            len++;
+            fast = fast.next;
+        }
+        
+        // Step 2: move slow to the last element of the first group.
+        k = len - k % len;
+        for (int i = 0; i < k; i++) {
+            slow = slow.next;
+        }
+        
+        // Step 3: reconnect
+        fast.next = dummy.next;
+        dummy.next = slow.next;
+        slow.next = null;
+        
+        return dummy.next;
+    }
 }
