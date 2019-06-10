@@ -31,6 +31,25 @@ public class Solution {
         }
         
         return dummy.next;
-       
+    }
+    
+    
+    
+    /**
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Remove Duplicates from Sorted List II.
+    */
+    public ListNode deleteDuplicates(ListNode head) {
+        if(head==null) return null;
+        
+        if(head.next!=null && head.val == head.next.val)
+        {
+            while(head.next!=null && head.val==head.next.val) head = head.next;
+            return deleteDuplicates(head.next);
+        } 
+        else
+        {
+            head.next = deleteDuplicates(head.next);
+        }
+        return head;
     }
 }
