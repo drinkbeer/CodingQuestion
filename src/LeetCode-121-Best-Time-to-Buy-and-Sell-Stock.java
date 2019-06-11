@@ -8,6 +8,23 @@ Analysis:
 DP
 */
 public class Solution {
+    
+    // 1. DP
+//     public int maxProfit(int[] prices) {
+//         if (prices == null || prices.length == 0) return 0;
+        
+//         int[] state = new int[prices.length];
+//         int lowest = prices[0];
+        
+//         for (int i = 1; i < prices.length; i++) {
+//             lowest = Math.min(lowest, prices[i]);
+//             state[i] = Math.max(state[i - 1], prices[i] - lowest);
+//         }
+        
+//         return state[prices.length - 1];
+//     }
+    
+    // 2.Greedy
     public int maxProfit(int[] prices) {
         if(prices == null || prices.length <= 1) return 0;
         
