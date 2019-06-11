@@ -53,46 +53,83 @@ public class Solution {
 //     }
     
     
+//     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+//         int carry = 0;
+//         ListNode dummy = new ListNode(-1);
+//         ListNode p = dummy;
+        
+//         while(l1 != null && l2 != null) {
+//             int temp = carry;
+//             carry = (l1.val + l2.val + temp) / 10;
+//             ListNode curr = new ListNode((l1.val + l2.val + temp) % 10);
+//             p.next = curr;
+//             p = p.next;
+//             l1 = l1.next;
+//             l2 = l2.next;
+//         }
+        
+//         while (l1 != null) {
+//             int temp = carry;
+//             carry = (l1.val + temp) / 10;
+//             ListNode curr = new ListNode((l1.val + temp) % 10);
+//             p.next = curr;
+//             p = p.next;
+//             l1 = l1.next;
+//         }
+        
+//         while (l2 != null) {
+//             int temp = carry;
+//             carry = (l2.val + temp) / 10;
+//             ListNode curr = new ListNode((l2.val + temp) % 10);
+//             p.next = curr;
+//             p = p.next;
+//             l2 = l2.next;
+//         }
+        
+//         if (carry != 0) {
+//             ListNode curr = new ListNode(carry);
+//             p.next = curr;
+//         }
+        
+//         return dummy.next;
+//     }
+    
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int carry = 0;
+        int carry =  0;
         ListNode dummy = new ListNode(-1);
-        ListNode p = dummy;
+        ListNode pre = dummy;
         
         while(l1 != null && l2 != null) {
-            int temp = carry;
-            carry = (l1.val + l2.val + temp) / 10;
-            ListNode curr = new ListNode((l1.val + l2.val + temp) % 10);
-            p.next = curr;
-            p = p.next;
+            int val = (l1.val + l2.val + carry) % 10;
+            carry = (l1.val + l2.val + carry) / 10;
+            pre.next = new ListNode(val);
+            
             l1 = l1.next;
             l2 = l2.next;
+            pre = pre.next;
         }
         
         while (l1 != null) {
-            int temp = carry;
-            carry = (l1.val + temp) / 10;
-            ListNode curr = new ListNode((l1.val + temp) % 10);
-            p.next = curr;
-            p = p.next;
+            int val = (l1.val + carry) % 10;
+            carry = (l1.val + carry) / 10;
+            pre.next = new ListNode(val);
+            
             l1 = l1.next;
+            pre = pre.next;
         }
         
-        while (l2 != null) {
-            int temp = carry;
-            carry = (l2.val + temp) / 10;
-            ListNode curr = new ListNode((l2.val + temp) % 10);
-            p.next = curr;
-            p = p.next;
+        while(l2 != null) {
+            int val = (l2.val + carry) % 10;
+            carry = (l2.val + carry) / 10;
+            pre.next = new ListNode(val);
+            
             l2 = l2.next;
+            pre = pre.next;
         }
         
-        if (carry != 0) {
-            ListNode curr = new ListNode(carry);
-            p.next = curr;
-        }
+        if (carry != 0) pre.next = new ListNode(carry);
         
         return dummy.next;
     }
-    
  
 }
