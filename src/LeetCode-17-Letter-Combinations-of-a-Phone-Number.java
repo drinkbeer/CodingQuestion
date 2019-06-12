@@ -92,4 +92,30 @@ public class Solution {
         }
         return result;
     }
+    
+    
+    
+    public List<String> letterCombinations(String digits) {
+        List<String> result = new ArrayList<>();
+        if (digits == null || digits.length() == 0) return result;
+        
+        result.add("");
+        String[] map = new String[] {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        for (int i = 0; i < digits.length(); i++) {
+            String chars = map[digits.charAt(i) - '0'];
+            
+            List<String> temp = new ArrayList<>();
+            for (char ch : chars.toCharArray()) {
+                
+                for (String str : result) {
+                    temp.add(str + ch);
+                }
+                
+            }
+            result.clear();
+            result.addAll(temp);
+            
+        }
+        return result;
+    }
 }
