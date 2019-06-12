@@ -121,4 +121,38 @@ class Solution {
     private void reverse(int[] nums, int i, int j) {
         while (i < j) swap(nums, i++, j--);
     }
+  
+  
+     public void nextPermutation(int[] nums) {
+        // 1.find the first increasing index from right to left
+       int index1 = -1;
+       for (int i = nums.length - 1; i > 0; i--) {
+           if (nums[i - 1] < nums[i]) {
+               index1 = i - 1;
+               break;
+           }
+       }
+       
+       if (index1 == -1) {
+           // all elements in nums are decreasing
+           Arrays.sort(nums);
+           return;
+       }
+       
+       // 2.find the first element which is larger than index1 from right to left
+       int index2 = -1;
+       for (int i = nums.length - 1; i > index1; i--) {
+           if (nums[i] > nums[index1]) {
+               index2 = i;
+               break;
+           }
+       }
+       
+       // swap index1 and index2
+       int temp = nums[index1];
+       nums[index1] = nums[index2];
+       nums[index2] = temp;
+       
+       Arrays.sort(nums, index1 + 1, nums.length);
+    }
 }
