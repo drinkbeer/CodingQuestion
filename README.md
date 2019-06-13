@@ -58,6 +58,7 @@ Note:
 |[169. Majority Element](https://leetcode.com/problems/majority-element/)|[LeetCode-169-Majority-Element.java](src/LeetCode-169-Majority-Element.java)|Array, Bit Manipulation|
 |[189.Rotate Array](https://leetcode.com/problems/rotate-array/)|[LeetCode-189-Rotate-Array.java](src/LeetCode-189-Rotate-Array.java)|Array|
 [209.Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[LeetCode-209-Minimum-Size-Subarray-Sum.java](src/LeetCode-209-Minimum-Size-Subarray-Sum.java)|Array, Two Pointers, Binary Search|
+[238.Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)|[LeetCode-238-Product-of-Array-Except-Self.java](src/LeetCode-238-Product-of-Array-Except-Self.java)|Array|
 
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
@@ -342,7 +343,6 @@ Operations between strings, between big numbers(larger than RAM: First external 
 
 
 [301.Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)
-[238.Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 
 
 
