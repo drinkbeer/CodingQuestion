@@ -1,5 +1,20 @@
 /*
 https://leetcode.com/problems/adding-two-negabinary-numbers/discuss/303901/Python-beats-100This-is-my-first-question-I-contributed-on-leetcode-here-is-my-approach
+
+
+https://leetcode.com/problems/adding-two-negabinary-numbers/discuss/307677/java-2ms-solution-with-explanation
+The basic idea is sum bit by bit. The key is how to process carry. There are five situations for the bit sum:
+
+sum = 0 -> carry = 0, result = 0
+sum = 1 -> carry = 0, result = 1
+sum = 2 -> carry = -1, result = 0
+sum = 3 -> carry = -1, result = 1
+sum = -1 -> carry = 1, result = 1
+Here, carry will be added to the sum of next calculation and result is what we put on current bit. We can either enumerate all five situations or use bit manipulation:
+
+carry = -1 * (sum >> 1)
+result = sum & 1
+to calculate carry and result quickly.
 */
 class Solution {
     
