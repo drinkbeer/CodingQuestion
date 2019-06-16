@@ -113,4 +113,59 @@ public class Solution {
         if(root.right != null) DFS(depthToValue, root.right, depth + 1);
     }
     
+    
+    // 1.BFS. Both left size view and right side view.
+    //     public List<Integer> rightSideView(TreeNode root) {
+//         if (root == null) return new ArrayList<>();
+        
+//         List<Integer> left = new ArrayList<>();
+//         List<Integer> right = new ArrayList<>();
+        
+//         Queue<TreeNode> queue = new LinkedList<>();
+//         queue.add(root);
+        
+//         while(!queue.isEmpty()) {
+//             int size = queue.size();
+            
+//             for(int i = 0; i < size; i++) {
+//                 TreeNode curr = queue.poll();
+                
+//                 if (i == 0) left.add(curr.val);
+//                 if (i == size - 1) right.add(curr.val);
+                
+//                 if (curr.left != null) queue.add(curr.left);
+//                 if (curr.right != null) queue.add(curr.right);
+//             }
+//         }
+        
+//         return right;
+        
+//     }
+    
+    // 2.DFS. Both left size view and right side view.
+    public List<Integer> rightSideView(TreeNode root) {
+        if (root == null) return new ArrayList<>();
+        
+        List<Integer> left = new ArrayList<>();
+        List<Integer> right = new ArrayList<>();
+        
+        helper(root, 0, left, right);
+        
+        System.out.println(left.toString());
+        System.out.println(right.toString());
+        return right;
+    }
+    
+    private void helper(TreeNode root, int level, List<Integer> left, List<Integer> right) {
+        if (left.size() <= level) left.add(level, root.val);
+        if (right.size() <= level) {
+            right.add(level, root.val);
+        } else {
+            right.set(level, root.val);
+        }
+        
+        if (root.left != null) helper(root.left, level + 1, left, right);
+        if (root.right != null) helper(root.right, level + 1, left, right);
+    }
+    
 }
