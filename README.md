@@ -330,6 +330,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[204.Count Primes](https://leetcode.com/problems/count-primes/)|[LeetCode-204-Count-Primes.java](src/LeetCode-204-Count-Primes.java)|Math|
 |[227. Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)|[LeetCode-227-Basic-Calculator-II.java](src/LeetCode-227-Basic-Calculator-II.java)|Math|
 |[369. Plus One Linked List](https://leetcode.com/problems/plus-one-linked-list/)|[LeetCode-369-Plus-One-Linked-List.java](src/LeetCode-369-Plus-One-Linked-List.java)|Math|
+|[593. Valid Square](https://leetcode.com/problems/valid-square/)|[LeetCode-593-Valid-Square.java](src/LeetCode-593-Valid-Square.java)|Math|
 |[1017. Convert to Base -2](https://leetcode.com/problems/convert-to-base-2/)|[LeetCode-1017-Convert-to-Base--2.java](src/LeetCode-1017-Convert-to-Base--2.java)|Math|
 |[1073. Adding Two Negabinary Numbers](https://leetcode.com/problems/adding-two-negabinary-numbers/)|[LeetCode-1073-Adding-Two-Negabinary-Numbers.java](src/LeetCode-1073-Adding-Two-Negabinary-Numbers.java)|Math|
 
@@ -338,7 +339,13 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[60.Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)|[LeetCode-60-Permutation-Sequence.java](src/LeetCode-60-Permutation-Sequence.java)|Math|
 |[168.Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)|[LeetCode-168-Excel-Sheet-Column-Title.java](src/LeetCode-168-Excel-Sheet-Column-Title.java)|Math|
 |[171.Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/)|[LeetCode-171-Excel-Sheet-Column-Number.java](src/LeetCode-171-Excel-Sheet-Column-Number.java)|Math|
-|[593. Valid Square](https://leetcode.com/problems/valid-square/)|[LeetCode-593-Valid-Square.java](src/LeetCode-593-Valid-Square.java)|Math|
+
+### Bit Manipulation
+
+|Question|Solution|Tags|
+|--------|--------|----|
+|[318. Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)|[LeetCode-318-Maximum-Product-of-Word-Lengths.java](src/LeetCode-318-Maximum-Product-of-Word-Lengths.java)|Math|
+
 
 
 ### Design
