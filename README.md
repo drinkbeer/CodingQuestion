@@ -294,11 +294,16 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 |[61 Rotate List](https://leetcode.com/problems/rotate-list/)|[LeetCode-61-Rotate-List.java](src/LeetCode-61-Rotate-List.java)|Two Pointers|
 |[83.Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|[LeetCode-83-Remove-Duplicates-from-Sorted-List.java](src/LeetCode-83-Remove-Duplicates-from-Sorted-List.java)|LinkedList|
 |[82.Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)|[LeetCode-82-Remove-Duplicates-from-Sorted-List-II.java](src/LeetCode-82-Remove-Duplicates-from-Sorted-List-II.java)|LinkedList|
+|[138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)|[LeetCode-138-Copy-List-with-Random-Pointer.java](src/LeetCode-138-Copy-List-with-Random-Pointer.java)|LinkedList|
 |[203.Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)|[LeetCode-203-Remove-Linked-List-Elements.java](src/LeetCode-203-Remove-Linked-List-Elements.java)|LinkedList|
 |[206.Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[LeetCode-206-Reverse-Linked-List.java](src/LeetCode-206-Reverse-Linked-List.java)|LinskedList|
 |[92.Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[LeetCode-92-Reverse-Linked-List-II.java](src/LeetCode-92-Reverse-Linked-List-II.java)|LinskedList|
 |[141.Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[LeetCode-141-Linked-List-Cycle.java](src/LeetCode-141-Linked-List-Cycle.java)|Two Pointers|
 |[142.Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|[LeetCode-142-Linked-List-Cycle-II.java](src/LeetCode-142-Linked-List-Cycle-II.java)|Two Pointers|
+
+
+
+
 
 ### Graph
 
