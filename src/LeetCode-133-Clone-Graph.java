@@ -18,32 +18,65 @@ HashMap is used to navigate the relationship between original Graph and new Grap
  * };
  */
 public class Solution {
-    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
-        if(node == null) return node;
+//     // 1. BFS
+//     public Node cloneGraph(Node node) {
+//         if (node == null) return node;
         
-        HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
-        Queue<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();
+//         HashMap<Node, Node> map = new HashMap<>();
+//         Queue<Node> queue = new LinkedList<>();
         
-        UndirectedGraphNode newHead = new UndirectedGraphNode(node.label);
-        map.put(node, newHead);
-        queue.offer(node);
+//         Node newNode = new Node(node.val, new ArrayList<>());
+//         map.put(node, newNode);
+//         queue.add(node);
         
-        while(!queue.isEmpty()){
-            UndirectedGraphNode curr = queue.poll();
+//         while(!queue.isEmpty()) {
+//             Node curr = queue.poll();
             
-            for(UndirectedGraphNode n : curr.neighbors){
-                if(!map.containsKey(n)){
-                    //if n is not visited
-                    UndirectedGraphNode newCopy = new UndirectedGraphNode(n.label);
-                    map.put(n, newCopy);
-                    map.get(curr).neighbors.add(newCopy);
-                    queue.offer(n);
-                }else{
-                    map.get(curr).neighbors.add(map.get(n));
-                }
-            }
-        }
+//             for (Node n : curr.neighbors) {
+//                 if (map.containsKey(n)) {
+//                     //means n is already visited, just need to add relationship
+//                     map.get(curr).neighbors.add(map.get(n));
+//                 } else {
+//                     // means n has not been visited
+//                     Node newN = new Node(n.val, new ArrayList<>());
+//                     map.get(curr).neighbors.add(newN);     //add to new Graph node's neighbor list
+                    
+//                     map.put(n, newN);
+//                     queue.add(n);
+//                 }
+//             }
+//         }
         
-        return newHead;
+//         return newNode;
+//     }
+    
+    
+    // 2. DFS
+    public Node cloneGraph(Node node) {
+        if (node == null) return node;
+        
+        HashMap<Node, Node> map = new HashMap<>();
+        Set<Integer> visited = new HashSet<>();
+        
+        Node newNode = new Node(node.val, new ArrayList<>());
+        map.put(node, newNode);
+        dfs(node, newNode, map, visited);
+        return newNode;
+    }
+    
+    private void dfs(Node curr, Node clone, Map<Node, Node> map, Set<Integer> visited) {
+        if (visited.contains(curr.val)) return;
+        
+        visited.add(curr.val);
+        for (Node adj : curr.neighbors) {
+            if (map.containsKey(adj)) {
+                clone.neighbors.add(map.get(adj));
+            } else {
+                Node cloneAdj = new Node(adj.val, new ArrayList<>());
+                map.put(adj, cloneAdj);
+                clone.neighbors.add(cloneAdj);
+            }
+            dfs(adj, map.get(adj), map, visited);
+        }
     }
 }
