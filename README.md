@@ -37,7 +37,6 @@ Note:
 |[59 Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)|[LeetCode-59-Spiral-Matrix-II.java](src/LeetCode-59-Spiral-Matrix-II.java)|Array|
 |[56.Merge Intervals](https://leetcode.com/problems/merge-intervals/)|[LeetCode-56-Merge-Intervals.java](src/LeetCode-56-Merge-Intervals.java)|Array|
 |[57.Insert Interval](https://leetcode.com/problems/insert-interval/)|[LeetCode-57-Insert-Interval.java](src/LeetCode-57-Insert-Interval.java)|Array|
-|[66.Plus One](https://leetcode.com/problems/plus-one/)|[LeetCode-66-Plus-One.java](src/LeetCode-66-Plus-One.java)|Array|
 |[73.Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)|[LeetCode-73-Set-Matrix-Zeroes.java](src/LeetCode-73-Set-Matrix-Zeroes.java)|Array|
 |[74.Search a 2D Matrix](https://leetcode.com/problems/set-matrix-zeroes/)|[LeetCode-74-Search-a-2D-Matrix.java](src/LeetCode-74-Search-a-2D-Matrix.java)|Array, Binary Search|
 |[75 Sort Colors](https://leetcode.com/problems/sort-colors/)|[LeetCode-75-Sort-Colors.java](src/LeetCode-75-Sort-Colors.java)|Array, Two Pointers|
@@ -324,16 +323,17 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[67.Add Binary](https://leetcode.com/problems/add-binary/)|[LeetCode-67-Add-Binary.java](src/LeetCode-67-Add-Binary.java)|String|
 |[29.Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)|[LeetCode-29-Divide-Two-Integers.java](src/LeetCode-29-Divide-Two-Integers.java)|Binary Search|
 |[50.Pow(x, n)](https://leetcode.com/problems/powx-n/)|[LeetCode-50-Pow-n.java](src/LeetCode-LeetCode-50-Pow-n.java)|Binary Search|
+|[66.Plus One](https://leetcode.com/problems/plus-one/)|[LeetCode-66-Plus-One.java](src/LeetCode-66-Plus-One.java)|Array|
 |[69.Sqrt(x)](https://leetcode.com/problems/sqrtx/)|[LeetCode-69-Sqrt-x.java](src/LeetCode-69-Sqrt-x.java)|Binary Search|
 |[89 Gray Code](https://leetcode.com/problems/gray-code/)|[LeetCode-89-Gray-Code.java](src/LeetCode-89-Gray-Code.java)|Math|
 |[202. Happy Number](https://leetcode.com/problems/happy-number/)|[LeetCode-202-Happy-Number.java](src/LeetCode-202-Happy-Number.java)|Math|
 |[204.Count Primes](https://leetcode.com/problems/count-primes/)|[LeetCode-204-Count-Primes.java](src/LeetCode-204-Count-Primes.java)|Math|
 |[227. Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)|[LeetCode-227-Basic-Calculator-II.java](src/LeetCode-227-Basic-Calculator-II.java)|Math|
+|[369. Plus One Linked List](https://leetcode.com/problems/plus-one-linked-list/)|[LeetCode-369-Plus-One-Linked-List.java](src/LeetCode-369-Plus-One-Linked-List.java)|Math|
 |[1017. Convert to Base -2](https://leetcode.com/problems/convert-to-base-2/)|[LeetCode-1017-Convert-to-Base--2.java](src/LeetCode-1017-Convert-to-Base--2.java)|Math|
 |[1073. Adding Two Negabinary Numbers](https://leetcode.com/problems/adding-two-negabinary-numbers/)|[LeetCode-1073-Adding-Two-Negabinary-Numbers.java](src/LeetCode-1073-Adding-Two-Negabinary-Numbers.java)|Math|
 
 
-1073. Adding Two Negabinary Numbers
 
 |[60.Permutation Sequence](https://leetcode.com/problems/permutation-sequence/)|[LeetCode-60-Permutation-Sequence.java](src/LeetCode-60-Permutation-Sequence.java)|Math|
 |[168.Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/)|[LeetCode-168-Excel-Sheet-Column-Title.java](src/LeetCode-168-Excel-Sheet-Column-Title.java)|Math|
