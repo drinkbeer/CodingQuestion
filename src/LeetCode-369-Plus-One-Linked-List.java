@@ -61,38 +61,51 @@ class Solution {
     /*
     https://leetcode.com/problems/plus-one-linked-list/discuss/84125/Iterative-Two-Pointers-with-dummy-node-Java-O(n)-time-O(1)-space
     */
-    public ListNode plusOne(ListNode head) {
-        if (head == null) return head;
+//     public ListNode plusOne(ListNode head) {
+//         if (head == null) return head;
         
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        ListNode lastNonNineNode = dummy;
-        ListNode lastNode = dummy;
+//         ListNode dummy = new ListNode(0);
+//         dummy.next = head;
+//         ListNode lastNonNineNode = dummy;
+//         ListNode lastNode = dummy;
         
-        while (lastNode.next != null) {
-            lastNode = lastNode.next;
-            if (lastNode.val != 9) lastNonNineNode = lastNode;
-        }
+//         while (lastNode.next != null) {
+//             lastNode = lastNode.next;
+//             if (lastNode.val != 9) lastNonNineNode = lastNode;
+//         }
         
-        if (lastNode.val != 9) {
-            lastNode.val++;
-        } else {
-            lastNonNineNode.val++;
+//         if (lastNode.val != 9) {
+//             lastNode.val++;
+//         } else {
+//             lastNonNineNode.val++;
             
-            while(lastNonNineNode.next != null) {
-                lastNonNineNode = lastNonNineNode.next;
-                lastNonNineNode.val = 0;
-            }
-        }
+//             while(lastNonNineNode.next != null) {
+//                 lastNonNineNode = lastNonNineNode.next;
+//                 lastNonNineNode.val = 0;
+//             }
+//         }
         
-        return dummy.val == 0 ? dummy.next : dummy;
-    }
+//         return dummy.val == 0 ? dummy.next : dummy;
+//     }
     
     
     // 3.DFS
     /*
     https://leetcode.com/problems/plus-one-linked-list/discuss/84130/Java-recursive-solution
     */
-    
+    public ListNode plusOne(ListNode head) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        helper(dummy);
+        return dummy.val == 0 ? head : dummy;
+    }
+
+    private int helper(ListNode node){
+        if(node == null) return 1;
+        node.val += helper(node.next);
+        if(node.val <= 9) return 0;
+        node.val %= 10;
+        return 1;
+    }
     
 }
