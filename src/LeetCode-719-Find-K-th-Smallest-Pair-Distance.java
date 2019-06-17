@@ -81,7 +81,7 @@ class Solution {
 //         return count;
 //     }
     
-    
+    // https://www.cnblogs.com/grandyang/p/8627783.html
     // 3. Binary Search
     public int smallestDistancePair(int[] nums, int k) {
         Arrays.sort(nums);
