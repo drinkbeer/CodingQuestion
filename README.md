@@ -340,7 +340,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[★146.LRU Cache](https://leetcode.com/problems/lru-cache/)|[LeetCode-146-LRU-Cache.java](src/LeetCode-146-LRU-Cache.java)|HashMap, List|
 |[155.Min Stack](https://leetcode.com/problems/min-stack/)|[LeetCode-155-Min-Stack.java](src/LeetCode-155-Min-Stack.java)|Two Stacks|
 |[281.Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/)|[LeetCode-281-Zigzag-Iterator.java](src/LeetCode-281-Zigzag-Iterator.java)|LinkedList|
-|[380. Insert Delete GetRandom O(1)](LeetCode-380-Insert-Delete-GetRandom-O(1).java)|[LeetCode-380-Insert-Delete-GetRandom-O(1).java](src/LeetCode-380-Insert-Delete-GetRandom-O(1).java)|LinkedList|
+|[380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)|[LeetCode-380-Insert-Delete-GetRandom-O(1).java](src/LeetCode-380-Insert-Delete-GetRandom-O(1).java)|LinkedList|
 
 
 [225.Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)  
