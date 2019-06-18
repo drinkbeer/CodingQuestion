@@ -4,7 +4,7 @@ https://www.geeksforgeeks.org/trie-insert-and-search/
 
 Trie is an efficient information re**Trie**val data structure. Using Trie, search complexities can be brought to optimal limit (key length). If we store keys in binary search tree, a well balanced BST will need time proportional to **M * log N**, where M is maximum string length and N is number of keys in tree. Using Trie, we can search the key in **O(M)** time. However the penalty is on Trie storage requirements.
 
-Insert and search costs O(M) where M is the key length, however the memory requirements of Trie is O(ALPHABET_SIZE * key_length * N) where N is number of keys in Trie. There are efficient representation of trie nodes (e.g. compressed trie, ternary search tree, etc.) to minimize memory requirements of trie.
+Insert and search costs **O(M)** where M is the key length, however the memory requirements of Trie is **O(ALPHABET_SIZE * M * N)** where N is number of keys in Trie. There are efficient representation of trie nodes (e.g. compressed trie, ternary search tree, etc.) to minimize memory requirements of trie.
 
 
 
