@@ -111,3 +111,39 @@ class Trie {
     }
 }
 ```
+
+#### DFS
+```
+    private void dfsUsingStack(TrieNode root) {
+        Stack<TrieNode> stack = new Stack<>();
+        stack.push(root);
+
+        String longestStr = "";
+        while(!stack.isEmpty()) {
+            TrieNode curr = stack.pop();
+
+            // do the operation to the curr here
+
+            for (TrieNode n : curr.children.values()) {
+
+                // filter out the nodes that we don't want to proceed in next level here
+
+                stack.push(n);
+            }
+        }
+    }
+
+    private void dfsUsingRecall(TrieNode curr) {
+        // end condition
+        if (curr.isLeaf) return;
+
+        // do the operation to the curr here
+
+        for (TrieNode n : curr.children.values()) {
+
+            // filter out the nodes that we don't want to proceed in next level here
+
+            dfsUsingRecall(n);
+        }
+    }
+```
