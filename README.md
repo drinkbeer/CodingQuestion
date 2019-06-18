@@ -304,8 +304,10 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 |[141.Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[LeetCode-141-Linked-List-Cycle.java](src/LeetCode-141-Linked-List-Cycle.java)|Two Pointers|
 |[142.Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|[LeetCode-142-Linked-List-Cycle-II.java](src/LeetCode-142-Linked-List-Cycle-II.java)|Two Pointers|
 
-
-
+### List
+|Question|Solution|Tags|
+|--------|--------|----|
+|[208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)|[LeetCode-208-Implement-Trie-Prefix-Tree.java](src/LeetCode-208-Implement-Trie-Prefix-Tree.java)|Trie|
 
 
 ### Graph
