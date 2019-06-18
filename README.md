@@ -304,11 +304,20 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 |[141.Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[LeetCode-141-Linked-List-Cycle.java](src/LeetCode-141-Linked-List-Cycle.java)|Two Pointers|
 |[142.Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|[LeetCode-142-Linked-List-Cycle-II.java](src/LeetCode-142-Linked-List-Cycle-II.java)|Two Pointers|
 
-### List
+### Trie
 |Question|Solution|Tags|
 |--------|--------|----|
 |[208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)|[LeetCode-208-Implement-Trie-Prefix-Tree.java](src/LeetCode-208-Implement-Trie-Prefix-Tree.java)|Trie|
 |[720. Longest Word in Dictionary](https://leetcode.com/problems/longest-word-in-dictionary/)|[LeetCode-720-Longest-Word-in-Dictionary.java](src/LeetCode-720-Longest-Word-in-Dictionary.java)|Trie|
+
+
+### Heap
+
+PriorityQueue.
+
+|Question|Solution|Tags|
+|--------|--------|----|
+|[692. Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)|[LeetCode-692-Top-K-Frequent-Words.java](src/LeetCode-692-Top-K-Frequent-Words.java)|Heap|
 
 
 ### Graph
