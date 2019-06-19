@@ -9,7 +9,7 @@ Analysis:
 
 2.Divid and conquer
 
-3.BFS
+3.DFS Using a Stack
 Be careful, stack is FILO. so we need first put right in stack , then put left.
 So we can sure left is handled first, then right.
 
@@ -56,7 +56,7 @@ public class Solution {
     //     return result;
     // }
     
-    // 3.BFS
+    // 3.DFS Using a Stack
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<Integer>();
         if(root == null) return result;
