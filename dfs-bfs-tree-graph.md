@@ -144,4 +144,17 @@ BFS Template
     }
 ```
 
+```
+    private void bfsRecursive(Node root) {
+        bfsRecursive(root, 0);
+    }
+
+    private void bfsRecursive(Node curr, int level) {
+        // process the curr node, e.g. result.add(level, root.val);
+
+        if (curr.left != null) bfsRecursive(curr.left, level + 1);
+        if (curr.right != null) bfsRecursive(curr.right, level + 1);
+    }
+```
+
 https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
