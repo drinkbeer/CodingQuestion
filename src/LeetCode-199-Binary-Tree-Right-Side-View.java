@@ -142,7 +142,7 @@ public class Solution {
         
 //     }
     
-    // 2.DFS. Both left size view and right side view.
+    // 2.BFS Recursion. Both left size view and right side view.
     public List<Integer> rightSideView(TreeNode root) {
         if (root == null) return new ArrayList<>();
         
