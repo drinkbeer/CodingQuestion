@@ -23,3 +23,23 @@ Depth First Traversals:
       Postorder Traversal : 4 5 2 3 1
 ```
 
+DFS
+Time Complexity: **O(N)**  
+Space Complexity: **O(H)** (H is the maximum height of the Tree. For a Binary Tree, the height is O(logN))
+
+BFS
+Time Complexity: **O(N)**  
+Space Complexity: **O(W)** (W is the maximum width of the Tree)
+
+DFS Template
+
+```
+
+```
+
+BFS Template
+
+```
+
+```
+
