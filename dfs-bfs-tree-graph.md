@@ -40,6 +40,18 @@ DFS Template
 BFS Template
 
 ```
+    private void bfs(Node root) {
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
 
+        while(!queue.isEmpty()) {
+            Node curr = queue.poll();
+
+            // do the operation to curr Node
+
+            if (curr.left != null) queue.offer(curr.left);
+            if (curr.right != null) queue.offer(curr.right);
+        }
+    }
 ```
 
