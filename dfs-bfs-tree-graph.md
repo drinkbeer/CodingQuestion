@@ -158,3 +158,31 @@ BFS Template
 ```
 
 https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
+
+Building a graph represented by HashMap<Integer, List<Integer>>.
+```
+    private HashMap<Integer, List<Integer>> buildGraph(int[][] prerequisites) {
+        // Construct graph
+        HashMap<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
+        for (int i = 0; i < prerequisites.length; i++) {
+            int from = prerequisites[i][1];
+            int to = prerequisites[i][0];
+
+            if (!map.containsKey(from)) {
+                map.put(from, new ArrayList<Integer>());
+            }
+
+            List<Integer> list = map.get(from);
+            list.add(to);
+            map.put(from, list);
+        }
+
+        return map;
+    }
+```
+
+Building a graph represented by int[][] array.
+```
+
+```
+
