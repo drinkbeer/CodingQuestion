@@ -369,6 +369,14 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |--------|--------|----|
 |[318. Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)|[LeetCode-318-Maximum-Product-of-Word-Lengths.java](src/LeetCode-318-Maximum-Product-of-Word-Lengths.java)|Math|
 
+### Stack
+
+https://leetcode.com/tag/stack/
+
+|Question|Solution|Tags|
+|--------|--------|----|
+|[636. Exclusive Time of Functions](https://leetcode.com/problems/exclusive-time-of-functions/)|[LeetCode-636-Exclusive-Time-of-Functions.java](src/LeetCode-636-Exclusive-Time-of-Functions.java)|Math|
+
 
 
 ### Design
