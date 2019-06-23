@@ -4,7 +4,7 @@
 
 Template
 
-In a sorted, non-duplicate array, search target:
+In a sorted, non-duplicate array, search target:  
 Boundary: `[lo, hi]`  
 
 ```
@@ -21,7 +21,7 @@ public int search(int[] nums, int target) {
 }
 ```
 
-In a sorted, duplicated array, search the first element >= target:
+In a sorted, duplicated array, search the first element >= target:  
 Boundary: `[lo, hi]`
 
 ```
@@ -41,7 +41,7 @@ public int searchInsert(int[] nums, int target) {
 }
 ```
 
-In a sorted, duplicated array, search the last element >= target:
+In a sorted, duplicated array, search the last element >= target:  
 Boundary: `[lo, hi]`
 
 ```
