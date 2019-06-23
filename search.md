@@ -31,8 +31,8 @@ public int searchInsert(int[] nums, int target) {
         int mid = lo + (hi - lo) / 2;
 
         if (nums[mid] == target) hi = mid;
-        else if (nums[mid] < target) lo = mid + 1;
-        else hi = mid - 1;
+        else if (nums[mid] < target) lo = mid;
+        else hi = mid;
     }
     
     if (nums[lo] >= target) return lo;
@@ -51,8 +51,8 @@ public int searchInsert(int[] nums, int target) {
         int mid = lo + (hi - lo) / 2;
 
         if (nums[mid] == target) lo = mid;
-        else if (nums[mid] < target) lo = mid + 1;
-        else hi = mid - 1;
+        else if (nums[mid] < target) lo = mid;
+        else hi = mid;
     }
     
     if (nums[lo] >= target) return lo;
