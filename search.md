@@ -294,4 +294,6 @@ public int findMin(int[] nums) {
 
 
 ### Reference
-[[二分/排序/搜索] Binary Search的总结帖](https://www.1point3acres.com/bbs/thread-432793-1-1.html)
+[[二分/排序/搜索] Binary Search的总结帖](https://www.1point3acres.com/bbs/thread-432793-1-1.html)  
+[LeetCode Binary Search Summary 二分搜索法小结](https://www.cnblogs.com/grandyang/p/6854825.html)  
+
