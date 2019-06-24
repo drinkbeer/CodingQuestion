@@ -391,6 +391,7 @@ https://leetcode.com/tag/stack/
 |[281.Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/)|[LeetCode-281-Zigzag-Iterator.java](src/LeetCode-281-Zigzag-Iterator.java)|LinkedList|
 |[346. Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream/)|[LeetCode-346-Moving-Average-from-Data-Stream.java](src/LeetCode-346-Moving-Average-from-Data-Stream.java)|LinkedList|
 |[380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)|[LeetCode-380-Insert-Delete-GetRandom-O(1).java](src/LeetCode-380-Insert-Delete-GetRandom-O(1).java)|LinkedList|
+|[716. Max Stack](https://leetcode.com/problems/max-stack/)|[LeetCode-716-Max-Stack.java](src/LeetCode-716-Max-Stack.java)|Two Stacks|
 
 
 [225.Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)  
