@@ -212,6 +212,38 @@ public int[] searchRange(int[] nums, int target) {
 }
 ```
 
+#### 35. Search Insert Position
+https://leetcode.com/problems/search-insert-position/
+```
+public int searchInsert(int[] nums, int target) {
+    int lo = 0, hi = nums.length - 1;
+
+    while (lo + 1 < hi) {
+        int mid = lo + (hi - lo) / 2;
+
+        if (nums[mid] == target) hi = mid;
+        else if (nums[mid] < target) lo = mid;
+        else hi = mid;
+    }
+
+    if (nums[lo] >= target) return lo;
+    if (nums[hi] >= target) return hi;
+    return hi + 1;
+}
+
+public int searchInsert(int[] nums, int target) {
+    int lo = 0, hi = nums.length - 1;
+    while (lo <= hi) {
+        int mid = lo + (hi - lo) / 2;
+
+        if (nums[mid] == target) return mid;
+        else if (nums[mid] < target) lo = mid + 1;
+        else hi = mid - 1;
+    }
+    return lo;
+}
+```
+
 ### 第三类题：没有明确Target的题型，可越界类型
 
 这类题型，用“lo <= hi”的模板可能会越界。
