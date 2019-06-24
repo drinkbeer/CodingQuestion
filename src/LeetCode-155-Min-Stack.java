@@ -92,3 +92,49 @@ class MinStack {
         return minStack.peek();
     }
 }
+
+
+// 3.Using a self-defined inner class
+/*
+Runtime: 47 ms, faster than 69.03% of Java online submissions for Min Stack.
+
+*/
+class MinStack {
+    private class Pair {
+        int val;
+        int min;
+        
+        public Pair(int val, int min) {
+            this.val = val;
+            this.min = min;
+        }
+    }
+
+    Stack<Pair> stack;
+    
+    /** initialize your data structure here. */
+    public MinStack() {
+        stack = new Stack<>();
+    }
+    
+    public void push(int x) {
+        int min = x;
+        if (!stack.isEmpty()) {
+            min = Math.min(min, stack.peek().min);
+        }
+        Pair p = new Pair(x, min);
+        stack.push(p);
+    }
+    
+    public void pop() {
+        stack.pop();
+    }
+    
+    public int top() {
+        return stack.peek().val;
+    }
+    
+    public int getMin() {
+        return stack.peek().min;
+    }
+}
