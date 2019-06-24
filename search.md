@@ -169,3 +169,46 @@ https://leetcode.com/problems/search-in-rotated-sorted-array/
     }
 ```
 
+### 第二类题：没有明确Target的题型
+
+#### 34. Find First and Last Position of Element in Sorted Array
+https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+
+Template 2 is much easier than template one, as it's easier to process the boundary.
+
+```
+public int[] searchRange(int[] nums, int target) {
+    int[] res = new int[] {-1, -1};
+    if (nums == null || nums.length == 0) return res;
+    if (nums.length == 1) {
+        if (nums[0] == target) return new int[] {0, 0};
+        return res;
+    }
+
+    // search the lower boundary
+    int lo = 0, hi = nums.length - 1;
+    while (lo + 1 < hi) {
+        int mid = lo + (hi - lo) / 2;
+        if (nums[mid] == target) hi = mid;
+        else if (nums[mid] > target) hi = mid;
+        else lo = mid;
+    }
+    if (nums[lo] == target) res[0] = lo;
+    else if (nums[hi] == target) res[0] = hi;
+
+    // search the higher boundary
+    lo = 0;
+    hi = nums.length - 1;
+    while (lo + 1 < hi) {
+        int mid = lo + (hi - lo) / 2;
+        if (nums[mid] == target) lo = mid;
+        else if (nums[mid] < target) lo = mid;
+        else hi = mid;
+    }
+    if (nums[hi] == target) res[1] = hi;
+    else if (nums[lo] == target) res[1] = lo;
+
+    return res;
+}
+```
+
