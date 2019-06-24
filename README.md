@@ -257,6 +257,7 @@ Search a required set, search Maximum/Minimu result
 |[333. Largest BST Subtree](https://leetcode.com/problems/largest-bst-subtree/)|[LeetCode-333-Largest-BST-Subtree.java](src/LeetCode-333-Largest-BST-Subtree.java)|DFS|
 |[337. House Robber III](https://leetcode.com/problems/house-robber-iii/)|[LeetCode-337-House-Robber-III.java](src/LeetCode-337-House-Robber-III.java)|DFS|
 |[366. Find Leaves of Binary Tree](https://leetcode.com/problems/find-leaves-of-binary-tree/)|[LeetCode-366-Find-Leaves-of-Binary-Tree.java.java](src/LeetCode-366-Find-Leaves-of-Binary-Tree.java.java)|DFS|
+|[374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)|[LeetCode-374-Guess-Number-Higher-or-Lower.java](src/LeetCode-374-Guess-Number-Higher-or-Lower.java)|Binary Search|
 |[404. Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/)|[LeetCode-404-Sum-of-Left-Leaves.java](src/LeetCode-404-Sum-of-Left-Leaves.java)|DFS|
 |[437. Path Sum III](https://leetcode.com/problems/path-sum-iii/)|[LeetCode-437-Path-Sum-III.java](src/LeetCode-437-Path-Sum-III.java)|DFS|
 |[450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)|[LeetCode-450-Delete-Node-in-a-BST.java](src/LeetCode-450-Delete-Node-in-a-BST.java)|DFS|
