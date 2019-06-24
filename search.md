@@ -259,3 +259,7 @@ public int findMin(int[] nums) {
     return Math.min(nums[lo], nums[hi]);
 }
 ```
+
+
+### Reference
+[[二分/排序/搜索] Binary Search的总结帖](https://www.1point3acres.com/bbs/thread-432793-1-1.html)
