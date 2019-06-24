@@ -113,7 +113,6 @@ public class Solution extends GuessGame {
 
 
 #### 367. Valid Perfect Square
-
 https://leetcode.com/problems/valid-perfect-square/
 
 ```
@@ -133,3 +132,40 @@ class Solution {
     }
 }
 ```
+
+#### 33. Search in Rotated Sorted Array
+https://leetcode.com/problems/search-in-rotated-sorted-array/
+
+```
+    public int search(int[] nums, int target) {
+        if (nums == null || nums.length == 0) return -1;
+        int lo = 0, hi = nums.length - 1;
+        
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            
+            if (nums[mid] == target) return mid;
+            
+            // Be careful that mid could be equal to 0 (the lower boundary) when there are only two elements.
+            if (nums[mid] >= nums[0]) {
+                // means mid is in the left side of pivot
+                if (nums[lo] <= target && target < nums[mid]) {
+                    // means target is between lo and mid
+                    hi = mid - 1;
+                } else {
+                    lo = mid + 1;
+                }
+            } else {
+                // means mid is in the right side of pivot
+                if (nums[mid] < target && target <= nums[hi]) {
+                    lo = mid + 1;
+                } else {
+                    hi = mid - 1;
+                }
+            }
+        }
+        
+        return - 1;
+    }
+```
+
