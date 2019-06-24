@@ -353,6 +353,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[202. Happy Number](https://leetcode.com/problems/happy-number/)|[LeetCode-202-Happy-Number.java](src/LeetCode-202-Happy-Number.java)|Math|
 |[204.Count Primes](https://leetcode.com/problems/count-primes/)|[LeetCode-204-Count-Primes.java](src/LeetCode-204-Count-Primes.java)|Math|
 |[227. Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)|[LeetCode-227-Basic-Calculator-II.java](src/LeetCode-227-Basic-Calculator-II.java)|Math|
+|[367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)|[LeetCode-367-Valid-Perfect-Square.java](src/LeetCode-367-Valid-Perfect-Square.java)|Math, Binary Search|
 |[369. Plus One Linked List](https://leetcode.com/problems/plus-one-linked-list/)|[LeetCode-369-Plus-One-Linked-List.java](src/LeetCode-369-Plus-One-Linked-List.java)|Math|
 |[593. Valid Square](https://leetcode.com/problems/valid-square/)|[LeetCode-593-Valid-Square.java](src/LeetCode-593-Valid-Square.java)|Math|
 |[1017. Convert to Base -2](https://leetcode.com/problems/convert-to-base-2/)|[LeetCode-1017-Convert-to-Base--2.java](src/LeetCode-1017-Convert-to-Base--2.java)|Math|
