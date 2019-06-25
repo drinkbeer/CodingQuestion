@@ -43,6 +43,7 @@ Note:
 |[79.Word Search](https://leetcode.com/problems/word-search/)|[LeetCode-79-Word-Search.java](src/LeetCode-79-Word-Search.java)|Array, DFS|
 |[80.Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)|[LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java](src/LeetCode-80-Remove-Duplicates-from-Sorted-Array-II.java)|Array, One Pointer, LC26|
 |[81.Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)|[LeetCode-81-Search-in-Rotated-Sorted-Array-II.java](src/LeetCode-81-Search-in-Rotated-Sorted-Array-II.java)|Array, Binary Search, LC33|
+|[84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)|[LeetCode-84-Largest-Rectangle-in-Histogram.java](src/LeetCode-84-Largest-Rectangle-in-Histogram.java)|Array, Stack, Two Way Scan|
 |[88.Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[LeetCode-88-Merge-Sorted-Array.java](src/LeetCode-88-Merge-Sorted-Array.java)|Array, Two Pointers|
 |[118.Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|[LeetCode-118-Pascals-Triangle.java](src/LeetCode-118-Pascals-Triangle.java)|Array|
 |[119.Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)|[LeetCode-119-Pascals-Triangle-II.java](src/LeetCode-119-Pascals-Triangle-II.java)|Array|
