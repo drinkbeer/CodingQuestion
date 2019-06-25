@@ -78,4 +78,11 @@ class Solution {
         }
         return maxArea;
     }
+    
+    // 3. Divide and Conquer with Segment Tree (Have not finished this solution)
+    /*
+    https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/28910/Simple-Divide-and-Conquer-AC-solution-without-Segment-Tree
+    
+    
+    */
 }
