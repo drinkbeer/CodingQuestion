@@ -361,6 +361,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[227. Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)|[LeetCode-227-Basic-Calculator-II.java](src/LeetCode-227-Basic-Calculator-II.java)|Math|
 |[367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)|[LeetCode-367-Valid-Perfect-Square.java](src/LeetCode-367-Valid-Perfect-Square.java)|Math, Binary Search|
 |[369. Plus One Linked List](https://leetcode.com/problems/plus-one-linked-list/)|[LeetCode-369-Plus-One-Linked-List.java](src/LeetCode-369-Plus-One-Linked-List.java)|Math|
+|[445. Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/)|[LeetCode-445-Add-Two-Numbers-II.java](src/LeetCode-445-Add-Two-Numbers-II.java)|LinkedList, Stack|
 |[593. Valid Square](https://leetcode.com/problems/valid-square/)|[LeetCode-593-Valid-Square.java](src/LeetCode-593-Valid-Square.java)|Math|
 |[1017. Convert to Base -2](https://leetcode.com/problems/convert-to-base-2/)|[LeetCode-1017-Convert-to-Base--2.java](src/LeetCode-1017-Convert-to-Base--2.java)|Math|
 |[1073. Adding Two Negabinary Numbers](https://leetcode.com/problems/adding-two-negabinary-numbers/)|[LeetCode-1073-Adding-Two-Negabinary-Numbers.java](src/LeetCode-1073-Adding-Two-Negabinary-Numbers.java)|Math|
