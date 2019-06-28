@@ -309,6 +309,8 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 |[92.Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[LeetCode-92-Reverse-Linked-List-II.java](src/LeetCode-92-Reverse-Linked-List-II.java)|LinskedList|
 |[141.Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[LeetCode-141-Linked-List-Cycle.java](src/LeetCode-141-Linked-List-Cycle.java)|Two Pointers|
 |[142.Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|[LeetCode-142-Linked-List-Cycle-II.java](src/LeetCode-142-Linked-List-Cycle-II.java)|Two Pointers|
+|[160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)|[LeetCode-160-Intersection-of-Two-Linked-Lists.java](src/LeetCode-160-Intersection-of-Two-Linked-Lists.java)|Two Pointers|
+
 
 ### Trie
 |Question|Solution|Tags|
