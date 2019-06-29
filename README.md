@@ -60,6 +60,7 @@ Note:
 |[209.Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[LeetCode-209-Minimum-Size-Subarray-Sum.java](src/LeetCode-209-Minimum-Size-Subarray-Sum.java)|Array, Two Pointers, Binary Search|
 |[238.Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)|[LeetCode-238-Product-of-Array-Except-Self.java](src/LeetCode-238-Product-of-Array-Except-Self.java)|Array|
 |[283.Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[LeetCode-283-Move-Zeroes.java](src/LeetCode-283-Move-Zeroes.java)|Array|
+|[670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)|[LeetCode-670-Maximum-Swap.java](src/LeetCode-670-Maximum-Swap.java)|Array|
 |[719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)|[LeetCode-719-Find-K-th-Smallest-Pair-Distance.java](src/LeetCode-719-Find-K-th-Smallest-Pair-Distance.java)|Array, Binary Search|
 |[915. Partition Array into Disjoint Intervals](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)|[LeetCode-915-Partition-Array-into-Disjoint-Intervals.java](src/LeetCode-915-Partition-Array-into-Disjoint-Intervals.java)|Array|
 
