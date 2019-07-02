@@ -59,6 +59,7 @@ Note:
 |[189.Rotate Array](https://leetcode.com/problems/rotate-array/)|[LeetCode-189-Rotate-Array.java](src/LeetCode-189-Rotate-Array.java)|Array|
 |[209.Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)|[LeetCode-209-Minimum-Size-Subarray-Sum.java](src/LeetCode-209-Minimum-Size-Subarray-Sum.java)|Array, Two Pointers, Binary Search|
 |[238.Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)|[LeetCode-238-Product-of-Array-Except-Self.java](src/LeetCode-238-Product-of-Array-Except-Self.java)|Array|
+|[240.Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)|[LeetCode-240-Search-a-2D-Matrix-II.java](src/LeetCode-240-Search-a-2D-Matrix-II.java)|Array|
 |[283.Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[LeetCode-283-Move-Zeroes.java](src/LeetCode-283-Move-Zeroes.java)|Array|
 |[296. Best Meeting Point](https://leetcode.com/problems/best-meeting-point/)|[LeetCode-296-Best-Meeting-Point.java](src/LeetCode-296-Best-Meeting-Point.java)|Array|
 |[670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)|[LeetCode-670-Maximum-Swap.java](src/LeetCode-670-Maximum-Swap.java)|Array|
@@ -209,7 +210,6 @@ Search a required set, search Maximum/Minimu result
 |[216.Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)|[LeetCode-216-Combination-Sum-III.java](src/LeetCode-216-Combination-Sum-III.java)|Not yet|
 |[77.Combinations](https://leetcode.com/problems/combinations/)|[LeetCode-77-Combinations.java](src/LeetCode-77-Combinations.java)|DFS|
 |[278.First Bad Version](https://leetcode.com/problems/first-bad-version/)|[LeetCode-278-First-Bad-Version.java](src/LeetCode-278-First-Bad-Version.java)|Binary Search|
-|[240.Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)|[LeetCode-240-Search-a-2D-Matrix-II.java](src/LeetCode-240-Search-a-2D-Matrix-II.java)|not yet|
 |[70.Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[LeetCode-70-Climbing-Stairs.java](src/LeetCode-70-Climbing-Stairs.java)|DP|
 |[212.Word Search II](https://leetcode.com/problems/word-search-ii/)|[LeetCode-212-Word-Search-II.java](src/LeetCode-212-Word-Search-II.java)|Not yet, hard|
 |[86.Partition List](https://leetcode.com/problems/partition-list/)|[LeetCode-86-Partition-List.java](src/LeetCode-86-Partition-List.java)|Two Pointers|
