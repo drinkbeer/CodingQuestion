@@ -9,6 +9,7 @@ Deque<Integer> queue = new LinkedList<>();
 ```
 
 |Queue Method|Equivalent Deque Method|
+|------------|-----------------------|
 |add(e)|addLast(e)|
 |offer(e)|offerLast(e)|
 |remove()|removeFirst()|
