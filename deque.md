@@ -8,6 +8,8 @@ This interface defines methods to access the elements at both ends of the deque.
 Deque<Integer> queue = new LinkedList<>();
 ```
 
+#### Queue Related Operations
+
 |Queue Method|Equivalent Deque Method|
 |------------|-----------------------|
 |add(e)|addLast(e)|
@@ -16,4 +18,11 @@ Deque<Integer> queue = new LinkedList<>();
 |poll()|pollFirst()|
 |peek()|peekFirst()|
 
+#### Stack Related Operations
+
+|Stack Method|Equivalent Deque Method|
+|------------|-----------------------|
+|push(e)|addFirst(e)|
+|pop()|removeFirst()|
+|peek()|peekFirst()|
 
