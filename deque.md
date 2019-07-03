@@ -4,8 +4,47 @@ Deque is a linear collection that supports element insertion and removal at both
 
 This interface defines methods to access the elements at both ends of the deque. Methods are provided to insert, remove and examine the element. Each of these methods exists in two forms: one throws an exception if the operation fails, the other returns a special value (either null or false, depending on the operation).
 
+https://www.geeksforgeeks.org/deque-add-method-in-java/
 ```
-Deque<Integer> queue = new LinkedList<>();
+public class GFG { 
+    public static void main(String[] args) 
+        throws IllegalStateException 
+    { 
+  
+        // create object of De1ue 
+        Deque<Integer> DQ = new LinkedList<Integer>(); 
+  
+        // Add numbers to end of Deque 
+        DQ.add(7855642); 
+        DQ.add(35658786); 
+        DQ.add(5278367); 
+        DQ.add(74381793); 
+  
+        // before removing print Deque 
+        System.out.println("Deque: " + DQ); 
+    } 
+} 
+```
+
+```
+public class GFG { 
+    public static void main(String[] args) 
+        throws IllegalStateException 
+    { 
+  
+        // create object of De1ue 
+        Deque<Integer> DQ = new ArrayDeque<Integer>(); 
+  
+        // Add numbers to end of Deque 
+        DQ.add(7855642); 
+        DQ.add(35658786); 
+        DQ.add(5278367); 
+        DQ.add(74381793); 
+  
+        // before removing print Deque 
+        System.out.println("Deque: " + DQ); 
+    } 
+} 
 ```
 
 #### Queue Related Operations
