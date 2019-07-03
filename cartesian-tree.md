@@ -1,6 +1,9 @@
 https://www.geeksforgeeks.org/cartesian-tree/   
 https://leetcode.com/problems/maximum-binary-tree/   
 
+A Cartesian tree is a tree data structure created from a set of data that obeys the  following structural invariants:
+* The tree obeys in the min (or max) heap property – each node is less (or greater) than its children.
+* An inorder traversal of the nodes yields the values in the same order in which they appear in the initial sequence.
 
 #### Construct a Cartesian Tree (Min or Max Heap)
 
