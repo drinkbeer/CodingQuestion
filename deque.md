@@ -82,3 +82,36 @@ public int[] maxSlidingWindow(int[] nums, int k) {
 }
 ```
 
+#### 654. Maximum Binary Tree
+https://leetcode.com/problems/maximum-binary-tree/
+
+```
+// 2. Using a Deque based stack
+/*
+https://leetcode.com/problems/maximum-binary-tree/discuss/106156/Java-worst-case-O(N)-solution
+
+Runtime: 8 ms, faster than 14.24% of Java online submissions for Maximum Binary Tree.
+Memory Usage: 39.4 MB, less than 79.45% of Java online submissions for Maximum Binary Tree.
+
+Worst Time O(N)
+
+*/
+ public TreeNode constructMaximumBinaryTree(int[] nums) {
+     if (nums == null || nums.length == 0) return null;
+
+     Deque<TreeNode> stack = new ArrayDeque<>();
+     for (int i = 0; i < nums.length; i++) {
+         TreeNode curr = new TreeNode(nums[i]);
+         // traverse the nodes in the stack, and find the max-smaller one than nums[i], make it to be the left node of curr
+         while(!stack.isEmpty() &&  stack.peek().val < nums[i]) {
+             curr.left = stack.pop();
+         }
+         if (!stack.isEmpty() && stack.peek().val > nums[i]) {
+             stack.peek().right = curr;
+         }
+         stack.push(curr);
+     }
+
+     return stack.isEmpty() ? null : stack.peekLast();
+ }
+```
