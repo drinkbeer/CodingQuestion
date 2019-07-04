@@ -61,6 +61,7 @@ Note:
 |[238.Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)|[LeetCode-238-Product-of-Array-Except-Self.java](src/LeetCode-238-Product-of-Array-Except-Self.java)|Array|
 |[240.Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)|[LeetCode-240-Search-a-2D-Matrix-II.java](src/LeetCode-240-Search-a-2D-Matrix-II.java)|Array|
 |[283.Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[LeetCode-283-Move-Zeroes.java](src/LeetCode-283-Move-Zeroes.java)|Array|
+|[287.Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)|[LeetCode-287-Find-the-Duplicate-Number.java](src/LeetCode-287-Find-the-Duplicate-Number.java)|Array|  
 |[296. Best Meeting Point](https://leetcode.com/problems/best-meeting-point/)|[LeetCode-296-Best-Meeting-Point.java](src/LeetCode-296-Best-Meeting-Point.java)|Array|
 |[670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)|[LeetCode-670-Maximum-Swap.java](src/LeetCode-670-Maximum-Swap.java)|Array|
 |[719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)|[LeetCode-719-Find-K-th-Smallest-Pair-Distance.java](src/LeetCode-719-Find-K-th-Smallest-Pair-Distance.java)|Array, Binary Search|
@@ -427,7 +428,6 @@ https://leetcode.com/tag/stack/
 [137.Single Number II](https://leetcode.com/problems/single-number-ii/)  
 [260.Single Number III](https://leetcode.com/problems/single-number-iii/)  
 [268.Missing Number](https://leetcode.com/problems/missing-number/)  
-[287.Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)  
 
 
 
