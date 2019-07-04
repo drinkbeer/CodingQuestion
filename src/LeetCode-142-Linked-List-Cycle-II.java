@@ -24,46 +24,46 @@ Analysis:
  */
 public class Solution {
     // 1.Two Pointers
-    // public ListNode detectCycle(ListNode head) {
-    //     if(head == null || head.next == null) return null;
-        
-    //     ListNode slow = head, fast = head.next;
-        
-    //     while(fast != slow){
-    //         if(fast == null || fast.next == null) return null;
-    //         slow = slow.next;
-    //         fast = fast.next.next;
-    //     }
-        
-    //     //head != slow.next, as fast start from head.next
-    //     while(head != slow.next){
-    //         head = head.next;
-    //         slow = slow.next;
-    //     }
-        
-    //     return head;
-    // }
-    
-    // 2.Two Pointers
     public ListNode detectCycle(ListNode head) {
-        if(head == null || head.next == null) return null;
+        if (head == null || head.next == null) return null;     // there is no cycle
         
-        ListNode slow = head, fast = head;
-        
-        while(fast != null && fast.next != null){
+        ListNode slow = head, fast = head.next;
+        while (slow != fast) {
+            if (fast == null || fast.next == null) return null; // means there is no cycle
             slow = slow.next;
             fast = fast.next.next;
-            if(slow == fast) break;
         }
         
-        if(fast == null || fast.next == null) return null;
-        
-        while(head != slow){
-            head = head.next;
+        fast = head;
+        slow = slow.next;       // we must let slow starts from the first one in the next round
+        while (fast != slow) {
             slow = slow.next;
+            fast = fast.next;
         }
         
-        return head;
+        return slow;
     }
+    
+    // 2.Two Pointers
+//     public ListNode detectCycle(ListNode head) {
+//         if(head == null || head.next == null) return null;
+        
+//         ListNode slow = head, fast = head;
+        
+//         while(fast != null && fast.next != null){
+//             slow = slow.next;
+//             fast = fast.next.next;
+//             if(slow == fast) break;
+//         }
+        
+//         if(fast == null || fast.next == null) return null;
+        
+//         while(head != slow){
+//             head = head.next;
+//             slow = slow.next;
+//         }
+        
+//         return head;
+//     }
     
 }
