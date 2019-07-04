@@ -147,6 +147,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[★62.Unique Paths](https://leetcode.com/problems/unique-paths/)|[LeetCode-62-Unique-Paths.java](src/LeetCode-62-Unique-Paths.java)|DP|
 |[63.Unique Paths II](https://leetcode.com/problems/unique-paths-ii/)|[LeetCode-63-Unique-Paths-II.java](src/LeetCode-63-Unique-Paths-II.java)|DP|
 |[64.Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)|[LeetCode-64-Minimum-Path-Sum.java](src/LeetCode-64-Minimum-Path-Sum.java)|DP|
+|[70.Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[LeetCode-70-Climbing-Stairs.java](src/LeetCode-70-Climbing-Stairs.java)|DP|
 |[72. Edit Distance](https://leetcode.com/problems/edit-distance/)|[LeetCode-72-Edit-Distance.java](src/LeetCode-72-Edit-Distance.java)|DP|
 |[91.Decode Ways](https://leetcode.com/problems/decode-ways/)|[LeetCode-91-Decode-Ways.java](src/LeetCode-91-Decode-Ways.java)|DP|
 |[★★★120.Triangle](https://leetcode.com/problems/triangle/)|[LeetCode-120-Triangle.java](src/LeetCode-120-Triangle.java)|DP, Array|
@@ -173,7 +174,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 
 
 
-### Search(Tree, Binary Search, DFS, BFS, DP)
+### Tree Search(Tree, Binary Search, DFS, BFS)
 Search in Tree, in Binary Tree, Binary Search Tree, in String, in Array  
 Search a required set, search Maximum/Minimu result  
 
@@ -211,7 +212,6 @@ Search a required set, search Maximum/Minimu result
 |[216.Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)|[LeetCode-216-Combination-Sum-III.java](src/LeetCode-216-Combination-Sum-III.java)|Not yet|
 |[77.Combinations](https://leetcode.com/problems/combinations/)|[LeetCode-77-Combinations.java](src/LeetCode-77-Combinations.java)|DFS|
 |[278.First Bad Version](https://leetcode.com/problems/first-bad-version/)|[LeetCode-278-First-Bad-Version.java](src/LeetCode-278-First-Bad-Version.java)|Binary Search|
-|[70.Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)|[LeetCode-70-Climbing-Stairs.java](src/LeetCode-70-Climbing-Stairs.java)|DP|
 |[212.Word Search II](https://leetcode.com/problems/word-search-ii/)|[LeetCode-212-Word-Search-II.java](src/LeetCode-212-Word-Search-II.java)|Not yet, hard|
 |[86.Partition List](https://leetcode.com/problems/partition-list/)|[LeetCode-86-Partition-List.java](src/LeetCode-86-Partition-List.java)|Two Pointers|
 |[205.Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)|[LeetCode-205-Isomorphic-Strings.java](src/LeetCode-205-Isomorphic-Strings.java)|HashMap|
@@ -241,7 +241,7 @@ Search a required set, search Maximum/Minimu result
 |[★112.Path Sum](https://leetcode.com/problems/path-sum/)|[LeetCode-112-Path-Sum.java](src/LeetCode-112-Path-Sum.java)|DFS, BFS|
 |[113.Path Sum II](https://leetcode.com/problems/path-sum-ii/)|[LeetCode-113-Path-Sum-II.java](src/LeetCode-113-Path-Sum-II.java)|DFS|
 |[129.Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)|[LeetCode-129-Sum-Root-to-Leaf-Numbers.java](src/LeetCode-129-Sum-Root-to-Leaf-Numbers.java)|DFS|
-|[124.Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)|[LeetCode-124-Binary-Tree-Maximum-Path-Sum.java](src/LeetCode-124-Binary-Tree-Maximum-Path-Sum.java)|not yet, hard|
+|[124.Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)|[LeetCode-124-Binary-Tree-Maximum-Path-Sum.java](src/LeetCode-124-Binary-Tree-Maximum-Path-Sum.java)|DFS|
 |[257.Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)|[LeetCode-257-Binary-Tree-Paths.java](src/LeetCode-257-Binary-Tree-Paths.java)|not yet|
 |[144.Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)|[LeetCode-144-Binary-Tree-Preorder-Traversal.java](src/LeetCode-144-Binary-Tree-Preorder-Traversal.java)|DFS, BFS|
 |[94.Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|[LeetCode-94-Binary-Tree-Inorder-Traversal.java](src/LeetCode-94-Binary-Tree-Inorder-Traversal.java)|DFS, BFS|
