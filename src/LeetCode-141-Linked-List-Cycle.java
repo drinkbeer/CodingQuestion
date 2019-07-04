@@ -8,6 +8,11 @@ Analysis:
 Fast-slow node
 
 
+slow goes 1 step at a time,and fast goes 2 steps at a time.
+If we think slow is still,then fast goes 1 step at a time.
+So,the problem is just like a Chasing problem.
+There is a time when fast catches slower if there is cycle.
+
 Runtime: 0 ms, faster than 100.00% of Java online submissions for Linked List Cycle.
 Memory Usage: 36.8 MB, less than 99.99% of Java online submissions for Linked List Cycle.
 
