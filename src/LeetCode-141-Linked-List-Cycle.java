@@ -29,9 +29,10 @@ public class Solution {
         if(head == null) return false;
         
         ListNode slow = head, fast = head.next;
-        while (slow != null && fast != null) {
+        while (slow != null && fast != null && fast.next != null) {
             if (slow.val == fast.val) return true;
-            if (slow.next == null || fast.next == null || fast.next.next == null) return false;
+            // this line is not necessary
+            // if (slow.next == null || fast.next == null || fast.next.next == null) return false;
             
             slow = slow.next;
             fast = fast.next.next;
