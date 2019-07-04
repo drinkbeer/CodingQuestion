@@ -3,6 +3,7 @@ LeetCode:  https://leetcode.com/problems/linked-list-cycle-ii/
 LintCode:  http://www.lintcode.com/problem/linked-list-cycle-ii/
 JiuZhang:  http://www.jiuzhang.com/solutions/linked-list-cycle-ii/
 ProgramCreek:  not find
+http://fisherlei.blogspot.com/2013/11/leetcode-linked-list-cycle-ii-solution.html
 
 Analysis:  
 1.Two Pointers
