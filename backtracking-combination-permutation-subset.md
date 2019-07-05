@@ -4,22 +4,25 @@ https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-t
 Combination Sum : https://leetcode.com/problems/combination-sum/
 
 ```
-public List<List<Integer>> combinationSum(int[] nums, int target) {
-    List<List<Integer>> list = new ArrayList<>();
-    Arrays.sort(nums);
-    backtrack(list, new ArrayList<>(), nums, target, 0);
-    return list;
+public List<List<Integer>> combinationSum(int[] candidates, int target) {
+    List<List<Integer>> res = new ArrayList<List<Integer>>();
+    if (candidates == null || candidates.length == 0) return res;
+
+    backtrack(candidates, target, 0, res, new ArrayList<>());
+    return res;
 }
 
-private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] nums, int remain, int start){
-    if(remain < 0) return;
-    else if(remain == 0) list.add(new ArrayList<>(tempList));
-    else{ 
-        for(int i = start; i < nums.length; i++){
-            tempList.add(nums[i]);
-            backtrack(list, tempList, nums, remain - nums[i], i); // not i + 1 because we can reuse same elements
-            tempList.remove(tempList.size() - 1);
-        }
+private void backtrack(int[] candidates, int target, int start, List<List<Integer>> res, List<Integer> list) {
+    if (target < 0) return;
+    if (target == 0) {
+        res.add(new ArrayList<>(list));
+        return;
+    }
+
+    for (int i = start; i < candidates.length; i++) {
+        list.add(candidates[i]);
+        backtrack(candidates, target - candidates[i], i, res, list);  // not i + 1 because we can reuse same elements
+        list.remove(list.size() - 1);
     }
 }
 ```
