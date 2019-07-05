@@ -16,104 +16,197 @@ Time Limit Exceeded
 Time Complexity: O(n^2)
 Space Complexity: O(1)
 */
-public class Solution {
+class Solution {
+    // 1. Native solution
+//     public String longestPalindrome(String s) {
+//         int max = Integer.MIN_VALUE;
+//         String result = "";
+//         for (int i = 0; i < s.length(); i++) {
+//             for (int j = i + 1; j <= s.length(); j++) {
+//                 if (isPalindromic(s, i, j - 1)) {
+//                     if (max < j - i) {
+//                         max = j - i;
+//                         result = s.substring(i, j);
+//                     }
+//                 }
+//             }
+//         }
+//         return result;
+//     }
     
-    // 1.Naive Approach
-    // public String longestPalindrome(String s) {
-    //     String result = "";
-    //     int maxLen = 0;
-    //     if(s == null || s.length() <= 1) return s;
-        
-    //     int len = s.length();
-        
-    //     for(int right = 0; right < len; right++){
-    //         for(int left = 0; left <= right; left++){
-    //             String curr = s.substring(left, right);
-    //             if(isPalindrome(curr) && curr.length() > maxLen){
-    //                 maxLen = curr.length();
-    //                 result = curr;
-    //             }
-    //         }
-    //     }
-        
-    //     return result;
-    // }
+//     private boolean isPalindromic(String s, int lo, int hi) {
+//         while (lo < hi) {
+//             if (s.charAt(lo++) != s.charAt(hi--)) return false;
+//         }
+//         return true;
+//     }
     
-    // private boolean isPalindrome(String s){
-    //     int start = 0, end = s.length() - 1;
-    //     while(start < end){
-    //         if(s.charAt(start) != s.charAt(end)) return false;
-    //         start++;
-    //         end--;
-    //     }
-    //     return true;
-    // }
+    // 2. Native solution
+    /*
+    Time Limit Exceeded
     
-    // 2.Dynamic Programming
-    // public String longestPalindrome(String s) {
-    //     String result = "";
-    //     if(s == null || s.length() <= 1) return s;
-    //     int len = s.length();
-    //     int maxLen = 0;
+    */
+//     public String longestPalindrome(String s) {
+//         String result = "";
+//         int maxLen = 0;
+//         if(s == null || s.length() <= 1) return s;
         
-    //     // state matrix
-    //     int[][] state = new int[len][len];
+//         int len = s.length();
         
-    //     // calculate state matrix
-    //     // if length == 1
-    //     for(int i = 0; i < len; i++) state[i][i] = 1;
+//         // Here must be right "<=", as substring method in Java will excluse the right bound.
+//         for(int right = 0; right <= len; right++){
+//             for(int left = 0; left <= right; left++){
+//                 String curr = s.substring(left, right);
+//                 if(isPalindrome(curr) && curr.length() > maxLen){
+//                     maxLen = curr.length();
+//                     result = curr;
+//                 }
+//             }
+//         }
         
-    //     // if length == 2
-    //     for(int i = 0; i < len - 1; i++) if(s.charAt(i) == s.charAt(i + 1)) state[i][i + 1] = 1;
-        
-    //     for(int right = 0; right < len; right ++){
-    //         for(int left = 0; left <= right; left++){
-    //             if(s.charAt(left) == s.charAt(right)){
-    //                 state[left][right] = 1;
-    //                 int l = right - left + 1;
-    //                 if(l > maxLen){
-    //                     result = s.substring(left, right + 1);
-    //                 }
-    //             }else{
-    //                 state[left][right] = 0;
-    //             }
-    //         }
-    //     }
-    //     return result;
-    // }
+//         return result;
+//     }
     
-    //3.
+//     private boolean isPalindrome(String s){
+//         int start = 0, end = s.length() - 1;
+//         while(start < end){
+//             if(s.charAt(start) != s.charAt(end)) return false;
+//             start++;
+//             end--;
+//         }
+//         return true;
+//     }
+    
+    // 3. Extend
+//     public String longestPalindrome(String s) {
+//         String result = "";
+//         int max = 0;
+//         if(s == null || s.length() <= 1) return s;
+        
+//         // sub string in odd length
+//         for (int i = 0; i < s.length(); i++) {
+//             String temp = getLongestStr(s, i, i);
+//             if (temp.length() > max) {
+//                 result = temp;
+//                 max = temp.length();
+//             }
+//         }
+        
+//         for (int i = 0; i < s.length() - 1; i++) {
+//             String temp = getLongestStr(s, i, i + 1);
+//             if (temp.length() > max) {
+//                 result = temp;
+//                 max = temp.length();
+//             }
+//         }
+        
+//         return result;
+//     }
+    
+//     private String getLongestStr(String s, int i, int j) {
+//         String res = "";
+//         while (i >= 0 && j < s.length() && s.charAt(i) == s.charAt(j)) {
+//             res = s.substring(i, j + 1);
+//             i--;
+//             j++;
+//         }
+//         return res;
+//     }
+    
+    // extend
+    // private int lo, maxLen;
+//     public String longestPalindrome(String s) {
+//         int len = s.length();
+//         if (len < 2)
+//             return s;
+
+//         for (int i = 0; i < len-1; i++) {
+//             extendPalindrome(s, i, i);  //assume odd length, try to extend Palindrome as possible
+//             extendPalindrome(s, i, i+1); //assume even length.
+//         }
+//         return s.substring(lo, lo + maxLen);
+//     }
+
+//     private void extendPalindrome(String s, int j, int k) {
+//         while (j >= 0 && k < s.length() && s.charAt(j) == s.charAt(k)) {
+//             j--;
+//             k++;
+//         }
+//         if (maxLen < k - j - 1) {
+//             lo = j + 1;
+//             maxLen = k - j - 1;
+//         }
+//     }
+    
+    // DP (2D array)
+    /*
+    
+    https://leetcode.com/problems/longest-palindromic-substring/discuss/2921/Share-my-Java-solution-using-dynamic-programming
+    
+    
+    subproblem:
+    dp[i][j]    -   whether char at i and char at j are equal, and s [i + 1, j - 1] is a palindrome
+    
+    recurrence relation
+    assume dp[0, i - 1][0, len] is optimized result
+    dp[i][j] = true if char(i) == char(j) && dp[i + 1][j - 1] == true
+    
+    init:
+    dp[0][0] = true // only one first char is a palindrome
+    
+    ans:
+    longest (j - i + 1)
+    
+    */
+//     public String longestPalindrome(String s) {
+//         int len = s.length();
+//         if (len < 2) {
+//             return s;
+//         }
+        
+//         // subproblem
+//         boolean[][] dp = new boolean[len][len];
+        
+//         // init
+//         dp[0][0] = true;
+        
+//         // recurrence relation
+//         int start = 0, maxLen = 0;
+//         for (int i = len - 1; i >= 0; i--) {
+//             for (int j = i; j < len; j++) {
+                
+//                 dp[i][j] = (s.charAt(i) == s.charAt(j)) && (j - i < 3 || dp[i + 1][j - 1]);
+                
+//                 if (dp[i][j] && maxLen <= j - i + 1) {
+//                     start = i;
+//                     maxLen = j - i + 1;
+//                 }
+//             }
+//         }
+        
+//         return s.substring(start, start + maxLen);
+//     }
+    
+    // DP (1D array) (best DP solution)
+    /*
+    Optimization: substring() is costy. It's better to record start index and length, and do one substring finally.
+    */
     public String longestPalindrome(String s) {
-        if(s == null || s.length() <= 1) return s;
         int len = s.length();
+        if(len < 2) return s;        
+        boolean dp[] = new boolean[len];
+        int start = 0;
         int maxLen = 0;
-        String result = s.substring(0, 1);
         
-        // get longest palindrome with center of i
-        for(int i = 0; i < len; i++){
-            String temp = getLongestStr(s, i, i);
-            if(temp.length() >maxLen ){
-                maxLen = temp.length();
-                result = temp;
+        for(int i = len - 1; i >= 0; i--){
+            for(int j = len - 1; j >= i; j--){
+                dp[j] = (s.charAt(i) == s.charAt(j)) && (j - i < 2 || dp[j - 1]);
+                if(dp[j] && maxLen <= j - i + 1){
+                    start = i;
+                    maxLen = j - i + 1;
+                }
             }
         }
-        
-        // get longest palindrome with center of i and i+1
-        for(int i = 0; i < len - 1; i++){
-            String temp = getLongestStr(s, i, i + 1);
-            if(temp.length() > maxLen){
-                maxLen = temp.length();
-                result = temp;
-            }
-        }
-        return result;
-    }
-        
-    private String getLongestStr(String s, int start, int end){
-        while(start >= 0 && end < s.length() && s.charAt(start) == s.charAt(end)){
-            start--;
-            end++;
-        }
-        return s.substring(start + 1, end);     // must consider clearly why [start+1, end]
+        return s.substring(start, start + maxLen); 
     }
 }
