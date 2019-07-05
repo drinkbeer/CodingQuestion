@@ -40,6 +40,7 @@ public List<List<Integer>> combinationSum2(int[] candidates, int target) {
 }
 
 public void backtrack(int[] nums, int target, int start, List<List<Integer>> result, List<Integer> list) {
+    if (target < 0) return;
     if (target == 0) {
         result.add(new ArrayList<>(list));
         return;
