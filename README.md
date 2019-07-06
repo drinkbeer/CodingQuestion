@@ -362,7 +362,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[43.Multiply Strings](https://leetcode.com/problems/multiply-strings/)|[LeetCode-43-Multiply-Strings.java](src/LeetCode-43-Multiply-Strings.java)|String|
 |[67.Add Binary](https://leetcode.com/problems/add-binary/)|[LeetCode-67-Add-Binary.java](src/LeetCode-67-Add-Binary.java)|String|
 |[29.Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)|[LeetCode-29-Divide-Two-Integers.java](src/LeetCode-29-Divide-Two-Integers.java)|Binary Search|
-|[50.Pow(x, n)](https://leetcode.com/problems/powx-n/)|[LeetCode-50-Pow-n.java](src/LeetCode-LeetCode-50-Pow-n.java)|Binary Search|
+|[50.Pow(x, n)](https://leetcode.com/problems/powx-n/)|[LeetCode-50-Pow-n.java](src/LeetCode-50-Pow-n.java)|Binary Search|
 |[66.Plus One](https://leetcode.com/problems/plus-one/)|[LeetCode-66-Plus-One.java](src/LeetCode-66-Plus-One.java)|Array|
 |[69.Sqrt(x)](https://leetcode.com/problems/sqrtx/)|[LeetCode-69-Sqrt-x.java](src/LeetCode-69-Sqrt-x.java)|Binary Search|
 |[89 Gray Code](https://leetcode.com/problems/gray-code/)|[LeetCode-89-Gray-Code.java](src/LeetCode-89-Gray-Code.java)|Math|
