@@ -76,7 +76,17 @@ public class Solution {
 }
 
 
-
+/*
+LeetCode:  https://leetcode.com/problems/insert-interval/
+LintCode:  http://www.lintcode.com/problem/insert-interval/
+JiuZhang:  http://www.jiuzhang.com/solutions/insert-interval/
+ProgramCreek:  http://www.programcreek.com/2012/12/leetcode-insert-interval/
+Analysis:  
+1.Sort at first, then merge
+Just like Merge Intervals
+2.Do not sort.
+If the original List has overlapping? Perhaps.
+*/
 class Solution {
     // 1.Scan the intervals, and sort twice. It's slow, TimeComplexity O(NlogN), because the sorting.
 //     public int[][] insert(int[][] intervals, int[] newInterval) {
@@ -204,6 +214,35 @@ then use the updated newInterval to compare with latter intervals.
 //         return result.toArray(new int[result.size()][]);
 //     }
     
+    // Another implementation similar to the above one (without sorting) (Best Solution)
+     public int[][] insert(int[][] intervals, int[] newInterval) {
+        List<int[]> result = new ArrayList<>();
+        if (intervals == null) return result.toArray(new int[0][]);
+     
+         int start = newInterval[0], end = newInterval[1];
+         
+         for (int[] interval : intervals) {
+             if (interval[1] < start) {
+                 // non overlapping, we have not reached the new interval
+                 result.add(interval);
+             } else if (interval[0] > end) {
+                 // non overlapping, we have already passed the new interval
+                 
+                 result.add(new int[]{start, end});
+                 start = interval[0];
+                 end = interval[1];
+             } else {
+                 // has overlapping
+                 start = Math.min(start, interval[0]);
+                 end = Math.max(end, interval[1]);
+             }
+         }
+         
+         result.add(new int[]{start, end});
+     
+         return result.toArray(new int[result.size()][]);
+     }
+    
     // 2. Split the intervals to start array and end array, and scan the end
     /*
     The idea here is:
@@ -257,7 +296,7 @@ then use the updated newInterval to compare with latter intervals.
 //         return result.toArray(new int[result.size()][]);
 //     }
     
-    // 3.Do it with Binary Search.
+    // 3.Do it with Binary Search. (Wrong Answer)
     /*
     https://leetcode.com/problems/insert-interval/discuss/21659/My-Binary-Search-Approach-Implementation-2ms
     https://leetcode.com/problems/insert-interval/discuss/21698/Java-2ms-O(log-n)O(1)-binary-search-solution-beats-97.7-with-clear-explaination
@@ -270,176 +309,179 @@ then use the updated newInterval to compare with latter intervals.
     Lift: 0  Right: 0
     
     */
-    public int[][] insert(int[][] intervals, int[] newInterval) {
-        List<int[]> result = new ArrayList<>();
-        if (intervals == null) return result.toArray(new int[0][]);
-        if (intervals.length == 0) {
-            result.add(newInterval);
-            return result.toArray(new int[1][]);
-        }
-        
-        int left = searchStartPos(intervals, newInterval[0]);
-        int right = searchEndPos(intervals, newInterval[1]);
-        System.out.println("Left: " + left + "  Right: " + right);
-        
-        /*
-        Process the search result:
-        
-        [[1,5]]
-        [2,3]
-        Left: 0  Right: 0
-        Result:[[1,5]], should do merge
-        
-        [[1,5]]
-        [0,3]
-        Left: -1  Right: 0
-        Result: [[0,5]], merge, and don't add anything
-        
-        [[4,5]]
-        [2,3]
-        Left: -1  Right: 0
-        Result: [[2,3],[4,5]], don't merge, just directly add to the beginning
-        
-        [[1,5]]
-        [6,8]
-        Left: 0  Right: -1
-        Result: [[1,5],[6,8]], add to right
-        
-        [[1,2],[3,5],[6,7],[8,10],[12,16]]
-        [4,8]
-        [[1,2],[3,10],[12,16]]
-        Result: [[1,2],[3,10],[12,16]], merge and add
-       
-       My code is wrong in this case.
-        [[1,3],[6,9]]
-        [2,5]
-        Left: 0  Right: 1
-        [[1,5],[6,9]]
-        
-        Then we should insert newInterval to zero index
-        */
-        // add to the beginning, then continue adding everything left in the intervals by setting left and right to be 0
-        if (left == -1 && right == -1) {
-            // result.add(newInterval);
-            left = 0;
-            if (intervals[left][0] <= newInterval[1]) {
-                // merge left with newInterval
-                newInterval = new int[]{Math.min(newInterval[0], intervals[left][0]), Math.max(newInterval[1], intervals[left][1])};
-                // don't reset right, let it be -1, so we will skip adding any thing.
-            } else {
-                right = -1; // after merged newInterval, we need start from 0 to add intervals
-            }
-        } else if (left == -1) {
-            if (intervals[right][0] <= newInterval[1]) {
-                // merge left with newInterval
-                newInterval = new int[]{Math.min(newInterval[0], intervals[right][0]), Math.max(newInterval[1], intervals[right][1])};
-                // don't reset right, let it be -1, so we will skip adding any thing.
-            } else {
-                right = left; // after merged newInterval, we need start from 0 to add intervals
-            }
-        } else if (right == -1) {
-            if (intervals[left][1] >= newInterval[0]) {
-                // merge left with newInterval
-                newInterval = new int[]{Math.min(newInterval[0], intervals[left][0]), Math.max(newInterval[1], intervals[left][1])};
-                // don't reset right, let it be -1, so we will skip adding any thing.
-                // left = -1; // // after merged newInterval, we need start from 0 to add intervals in the left side
-                // left++;
-            } 
-            else {
-                left++; // after merged newInterval, we need start from 0 to add intervals
-                right = left;
-            }
-        } else {
-            if (intervals[right][1] >= newInterval[0]) {
-                // merge newInterval with the intervals between left and right.
-                newInterval = new int[]{Math.min(newInterval[0], intervals[left][0]), Math.max(newInterval[1], intervals[right][1])};
-            } else {
-                // no need merge, but need find the correct position to insert (insert before the left, or after the right)
-                if (intervals[right][1] < newInterval[0]) {
-                    // insert to the right of right.
-                    left = left + 1;
-                } 
-                
-                // if (intervals[right][0])
-            }
-        }
-        
-        // if (left == -1 && right == -1) {
-        //     left = 0;
-        //     right = 0;
-        // }
-        // if (left == -1) {
-        //     left = right;
-        // }
-        // if (right == -1) {
-        //     right = left;
-        // }
-        // start = Math.min(start, intervals[left][0]);
-        // end = Math.max(end, intervals[left][1]);
-        // start = Math.min(start, intervals[right][0]);
-        // end = Math.max(end, intervals[right][1]);
-//         if (right != -1) {
-            
+//     public int[][] insert(int[][] intervals, int[] newInterval) {
+//         List<int[]> result = new ArrayList<>();
+//         if (intervals == null) return result.toArray(new int[0][]);
+//         if (intervals.length == 0) {
+//             result.add(newInterval);
+//             return result.toArray(new int[1][]);
 //         }
         
-        int i = 0;
-        while (i < left) {
-            result.add(intervals[i]);
-            i++;
-        }
+//         int left = searchStartPos(intervals, newInterval[0]);
+//         int right = searchEndPos(intervals, newInterval[1]);
+//         System.out.println("Left: " + left + "  Right: " + right);
         
-        result.add(newInterval);
+//         /*
+//         Process the search result:
         
-        i = right + 1;
-        while (i < intervals.length) {
-            result.add(intervals[i]);
-            i++;
-        }
-        return result.toArray(new int[result.size()][]);
-    }
-    
-    // find the right most interval whose start is smaller than val
-    private int searchStartPos(int[][] intervals, int val) {
-        int lo = 0, hi = intervals.length - 1;
+//         [[1,5]]
+//         [2,3]
+//         Left: 0  Right: 0
+//         Result:[[1,5]], should do merge
         
-        while(lo + 1 < hi) {
-            int mid = lo + (hi - lo) / 2;
+//         [[1,5]]
+//         [0,3]
+//         Left: -1  Right: 0
+//         Result: [[0,5]], merge, and don't add anything
+        
+//         [[4,5]]
+//         [2,3]
+//         Left: -1  Right: 0
+//         Result: [[2,3],[4,5]], don't merge, just directly add to the beginning
+        
+//         [[1,5]]
+//         [6,8]
+//         Left: 0  Right: -1
+//         Result: [[1,5],[6,8]], add to right
+        
+//         [[1,2],[3,5],[6,7],[8,10],[12,16]]
+//         [4,8]
+//         [[1,2],[3,10],[12,16]]
+//         Result: [[1,2],[3,10],[12,16]], merge and add
+       
+//        My code is wrong in this case.
+//         [[1,3],[6,9]]
+//         [2,5]
+//         Left: 0  Right: 1
+//         [[1,5],[6,9]]
+        
+//         Then we should insert newInterval to zero index
+//         */
+//         // add to the beginning, then continue adding everything left in the intervals by setting left and right to be 0
+//         if (left == -1 && right == -1) {
+//             // result.add(newInterval);
+//             left = 0;
+//             if (intervals[left][0] <= newInterval[1]) {
+//                 // merge left with newInterval
+//                 newInterval = new int[]{Math.min(newInterval[0], intervals[left][0]), Math.max(newInterval[1], intervals[left][1])};
+//                 // don't reset right, let it be -1, so we will skip adding any thing.
+//             } else {
+//                 right = -1; // after merged newInterval, we need start from 0 to add intervals
+//             }
+//         } else if (left == -1) {
+//             if (intervals[right][0] <= newInterval[1]) {
+//                 // merge left with newInterval
+//                 newInterval = new int[]{Math.min(newInterval[0], intervals[right][0]), Math.max(newInterval[1], intervals[right][1])};
+//                 // don't reset right, let it be -1, so we will skip adding any thing.
+//             } else {
+//                 right = left; // after merged newInterval, we need start from 0 to add intervals
+//             }
+//         } else if (right == -1) {
+//             if (intervals[left][1] >= newInterval[0]) {
+//                 // merge left with newInterval
+//                 newInterval = new int[]{Math.min(newInterval[0], intervals[left][0]), Math.max(newInterval[1], intervals[left][1])};
+//                 // don't reset right, let it be -1, so we will skip adding any thing.
+//                 // left = -1; // // after merged newInterval, we need start from 0 to add intervals in the left side
+//                 // left++;
+//             } 
+//             else {
+//                 left++; // after merged newInterval, we need start from 0 to add intervals
+//                 right = left;
+//             }
+//         } else {
+//             if (intervals[right][1] >= newInterval[0]) {
+//                 // merge newInterval with the intervals between left and right.
+//                 newInterval = new int[]{Math.min(newInterval[0], intervals[left][0]), Math.max(newInterval[1], intervals[right][1])};
+//             } else {
+//                 // no need merge, but need find the correct position to insert (insert before the left, or after the right)
+//                 if (intervals[right][1] < newInterval[0]) {
+//                     // insert to the right of right.
+//                     left = left + 1;
+//                 } 
+                
+//                 // if (intervals[right][0])
+//             }
+//         }
+        
+//         // if (left == -1 && right == -1) {
+//         //     left = 0;
+//         //     right = 0;
+//         // }
+//         // if (left == -1) {
+//         //     left = right;
+//         // }
+//         // if (right == -1) {
+//         //     right = left;
+//         // }
+//         // start = Math.min(start, intervals[left][0]);
+//         // end = Math.max(end, intervals[left][1]);
+//         // start = Math.min(start, intervals[right][0]);
+//         // end = Math.max(end, intervals[right][1]);
+// //         if (right != -1) {
             
-            if (intervals[mid][0] == val) return mid;
-            else if (intervals[mid][0] > val) hi = mid - 1;
-            else lo = mid + 1;
-        }
+// //         }
         
-        if (intervals[hi][0] < val) return hi;
-        if (intervals[lo][0] < val) return lo;
-        return -1;
-    }
-    
-    // find the left most interval whose end is larger or equal to val
-    /*
-    If we cannot find the left most interval whose end is smaller than val, e.g.
-    
-    [[1,5]]
-    [2,3]
-    
-    we just return -1.
-    
-    If we cannot find a right boundary, then just use the 
-    */
-    private int searchEndPos(int[][] intervals, int val) {
-        int lo = 0, hi = intervals.length - 1;
+//         int i = 0;
+//         while (i < left) {
+//             result.add(intervals[i]);
+//             i++;
+//         }
         
-        while(lo + 1 < hi) {
-            int mid = lo + (hi - lo) / 2;
+//         result.add(newInterval);
+        
+//         i = right + 1;
+//         while (i < intervals.length) {
+//             result.add(intervals[i]);
+//             i++;
+//         }
+//         return result.toArray(new int[result.size()][]);
+//     }
+    
+//     // find the right most interval whose start is smaller than val
+//     private int searchStartPos(int[][] intervals, int val) {
+//         int lo = 0, hi = intervals.length - 1;
+        
+//         while(lo + 1 < hi) {
+//             int mid = lo + (hi - lo) / 2;
             
-            if (intervals[mid][1] == val) return mid;
-            else if (intervals[mid][1] > val) hi = mid - 1;
-            else lo = mid + 1;
-        }
+//             if (intervals[mid][0] == val) return mid;
+//             else if (intervals[mid][0] > val) hi = mid - 1;
+//             else lo = mid + 1;
+//         }
         
-        if (intervals[lo][1] > val) return lo;
-        if (intervals[hi][1] > val) return hi;
+//         if (intervals[hi][0] < val) return hi;
+//         if (intervals[lo][0] < val) return lo;
+//         return -1;
+//     }
+    
+//     // find the left most interval whose end is larger or equal to val
+//     /*
+//     If we cannot find the left most interval whose end is smaller than val, e.g.
+    
+//     [[1,5]]
+//     [2,3]
+    
+//     we just return -1.
+    
+//     If we cannot find a right boundary, then just use the 
+//     */
+//     private int searchEndPos(int[][] intervals, int val) {
+//         int lo = 0, hi = intervals.length - 1;
         
-        return -1;
-    }
+//         while(lo + 1 < hi) {
+//             int mid = lo + (hi - lo) / 2;
+            
+//             if (intervals[mid][1] == val) return mid;
+//             else if (intervals[mid][1] > val) hi = mid - 1;
+//             else lo = mid + 1;
+//         }
+        
+//         if (intervals[lo][1] > val) return lo;
+//         if (intervals[hi][1] > val) return hi;
+        
+//         return -1;
+//     }
+    
+    
+
 }
