@@ -3,40 +3,38 @@ LeetCode: https://leetcode.com/problems/permutations/
 LintCode: http://www.lintcode.com/problem/permutations/
 JiuZhang: http://www.jiuzhang.com/solutions/permutations/
 ProgramCreek: http://www.programcreek.com/2013/02/leetcode-permutations-java/
-
 Analysis:
 1.DFS(recursive)
-
 2.BFS(itertive)
 */
 class Solution {
-    // 1.DFS(recursive)
+    // 1.DFS
+    /*
+    Runtime: 1 ms, faster than 99.09% of Java online submissions for Permutations.
+    Memory Usage: 37.2 MB, less than 96.38% of Java online submissions for Permutations.
+    */
 //     public List<List<Integer>> permute(int[] nums) {
-//         if(nums == null || nums.length == 0) return null;
-        
-//         List<List<Integer>> result = new ArrayList<List<Integer>>();
-//         List<Integer> set = new ArrayList<Integer>();
-        
-//         helper(nums, result, set);
-//         return result;
+//         List<List<Integer>> res = new ArrayList<List<Integer>>();
+//         if(nums == null || nums.length == 0) return res;
+//         backtrack(nums, res, new ArrayList<>());
+//         return res;
 //     }
     
-//     private void helper(int[] nums, List<List<Integer>> result, List<Integer> set) {
-//         if (set.size() == nums.length) {
-//             // Be careful: here we must create a new set to add to result
-//             result.add(new ArrayList<>(set));
+//     private void backtrack(int[] nums, List<List<Integer>> res, List<Integer> list) {
+//         if (list.size() == nums.length) {
+//             res.add(new ArrayList<>(list));
 //             return;
 //         }
         
 //         for (int i = 0; i < nums.length; i++) {
-//             if (set.contains(nums[i])) continue; // skip duplicates
-//             set.add(nums[i]);
-//             helper(nums, result, set);
-//             set.remove(set.size() - 1);
+//             if (list.contains(nums[i])) continue;
+//             list.add(nums[i]);
+//             backtrack(nums, res, list);
+//             list.remove(list.size() - 1);
 //         }
 //     }
     
-    // 2.BFS(iterative)
+    // 2.BFS
     
     /*
     https://leetcode.com/problems/permutations/discuss/18237/My-AC-simple-iterative-javapython-solution
@@ -81,6 +79,7 @@ class Solution {
                 }
                 
             }
+            
             result = tempResult;
         }
         
