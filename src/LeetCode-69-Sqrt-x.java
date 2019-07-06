@@ -6,28 +6,47 @@ ProgramCreek: http://www.programcreek.com/2012/02/java-calculate-square-root-wit
 Other: http://www.cnblogs.com/yuzhangcmu/p/4198959.html
 
 Analysis: 
-Binary Search
+Binary Search: search the largest mid value that has mid * mid <= x
 */
-public class Solution {
+class Solution {
+    
+    // 1. Binary Search (allow overlapping)
     public int mySqrt(int x) {
-        if(x <= 1)return x;
+        if (x <= 1) return x;
         
-        long lo = 0;
-        long hi = x / 2 + 1;      // For a non-positive n, it's sqrt mustn't larger than n/2+1
-        
-        while(lo <= hi){
+        long lo = 1, hi = x / 2;
+        while (lo <= hi) {
             long mid = lo + (hi - lo) / 2;
-
-            if(x == mid * mid){
-                return (int)mid;
-            }
-            if(x > mid * mid){
+            
+            if (mid * mid == x) return (int) mid;
+            if (mid * mid < x) {
                 lo = mid + 1;
-            } else {
+            }
+            else {
                 hi = mid - 1;
             }
         }
         
-        return (int)hi;
+        return (int) hi;
     }
+    
+    // 2.Binary Search (don't allow overlapping)
+//     public int mySqrt(int x) {
+//         if (x == 1) return 1;
+        
+//         long lo = 1, hi = x / 2;
+//         while (lo + 1 < hi) {
+//             long mid = lo + (hi - lo) / 2;
+            
+//             if (mid * mid == x) return (int) mid;
+//             if (mid * mid < x) {
+//                 lo = mid;
+//             } else {
+//                 hi = mid;
+//             }
+//         }
+        
+//         if (hi * hi <= x) return (int) hi;
+//         return (int) lo;
+//     }
 }
