@@ -15,20 +15,41 @@ Analysis:
 */
 
 public class Solution {
-    // public int maxSubArray(int[] nums) {
-    //     // 1.DP
-    //     int max = nums[0];
+    // 1.DP (Pull)
+    /*
+    subproblem:
+    dp[i]   -   the max sum of subarray that ends with i, the range: [any, i]
+    
+    recurrence relation:
+    dp[i] = max{dp[i - 1] + nums[i], nums[i]}
+    
+    init:
+    dp[0] = nums[0]
+    
+    ans:
+    max val
+    */
+//     public int maxSubArray(int[] nums) {
+//         if (nums == null || nums.length == 0) return 0;
+    
+//         int n = nums.length;
         
-    //     // state
-    //     int[] sum = new int[nums.length];
-    //     sum[0] = nums[0];
+//         // recurrence relation
+//         int[] dp = new int[n];
         
-    //     for(int i = 1; i < nums.length; i++){
-    //         sum[i] = Math.max(nums[i], sum[i - 1] + nums[i]);
-    //         max = Math.max(max, sum[i]);
-    //     }
-    //     return max;
-    // }
+//         // init
+//         dp[0] = nums[0];
+//         int max = nums[0];
+        
+//         // recurrence relation
+//         for (int i = 1; i < n; i++) {
+//             dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+//             max = Math.max(max, dp[i]);
+//         }
+        
+//         // ans
+//         return max;
+//     }
     
     // 2.Greedy
 //  public int maxSubArray(int[] nums) {
