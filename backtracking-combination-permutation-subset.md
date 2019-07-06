@@ -83,25 +83,37 @@ private void backtrack(int[] nums, List<List<Integer>> res, List<Integer> list) 
 
 Permutations II (contains duplicates) : https://leetcode.com/problems/permutations-ii/
 ```
+/*
+if(!result.contains(list)){
+we could use contains to check duplicate, but it's too slow.
+*/
 public List<List<Integer>> permuteUnique(int[] nums) {
-    List<List<Integer>> list = new ArrayList<>();
-    Arrays.sort(nums);
-    backtrack(list, new ArrayList<>(), nums, new boolean[nums.length]);
-    return list;
+    List<List<Integer>> result = new ArrayList<List<Integer>>();
+    if(nums == null) return result;
+
+    List<Integer> list = new ArrayList<Integer>();
+    boolean[] visited = new boolean[nums.length];
+    java.util.Arrays.sort(nums);
+
+    DFS(nums, visited, result, list);
+    return result;
 }
 
-private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] nums, boolean [] used){
-    if(tempList.size() == nums.length){
-        list.add(new ArrayList<>(tempList));
-    } else{
-        for(int i = 0; i < nums.length; i++){
-            if(used[i] || i > 0 && nums[i] == nums[i-1] && !used[i - 1]) continue;
-            used[i] = true; 
-            tempList.add(nums[i]);
-            backtrack(list, tempList, nums, used);
-            used[i] = false; 
-            tempList.remove(tempList.size() - 1);
-        }
+private void DFS(int[] nums, boolean[] visited, List<List<Integer>> result, List<Integer> list){
+    // end condition
+    if(list.size() == nums.length){
+        result.add(new ArrayList<Integer>(list));
+        return;
+    }
+
+    for(int i = 0; i < nums.length; i++){
+        // [1,1,2], when we visit the second 1, we have to ensure the first 1 has already been visited. which means in the final result, the add order is: first 1, second 1
+        if(visited[i] || (i > 0 && nums[i] == nums[i - 1] && !visited[i - 1])) continue;
+        list.add(nums[i]);
+        visited[i] = true;
+        DFS(nums, visited, result, list);
+        list.remove(list.size() - 1);
+        visited[i] = false;
     }
 }
 ```
