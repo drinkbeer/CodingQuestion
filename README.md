@@ -47,7 +47,6 @@ Note:
 |[88.Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)|[LeetCode-88-Merge-Sorted-Array.java](src/LeetCode-88-Merge-Sorted-Array.java)|Array, Two Pointers|
 |[118.Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|[LeetCode-118-Pascals-Triangle.java](src/LeetCode-118-Pascals-Triangle.java)|Array|
 |[119.Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/)|[LeetCode-119-Pascals-Triangle-II.java](src/LeetCode-119-Pascals-Triangle-II.java)|Array|
-|[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|[LeetCode-128-Longest-Consecutive-Sequence.java](src/LeetCode-128-Longest-Consecutive-Sequence.java)|Array|
 |[153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)|[LeetCode-153-Find-Minimum-in-Rotated-Sorted-Array.java](src/LeetCode-153-Find-Minimum-in-Rotated-Sorted-Array.java)|Array|
 |[154. Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)|[LeetCode-154-Find-Minimum-in-Rotated-Sorted-Array-II.java](src/LeetCode-154-Find-Minimum-in-Rotated-Sorted-Array-II.java)|Array|
 |[162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)|[LeetCode-162-Find-Peak-Element.java](src/LeetCode-162-Find-Peak-Element.java)|Array, Binary Search|
@@ -398,6 +397,14 @@ https://leetcode.com/tag/stack/
 |--------|--------|----|
 |[394. Decode String](https://leetcode.com/problems/decode-string/)|[LeetCode-394-Decode-String.java](src/LeetCode-394-Decode-String.java)|Math|
 |[636. Exclusive Time of Functions](https://leetcode.com/problems/exclusive-time-of-functions/)|[LeetCode-636-Exclusive-Time-of-Functions.java](src/LeetCode-636-Exclusive-Time-of-Functions.java)|Math|
+
+
+### Union-Find
+
+|Question|Solution|Tags|
+|--------|--------|----|
+|[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|[LeetCode-128-Longest-Consecutive-Sequence.java](src/LeetCode-128-Longest-Consecutive-Sequence.java)|Array, Union-Find|
+
 
 
 
