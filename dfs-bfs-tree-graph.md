@@ -157,6 +157,8 @@ BFS Template
     }
 ```
 
+### Build Graph
+
 https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
 
 Building a graph represented by HashMap<Integer, List<Integer>>.
