@@ -242,6 +242,32 @@ private void subsetsWithDup(int[] nums, int start, List<List<Integer>> result, L
 }
 ```
 
+```
+// Iterative
+public List<List<Integer>> subsetsWithDup(int[] nums) {
+    List<List<Integer>> result = new ArrayList<List<Integer>>();
+    if (nums == null || nums.length == 0) return result;
+
+    Arrays.sort(nums);  // have to sort here is we want to skip duplicates
+    result.add(new ArrayList<>());
+
+    for (int i : nums) {
+        List<List<Integer>> temp = new ArrayList<List<Integer>>();
+
+        for (List<Integer> sub : result) {
+            List<Integer> list = new ArrayList<>(sub);  // have to create a new list to avoid polluating the existing results
+            list.add(i);
+            if (result.contains(list)) continue;  // have to skip the duplicates
+            temp.add(list);
+        }
+
+        result.addAll(temp);
+    }
+
+    return result;
+}
+```
+
 Palindrome Partitioning : https://leetcode.com/problems/palindrome-partitioning/
 ```
 public List<List<String>> partition(String s) {
