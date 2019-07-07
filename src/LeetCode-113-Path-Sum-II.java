@@ -17,41 +17,30 @@ DFS. Notice, the value the of sum, should - root.val.
  * }
  */
 public class Solution {
+    // 1.DFS (Recursive)
     public List<List<Integer>> pathSum(TreeNode root, int sum) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
-        if(root == null) return result;     // sum could be positive or 0, for instance, sum=-5 [-2,null,-3]
-                                            // sum=0 [7,0,null,-1,-6,null,1,null,null,-7]
-        
-        List<Integer> set = new ArrayList<Integer>();
-        set.add(root.val);
-        DFS(root, sum - root.val, result, set);
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null) return result;
+        recursive(root, sum, result, new ArrayList<>());
         return result;
     }
     
-    private void DFS(TreeNode root, int sum, List<List<Integer>> result, List<Integer> set){
-        // end condition
-        if(sum == 0 && root.left == null && root.right == null) {
-            result.add(new ArrayList<Integer>(set));
+    public void recursive(TreeNode curr, int sum, List<List<Integer>> result, List<Integer> list) {
+        if (curr.left == null && curr.right == null) {
+            if (curr.val == sum) {
+                list.add(curr.val);
+                result.add(new ArrayList<>(list));
+                list.remove(list.size() - 1);
+            }
             return;
         }
         
-        if(root.left != null){
-            set.add(root.left.val);
-            DFS(root.left, sum - root.left.val, result, set);
-            set.remove(set.size() - 1);
-        }
-        
-        if(root.right != null){
-            set.add(root.right.val);
-            DFS(root.right, sum - root.right.val, result, set);
-            set.remove(set.size() - 1);
-        }
+        list.add(curr.val);
+        if (curr.left != null) recursive(curr.left, sum - curr.val, result, list);
+        if (curr.right != null) recursive(curr.right, sum - curr.val, result, list);
+        list.remove(list.size() - 1);
     }
-    
-}
 
-
-class Solution {
     // 1.DFS
     public List<List<Integer>> pathSum(TreeNode root, int sum) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
