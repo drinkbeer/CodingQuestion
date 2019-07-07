@@ -51,7 +51,7 @@ public class Solution {
 //     }
     
     
-    // 2. DFS
+    // 2. DFS (visited set is not necessary
     public Node cloneGraph(Node node) {
         if (node == null) return node;
         
@@ -77,6 +77,32 @@ public class Solution {
                 clone.neighbors.add(cloneAdj);
             }
             dfs(adj, map.get(adj), map, visited);
+        }
+    }
+  
+  // DFS
+    public Node cloneGraph(Node node) {
+        HashMap<Node, Node> map = new HashMap<>();
+        Node copy = new Node(node.val, new ArrayList<>());
+        map.put(node, copy);
+        
+        recursive(node, map);
+        return copy;
+    }
+    
+    private void recursive(Node curr, HashMap<Node, Node> map) {
+        Node copy = map.get(curr);
+        
+        for (Node nb : curr.neighbors) {
+            if (map.containsKey(nb)) {
+                // nb has already been visited
+                copy.neighbors.add(map.get(nb));
+            } else {
+                Node nbCopy = new Node(nb.val, new ArrayList<>());
+                map.put(nb, nbCopy);
+                copy.neighbors.add(nbCopy);
+                recursive(nb, map);
+            }
         }
     }
 }
