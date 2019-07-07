@@ -81,6 +81,37 @@ private void backtrack(int[] nums, List<List<Integer>> res, List<Integer> list) 
 }
 ```
 
+```
+public List<List<Integer>> permute(int[] nums) {
+    if(nums == null || nums.length == 0) return null;
+
+    List<List<Integer>> result = new ArrayList<List<Integer>>();
+    result.add(new ArrayList<Integer>());
+
+    // Gradually insert the numbers to the result row by row
+    for (int i = 0; i < nums.length; i++) {
+        // start insertion of the first row
+        List<List<Integer>> tempResult = new ArrayList<List<Integer>>();
+
+        for (int insertPos = 0; insertPos <= i; insertPos++) {
+            // the insertPos could be at the beginning of the existing list, it could also be the end of the existing list,
+            // so the insertPos could be "i"
+
+            for (List<Integer> sub : result) {
+                List<Integer> row = new ArrayList<>(sub);
+                row.add(insertPos, nums[i]);
+                tempResult.add(row);
+            }
+
+        }
+
+        result = tempResult;
+    }
+
+    return result;
+}
+```
+
 Permutations II (contains duplicates) : https://leetcode.com/problems/permutations-ii/
 ```
 /*
@@ -115,6 +146,35 @@ private void DFS(int[] nums, boolean[] visited, List<List<Integer>> result, List
         list.remove(list.size() - 1);
         visited[i] = false;
     }
+}
+```
+
+```
+public List<List<Integer>> permuteUnique(int[] nums) {
+    List<List<Integer>> result = new ArrayList<List<Integer>>();
+    if (nums == null || nums.length == 0) return result;
+
+    result.add(new ArrayList<>());
+
+    // Start inserting the numbers in nums row by row
+    for (int i = 0; i < nums.length; i++) {
+        List<List<Integer>> tempResult = new ArrayList<List<Integer>>();
+
+        for (int insertPos = 0; insertPos <= i; insertPos++) {
+
+            for (List<Integer> sub : result) {
+                List<Integer> row = new ArrayList<>(sub);
+                row.add(insertPos, nums[i]);
+                if (result.contains(row) || tempResult.contains(row)) continue;
+                tempResult.add(row);
+            }
+
+        }
+
+        result = tempResult;
+    }
+
+    return result;
 }
 ```
 
