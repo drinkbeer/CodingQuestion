@@ -139,7 +139,7 @@ private void DFS(int[] nums, boolean[] visited, List<List<Integer>> result, List
 
     for(int i = 0; i < nums.length; i++){
         // [1,1,2], when we visit the second 1, we have to ensure the first 1 has already been visited. which means in the final result, the add order is: first 1, second 1
-        if(visited[i] || (i > 0 && nums[i] == nums[i - 1] && !visited[i - 1])) continue;
+        if(visited[i] || (i > 0 && nums[i] == nums[i - 1] && !visited[i - 1])) continue;    // skip duplicate
         list.add(nums[i]);
         visited[i] = true;
         DFS(nums, visited, result, list);
@@ -165,7 +165,7 @@ public List<List<Integer>> permuteUnique(int[] nums) {
             for (List<Integer> sub : result) {
                 List<Integer> row = new ArrayList<>(sub);
                 row.add(insertPos, nums[i]);
-                if (result.contains(row) || tempResult.contains(row)) continue;
+                if (result.contains(row) || tempResult.contains(row)) continue; // skip duplicate
                 tempResult.add(row);
             }
 
@@ -222,21 +222,24 @@ public List<List<Integer>> subsets(int[] nums) {
 Subsets II (contains duplicates) : https://leetcode.com/problems/subsets-ii/
 ```
 public List<List<Integer>> subsetsWithDup(int[] nums) {
-    List<List<Integer>> list = new ArrayList<>();
+    List<List<Integer>> result = new ArrayList<List<Integer>>();
+    if (nums == null) return result;
+
     Arrays.sort(nums);
-    backtrack(list, new ArrayList<>(), nums, 0);
-    return list;
+    subsetsWithDup(nums, 0, result, new ArrayList<>());
+    return result;
 }
 
-private void backtrack(List<List<Integer>> list, List<Integer> tempList, int [] nums, int start){
-    list.add(new ArrayList<>(tempList));
-    for(int i = start; i < nums.length; i++){
-        if(i > start && nums[i] == nums[i-1]) continue; // skip duplicates
-        tempList.add(nums[i]);
-        backtrack(list, tempList, nums, i + 1);
-        tempList.remove(tempList.size() - 1);
+private void subsetsWithDup(int[] nums, int start, List<List<Integer>> result, List<Integer> list) {
+    result.add(new ArrayList<>(list));
+
+    for (int i = start; i < nums.length; i++) {
+        if (i > start && nums[i - 1] == nums[i]) continue;      // skip duplicate
+        list.add(nums[i]);
+        subsetsWithDup(nums, i + 1, result, list);
+        list.remove(list.size() - 1);
     }
-} 
+}
 ```
 
 Palindrome Partitioning : https://leetcode.com/problems/palindrome-partitioning/
