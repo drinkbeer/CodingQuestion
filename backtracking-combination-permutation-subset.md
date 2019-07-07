@@ -139,6 +139,26 @@ private void recursive(int[] nums, int start, List<List<Integer>> result, List<I
 }
 ```
 
+```
+public List<List<Integer>> subsets(int[] nums) {
+    List<List<Integer>> result = new ArrayList<List<Integer>>();
+    if (nums == null || nums.length == 0) return result;
+
+    result.add(new ArrayList<>());
+
+    for (int i : nums) {
+        List<List<Integer>> temp = new ArrayList<List<Integer>>();
+        for (List<Integer> sub : result) {
+            List<Integer> list = new ArrayList<>(sub);  // have to create a copy of the sub list, otherwise the next line will pollute the existing result.
+            list.add(i);
+            temp.add(list);
+        }
+        result.addAll(temp);  // we have to add the temp after we finished the above for-loop, as it's loop the result.
+    }
+    return result;
+}
+```
+
 Subsets II (contains duplicates) : https://leetcode.com/problems/subsets-ii/
 ```
 public List<List<Integer>> subsetsWithDup(int[] nums) {
