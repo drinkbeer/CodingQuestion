@@ -47,7 +47,7 @@ public class Solution {
         return result;
     }
     
-    // 2.DFS
+    // 2.BFS Recursive
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (root == null) return result;
