@@ -108,8 +108,8 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[★76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)|[LeetCode-76-Minimum-Window-Substring.java](src/LeetCode-76-Minimum-Window-Substring.java)|String|
 |[93.Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)|[LeetCode-93-Restore-IP-Addresses.java](src/LeetCode-93-Restore-IP-Addresses.java)|String, DFS|
 |[★125.Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|[LeetCode-125-Valid-Palindrome.java](src/LeetCode-125-Valid-Palindrome.java)|Two Pointers|
-|[★127.Word Ladder](https://leetcode.com/problems/word-ladder/)|[LeetCode-127-Word-Ladder.java](src/LeetCode-127-Word-Ladder.java)|BFS|
 |[★126.Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)|[LeetCode-126-Word-Ladder-II.java](src/LeetCode-126-Word-Ladder-II.java)|DFS+BFS|
+|[★127.Word Ladder](https://leetcode.com/problems/word-ladder/)|[LeetCode-127-Word-Ladder.java](src/LeetCode-127-Word-Ladder.java)|BFS|
 |[151.Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/)|[LeetCode-151-Reverse-Words-in-a-String.java](src/LeetCode-151-Reverse-Words-in-a-String.java)|String|
 |[★157.Read N Characters Given Read4](https://leetcode.com/problems/read-n-characters-given-read4/)|[LeetCode-157-Read-N-Characters-Given-Read4.java](src/LeetCode-157-Read-N-Characters-Given-Read4.java)|String|
 |[★158.Read N Characters Given Read4 II - Call multiple times](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/)|[LeetCode-158-Read-N-Characters-Given-Read4II-Call-multiple-times.java](src/LeetCode-158-Read-N-Characters-Given-Read4II-Call-multiple-times.java)|String|
