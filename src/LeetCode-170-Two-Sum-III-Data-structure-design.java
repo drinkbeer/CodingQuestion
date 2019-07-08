@@ -3,74 +3,86 @@ LeetCode:  https://leetcode.com/problems/two-sum-iii-data-structure-design/
 LintCode:  not find
 JiuZhang:  not find
 ProgramCreek:  http://www.programcreek.com/2014/03/two-sum-iii-data-structure-design-java/
-
 Analysis: 
 1.
 put: Time O(1)
 find: Time O(n)
-
 2.
 put: Time O(1)
 find: Time O(n)
-
 */
-// public class TwoSum {
+
+// Using one HashMap + one List
+// class TwoSum {
+
 //     List<Integer> list;
-    
-//     public TwoSum(){
-//         list = new ArrayList<Integer>();
+//     /** Initialize your data structure here. */
+//     public TwoSum() {
+//         list = new ArrayList<>();
 //     }
-
-//     // Add the number to an internal data structure.
-//  public void add(int number) {
-//      list.add(number);
-//  }
-
-//     // Find if there exists any pair of numbers which sum is equal to the value.
-//  public boolean find(int value) {
-//      HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-//      for(int i = 0; i < list.size(); i++){
-//          if(map.containsKey(list.get(i))){
-//              return true;
-//          }else{
-//              map.put(value - list.get(i), i);
-//          }
-//      }
-//      return false;
-//  }
+    
+//     /** Add the number to an internal data structure.. */
+//     public void add(int number) {
+//         list.add(number);
+//     }
+    
+//     /** Find if there exists any pair of numbers which sum is equal to the value. */
+//     public boolean find(int value) {
+//         HashMap<Integer, Integer> map = new HashMap<>();
+//         for (int val : list) {
+//             map.put(val, map.getOrDefault(val, 0) + 1);
+            
+//             if (map.containsKey(value - val)) {
+//                 if (val == value - val) {
+//                     if (map.get(val) > 1) return true;
+//                 } else {
+//                     return true;
+//                 }
+//             }
+//         }
+        
+//         return false;
+//     }
 // }
 
-public class TwoSum {
-    List<Integer> list;
+
+// Using One HashMap. Best solution
+class TwoSum {
+
     HashMap<Integer, Integer> map;
+    int max;
+    int min;
+    /** Initialize your data structure here. */
+    public TwoSum() {
+        map = new HashMap<>();
+        max = Integer.MIN_VALUE;
+        min = Integer.MAX_VALUE;
+    }
     
-    public TwoSum(){
-        list = new ArrayList<Integer>();
-        map = new HashMap<Integer, Integer>();
-    }
-
-    // Add the number to an internal data structure.
+    /** Add the number to an internal data structure.. */
     public void add(int number) {
-        list.add(number);
-        if(map.containsKey(number)){
-            map.put(number, map.get(number) + 1);
-        }else{
-            map.put(number, 1);
-        }
+        min = Math.min(min, number);
+        max = Math.max(max, number);
+        map.put(number, map.getOrDefault(number, 0) + 1);
     }
-
-    // Find if there exists any pair of numbers which sum is equal to the value.
+    
+    /** Find if there exists any pair of numbers which sum is equal to the value. */
     public boolean find(int value) {
-        for(int i = 0; i < list.size(); i++){
-            int num1 = list.get(i);
-            int num2 = value - num1;
-            if((num1 == num2 && map.get(num1) > 1) || (num1 != num2 && map.containsKey(num2))) return true;
+        if (value < min * 2 || value > max * 2) return false;
+        
+        for (int i : map.keySet()) {
+            int val2= value - i;
+            if (map.containsKey(val2) && (i != val2 || map.get(i) > 1)) {
+                return true;
+            }
         }
         
         return false;
     }
 }
-// Your TwoSum object will be instantiated and called as such:
-// TwoSum twoSum = new TwoSum();
-// twoSum.add(number);
-// twoSum.find(value);
+/**
+ * Your TwoSum object will be instantiated and called as such:
+ * TwoSum obj = new TwoSum();
+ * obj.add(number);
+ * boolean param_2 = obj.find(value);
+ */
