@@ -162,16 +162,17 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[309.Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)|[LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java](src/LeetCode-309-Best-Time-to-Buy-and-Sell-Stock-with-Cooldown.java)|not yet???|
 |[135. Candy](https://leetcode.com/problems/candy/)|[LeetCode-135-Candy.java](src/LeetCode-135-Candy.java)|Greedy|
 |[152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)|[LeetCode-152-Maximum-Product-Subarray.java](src/LeetCode-152-Maximum-Product-Subarray.java)|DP|
-|[198. House Robber](https://leetcode.com/problems/house-robber/)|[LeetCode-198-House-Robber.java](src/LeetCode-198-House-Robber.java)|DP|
+|[★★★198. House Robber](https://leetcode.com/problems/house-robber/)|[LeetCode-198-House-Robber.java](src/LeetCode-198-House-Robber.java)|DP|
 |[213. House Robber II](https://leetcode.com/problems/house-robber-ii/)|[LeetCode-213-House-Robber-II.java](src/LeetCode-213-House-Robber-II.java)|DP|
-|[256. Paint House](https://leetcode.com/problems/paint-house/)|[LeetCode-256-Paint-House.java](src/LeetCode-256-Paint-House.java)|DP|
-|[276. Paint Fence](https://leetcode.com/problems/paint-fence/)|[LeetCode-276-Paint-Fence.java](src/LeetCode-276-Paint-Fence.java)|DP|
+|[★★★256. Paint House](https://leetcode.com/problems/paint-house/)|[LeetCode-256-Paint-House.java](src/LeetCode-256-Paint-House.java)|DP|
+|[265. Paint House II](https://leetcode.com/problems/paint-house-ii/)|[LeetCode-265-Paint-House-II.java](src/LeetCode-265-Paint-House-II.java)|DP|
+|[★★★276. Paint Fence](https://leetcode.com/problems/paint-fence/)|[LeetCode-276-Paint-Fence.java](src/LeetCode-276-Paint-Fence.java)|DP|
 |[303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)|[LeetCode-303-Range-Sum-Query-Immutable.java](src/LeetCode-303-Range-Sum-Query-Immutable.java)|DP|
 |[304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)|[LeetCode-304-Range-Sum-Query-2D-Immutable.java](src/LeetCode-304-Range-Sum-Query-2D-Immutable.java)|DP|
 |[★★★322. Coin Change](https://leetcode.com/problems/coin-change/)|[LeetCode-322-Coin-Change.java](src/LeetCode-322-Coin-Change.java)|DP|
 |[★★★494. Target Sum](https://leetcode.com/problems/target-sum/)|[LeetCode-494-Target-Sum.java](src/LeetCode-494-Target-Sum.java)|DP|
 |[968. Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/)|[LeetCode-968-Binary-Tree-Cameras.java](src/LeetCode-968-Binary-Tree-Cameras.java)|DP, Greedy|
-|[983. Minimum Cost For Tickets](https://leetcode.com/problems/minimum-cost-for-tickets/)|[LeetCode-983-Minimum-Cost-For-Tickets.java](src/LeetCode-983-Minimum-Cost-For-Tickets.java)|DP|
+|[★★★983. Minimum Cost For Tickets](https://leetcode.com/problems/minimum-cost-for-tickets/)|[LeetCode-983-Minimum-Cost-For-Tickets.java](src/LeetCode-983-Minimum-Cost-For-Tickets.java)|DP|
 |[1049. Last Stone Weight II](https://leetcode.com/problems/last-stone-weight-ii/)|[LeetCode-1049-Last-Stone-Weight-II.java](src/LeetCode-1049-Last-Stone-Weight-II.java)|DP|
 
 
