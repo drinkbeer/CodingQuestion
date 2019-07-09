@@ -122,7 +122,38 @@ class Solution {
 //         return count == n;
 //     }
     
-    // 3. Union-Find
+//     // 3. Union-Find (Best)
+//     public boolean validTree(int n, int[][] edges) {
+//         if (edges == null) return false;
+//         if (edges.length == 0) {
+//             if (n == 1) return true;
+//             else return false;
+//         }
+//         if (n - 1 != edges.length) return false;
+        
+//         int[] nums = new int[n];
+//         Arrays.fill(nums, -1);
+    
+//         for (int i = 0; i < edges.length; i++) {
+//             int x = find(edges[i][0], nums);
+//             int y = find(edges[i][1], nums);
+            
+//             if (x == y) return false;
+            
+//             nums[x] = y;    // union u and v
+//         }
+        
+//         return true;
+//     }
+    
+//     private int find(int u, int[] nums) {
+//         if (nums[u] == -1) return u;
+//         int v = nums[u];
+//         return find(v, nums);
+//     }
+    
+    
+    // 3. Union-Find (Another version, more clear)
     public boolean validTree(int n, int[][] edges) {
         if (edges == null) return false;
         if (edges.length == 0) {
@@ -132,23 +163,31 @@ class Solution {
         if (n - 1 != edges.length) return false;
         
         int[] nums = new int[n];
-        Arrays.fill(nums, -1);
-    
+        for (int i = 0; i < n; i++) nums[i] = i;
+        
         for (int i = 0; i < edges.length; i++) {
-            int x = find(edges[i][0], nums);
-            int y = find(edges[i][1], nums);
+            int xRoot = find(nums, edges[i][0]);
+            int yRoot = find(nums, edges[i][1]);
             
-            if (x == y) return false;
+            if (xRoot == yRoot) return false;
             
-            nums[x] = y;    // union u and v
+            union(nums, xRoot, yRoot);
         }
         
         return true;
     }
     
-    private int find(int u, int[] nums) {
-        if (nums[u] == -1) return u;
-        int v = nums[u];
-        return find(v, nums);
+    private int find(int[] nums, int x) {
+        while (x != nums[x]) {
+            x = nums[x];
+        }
+        return x;
+    }
+    
+    private void union(int[] nums, int x, int y) {
+        int xRoot = find(nums, x);
+        int yRoot = find(nums, y);
+        if (xRoot == yRoot) return;
+        nums[xRoot] = yRoot;
     }
 }
