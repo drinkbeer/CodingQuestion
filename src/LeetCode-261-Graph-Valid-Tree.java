@@ -154,40 +154,95 @@ class Solution {
     
     
     // 3. Union-Find (Another version, more clear)
+//     public boolean validTree(int n, int[][] edges) {
+//         if (edges == null) return false;
+//         if (edges.length == 0) {
+//             if (n == 1) return true;
+//             else return false;
+//         }
+//         if (n - 1 != edges.length) return false;
+        
+//         int[] nums = new int[n];
+//         for (int i = 0; i < n; i++) nums[i] = i;
+        
+//         for (int i = 0; i < edges.length; i++) {
+//             int xRoot = find(nums, edges[i][0]);
+//             int yRoot = find(nums, edges[i][1]);
+            
+//             if (xRoot == yRoot) return false;
+            
+//             union(nums, xRoot, yRoot);
+//         }
+        
+//         return true;
+//     }
+    
+//     private int find(int[] nums, int x) {
+//         while (x != nums[x]) {
+//             x = nums[x];
+//         }
+//         return x;
+//     }
+    
+//     private void union(int[] nums, int x, int y) {
+//         int xRoot = find(nums, x);
+//         int yRoot = find(nums, y);
+//         if (xRoot == yRoot) return;
+//         nums[xRoot] = yRoot;
+//     }
+    
+    
+    // 3. Union-Find (Define a UnionFind Class)
     public boolean validTree(int n, int[][] edges) {
-        if (edges == null) return false;
-        if (edges.length == 0) {
-            if (n == 1) return true;
-            else return false;
+        UnionFind uf = new UnionFind(n);
+        for (int[] edge : edges) {
+            if (uf.find(edge[0], edge[1])) return false;
+            uf.union(edge[0], edge[1]);
         }
-        if (n - 1 != edges.length) return false;
-        
-        int[] nums = new int[n];
-        for (int i = 0; i < n; i++) nums[i] = i;
-        
-        for (int i = 0; i < edges.length; i++) {
-            int xRoot = find(nums, edges[i][0]);
-            int yRoot = find(nums, edges[i][1]);
-            
-            if (xRoot == yRoot) return false;
-            
-            union(nums, xRoot, yRoot);
-        }
-        
-        return true;
+        return uf.size() == 1;
     }
     
-    private int find(int[] nums, int x) {
-        while (x != nums[x]) {
-            x = nums[x];
+    private class UnionFind {
+        
+        private int[] id, size;
+        private int count;
+        
+        public UnionFind(int len) {
+            id = new int[len];
+            size = new int[len];
+            for (int i = 0; i < len; i++) {
+                id[i] = i;
+                size[i] = 1;
+            }
+            count = len;
         }
-        return x;
-    }
-    
-    private void union(int[] nums, int x, int y) {
-        int xRoot = find(nums, x);
-        int yRoot = find(nums, y);
-        if (xRoot == yRoot) return;
-        nums[xRoot] = yRoot;
+        
+        public int size() {
+            return count;
+        }
+        
+        private int root(int i) {
+            while(i != id[i]) {
+                id[i] = id[id[i]];
+                i = id[i];
+            }
+            return i;
+        }
+        
+        public boolean find(int p, int q) {
+            return root(p) == root(q);
+        }
+        
+        public void union(int p, int q) {
+            int pi = root(p), qi = root(q);
+            if (size[pi] < size[qi]) {
+                id[pi] = qi;
+                size[qi] += size[pi];
+            } else {
+                id[qi] = pi;
+                size[pi] += size[qi];
+            }
+            count--;
+        }
     }
 }
