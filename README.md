@@ -413,6 +413,7 @@ https://leetcode.com/tag/stack/
 |Question|Solution|Tags|
 |--------|--------|----|
 |[128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|[LeetCode-128-Longest-Consecutive-Sequence.java](src/LeetCode-128-Longest-Consecutive-Sequence.java)|Array, Union-Find|
+|[261. Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)|[LeetCode-261-Graph-Valid-Tree.java](src/LeetCode-261-Graph-Valid-Tree.java)|Graph, Union-Find, DFS, BFS|
 
 
 
