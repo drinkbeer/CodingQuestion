@@ -346,6 +346,7 @@ PriorityQueue.
 |Question|Solution|Tags|
 |--------|--------|----|
 |[239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)|[LeetCode-239-Sliding-Window-Maximum.java](src/LeetCode-239-Sliding-Window-Maximum.java)|Heap, Deque|
+|[347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)|[LeetCode-347-Top-K-Frequent-Elements.java](src/LeetCode-347-Top-K-Frequent-Elements.java)|Heap, Deque|
 |[692. Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)|[LeetCode-692-Top-K-Frequent-Words.java](src/LeetCode-692-Top-K-Frequent-Words.java)|Heap|
 |[1046. Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)|[LeetCode-1046-Last-Stone-Weight.java](src/LeetCode-1046-Last-Stone-Weight.java)|Max Heap|
 
