@@ -38,3 +38,5 @@ Cartesian Sort is an adaptive sorting as it sorts the data faster if data is par
 ## Reference
 [Know Your Sorting Algorithm | Set 1 (Sorting Weapons used by Programming Languages)](https://www.geeksforgeeks.org/know-sorting-algorithm-set-1-sorting-weapons-used-programming-languages/)  
 [Know Your Sorting Algorithm | Set 2 (Introsort- C++’s Sorting Weapon)](https://www.geeksforgeeks.org/know-your-sorting-algorithm-set-2-introsort-cs-sorting-weapon/)  
+[Sorting in Java](https://www.geeksforgeeks.org/sorting-in-java/)  
+
