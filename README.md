@@ -67,6 +67,7 @@ Note:
 |[283.Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[LeetCode-283-Move-Zeroes.java](src/LeetCode-283-Move-Zeroes.java)|Array|
 |[287.Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)|[LeetCode-287-Find-the-Duplicate-Number.java](src/LeetCode-287-Find-the-Duplicate-Number.java)|Array|  
 |[296. Best Meeting Point](https://leetcode.com/problems/best-meeting-point/)|[LeetCode-296-Best-Meeting-Point.java](src/LeetCode-296-Best-Meeting-Point.java)|Array|
+|[339. Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)|[LeetCode-339-Nested-List-Weight-Sum.java](src/LeetCode-339-Nested-List-Weight-Sum.java)|Array|
 |[670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)|[LeetCode-670-Maximum-Swap.java](src/LeetCode-670-Maximum-Swap.java)|Array|
 |[719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)|[LeetCode-719-Find-K-th-Smallest-Pair-Distance.java](src/LeetCode-719-Find-K-th-Smallest-Pair-Distance.java)|Array, Binary Search|
 |[915. Partition Array into Disjoint Intervals](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)|[LeetCode-915-Partition-Array-into-Disjoint-Intervals.java](src/LeetCode-915-Partition-Array-into-Disjoint-Intervals.java)|Array|
