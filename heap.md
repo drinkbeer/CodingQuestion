@@ -133,6 +133,18 @@ A Min-Heap is a complete binary tree in which the value in each internal node is
 Mapping the elements of a heap into an array is trivial: if a node is stored a index k, then its left child is stored at index 2k + 1 and its right child at index 2k + 2.
 
 
+#### Java PQ Example
+
+```
+PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> Integer.compare(b, a));
+
+ PriorityQueue<String> queue = new PriorityQueue(new Comparator<String>(){
+     public int compare(String s1, String s2) {
+         if (map.get(s1) == map.get(s2)) return s1.compareTo(s2);
+         return map.get(s2) - map.get(s1);
+     }
+ });
+```
 
 ### Top-K series code could be resolved by either heap or bucket sort.
 
