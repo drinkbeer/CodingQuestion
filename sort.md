@@ -1,6 +1,6 @@
 
 
-#### Bucket Sort
+### Bucket Sort
 
 Top-K series problem could either use PriorityQueue or bucket sort to solve.
 
@@ -8,16 +8,62 @@ Examples:
 
 https://leetcode.com/problems/top-k-frequent-words/
 
-#### Quick Sort
+### Quick Sort
 https://www.geeksforgeeks.org/quick-sort/
 
-#### Merge Sort
+### Merge Sort
 https://www.geeksforgeeks.org/merge-sort/
+https://www.geeksforgeeks.org/java-program-for-merge-sort/
+
+```
+/*
+Created by chen on 15/4/1.
+Time O(NlogN)
+ */
+class MergeSort {
+    public static void sort(int[] arr) {
+        int[] tmp = new int[arr.length];
+        sort(arr, tmp, 0, arr.length - 1);
+    }
+
+    private static void sort(int[] arr, int[] tmp, int lo, int hi) {
+        if (lo >= hi) return;
+        int mid = lo + (hi - lo) / 2;
+        sort(arr, tmp, lo, mid);                //sort left part
+        sort(arr, tmp, mid + 1, hi);        //sort right part
+        merge(arr, tmp, lo, mid, hi);           //merge left and right parts
+    }
+
+    public static void merge(int[] arr, int[] tmp, int lo, int mid, int hi) {
+
+        for (int k = lo; k <= hi; k++) {
+            tmp[k] = arr[k];
+        }
+
+        int i = lo;
+        int j = mid + 1;
+        for (int k = lo; k <= hi; k++) {
+            if(j > hi || (i <= mid && tmp[i] < tmp[j])){
+                arr[k] = tmp[i++];
+            }else{
+                arr[k] = tmp[j++];
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {6, 3, 6, 4, 2, 3, 9, 5, 3, 2, 0};
+        sort(arr);
+        for(int ele : arr){
+            System.out.print(ele + " ");
+        }
+    }
+}
+```
 
 
 
-
-#### External Sort - an extersion of Merge Sort
+### External Sort - an extersion of Merge Sort
 https://www.geeksforgeeks.org/external-sorting/
 
 External sorting is a sorting algorithm used to handle massive amounts of data, which cannot fit all into memory. Usually we store the data in external storage device (e.g. a hard drive), and read chunks of data into memory, sort, and write out to a temporary file. In the merge phase, the sorted sub-files are combined into a single larger file.
@@ -28,7 +74,7 @@ The external sort has two prerequisite algorithm:
 * Merge Sort
 * [Merge K Sorted Arrays](https://www.geeksforgeeks.org/merge-k-sorted-arrays/)
 
-#### Cartesian Tree Sorting
+### Cartesian Tree Sorting
 https://www.geeksforgeeks.org/cartesian-tree/
 https://www.geeksforgeeks.org/cartesian-tree-sorting/
 
