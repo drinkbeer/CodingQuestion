@@ -9,10 +9,15 @@ Examples:
 https://leetcode.com/problems/top-k-frequent-words/
 
 ### Quick Sort
-https://www.geeksforgeeks.org/quick-sort/
+https://www.geeksforgeeks.org/quick-sort/  
+https://www.geeksforgeeks.org/java-program-for-quicksort/  
+
+```
+
+```
 
 ### Merge Sort
-https://www.geeksforgeeks.org/merge-sort/
+https://www.geeksforgeeks.org/merge-sort/  
 https://www.geeksforgeeks.org/java-program-for-merge-sort/
 
 ```
