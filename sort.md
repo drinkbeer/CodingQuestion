@@ -84,7 +84,108 @@ https://www.geeksforgeeks.org/java-program-for-quicksort/
 - Space: `O(1)`
     
 ```
+/*
+Created by chen on 15/4/2.
+QuickSort (Divide & Conquer)
+Time average O(NlogN)
+     worst O(N^2)
 
+https://www.programcreek.com/2012/11/quicksort-array-in-java/
+Analysis of partion using the last element:
+Steps:
+4   5   2   1   3
+s,i             p       arr[i]>arr[p], i++
+s   i           p       arr[i]>arr[p], i++
+s       i       p       swap[s,i], start++, i++
+
+2   5   4   1   3
+    s       i   p       swap[s,i], start++, i++
+2   1   4   5   3
+        s       i,p     end as arr[i] == pivot
+
+Final Step:
+2   1   3   5   4       swap[s,p]
+
+Analysis of partion using the middle element:
+Steps:
+4   5   2   1   3
+i       p       j       arr[j] > arr[p], j--
+i       p   j           swap[i,j], i++, j--
+
+1   5   2   4   3
+    i   p,j             arr[i] >= pivot, arr[j]<= pivot, swap[i,j], i++, j--
+1   2   5   4   3
+    p,j i
+
+
+*/
+class QuickSort {
+
+    public static void quickSort(int[] arr) {
+        quickSort(arr, 0, arr.length - 1);
+    }
+
+    // Partition with middle element
+    private static void quickSort(int[] arr, int lo, int hi) {
+        if (lo >= hi) return;
+        int pivot = arr[lo + (hi - lo) / 2];
+
+        int i = lo;
+        int j = hi;
+
+        while (i <= j) {
+            while (arr[i] < pivot) i++;
+            while (arr[j] > pivot) j--;
+
+            if (i <= j) {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                i++;
+                j--;
+            }
+        }
+
+        quickSort(arr, lo, j);
+        quickSort(arr, i, hi);
+    }
+
+    // Partition with last element
+    // https://www.programcreek.com/2012/11/quicksort-array-in-java/
+
+    private static void quickSort(int[] arr, int lo, int hi) {
+        if (lo >= hi) return;
+        int val = partition(arr, lo, hi);
+        quickSort(arr, lo, val - 1);
+        quickSort(arr, val + 1, hi);
+    }
+
+    public static int partition(int[] arr, int lo, int hi) {
+        int pivot = arr[hi];
+        for (int i = lo; i < hi; i++) {
+            if (arr[i] < pivot) {
+                int temp = arr[lo];
+                arr[lo] = arr[i];
+                arr[i] = temp;
+
+                lo++;
+            }
+        }
+
+        int temp = arr[lo];
+        arr[lo] = arr[hi];
+        arr[hi] = temp;
+
+        return lo;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {6, 3, 6, 4, 2, 3, 9, 5, 3, 2, 0};
+        quickSort(arr);
+        for (int ele : arr) {
+            System.out.print(ele + " ");
+        }
+    }
 ```
 
 ### Merge Sort (Divide & Conquer)
