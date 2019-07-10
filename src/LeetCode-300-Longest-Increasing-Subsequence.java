@@ -1,3 +1,11 @@
+/*
+http://www.jiuzhang.com/solutions/longest-increasing-subsequence/
+
+1.DP
+
+2.Binary Search
+
+*/
 class Solution {
     // Wrong Answer
     /*
