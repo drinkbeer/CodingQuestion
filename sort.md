@@ -38,18 +38,6 @@
 + Application
     
 
-### Merge Sort
-+ Idea
-    - Using divide and conquer paradigm
-
-+ Implementation
-    - 
-
-+ Analysis
-    - Time: `O(NlogN)`
-    - Space: `O(NlogN)`
-
-+ Application
 
 
 ### Quick Sort
@@ -97,9 +85,12 @@ https://www.geeksforgeeks.org/java-program-for-quicksort/
 
 ```
 
-### Merge Sort
+### Merge Sort (Divide & Conquer)
 https://www.geeksforgeeks.org/merge-sort/  
 https://www.geeksforgeeks.org/java-program-for-merge-sort/
+
+- Time: `O(NlogN)`
+- Space: `O(NlogN)`
 
 ```
 /*
