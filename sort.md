@@ -27,17 +27,12 @@ Each loop, select the smallest ele in right subarray, and swap with curr.
 
 
 ### Heap Sort
-+ Idea
-    - Using divide and conquer paradigm
-
-+ Implementation
-    - 
+Using divide and conquer paradigm
 
 + Analysis
     - Time: `O(NlogN)`
     - Space: 
 
-+ Application
 
 
 
