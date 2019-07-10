@@ -48,8 +48,7 @@
     - 
 
 + Analysis
-    - Time: `O(NlogN)`
-    - Space: 
+
 
 + Application
 
@@ -81,6 +80,9 @@ https://leetcode.com/problems/top-k-frequent-words/
 https://www.geeksforgeeks.org/quick-sort/  
 https://www.geeksforgeeks.org/java-program-for-quicksort/  
 
+- Time: `O(NlogN)`
+- Space: `O(1)`
+    
 ```
 
 ```
