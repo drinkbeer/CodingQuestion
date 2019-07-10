@@ -2,22 +2,15 @@
 
 
 ### Bubble Sort
-+ Idea
-    - Each loop get the highest element to the right side.
 
-+ Implementation
+Each loop get the highest element to the right side.
 
 + Analysis
     - Time `O(N^2)`
 
-+ Application
-
 
 ### Insertion Sort
-+ Idea
-    - Each loop, let curr left move to the final position.
-
-+ Implementation
+Each loop, let curr left move to the final position.
 
 + Analysis
     - Time: `O(N^2)` in average case; `O(N^2)` in worst case(input reverse sorted)
@@ -27,30 +20,10 @@
     
 
 ### Selection Sort
-+ Idea
-    - Each loop, select the smallest ele in right subarray, and swap with curr.
 
-+ Implementation
-
+Each loop, select the smallest ele in right subarray, and swap with curr.
 + Analysis
     - Time: avg `O(N^2)`
-
-+ Application
-    
-
-
-
-### Quick Sort
-+ Idea
-    - 
-
-+ Implementation
-    - 
-
-+ Analysis
-
-
-+ Application
 
 
 ### Heap Sort
