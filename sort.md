@@ -33,7 +33,7 @@
 + Implementation
 
 + Analysis
-    - Time: `O(N^2)`
+    - Time: avg `O(N^2)`
 
 + Application
     
@@ -80,7 +80,7 @@ https://leetcode.com/problems/top-k-frequent-words/
 https://www.geeksforgeeks.org/quick-sort/  
 https://www.geeksforgeeks.org/java-program-for-quicksort/  
 
-- Time: `O(NlogN)`
+- Time: `O(NlogN)`, worst `O(N^2)`
 - Space: `O(1)`
     
 ```
