@@ -3,9 +3,9 @@ https://leetcode.com/tag/heap/
 
 
 #### Heap
-https://www.geeksforgeeks.org/heap-data-structure/ . 
-https://www.geeksforgeeks.org/binary-heap/  
-https://stackoverflow.com/questions/12719066/priority-queue-remove-complexity-time . 
+https://www.geeksforgeeks.org/heap-data-structure/  
+https://www.geeksforgeeks.org/binary-heap/   
+https://stackoverflow.com/questions/12719066/priority-queue-remove-complexity-time   
 
 According to Oracle documentation: "Implementation note: this implementation provides O(log(n)) time for the enqueing and dequeing methods (offer, poll, remove() and add); linear time for the remove(Object) and contains(Object) methods; and constant time for the retrieval methods (peek, element, and size)."
 
