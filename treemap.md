@@ -22,9 +22,9 @@ https://www.geeksforgeeks.org/treemap-in-java/
 
 
 Time complexity:
-- add: `O(logN)`  - N is the number of elements in the TreeMap
-- remove: `O(logN)`
-- containsKey: `O(logN)`
+- add/put(): `O(logN)`  - N is the number of elements in the TreeMap
+- remove(): `O(logN)`
+- containsKey(): `O(logN)`
 
 ```
 TreeMap<Integer, Interval> tree = new TreeMap<>();
