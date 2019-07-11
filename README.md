@@ -26,6 +26,8 @@ Note:
 |[33.Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)|[LeetCode-33-Search-in-Rotated-Sorted-Array.java](src/LeetCode-33-Search-in-Rotated-Sorted-Array.java)|Binary Search, LC81|
 |[34.Search for a Range](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|[LeetCode-34-Search-for-a-Range.java](src/LeetCode-34-Search-for-a-Range.java)|Binary Search|
 |[35 Search Insert Position](https://leetcode.com/problems/search-insert-position/)|[LeetCode-35-Search-Insert-Position.java](src/LeetCode-35-Search-Insert-Position.java)|Binary Search|
+|[36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)|[LeetCode-36-Valid-Sudoku.java](src/LeetCode-36-Valid-Sudoku.java)|Array|
+|[37. Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)|[LeetCode-37-Sudoku-Solver.java](src/LeetCode-37-Sudoku-Solver.java)|Array, DFS|
 |[39.Combination Sum I](https://leetcode.com/problems/combination-sum/)|[LeetCode-39-Combination-Sum-I.java](src/LeetCode-39-Combination-Sum-I.java)|DFS|
 |[40.Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)|[LeetCode-40-Combination-Sum-II.java](src/LeetCode-40-Combination-Sum-II.java)|DFS|
 |[41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)|[LeetCode-41-First-Missing-Positive.java](src/LeetCode-41-First-Missing-Positive.java)|Array, rearrange the array|
