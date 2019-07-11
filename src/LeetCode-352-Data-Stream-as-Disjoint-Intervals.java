@@ -12,6 +12,18 @@ addNum
 Time O(logN)
 Space O(N)
 
+Follow-up:What if there are lots of merges and the number of disjoint intervals are small compared to the data stream's size?
+https://leetcode.com/problems/data-stream-as-disjoint-intervals/discuss/123414/Change-3-lines-switch-from-original-to-follow-up
+lots of merges -> add() cannot be too costy
+the number of disjoint intervals are small -> get() can be costy
+
+to reduce add, use O(logn) for insertion of points (no merge), and maintain order
+get will have to calculate the disjoint intervals on the fly (do a merge on get)
+
+
+
+
+
 */
 class SummaryRanges {
 
