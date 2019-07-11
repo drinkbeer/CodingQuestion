@@ -14,42 +14,54 @@ List to keep order(like a queue, FILO)
 Be carefully, every get, set operation, will cause operated node to the head of list.
 Every set operation will affect both List and HashMap.
 
+
+This Question could be extended to add some other API:
+
+clear();            // clear the cache
+delete(int key);    // delete one key-value in the cache
+size();             // return size of the cache
 */
-public class LRUCache {
-    private class Node{
+
+/*
+
+tail <- prev <- Node -> next -> head
+*/
+class LRUCache {
+    private class Node {
         int key;
         int value;
         Node prev;
         Node next;
         
-        public Node(int key, int value){
+        public Node(int key, int value) {
             this.key = key;
             this.value = value;
         }
     }
     
-    HashMap<Integer, Node> map = new HashMap<Integer, Node>();
-    Node head;
+    Map<Integer, Node> map;
     Node tail;
+    Node head;
     int capacity;
-    
+
     public LRUCache(int capacity) {
         this.capacity = capacity;
+        map = new HashMap<>(capacity);
     }
     
     public int get(int key) {
-        if(map.containsKey(key)){
+        if (map.keySet().contains(key)) {
             Node curr = map.get(key);
-            int value = curr.value;
             removeNode(curr);
             addToHead(curr);
-            return value;
+            return curr.value;
         }
         return -1;
     }
     
-    public void set(int key, int value) {
-        if(map.containsKey(key)){
+    public void put(int key, int value) {
+        // simple case, if already exists, just update the value, and promote the node to head
+        if (map.keySet().contains(key)) {
             Node curr = map.get(key);
             curr.value = value;
             removeNode(curr);
@@ -57,107 +69,32 @@ public class LRUCache {
             return;
         }
         
-        // we need to add a new node to hashmap and List
-        Node curr = new Node(key, value);
-        if(map.size() == capacity){
-            Node oldTail = tail;
-            tail = tail.prev;
-            
-            removeNode(oldTail);     //remove in List
-            map.remove(oldTail.key); //don't forget to remove in HashMap
+        // going to add a new node, but check the capacity first
+        if (map.size() == capacity) {
+            // remove tail first
+            map.remove(tail.key);
+            removeNode(tail);
         }
         
-        addToHead(curr);            //add in list
-        map.put(curr.key, curr);    //don't forget to operate in HashMap
+        // first time to add this key-value pair
+        Node curr = new Node(key, value);
+        map.put(key, curr);
+        addToHead(curr);
     }
     
-    //Move to the head of List (Have nothing to do with HashMap operation)
-    private void addToHead(Node node){
-        // removeNode(node);
-        node.next = head;
-        node.prev = null;
-        
-        if(head != null) head.prev = node;
-        if(tail == null) tail = node;       //don't forget the tail is null
-        
-        head = node;
-    }
-    
-    //Remove node from List(Have nothing to do with HashMap operation)
-    private void removeNode(Node node){
-        if(node == head) head = head.next;
-        if(node == tail) tail = tail.prev;
-        if(node.next != null) node.next.prev = node.prev;
-        if(node.prev != null) node.prev.next = node.next;
+    // Operation to Double LinkedList (has nothing to do with HashMap)
+    private void removeNode(Node node) {
+        if (node == tail) tail = tail.next;
+        if (node == head) head = head.prev;
+        if (node.next != null) node.next.prev = node.prev;
+        if (node.prev != null) node.prev.next = node.next;
         node.next = null;
         node.prev = null;
     }
-}
-
-
-// 2.
-class LRUCache {
-
-    private class Node {
-        int key;
-        int val;
-        Node next;
-        Node prev;
-        
-        public Node(int key, int val) {
-            this.key = key;
-            this.val = val;
-        }
-    }
     
-    int capacity;
-    int count = 0;
-    HashMap<Integer, Node> map;
-    Node head, tail;
-    
-    public LRUCache(int capacity) {
-        this.capacity = capacity;
-        this.map = new HashMap<>();
-    }
-    
-    public int get(int key) {
-        if (map.containsKey(key)) {
-            // means the key exists
-            Node node = map.get(key);
-            removeNode(node);
-            addNode(node);
-            return node.val;
-        }
-        return -1;
-    }
-    
-    public void put(int key, int value) {
-        if (map.containsKey(key)) {
-            // key already exists in the Cache, so we just need to override the val
-            Node node = map.get(key);
-            removeNode(node);
-            node.val = value;
-            addNode(node);
-            return;
-        }
-        
-        if (count == capacity) {
-            // remove tail if the cache is full before putting new <key, value>, also need update HashMap before removing
-            map.remove(tail.key);
-            removeNode(tail);
-            count--;
-        }
-        
-        Node curr = new Node(key, value);
-        map.put(key, curr);
-        addNode(curr);
-        count++;
-    }
-    
-    // add Node to the head of doubly-linked list
-    private void addNode(Node node) {
-        if (head == null && tail == null) {
-            // add first node
+    // Operation to Double LInkedList (has nothing to do with HashMap)
+    private void addToHead(Node node) {
+        if (head == null) {
             head = node;
             tail = node;
             return;
@@ -166,36 +103,6 @@ class LRUCache {
         head.next = node;
         node.prev = head;
         head = head.next;
-    }
-    
-    // remove Node form the doubly-linked list
-    private void removeNode(Node node) {
-        if (node == tail && node == head) {
-            tail = null;
-            head = null;
-            return;
-        }
-        
-        if (node == tail) {
-            tail = tail.next;
-            if (tail != null) tail.prev = null;
-            node.next = null;
-            return;
-        }
-        
-        if (node == head) {
-            head = head.prev;
-            if (head != null) head.next = null;
-            node.prev = null;
-            return;
-        }
-        
-        Node next = node.next;
-        Node prev = node.prev;
-        node.next = null;
-        node.prev = null;
-        prev.next = next;
-        next.prev = prev;
     }
 }
 
