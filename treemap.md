@@ -47,3 +47,55 @@ private static void TreeMapDemo1(){
   }
 }
 ```
+
+
+#### 352. Data Stream as Disjoint Intervals
+https://leetcode.com/problems/data-stream-as-disjoint-intervals/
+
+```
+// 2. TreeMap based implementation.
+/*
+https://leetcode.com/problems/data-stream-as-disjoint-intervals/discuss/82553/Java-solution-using-TreeMap-real-O(logN)-per-adding.
+
+Time O(log(N))
+*/
+TreeMap<Integer, Integer> map;
+public SummaryRanges() {
+    map = new TreeMap<>();
+}
+
+public void addNum(int val) {
+    if (map.containsKey(val)) return;
+
+    Integer l = map.lowerKey(val);  // the key that is just lower than val, could be null if no exist
+    Integer h = map.higherKey(val); // the key that is just higher than val, could be null if no exist
+
+    if (l != null && h != null && map.get(l) + 1 == val && val + 1 == h) {
+        // means [l, lv], [val, val], [h, hv] could be merged
+        map.put(l, map.get(h));
+        map.remove(h);
+    } else if (l != null && map.get(l) + 1 >= val) {
+        // means [l, lv], [val, val] has overlap
+        map.put(l, Math.max(map.get(l), val));
+    } else if (h != null && val + 1 >= h) {
+        // means [val, val] [h, hv] has overlap
+        map.put(val, map.get(h));
+        map.remove(h);
+    } else {
+        // means [l, lv], [val, val], [h, hv] have no overlapping
+        map.put(val, val);
+    }
+}
+
+public int[][] getIntervals() {
+    int[][] res = new int[map.size()][2];
+
+    int i = 0;
+    for (Map.Entry e : map.entrySet()) {
+        res[i][0] = (int) e.getKey();
+        res[i++][1] = (int) e.getValue();
+    }
+
+    return res;
+}
+```
