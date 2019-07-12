@@ -1,3 +1,5 @@
+class MaxStack {
+
 // 1. Using Two Stacks
 /*
 Runtime: 88 ms, faster than 30.97% of Java online submissions for Max Stack.
@@ -55,105 +57,87 @@ Memory Usage: 51.3 MB, less than 25.90% of Java online submissions for Max Stack
 //         return maxOnTop;
 //     }
 // }
-
-// 2.Using a doubly-linkedlist
-class MaxStack {
-    private class ListNode {
+    
+    // 2. Doubly-LinkedList + TreeMap
+    /*
+    https://leetcode.com/problems/max-stack/discuss/129922/Java-simple-solution-with-strict-O(logN)-push()popMax()pop()
+    
+    Store values nodes in Doubly-LinkedList,
+    Using TreeMap as a <Sorted Value, List of Nodes> pair. As TreeMap could do GET/PUT/DELETE in O(logN), so 
+    pop()/push()/popMax() Time  O(logN)
+    
+    <-   (prev) curr (next)  ->  <- (prev)  head   (next) ->  
+    
+    */
+    private class Node {
         int val;
-        ListNode prev = null, next = null, twin = null;
+        Node prev, next;
         
-        public ListNode(int val) {
+        public Node (int val) {
             this.val = val;
         }
     }
-
-    ListNode top;
-    ListNode topMax;
+    
+    private Node head;
+    private TreeMap<Integer, LinkedList<Node>> map;
     
     /** initialize your data structure here. */
     public MaxStack() {
-        this.top = new ListNode(Integer.MIN_VALUE);
-        this.topMax = new ListNode(Integer.MIN_VALUE);
-        topMax.twin = top;
+        head = new Node(-1);
+        map = new TreeMap<>();
     }
     
     public void push(int x) {
-        ListNode curr = new ListNode(x);
-        
-        ListNode currMax;
-        if (x >= topMax.val) {
-            // we find a new max value
-            currMax = new ListNode(x);
-            currMax.twin = curr;
-        } else {
-            // the max value is still the same as existing topMax
-            currMax = new ListNode(topMax.val);
-            currMax.twin = topMax.twin;
-        }
-        
-        top = addToTail(top, curr);
-        topMax = addToTail(topMax, currMax);
-        
+        Node curr = new Node(x);
+        addToHead(curr);
+        map.computeIfAbsent(x, k -> new LinkedList<>()).add(curr);
     }
     
     public int pop() {
-        int topVal = top.val;
-        top = deleteNode(top);
-        topMax = deleteNode(topMax);
-        return topVal;
+        Node curr = head.prev;
+        if (curr == null) return -1;    // no element exist
+        deleteNode(curr);
+        
+        // since it's pop(), we are always sure that the last element in the map's value list will be the tail
+        map.get(curr.val).removeLast();
+        if (map.get(curr.val).isEmpty()) {
+            map.remove(curr.val);
+        }
+        return curr.val;
     }
     
     public int top() {
-        return top.val;
+        return head.prev.val;
     }
     
     public int peekMax() {
-        return topMax.val;
+        return map.lastKey();
     }
     
     public int popMax() {
-        int max = this.peekMax();
-        
-        ListNode toBeDeleted = topMax.twin;
-        top = deleteNode(toBeDeleted);
-        while(topMax.twin == toBeDeleted) {
-            topMax = deleteNode(topMax);
+        int maxVal = peekMax();
+        Node max = map.get(maxVal).removeLast();
+        deleteNode(max);
+        if (map.get(maxVal).isEmpty()) {
+            map.remove(maxVal);
         }
-        
-        // construct the max stack after topMax
-        while(top.next != null) {
-            ListNode next = top.next;
-            
-            ListNode currMax;
-            if (next.val >= topMax.val) {
-                currMax = new ListNode(next.val);
-                currMax.twin = next;
-            } else {
-                currMax = new ListNode(topMax.val);
-                currMax.twin = topMax.twin;
-            }
-            
-            top = next;
-            topMax = addToTail(topMax, currMax);
-        }
-        
-        return max;
+        return maxVal;
     }
     
-    private ListNode addToTail(ListNode tail, ListNode curr) {
-        tail.next = curr;
-        curr.prev = tail;
-        return curr;
+    private void addToHead(Node curr) {
+        curr.next = head;
+        curr.prev = head.prev;
+        if (head.prev != null) head.prev.next = curr;
+        head.prev = curr;
     }
     
-    private ListNode deleteNode(ListNode node) {
-        node.prev.next = node.next;
-        if (node.next != null) node.next.prev = node.prev;
-        return node.prev;
+    private void deleteNode(Node curr) {
+        if (curr.prev != null) curr.prev.next = curr.next;
+        if (curr.next != null) curr.next.prev = curr.prev;
+        curr.next = null;
+        curr.prev = null;
     }
-    
 }
-
 
 /**
  * Your MaxStack object will be instantiated and called as such:
