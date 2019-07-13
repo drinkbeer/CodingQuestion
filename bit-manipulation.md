@@ -42,3 +42,18 @@ int updateBit(int i, int num, int v){
 2.  右移：除以2， 左移：乘以2。
 3. 异或性质：交换律，0^a=a, a^a=0;
 4. 将常用字符、数字等均转为按位运算，可以节约空间。
+
+#### 191. Number of 1 Bits
+https://leetcode.com/problems/number-of-1-bits/
+
+```
+// you need to treat n as an unsigned value
+public int hammingWeight(int n) {
+        int count = 0;
+        while (n != 0) {
+            count += (n & 1);
+            n >>>= 1;
+        }
+        return count;
+}
+```
