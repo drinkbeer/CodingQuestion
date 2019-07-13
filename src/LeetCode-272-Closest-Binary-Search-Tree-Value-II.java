@@ -41,6 +41,9 @@ class Solution {
     https://leetcode.com/problems/closest-binary-search-tree-value-ii/discuss/70511/AC-clean-Java-solution-using-two-stacks
     https://leetcode.com/problems/closest-binary-search-tree-value-ii/discuss/70503/O(logN)-Java-Solution-with-two-stacks-following-hint
     
+    Must understand this one first: 
+    https://leetcode.com/problems/inorder-successor-in-bst/
+    
     
     The solution that really make stack valuable is the idea of using two stacks as two iterators (smaller and larger), the smaller stack will pop the next available largest element that is smaller then target, and larger stack will pop the next available smallest element that is larger or equal to the target. Those two stacks will not need to store all the nodes, but only number of nodes proportional to the height of the tree... an idea similar to Leetcode 173...if the tree is balanced, the time cost will be amortized O(k), and the space cost will be O(logN), but if the tree is not balanced, the worst space cost will be O(N), I post the solution below...
 
@@ -55,14 +58,13 @@ class Solution {
         pushLarger(root, target, larger);
         
         List<Integer> res = new ArrayList<>();
-        TreeNode curr = null;
         while (res.size() < k) {
             if (smaller.isEmpty() || (!larger.isEmpty() && larger.peek().val - target < target - smaller.peek().val)) {
-                curr = larger.pop();
+                TreeNode curr = larger.pop();
                 res.add(curr.val);
                 pushLarger(curr.right, target, larger);
             } else {
-                curr = smaller.pop();
+                TreeNode curr = smaller.pop();
                 res.add(curr.val);
                 pushSmaller(curr.left, target, smaller);
             }
