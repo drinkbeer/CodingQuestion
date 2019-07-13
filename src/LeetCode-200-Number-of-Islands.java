@@ -8,18 +8,55 @@ Analysis:
 Removing adjacent island using DFS(recursive), each island removed, count++
 */
 public class Solution {
+    // 1.
+//     public int numIslands(char[][] grid) {
+//         if(grid == null || grid.length == 0 || grid[0].length == 0) return 0;
+        
+//         int count = 0;
+//         int m = grid.length;
+//         int n = grid[0].length;
+        
+//         for(int i = 0; i < m; i++){
+//             for(int j = 0; j < n; j++){
+//                 if(grid[i][j] == '1'){
+//                     count++;
+//                     removeIsland(grid, i, j);
+//                 }
+//             }
+//         }
+        
+//         return count;
+//     }
+    
+//     private void removeIsland(char[][] grid, int i, int j){
+//         if(i < 0 || i >= grid.length || j < 0 || j >= grid[0].length) return;
+//         if(grid[i][j] != '1') return;
+        
+//         grid[i][j] = '0';
+//         removeIsland(grid, i - 1, j);
+//         removeIsland(grid, i + 1, j);
+//         removeIsland(grid, i, j - 1);
+//         removeIsland(grid, i, j + 1);
+//     }
+    
+    // 2.
     public int numIslands(char[][] grid) {
-        if(grid == null || grid.length == 0 || grid[0].length == 0) return 0;
+        if (grid == null || grid.length == 0) return 0;
         
-        int count = 0;
-        int m = grid.length;
-        int n = grid[0].length;
-        
-        for(int i = 0; i < m; i++){
-            for(int j = 0; j < n; j++){
-                if(grid[i][j] == '1'){
+        int m = grid.length, n = grid[0].length, count = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == '1') {
                     count++;
-                    removeIsland(grid, i, j);
+                    recursive(grid, i, j);
+                }
+            }
+        }
+        
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == '.') {
+                    grid[i][j] = '1';
                 }
             }
         }
@@ -27,14 +64,15 @@ public class Solution {
         return count;
     }
     
-    private void removeIsland(char[][] grid, int i, int j){
-        if(i < 0 || i >= grid.length || j < 0 || j >= grid[0].length) return;
-        if(grid[i][j] != '1') return;
+    private void recursive(char[][] grid, int i, int j) {
+        if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length) return;
         
-        grid[i][j] = '0';
-        removeIsland(grid, i - 1, j);
-        removeIsland(grid, i + 1, j);
-        removeIsland(grid, i, j - 1);
-        removeIsland(grid, i, j + 1);
+        if (grid[i][j] != '1') return;
+        
+        grid[i][j] = '.';
+        recursive(grid, i - 1, j);
+        recursive(grid, i, j - 1);
+        recursive(grid, i + 1, j);
+        recursive(grid, i, j + 1);
     }
 }
