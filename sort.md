@@ -11,13 +11,26 @@ Each loop get the highest element to the right side.
 
 ### Insertion Sort
 Each loop, let curr left move to the final position.
+https://www.geeksforgeeks.org/insertion-sort/
 
 + Analysis
     - Time: `O(N^2)` in average case; `O(N^2)` in worst case(input reverse sorted)
     - Is insertion sort fast? Moderately so, for small N; Not at all, for large N.
 
-+ Application
-    
+```
+public static void insertionSort(int[] arr) {
+    int N = arr.length;
+    for (int i = 1; i < N; i++) {
+        int j = i - 1;
+        int key = arr[i];
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
+    }
+}
+```
 
 ### Selection Sort
 
