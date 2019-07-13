@@ -127,6 +127,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[159. Longest Substring with At Most Two Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/)|[LeetCode-159-Longest-Substring-with-At-Most-Two-Distinct-Characters.java](src/LeetCode-159-Longest-Substring-with-At-Most-Two-Distinct-Characters.java)|String, SubString|
 |[161. One Edit Distance](https://leetcode.com/problems/one-edit-distance/)|[LeetCode-161-One-Edit-Distance.java](src/LeetCode-161-One-Edit-Distance.java)|String|
 |[165.Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)|[LeetCode-165-Compare-Version-Numbers.java](src/LeetCode-165-Compare-Version-Numbers.java)|String|
+|[179. Largest Number](https://leetcode.com/problems/largest-number/)|[LeetCode-179-Largest-Number.java](src/LeetCode-179-Largest-Number.java)|String|
 |[186.Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii/)|[LeetCode-186-Reverse-Words-in-a-String-II.java](src/LeetCode-186-Reverse-Words-in-a-String-II.java)|String|
 |[344. Reverse String](https://leetcode.com/problems/reverse-string/)|[LeetCode-344-Reverse-String.java](src/LeetCode-344-Reverse-String.java)|String|
 |[443. String Compression](https://leetcode.com/problems/string-compression/)|[LeetCode-443-String-Compression.java](src/LeetCode-443-String-Compression.java)|String|
