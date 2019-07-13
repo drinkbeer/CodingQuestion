@@ -416,6 +416,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |Question|Solution|Tags|
 |--------|--------|----|
 |[187. Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)|[LeetCode-187-Repeated-DNA-Sequences.java](src/LeetCode-187-Repeated-DNA-Sequences.java)|Bit Manipulation|
+|[190. Reverse Bits](https://leetcode.com/problems/reverse-bits/)|[LeetCode-190-Reverse-Bits.java](src/LeetCode-190-Reverse-Bits.java)|Bit Manipulation|
 |[318. Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)|[LeetCode-318-Maximum-Product-of-Word-Lengths.java](src/LeetCode-318-Maximum-Product-of-Word-Lengths.java)|Math|
 
 ### Stack
