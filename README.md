@@ -346,6 +346,7 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 |Question|Solution|Tags|
 |--------|--------|----|
 |[208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)|[LeetCode-208-Implement-Trie-Prefix-Tree.java](src/LeetCode-208-Implement-Trie-Prefix-Tree.java)|Trie|
+|[212. Word Search II](https://leetcode.com/problems/word-search-ii/)|[LeetCode-212-Word-Search-II.java](src/LeetCode-212-Word-Search-II.java)|Trie|
 |[720. Longest Word in Dictionary](https://leetcode.com/problems/longest-word-in-dictionary/)|[LeetCode-720-Longest-Word-in-Dictionary.java](src/LeetCode-720-Longest-Word-in-Dictionary.java)|Trie|
 
 
