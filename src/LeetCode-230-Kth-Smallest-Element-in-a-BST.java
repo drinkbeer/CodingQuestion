@@ -55,6 +55,15 @@ class Solution {
     // 3. Divide and Conquer
     /*
     https://leetcode.com/problems/kth-smallest-element-in-a-bst/discuss/63660/3-ways-implemented-in-JAVA-(Python)%3A-Binary-Search-in-order-iterative-and-recursive
+    https://leetcode.com/problems/kth-smallest-element-in-a-bst/discuss/63743/Java-divide-and-conquer-solution-considering-augmenting-tree-structure-for-the-follow-up
+    
+    The idea behind the follow up question is what extra information is required for divide-and-conquer. Basically is we can know the number of nodes on the left subtree, we get to know what is the position of the root node in the in-order traversal, which is basically the the kth number. the left value can be saved in each node of the tree, and when we are finding the kth number, the complexity is O(lgn).
+
+    Counting Nodes Time: O(N)
+    Finding Nodes Time: O(logN)
+    Total Time: O(N)
+
+
     
     Best: O(N) 
     Worst: O(N^2)
