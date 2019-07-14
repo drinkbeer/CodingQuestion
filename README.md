@@ -363,6 +363,7 @@ PriorityQueue.
 |--------|--------|----|
 |[218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)|[LeetCode-218-The-Skyline-Problem.java](src/LeetCode-218-The-Skyline-Problem.java)|Heap, TreeMap|
 |[239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)|[LeetCode-239-Sliding-Window-Maximum.java](src/LeetCode-239-Sliding-Window-Maximum.java)|Heap, Deque|
+|[295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)|[LeetCode-295-Find-Median-from-Data-Stream.java](src/LeetCode-295-Find-Median-from-Data-Stream.java)|Heap|
 |[347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)|[LeetCode-347-Top-K-Frequent-Elements.java](src/LeetCode-347-Top-K-Frequent-Elements.java)|Heap, Deque|
 |[373. Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)|[LeetCode-373-Find-K-Pairs-with-Smallest-Sums.java](src/LeetCode-373-Find-K-Pairs-with-Smallest-Sums.java)|Heap|
 |[692. Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)|[LeetCode-692-Top-K-Frequent-Words.java](src/LeetCode-692-Top-K-Frequent-Words.java)|Heap|
