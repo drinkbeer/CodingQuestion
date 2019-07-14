@@ -72,6 +72,7 @@ Note:
 |[283.Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[LeetCode-283-Move-Zeroes.java](src/LeetCode-283-Move-Zeroes.java)|Array|
 |[287.Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)|[LeetCode-287-Find-the-Duplicate-Number.java](src/LeetCode-287-Find-the-Duplicate-Number.java)|Array|  
 |[296. Best Meeting Point](https://leetcode.com/problems/best-meeting-point/)|[LeetCode-296-Best-Meeting-Point.java](src/LeetCode-296-Best-Meeting-Point.java)|Array|
+|[329. Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)|[LeetCode-329-Longest-Increasing-Path-in-a-Matrix.java](src/LeetCode-329-Longest-Increasing-Path-in-a-Matrix.java)|Array, DFS|
 |[339. Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)|[LeetCode-339-Nested-List-Weight-Sum.java](src/LeetCode-339-Nested-List-Weight-Sum.java)|Recursive|
 |[341. Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/)|[LeetCode-341-Flatten-Nested-List-Iterator.java](src/LeetCode-341-Flatten-Nested-List-Iterator.java)|Array|
 |[349. Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)|[LeetCode-349-Intersection-of-Two-Arrays.java](src/LeetCode-349-Intersection-of-Two-Arrays.java)|Array|
