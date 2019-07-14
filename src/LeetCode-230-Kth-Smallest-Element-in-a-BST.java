@@ -7,29 +7,25 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-/**
-Inorder traversal
-*/
 class Solution {
-    // 1.BFS
+    // 1. Inorder Traversal using Stack
 //     public int kthSmallest(TreeNode root, int k) {
-//         if (root == null) return -1;
         
-//         int i = 0;
 //         Stack<TreeNode> stack = new Stack<>();
 //         TreeNode curr = root;
-        
+//         int count = 0;
 //         while (curr != null || !stack.isEmpty()) {
-            
 //             if (curr != null) {
-//                 // push all left node into stack
 //                 stack.push(curr);
 //                 curr = curr.left;
 //             } else {
-//                 // start processing right node
 //                 curr = stack.pop();
-//                 i++;
-//                 if (i == k) return curr.val;
+                
+//                 count++;
+//                 if (count == k) {
+//                     return curr.val;
+//                 }
+                
 //                 curr = curr.right;
 //             }
 //         }
@@ -37,27 +33,47 @@ class Solution {
 //         return -1;
 //     }
     
-    // 2.DFS
-    int count = 0;
-    int result = Integer.MIN_VALUE;
-
+    // 2.Inorder Traversal recursively
+    /*
+    https://leetcode.com/problems/kth-smallest-element-in-a-bst/discuss/63783/Two-Easiest-In-Order-Traverse-(Java)
+    */
+//     int count = 0, res = Integer.MAX_VALUE;
+//     public int kthSmallest(TreeNode root, int k) {
+//         recursive(root, k);
+//         return res;
+//     }
+    
+//     private void recursive(TreeNode root, int k) {
+//         if (root.left != null) recursive(root.left, k);
+//         count++;
+//         if (count == k) {
+//             res = root.val;
+//         }
+//         if (root.right != null) recursive(root.right, k);
+//     }
+    
+    // 3. Divide and Conquer
+    /*
+    https://leetcode.com/problems/kth-smallest-element-in-a-bst/discuss/63660/3-ways-implemented-in-JAVA-(Python)%3A-Binary-Search-in-order-iterative-and-recursive
+    
+    Best: O(N) 
+    Worst: O(N^2)
+    */
     public int kthSmallest(TreeNode root, int k) {
-        traverse(root, k);
-        return result;
-    }
-
-    public void traverse(TreeNode root, int k) {
-        if(root == null) return;
         
-        // process the left tree
-        traverse(root.left, k);
-        // process the current node
-        count++;
-        if(count == k) {
-            result = root.val;
-            return;
+        int left = countNodes(root.left);
+        if (left >= k) {
+            // kth smallest node is in left tree
+            return kthSmallest(root.left, k);
+        } else if (left + 1 < k) {
+            // kth smallest node is in right tree
+            return kthSmallest(root.right, k - 1 - left);   // 1 is counted as current node
         }
-        // process the right tree
-        traverse(root.right, k);       
+        return root.val;
+    }
+    
+    private int countNodes(TreeNode root) {
+        if (root == null) return 0;
+        return 1 + countNodes(root.left) + countNodes(root.right);
     }
 }
