@@ -450,7 +450,8 @@ https://leetcode.com/tag/stack/
 |--------|--------|----|
 |[★146.LRU Cache](https://leetcode.com/problems/lru-cache/)|[LeetCode-146-LRU-Cache.java](src/LeetCode-146-LRU-Cache.java)|HashMap, List|
 |[155.Min Stack](https://leetcode.com/problems/min-stack/)|[LeetCode-155-Min-Stack.java](src/LeetCode-155-Min-Stack.java)|Two Stacks|
-|[225.Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)|[LeetCode-225-Implement-Stack-using-Queues.java](src/LeetCode-225-Implement-Stack-using-Queues.java)|Queue||  
+|[225.Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)|[LeetCode-225-Implement-Stack-using-Queues.java](src/LeetCode-225-Implement-Stack-using-Queues.java)|Queue|  
+|[232.Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)|[LeetCode-232-Implement-Queue-using-Stacks.java](src/LeetCode-232-Implement-Queue-using-Stacks.java)|Stack|  
 |[251. Flatten 2D Vector](https://leetcode.com/problems/flatten-2d-vector/)|[LeetCode-251-Flatten-2D-Vector.java](src/LeetCode-251-Flatten-2D-Vector.java)|Two Pointers|
 |[281.Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/)|[LeetCode-281-Zigzag-Iterator.java](src/LeetCode-281-Zigzag-Iterator.java)|LinkedList|
 |[346. Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream/)|[LeetCode-346-Moving-Average-from-Data-Stream.java](src/LeetCode-346-Moving-Average-from-Data-Stream.java)|LinkedList|
@@ -460,7 +461,6 @@ https://leetcode.com/tag/stack/
 |[716. Max Stack](https://leetcode.com/problems/max-stack/)|[LeetCode-716-Max-Stack.java](src/LeetCode-716-Max-Stack.java)|Two Stacks|
 
 
-[232.Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)  
 
 
 [173.Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)  
