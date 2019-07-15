@@ -82,6 +82,7 @@ Note:
 |[412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)|[LeetCode-412-Fizz-Buzz.java](src/LeetCode-412-Fizz-Buzz.java)|Iterative|
 |[435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)|[LeetCode-435-Non-overlapping-Intervals.java](src/LeetCode-435-Non-overlapping-Intervals.java)|Iterative|
 |[463. Island Perimeter](https://leetcode.com/problems/island-perimeter/)|[LeetCode-463-Island-Perimeter.java](src/LeetCode-463-Island-Perimeter.java)|Recursive|
+|[540. Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)|[LeetCode-540-Single-Element-in-a-Sorted-Array.java](src/LeetCode-540-Single-Element-in-a-Sorted-Array.java)|Binary Search|
 |[670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)|[LeetCode-670-Maximum-Swap.java](src/LeetCode-670-Maximum-Swap.java)|Array|
 |[719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)|[LeetCode-719-Find-K-th-Smallest-Pair-Distance.java](src/LeetCode-719-Find-K-th-Smallest-Pair-Distance.java)|Array, Binary Search|
 |[915. Partition Array into Disjoint Intervals](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)|[LeetCode-915-Partition-Array-into-Disjoint-Intervals.java](src/LeetCode-915-Partition-Array-into-Disjoint-Intervals.java)|Array|
