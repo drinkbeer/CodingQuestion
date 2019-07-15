@@ -296,6 +296,7 @@ Search a required set, search Maximum/Minimu result
 |[374. Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)|[LeetCode-374-Guess-Number-Higher-or-Lower.java](src/LeetCode-374-Guess-Number-Higher-or-Lower.java)|Binary Search|
 |[404. Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves/)|[LeetCode-404-Sum-of-Left-Leaves.java](src/LeetCode-404-Sum-of-Left-Leaves.java)|DFS|
 |[427. Construct Quad Tree](https://leetcode.com/problems/construct-quad-tree/)|[LeetCode-427-Construct-Quad-Tree.java](src/LeetCode-427-Construct-Quad-Tree.java)|Recursive|
+|[428. Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/)|[LeetCode-428-Serialize-and-Deserialize-N-ary-Tree.java](src/LeetCode-428-Serialize-and-Deserialize-N-ary-Tree.java)|Recursive|
 |[437. Path Sum III](https://leetcode.com/problems/path-sum-iii/)|[LeetCode-437-Path-Sum-III.java](src/LeetCode-437-Path-Sum-III.java)|DFS|
 |[450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/)|[LeetCode-450-Delete-Node-in-a-BST.java](src/LeetCode-450-Delete-Node-in-a-BST.java)|DFS|
 |[501. Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/)|[LeetCode-501-Find-Mode-in-Binary-Search-Tree.java](src/LeetCode-501-Find-Mode-in-Binary-Search-Tree.java)|DFS|
