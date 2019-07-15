@@ -1,31 +1,32 @@
 /*
+
+
+O(N)  template for Minimum Size Subarray Sum & Minimum Window Substring & Longest Substring Without Repeating Characters:
+
+
 https://leetcode.com/problems/minimum-size-subarray-sum/discuss/59110/O(N)-template-for-Minimum-Size-Subarray-Sum-and-Minimum-Window-Substring-and-Longest-Substring-Without-Repeating-Characters
+
+Time O(N)
+
 */
+
 class Solution {
-    // 1. Two Pointers (SLIDING WINDOW)
+    // 1. Two Pointers (Sliding Window Template)
 //     public int minSubArrayLen(int s, int[] nums) {
-        
-//         int start = 0, end = 0, minStart = -1, minLen = Integer.MAX_VALUE, sum = 0;
-//         while (end < nums.length) {
-//             sum += nums[end];
+//         int left = 0, right = 0, sum = 0, n = nums.length, res = Integer.MAX_VALUE;
+//         while (right < n) {
+//             sum += nums[right];
             
-//             while (sum >= s) {
-//                 // successfully get one subarray sum >= s, but not sure if it's the smallest one
-//                 if (minLen > end - start + 1) {
-//                     minStart = start;
-//                     minLen = end - minStart + 1;
-//                 }
-                
-//                 // move start to get a smaller window
-//                 sum -= nums[start];
-//                 start++;
+//             // find a subarray which has sum >= s
+//             while (sum >= s && left <= right) {
+//                 res = Math.min(res, right - left + 1);
+//                 sum -= nums[left];
+//                 left++;
 //             }
-            
-//             end++;
+//             right++;
 //         }
         
-//         return minStart == -1 ? 0 : minLen;
-        
+//         return res == Integer.MAX_VALUE ? 0 : res;
 //     }
     
     // 2. Binary Search
@@ -35,6 +36,8 @@ class Solution {
     
     As the order of subarray matters, so we cannot sort the array. To get O(NlogN) Time Complexity, we have to get the 
     culmulative sum array.
+    
+    Time O(NlogN)
     */
     public int minSubArrayLen(int s, int[] nums) {
         int n = nums.length;
