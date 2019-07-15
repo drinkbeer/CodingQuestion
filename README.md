@@ -189,6 +189,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)|[LeetCode-304-Range-Sum-Query-2D-Immutable.java](src/LeetCode-304-Range-Sum-Query-2D-Immutable.java)|DP|
 |[★★★322. Coin Change](https://leetcode.com/problems/coin-change/)|[LeetCode-322-Coin-Change.java](src/LeetCode-322-Coin-Change.java)|DP|
 |[377. Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)|[LeetCode-377-Combination-Sum-IV.java](src/LeetCode-377-Combination-Sum-IV.java)|DP|
+|[403. Frog Jump](https://leetcode.com/problems/frog-jump/)|[LeetCode-403-Frog-Jump.java](src/LeetCode-403-Frog-Jump.java)|DP|
 |[★★★494. Target Sum](https://leetcode.com/problems/target-sum/)|[LeetCode-494-Target-Sum.java](src/LeetCode-494-Target-Sum.java)|DP|
 |[605. Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[LeetCode-605-Can-Place-Flowers.java](src/LeetCode-605-Can-Place-Flowers.java)|DP|
 |[968. Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/)|[LeetCode-968-Binary-Tree-Cameras.java](src/LeetCode-968-Binary-Tree-Cameras.java)|DP, Greedy|
