@@ -79,6 +79,7 @@ Note:
 |[350. Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)|[LeetCode-350-Intersection-of-Two-Arrays-II.java](src/LeetCode-350-Intersection-of-Two-Arrays-II.java)|Array|
 |[352. Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/)|[LeetCode-352-Data-Stream-as-Disjoint-Intervals.java](src/LeetCode-352-Data-Stream-as-Disjoint-Intervals.java)|Array, TreeMap|
 |[364. Nested List Weight Sum II](https://leetcode.com/problems/nested-list-weight-sum-ii/)|[LeetCode-364-Nested-List-Weight-Sum-II.java](src/LeetCode-364-Nested-List-Weight-Sum-II.java)|Recursive, Iterative|
+|[412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)|[LeetCode-412-Fizz-Buzz.java](src/LeetCode-412-Fizz-Buzz.java)|Iterative|
 |[670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)|[LeetCode-670-Maximum-Swap.java](src/LeetCode-670-Maximum-Swap.java)|Array|
 |[719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)|[LeetCode-719-Find-K-th-Smallest-Pair-Distance.java](src/LeetCode-719-Find-K-th-Smallest-Pair-Distance.java)|Array, Binary Search|
 |[915. Partition Array into Disjoint Intervals](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)|[LeetCode-915-Partition-Array-into-Disjoint-Intervals.java](src/LeetCode-915-Partition-Array-into-Disjoint-Intervals.java)|Array|
