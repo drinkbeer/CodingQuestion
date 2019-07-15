@@ -310,6 +310,7 @@ Search a required set, search Maximum/Minimu result
 |[530. Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)|[LeetCode-530-Minimum-Absolute-Difference-in-BST.java](src/LeetCode-530-Minimum-Absolute-Difference-in-BST.java)|DFS, BFS|
 |[538. Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/)|[LeetCode-538-Convert-BST-to-Greater-Tree.java](src/LeetCode-538-Convert-BST-to-Greater-Tree.java)|inorder traversal|
 |[543. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)|[LeetCode-543-Diameter-of-Binary-Tree.java](src/LeetCode-543-Diameter-of-Binary-Tree.java)|DFS|
+|[545. Boundary of Binary Tree](https://leetcode.com/problems/boundary-of-binary-tree/)|[LeetCode-545-Boundary-of-Binary-Tree.java](src/LeetCode-545-Boundary-of-Binary-Tree.java)|Recursive|
 |[654. Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree/)|[LeetCode-654-Maximum-Binary-Tree.java](src/LeetCode-654-Maximum-Binary-Tree.java)|Recursive, Deque|
 |[958. Check Completeness of a Binary Tree](https://leetcode.com/problems/check-completeness-of-a-binary-tree/)|[LeetCode-958-Check-Completeness-of-a-Binary-Tree.java](src/LeetCode-958-Check-Completeness-of-a-Binary-Tree.java)|DFS|
 
