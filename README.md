@@ -85,6 +85,7 @@ Note:
 |[540. Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)|[LeetCode-540-Single-Element-in-a-Sorted-Array.java](src/LeetCode-540-Single-Element-in-a-Sorted-Array.java)|Binary Search|
 |[560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)|[LeetCode-560-Subarray-Sum-Equals-K.java](src/LeetCode-560-Subarray-Sum-Equals-K.java)|Culmulative Sum|
 |[670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)|[LeetCode-670-Maximum-Swap.java](src/LeetCode-670-Maximum-Swap.java)|Array|
+|[694. Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/)|[LeetCode-694-Number-of-Distinct-Islands.java](src/LeetCode-694-Number-of-Distinct-Islands.java)|Recursive|
 |[719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)|[LeetCode-719-Find-K-th-Smallest-Pair-Distance.java](src/LeetCode-719-Find-K-th-Smallest-Pair-Distance.java)|Array, Binary Search|
 |[915. Partition Array into Disjoint Intervals](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)|[LeetCode-915-Partition-Array-into-Disjoint-Intervals.java](src/LeetCode-915-Partition-Array-into-Disjoint-Intervals.java)|Array|
 
