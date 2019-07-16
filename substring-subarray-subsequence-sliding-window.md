@@ -1,5 +1,5 @@
 
-### Template
+## Template
 ```Java
 int findSubstring(string s){
     vector<int> map(128,0);
@@ -225,6 +225,60 @@ public class Solution {
 
 [395. Longest Substring with At Least K Repeating Characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/)  
 
+
+
+## Some problems cannot be solved by Sliding Window Template (the array contains negative value)
+
+https://leetcode.com/problems/subarray-sum-equals-k/discuss/301242/General-summary-of-what-kind-of-problem-can-cannot-solved-by-Two-Pointers
+
+#### 560. Subarray Sum Equals K
+https://leetcode.com/problems/subarray-sum-equals-k/
+
+```
+    // 1. Brute Force for the culmulative sum array
+    /*
+    Time O(N^2)
+    */
+//     public int subarraySum(int[] nums, int k) {
+//         if (nums == null || nums.length == 0) return 0;
+        
+//         int n = nums.length;
+//         for (int i = 1; i < n; i++) nums[i] += nums[i - 1];
+    
+//         int res = 0;
+//         for (int i = 0; i < n; i++) {
+//             if (nums[i] == k) res++;
+//             for (int j = i + 1; j < n; j++) {
+//                 if (nums[i] + k == nums[j]) {
+//                     res++;
+//                 }
+//             }
+//         }
+        
+//         return res;
+//     }
+    
+    // 2. HashMap to store culmulative sum frequency. So each time, we check if sum - k exists in the map.
+    /*
+    Time O(N)
+    */
+    public int subarraySum(int[] nums, int k) {
+        if (nums == null || nums.length == 0) return 0;
+        
+        int n = nums.length;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        map.put(0, 1);
+        
+        int res = 0, sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += nums[i];
+            res += map.getOrDefault(sum - k, 0);
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
+        }
+        
+        return res;
+    }
+```
 
 ### Reference
 [Here is a 10-line template that can solve most 'substring' problems](https://discuss.leetcode.com/topic/30941/here-is-a-10-line-template-that-can-solve-most-substring-problems)  
