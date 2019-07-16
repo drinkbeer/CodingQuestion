@@ -88,6 +88,7 @@ Note:
 |[694. Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/)|[LeetCode-694-Number-of-Distinct-Islands.java](src/LeetCode-694-Number-of-Distinct-Islands.java)|Recursive|
 |[719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)|[LeetCode-719-Find-K-th-Smallest-Pair-Distance.java](src/LeetCode-719-Find-K-th-Smallest-Pair-Distance.java)|Array, Binary Search|
 |[915. Partition Array into Disjoint Intervals](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)|[LeetCode-915-Partition-Array-into-Disjoint-Intervals.java](src/LeetCode-915-Partition-Array-into-Disjoint-Intervals.java)|Array|
+|[724. Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)|[LeetCode-724-Find-Pivot-Index.java](src/LeetCode-724-Find-Pivot-Index.java)|Array|
 
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
