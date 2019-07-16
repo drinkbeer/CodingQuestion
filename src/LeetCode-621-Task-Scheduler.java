@@ -34,7 +34,7 @@ class Solution {
     https://leetcode.com/problems/task-scheduler/discuss/104496/concise-java-solution-on-time-o26-space
     https://www.cnblogs.com/grandyang/p/7098764.html
     https://blog.csdn.net/TheSnowBoy_2/article/details/73556561
-    
+    https://leetcode.com/problems/task-scheduler/discuss/104500/Java-O(n)-time-O(1)-space-1-pass-no-sorting-solution-with-detailed-explanation
     
     Ex1: (result == tasks.length == frame size)
     3 identical chunks "CE", "CE CE CE" <-- this is a frame
@@ -68,4 +68,9 @@ class Solution {
         return Math.max(tasks.length, numSlots * sizeSlots + residue);
     }
     
+    // 2. Another Solution
+    /*
+    https://leetcode.com/problems/task-scheduler/discuss/104511/Java-Solution-PriorityQueue-and-HashMap
+    https://leetcode.com/problems/task-scheduler/discuss/104531/java-solution-priorityqueue-cooldowntable
+    */ 
 }
