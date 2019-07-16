@@ -93,7 +93,6 @@ Note:
 |[90.Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
 |[252.Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)|[LeetCode-252-Meeting-Rooms.java](src/LeetCode-252-Meeting-Rooms.java)|Array, similar to 56.Merge Intervals|
 |[253.Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)|[LeetCode-253-Meeting-Rooms-II.java](src/LeetCode-253-Meeting-Rooms-II.java)|Array, similar to 56.Merge Intervals|
-|[435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)|[LeetCode-435-Non-overlapping-Intervals.java](src/LeetCode-435-Non-overlapping-Intervals.java)|Array, similar to 56.Merge Intervals|
 
 
 ### String 
