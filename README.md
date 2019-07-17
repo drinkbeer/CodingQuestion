@@ -91,6 +91,7 @@ Note:
 |[911. Online Election](https://leetcode.com/problems/online-election/)|[LeetCode-911-Online-Election.java](src/LeetCode-911-Online-Election.java)|Array, Binary Search, TreeMap|
 |[912. Sort an Array](https://leetcode.com/problems/sort-an-array/)|[LeetCode-912-Sort-an-Array.java](src/LeetCode-912-Sort-an-Array.java)|Array, Sort|
 |[915. Partition Array into Disjoint Intervals](https://leetcode.com/problems/partition-array-into-disjoint-intervals/)|[LeetCode-915-Partition-Array-into-Disjoint-Intervals.java](src/LeetCode-915-Partition-Array-into-Disjoint-Intervals.java)|Array|
+|[977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)|[LeetCode-977-Squares-of-a-Sorted-Array.java](src/LeetCode-977-Squares-of-a-Sorted-Array.java)|Two Pointers|
 
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
