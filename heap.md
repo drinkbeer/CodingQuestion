@@ -146,6 +146,22 @@ PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> Integer.compare(b, a))
  });
 ```
 
+Helper function for debug:
+```
+private void printPQ(PriorityQueue<int[]> source) {
+    PriorityQueue<int[]> target = new PriorityQueue<>(Comparator.comparing(t -> t[0]));
+    while (!source.isEmpty()) {
+        int[] t = source.poll();
+        System.out.println(t[0] + "  " + t[1]);
+        target.offer(t);
+    }
+
+    while (!target.isEmpty()) {
+        source.offer(target.poll());
+    }
+}
+```
+
 ### Top-K series code could be resolved by either heap or bucket sort.
 
 #### 692. Top K Frequent Words
