@@ -61,6 +61,8 @@ firstKey();       // Returns the first (lowest) key currently in this map.
 lastEntry();    // Returns a key-value mapping associated with the greatest key in this map, or null if the map is empty.
 lastKey();      // Returns the last (highest) key currently in this map.
 
+pollFirstEntry(); // Removes and returns a key-value mapping associated with the least key in this map, or null if the map is empty.
+pollLastEntry();  // Removes and returns a key-value mapping associated with the greatest key in this map, or null if the map is empty.
 
 higherEntry(key); // Returns a key-value mapping associated with the least key strictly greater than the given key, or null if there is no such key.
 higherKey(key)    // Returns the least key strictly greater than the given key, or null if there is no such key.
