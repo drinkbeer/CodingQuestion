@@ -49,6 +49,34 @@ private static void TreeMapDemo1(){
 }
 ```
 
+```
+TreeMap<Integer, Interval> tree = new TreeMap<>();
+Integer l = tree.lowerKey(val);     // Returns the greatest key strictly less than the given key, or null if there is no such key.
+
+Integer r = tree.higherKey(val);
+
+firstEntry();     // Returns a key-value mapping associated with the least key in this map, or null if the map is empty.
+firstKey();       // Returns the first (lowest) key currently in this map.
+
+lastEntry();    // Returns a key-value mapping associated with the greatest key in this map, or null if the map is empty.
+lastKey();      // Returns the last (highest) key currently in this map.
+
+
+higherEntry(key); // Returns a key-value mapping associated with the least key strictly greater than the given key, or null if there is no such key.
+higherKey(key)    // Returns the least key strictly greater than the given key, or null if there is no such key.
+
+lowerEntry(key); // Returns a key-value mapping associated with the greatest key strictly less than the given key, or null if there is no such key.
+lowerKey(key);   // Returns the greatest key strictly less than the given key, or null if there is no such key.
+
+
+floorEntry(key);  // Returns a key-value mapping associated with the greatest key less than or equal to the given key, or null if there is no such key.
+floorKey(key);    // Returns the greatest key less than or equal to the given key, or null if there is no such key.
+
+ceilingEntry(key);  // Returns a key-value mapping associated with the least key greater than or equal to the given key, or null if there is no such key.
+ceilingKey(key);    // Returns the least key greater than or equal to the given key, or null if there is no such key.
+
+```
+
 
 #### 352. Data Stream as Disjoint Intervals
 https://leetcode.com/problems/data-stream-as-disjoint-intervals/
