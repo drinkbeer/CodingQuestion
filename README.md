@@ -386,6 +386,7 @@ PriorityQueue.
 |[373. Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)|[LeetCode-373-Find-K-Pairs-with-Smallest-Sums.java](src/LeetCode-373-Find-K-Pairs-with-Smallest-Sums.java)|Heap|
 |[407. Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)|[LeetCode-407-Trapping-Rain-Water-II.java](src/LeetCode-407-Trapping-Rain-Water-II.java)|Heap|
 |[692. Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)|[LeetCode-692-Top-K-Frequent-Words.java](src/LeetCode-692-Top-K-Frequent-Words.java)|Heap|
+|[973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)|[LeetCode-973-K-Closest-Points-to-Origin.java](src/LeetCode-973-K-Closest-Points-to-Origin.java)|Heap, QuickSelect|
 |[1046. Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)|[LeetCode-1046-Last-Stone-Weight.java](src/LeetCode-1046-Last-Stone-Weight.java)|Max Heap|
 
 
