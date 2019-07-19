@@ -5,6 +5,10 @@ https://www.educative.io/collection/page/5668639101419520/5649050225344512/56686
 * encode long URL to short URL
 * decode short URL back to long URL
 
+### Non-Requirement
+* Customize short URL
+* Short URL should expire after a specific time
+
 ### QPS + Storage
 1.询问面试官日活跃度
  * 约100M
