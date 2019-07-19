@@ -1,13 +1,21 @@
 https://www.educative.io/collection/page/5668639101419520/5649050225344512/5668600916475904
 
 
-### Requirement
+## Requirements
+
+#### Functional Requirements
+
 * encode long URL to short URL
 * decode short URL back to long URL
+* (Optional) Customize short URL
+* (Optional) Short URL should expire after a specific time
 
 ### Non-Requirement
-* Customize short URL
-* Short URL should expire after a specific time
+
+* Highly available. If the service is down, all short URL redirection will start failing.
+* Low latency. URL redirection should happen in real-time with minimal latency.
+* Short URL should not be guessable (not predictable).
+
 
 ### QPS + Storage
 1.询问面试官日活跃度
@@ -18,7 +26,7 @@ https://www.educative.io/collection/page/5668639101419520/5649050225344512/56686
 * Peak Write QPS = 100 * 2
 3.推算点击一条Tiny URL的QPS
 * 假设每个用户平均点个Tiny URL
-I Averate Read QPS = 100M * 1 / 86400 ~ 1k
+* Averate Read QPS = 100M * 1 / 86400 ~ 1k
 I Peak Read QPS = 2k
 4.推算每天产生的新的URL所占存储
 * 100M * 0.1 ~ 10M
