@@ -22,11 +22,13 @@ I Peak Read QPS = 2k
 ### Service
 
 1. Store <id, longUrl> pair in SQL DB
+```
 id        longUrl                       shortUrl
 —      ————                      ---------
 1        www.google.com        sdfds8d
 2       www.amazon.com       aeflj2d4
 ...
+```
 
 2.Convert Sqeuencial ID to a shortUrl (encode)
 3.Decode
