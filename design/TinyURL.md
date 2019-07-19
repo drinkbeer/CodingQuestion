@@ -51,6 +51,8 @@ A few things to think when designing the DB schema:
 * Schema is pretty simple, not complicate SQL query, e.g. JOIN
 * The service is read-heavy.
 
+As there is no complicate relationship queries, NoSQL key-value store is better here, like DynamoDB, Cassandra. A NoSQL is easier to scale.
+
 ```
 id         longUrl                   shortUrl
 —          ————                      ---------
