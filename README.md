@@ -424,6 +424,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[202. Happy Number](https://leetcode.com/problems/happy-number/)|[LeetCode-202-Happy-Number.java](src/LeetCode-202-Happy-Number.java)|Math|
 |[204.Count Primes](https://leetcode.com/problems/count-primes/)|[LeetCode-204-Count-Primes.java](src/LeetCode-204-Count-Primes.java)|Math|
 |[227. Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)|[LeetCode-227-Basic-Calculator-II.java](src/LeetCode-227-Basic-Calculator-II.java)|Math|
+|[233. Number of Digit One](https://leetcode.com/problems/number-of-digit-one/)|[LeetCode-233-Number-of-Digit-One.java](src/LeetCode-233-Number-of-Digit-One.java)|Math|
 |[254. Factor Combinations](https://leetcode.com/problems/factor-combinations/)|[LeetCode-254-Factor-Combinations.java](src/LeetCode-254-Factor-Combinations.java)|Recursive|
 |[311. Sparse Matrix Multiplication](https://leetcode.com/problems/sparse-matrix-multiplication/)|[LeetCode-311-Sparse-Matrix-Multiplication.java](src/LeetCode-311-Sparse-Matrix-Multiplication.java)|Math|
 |[319. Bulb Switcher](https://leetcode.com/problems/bulb-switcher/)|[LeetCode-319-Bulb-Switcher.java](src/LeetCode-319-Bulb-Switcher.java)|Math|
