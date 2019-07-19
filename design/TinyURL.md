@@ -59,7 +59,7 @@ id         longUrl                   shortUrl
 ...
 ```
 
-2.Convert Sqeuencial ID to a shortUrl (encode)
+2.Convert Sqeuencial ID to a shortUrl (encode)  
 3.Decode
 
 ```
