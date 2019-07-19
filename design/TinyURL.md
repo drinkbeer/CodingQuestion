@@ -44,11 +44,18 @@ https://www.educative.io/collection/page/5668639101419520/5649050225344512/56686
 ### Service
 
 1. Store <id, longUrl> pair in SQL DB
+
+A few things to think when designing the DB schema:
+* DB stores billions of records.
+* Each row we store is small (~100 bytes for long URL, 6 bytes for short URL)
+* Schema is pretty simple, not complicate SQL query, e.g. JOIN
+* The service is read-heavy.
+
 ```
-id        longUrl                       shortUrl
-—      ————                      ---------
-1        www.google.com        sdfds8d
-2       www.amazon.com       aeflj2d4
+id         longUrl                   shortUrl
+—          ————                      ---------
+1          www.google.com            sdfds8
+2          www.amazon.com            aeflj2
 ...
 ```
 
