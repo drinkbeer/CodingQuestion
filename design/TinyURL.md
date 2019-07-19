@@ -34,8 +34,12 @@ https://www.educative.io/collection/page/5668639101419520/5649050225344512/56686
 
 4.推算每天产生的新的URL所占存储
 * 100M * 0.1 ~ 10M
-* 每一条URL长度平均100算，一共1G
+* 每一条URL长度平均100 bytes 算，一共1G
 * 1T硬盘可以用三年
+
+5.Cache 20% of requests in memory, the RAM requirement:
+* 100M * 1 * 20% = 20M requests
+* 20M * 100 bytes = 1.86 GiB
 
 ### Service
 
