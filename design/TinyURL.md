@@ -18,16 +18,20 @@ https://www.educative.io/collection/page/5668639101419520/5649050225344512/56686
 
 
 ### QPS + Storage
+
 1.询问面试官日活跃度
  * 约100M
+ 
 2.推算产生一条Tiny URL的QPS
 * 假设每个用户平均每天发0.1条带URL的微博
 * Average Write QPS = 100M * 0.1 / 86400 ~ 100
 * Peak Write QPS = 100 * 2
+
 3.推算点击一条Tiny URL的QPS
 * 假设每个用户平均点个Tiny URL
 * Averate Read QPS = 100M * 1 / 86400 ~ 1k
-I Peak Read QPS = 2k
+* Peak Read QPS = 2k
+
 4.推算每天产生的新的URL所占存储
 * 100M * 0.1 ~ 10M
 * 每一条URL长度平均100算，一共1G
