@@ -198,6 +198,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[★★★256. Paint House](https://leetcode.com/problems/paint-house/)|[LeetCode-256-Paint-House.java](src/LeetCode-256-Paint-House.java)|DP|
 |[265. Paint House II](https://leetcode.com/problems/paint-house-ii/)|[LeetCode-265-Paint-House-II.java](src/LeetCode-265-Paint-House-II.java)|DP|
 |[★★★276. Paint Fence](https://leetcode.com/problems/paint-fence/)|[LeetCode-276-Paint-Fence.java](src/LeetCode-276-Paint-Fence.java)|DP|
+|[279. Perfect Squares](https://leetcode.com/problems/perfect-squares/)|[LeetCode-279-Perfect-Squares.java](src/LeetCode-279-Perfect-Squares.java)|DP|
 |[300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[LeetCode-300-Longest-Increasing-Subsequence.java](src/LeetCode-300-Longest-Increasing-Subsequence.java)|DP, Binary Search|
 |[303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)|[LeetCode-303-Range-Sum-Query-Immutable.java](src/LeetCode-303-Range-Sum-Query-Immutable.java)|DP|
 |[304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)|[LeetCode-304-Range-Sum-Query-2D-Immutable.java](src/LeetCode-304-Range-Sum-Query-2D-Immutable.java)|DP|
