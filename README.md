@@ -430,6 +430,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[254. Factor Combinations](https://leetcode.com/problems/factor-combinations/)|[LeetCode-254-Factor-Combinations.java](src/LeetCode-254-Factor-Combinations.java)|Recursive|
 |[311. Sparse Matrix Multiplication](https://leetcode.com/problems/sparse-matrix-multiplication/)|[LeetCode-311-Sparse-Matrix-Multiplication.java](src/LeetCode-311-Sparse-Matrix-Multiplication.java)|Math|
 |[319. Bulb Switcher](https://leetcode.com/problems/bulb-switcher/)|[LeetCode-319-Bulb-Switcher.java](src/LeetCode-319-Bulb-Switcher.java)|Math|
+|[326. Power of Three](https://leetcode.com/problems/power-of-three/)|[LeetCode-326-Power-of-Three.java](src/LeetCode-326-Power-of-Three.java)|Math|
 |[367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)|[LeetCode-367-Valid-Perfect-Square.java](src/LeetCode-367-Valid-Perfect-Square.java)|Math, Binary Search|
 |[369. Plus One Linked List](https://leetcode.com/problems/plus-one-linked-list/)|[LeetCode-369-Plus-One-Linked-List.java](src/LeetCode-369-Plus-One-Linked-List.java)|Math|
 |[445. Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/)|[LeetCode-445-Add-Two-Numbers-II.java](src/LeetCode-445-Add-Two-Numbers-II.java)|LinkedList, Stack|
