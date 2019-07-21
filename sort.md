@@ -222,6 +222,71 @@ class MergeSort {
 }
 ```
 
+Example:
+
+##### 315. Count of Smaller Numbers After Self
+https://leetcode.com/problems/count-of-smaller-numbers-after-self/
+
+```
+    // 1. Merge Sort
+    /*
+    https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/76584/Mergesort-solution
+    */
+    private class Pair {
+        int val;
+        int idx;
+        
+        public Pair (int val, int idx) {
+            this.val = val;
+            this.idx = idx;
+        }
+    }
+    
+    public List<Integer> countSmaller(int[] nums) {
+        int n = nums.length;
+        Pair[] tmp = new Pair[n];
+        int[] res = new int[n];
+        
+        Pair[] pairs = new Pair[n];
+        for (int i = 0; i < n; i++) {
+            pairs[i] = new Pair(nums[i], i);
+        }
+        
+        mergeSort(pairs, 0, n - 1, tmp, res);
+        // System.out.println(Arrays.toString(res));
+        // System.out.println(Arrays.stream(pairs).map(p -> p.val).collect(Collectors.toList()).toString());
+        return Arrays.stream(res).boxed().collect(Collectors.toList());
+    }
+    
+    private void mergeSort(Pair[] pairs, int lo, int hi, Pair[] tmp, int[] res) {
+        if (lo >= hi) return;
+        int mid = lo + (hi - lo) / 2;
+        mergeSort(pairs, lo, mid, tmp, res);
+        mergeSort(pairs, mid + 1, hi, tmp, res);
+        merge(pairs, lo, mid, hi, tmp, res);
+    }
+    
+    private void merge(Pair[] pairs, int lo, int mid, int hi, Pair[] tmp, int[] res) {
+        if (lo >= hi) return;
+        for (int k = lo; k <= hi; k++) {
+            tmp[k] = pairs[k];
+        }
+        
+        int i = lo, j = mid + 1;
+        for (int k = lo; k <= hi; k++) {
+            if (j > hi || (i <= mid && tmp[i].val <= tmp[j].val)) {
+                pairs[k] = tmp[i];
+                // System.out.println("i: " + i + "  j: " + j + "  tmp[i].idx: " + tmp[i].idx + "  tmp[i].val: " + tmp[i].val + "  lo: " + lo + "  hi: " + hi);
+                // mid + 1 is the init index of the right array. j - (mid + 1) is the length of the subarray of right array that each element smaller than current i.
+                res[tmp[i].idx] += j - (mid + 1);
+                i++;
+            } else {
+                pairs[k] = tmp[j];
+                j++;
+            }
+        }
+    }
+```
 
 
 ### External Sort - an extersion of Merge Sort
