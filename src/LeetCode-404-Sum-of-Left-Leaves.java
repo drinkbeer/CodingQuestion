@@ -29,4 +29,57 @@ class Solution {
         
         return res;
     }
+    
+    
+    // 1. Recursive (My Solution)
+//     public int sumOfLeftLeaves(TreeNode root) {
+//         if (root == null) return 0;
+//         return sumOfLeftLeavesInclusive(root.left) + sumOfLeftLeaves(root.right);
+//     }
+    
+//     public int sumOfLeftLeavesInclusive(TreeNode root) {
+//         if (root == null) return 0;
+//         if (root.left == null && root.right == null) return root.val;
+//         return sumOfLeftLeavesInclusive(root.left) + sumOfLeftLeaves(root.right);
+//     }
+    
+    
+    // 2. Another Recursive Solution
+    /*
+    https://leetcode.com/problems/sum-of-left-leaves/discuss/88950/Java-iterative-and-recursive-solutions
+    */
+//     public int sumOfLeftLeaves(TreeNode root) {
+//         return helper(root, false);
+//     }
+    
+//     private int helper(TreeNode root, boolean isLeft) {
+//         if (root == null) return 0;
+//         if (root.left == null && root.right == null && isLeft) {
+//             return root.val;
+//         }
+//         return helper(root.left, true) + helper(root.right, false);
+//     }
+    
+    // 3. Iterative
+    public int sumOfLeftLeaves(TreeNode root) {
+        if(root == null) return 0;
+        int ans = 0;
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.push(root);
+
+        while(!stack.empty()) {
+            TreeNode node = stack.pop();
+            if(node.left != null) {
+                if (node.left.left == null && node.left.right == null)
+                    ans += node.left.val;
+                else
+                    stack.push(node.left);
+            }
+            if(node.right != null) {
+                if (node.right.left != null || node.right.right != null)
+                    stack.push(node.right);
+            }
+        }
+        return ans;
+    }
 }
