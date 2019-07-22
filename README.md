@@ -159,6 +159,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[771. Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/)|[LeetCode-771-Jewels-and-Stones.java](src/LeetCode-771-Jewels-and-Stones.java)|String|
 |[796. Rotate String](https://leetcode.com/problems/rotate-string/)|[LeetCode-796-Rotate-String.java](src/LeetCode-796-Rotate-String.java)|String|
 |[804. Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/)|[LeetCode-804-Unique-Morse-Code-Words.java](src/LeetCode-804-Unique-Morse-Code-Words.java)|String|
+|[929. Unique Email Addresses](https://leetcode.com/problems/unique-email-addresses/)|[LeetCode-929-Unique-Email-Addresses.java](src/LeetCode-929-Unique-Email-Addresses.java)|String|
 |[937. Reorder Log Files](https://leetcode.com/problems/reorder-log-files/)|[LeetCode-937-Reorder-Log-Files.java](src/LeetCode-937-Reorder-Log-Files.java)|String|
 
 
