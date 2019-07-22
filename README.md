@@ -435,6 +435,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[326. Power of Three](https://leetcode.com/problems/power-of-three/)|[LeetCode-326-Power-of-Three.java](src/LeetCode-326-Power-of-Three.java)|Math|
 |[367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)|[LeetCode-367-Valid-Perfect-Square.java](src/LeetCode-367-Valid-Perfect-Square.java)|Math, Binary Search|
 |[369. Plus One Linked List](https://leetcode.com/problems/plus-one-linked-list/)|[LeetCode-369-Plus-One-Linked-List.java](src/LeetCode-369-Plus-One-Linked-List.java)|Math|
+|[415. Add Strings](https://leetcode.com/problems/add-strings/)|[LeetCode-415-Add-Strings.java](src/LeetCode-415-Add-Strings.java)|Math|
 |[445. Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii/)|[LeetCode-445-Add-Two-Numbers-II.java](src/LeetCode-445-Add-Two-Numbers-II.java)|LinkedList, Stack|
 |[593. Valid Square](https://leetcode.com/problems/valid-square/)|[LeetCode-593-Valid-Square.java](src/LeetCode-593-Valid-Square.java)|Math|
 |[1017. Convert to Base -2](https://leetcode.com/problems/convert-to-base-2/)|[LeetCode-1017-Convert-to-Base--2.java](src/LeetCode-1017-Convert-to-Base--2.java)|Math|
