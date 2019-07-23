@@ -58,22 +58,24 @@ class Solution {
     
     /*
     https://leetcode.com/problems/guess-number-higher-or-lower-ii/discuss/84787/Java-DP-solution
+    https://leetcode.com/problems/guess-number-higher-or-lower-ii/discuss/84807/Java-commented-DP-solution
     */
     public int getMoneyAmount(int n) {
         if (n == 1) return 0;   // nothing to guess
         
         int[][] dp = new int[n + 1][n + 1];
         
-        for (int len = 1; len < n; len ++) {
-            for (int i = 0; i <= n - len; i++) {
+        for (int len = 1; len < n; len++) {
+            for (int i = 1; i + len <= n; i++) {
                 int j = i + len;
-                // range of k: (i, j), [0, len] -> [n - len, n]
+                // range of k: [i, j), [1, len + 1) -> [n - len, n)
                 int globalMin = Integer.MAX_VALUE;
-                for (int k = i + 1; k < j; k++) {
+                for (int k = i; k < j; k++) {
                     int localMax = k + Math.max(dp[i][k - 1], dp[k + 1][j]);
                     globalMin = Math.min(globalMin, localMax);
                 }
-                dp[i][j] = i + 1 == j ? i : globalMin;
+                // dp[i][j] = i + 1 == j ? i : globalMin;
+                dp[i][j] = globalMin;
             }
         }
         
