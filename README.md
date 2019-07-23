@@ -217,6 +217,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[377. Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)|[LeetCode-377-Combination-Sum-IV.java](src/LeetCode-377-Combination-Sum-IV.java)|DP|
 |[403. Frog Jump](https://leetcode.com/problems/frog-jump/)|[LeetCode-403-Frog-Jump.java](src/LeetCode-403-Frog-Jump.java)|DP|
 |[★★★494. Target Sum](https://leetcode.com/problems/target-sum/)|[LeetCode-494-Target-Sum.java](src/LeetCode-494-Target-Sum.java)|DP|
+|[516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)|[LeetCode-516-Longest-Palindromic-Subsequence.java](src/LeetCode-516-Longest-Palindromic-Subsequence.java)|DP|
 |[605. Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[LeetCode-605-Can-Place-Flowers.java](src/LeetCode-605-Can-Place-Flowers.java)|Greedy|
 |[621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)|[LeetCode-621-Task-Scheduler.java](src/LeetCode-621-Task-Scheduler.java)|Greedy|
 |[968. Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/)|[LeetCode-968-Binary-Tree-Cameras.java](src/LeetCode-968-Binary-Tree-Cameras.java)|DP, Greedy|
