@@ -104,6 +104,8 @@ The idea behind Recursive, Memorized DFS, and DP: https://leetcode.com/problems/
 #### 486. Predict the Winner
 https://leetcode.com/problems/predict-the-winner/
 
+DFS -> Memorized DFS -> 2D DP -> 1D DP
+
 ```
 class Solution {
     // 1. Recursive (without memorization)
