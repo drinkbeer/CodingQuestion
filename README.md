@@ -217,6 +217,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[375. Guess Number Higher or Lower II](https://leetcode.com/problems/guess-number-higher-or-lower-ii/)|[LeetCode-375-Guess-Number-Higher-or-Lower-II.java](src/LeetCode-375-Guess-Number-Higher-or-Lower-II.java)|DP|
 |[377. Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)|[LeetCode-377-Combination-Sum-IV.java](src/LeetCode-377-Combination-Sum-IV.java)|DP|
 |[403. Frog Jump](https://leetcode.com/problems/frog-jump/)|[LeetCode-403-Frog-Jump.java](src/LeetCode-403-Frog-Jump.java)|DP|
+|[486. Predict the Winner](https://leetcode.com/problems/predict-the-winner/)|[LeetCode-486-Predict-the-Winner.java](src/LeetCode-486-Predict-the-Winner.java)|DP|
 |[★★★494. Target Sum](https://leetcode.com/problems/target-sum/)|[LeetCode-494-Target-Sum.java](src/LeetCode-494-Target-Sum.java)|DP|
 |[516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/)|[LeetCode-516-Longest-Palindromic-Subsequence.java](src/LeetCode-516-Longest-Palindromic-Subsequence.java)|DP|
 |[605. Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[LeetCode-605-Can-Place-Flowers.java](src/LeetCode-605-Can-Place-Flowers.java)|Greedy|
