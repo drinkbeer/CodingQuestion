@@ -98,6 +98,9 @@ return maxSubLen;
 https://www.1point3acres.com/bbs/thread-423857-1-1.html
 
 
+The idea behind Recursive, Memorized DFS, and DP: https://leetcode.com/problems/reverse-pairs/discuss/97268/General-principles-behind-problems-similar-to-%22Reverse-Pairs%22
+
+
 #### 486. Predict the Winner
 https://leetcode.com/problems/predict-the-winner/
 
