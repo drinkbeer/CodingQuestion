@@ -51,7 +51,7 @@ Using divide and conquer paradigm
 
 ### Bucket Sort
 
-Top-K series problem could either use PriorityQueue or bucket sort to solve.
+Top-K series problem could either use PriorityQueue or bucket sort or Quick Select to solve.
 
 Examples:
 
