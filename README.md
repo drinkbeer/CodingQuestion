@@ -468,6 +468,7 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[190. Reverse Bits](https://leetcode.com/problems/reverse-bits/)|[LeetCode-190-Reverse-Bits.java](src/LeetCode-190-Reverse-Bits.java)|Bit Manipulation|
 |[191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)|[LeetCode-191-Number-of-1-Bits.java](src/LeetCode-191-Number-of-1-Bits.java)|Bit Manipulation|
 |[201. Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/)|[LeetCode-201-Bitwise-AND-of-Numbers-Range.java](src/LeetCode-201-Bitwise-AND-of-Numbers-Range.java)|Bit Manipulation|
+|[260.Single Number III](https://leetcode.com/problems/single-number-iii/)|[LeetCode-260-Single-Number-III.java](src/LeetCode-260-Single-Number-III.java)|Bit Manipulation|
 |[318. Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)|[LeetCode-318-Maximum-Product-of-Word-Lengths.java](src/LeetCode-318-Maximum-Product-of-Word-Lengths.java)|Math|
 
 ### Stack
@@ -524,7 +525,6 @@ https://leetcode.com/tag/stack/
 
 [136.Single Number](https://leetcode.com/problems/single-number/)  
 [137.Single Number II](https://leetcode.com/problems/single-number-ii/)  
-[260.Single Number III](https://leetcode.com/problems/single-number-iii/)  
 
 
 
