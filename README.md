@@ -82,6 +82,7 @@ Note:
 |[352. Data Stream as Disjoint Intervals](https://leetcode.com/problems/data-stream-as-disjoint-intervals/)|[LeetCode-352-Data-Stream-as-Disjoint-Intervals.java](src/LeetCode-352-Data-Stream-as-Disjoint-Intervals.java)|Array, TreeMap|
 |[364. Nested List Weight Sum II](https://leetcode.com/problems/nested-list-weight-sum-ii/)|[LeetCode-364-Nested-List-Weight-Sum-II.java](src/LeetCode-364-Nested-List-Weight-Sum-II.java)|Recursive, Iterative|
 |[378. Kth Smallest Element in a Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/)|[LeetCode-378-Kth-Smallest-Element-in-a-Sorted-Matrix.java](src/LeetCode-378-Kth-Smallest-Element-in-a-Sorted-Matrix.java)|Heap, Binary Search|
+|[384. Shuffle an Array](https://leetcode.com/problems/shuffle-an-array/)|[LeetCode-384-Shuffle-an-Array.java](src/LeetCode-384-Shuffle-an-Array.java)|Array|
 |[412. Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)|[LeetCode-412-Fizz-Buzz.java](src/LeetCode-412-Fizz-Buzz.java)|Iterative|
 |[419. Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/)|[LeetCode-419-Battleships-in-a-Board.java](src/LeetCode-419-Battleships-in-a-Board.java)|Iterative|
 |[435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)|[LeetCode-435-Non-overlapping-Intervals.java](src/LeetCode-435-Non-overlapping-Intervals.java)|Iterative|
