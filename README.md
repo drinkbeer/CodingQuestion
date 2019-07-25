@@ -505,6 +505,7 @@ https://leetcode.com/tag/stack/
 |[281.Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/)|[LeetCode-281-Zigzag-Iterator.java](src/LeetCode-281-Zigzag-Iterator.java)|LinkedList|
 |[346. Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream/)|[LeetCode-346-Moving-Average-from-Data-Stream.java](src/LeetCode-346-Moving-Average-from-Data-Stream.java)|LinkedList|
 |[348. Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/)|[LeetCode-348-Design-Tic-Tac-Toe.java](src/LeetCode-348-Design-Tic-Tac-Toe.java)|Array|
+|[353. Design Snake Game](https://leetcode.com/problems/design-snake-game/)|[LeetCode-353-Design-Snake-Game.java](src/LeetCode-353-Design-Snake-Game.java)|Array|
 |[362. Design Hit Counter](https://leetcode.com/problems/design-hit-counter/)|[LeetCode-362-Design-Hit-Counter.java](src/LeetCode-362-Design-Hit-Counter.java)|Deque, Array|
 |[380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)|[LeetCode-380-Insert-Delete-GetRandom-O(1).java](src/LeetCode-380-Insert-Delete-GetRandom-O(1).java)|LinkedList|
 |[381. Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)|[LeetCode-381-Insert-Delete-GetRandomO(1)-Duplicates-allowed.java](src/LeetCode-381-Insert-Delete-GetRandomO(1)-Duplicates-allowed.java)|LinkedList|
