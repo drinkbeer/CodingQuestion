@@ -1,4 +1,5 @@
 
+https://leetcode.com/problems/linked-list-random-node/discuss/85659/Brief-explanation-for-Reservoir-Sampling
 
 ```
 import org.junit.jupiter.api.Test;
