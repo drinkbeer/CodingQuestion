@@ -153,6 +153,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[186.Reverse Words in a String II](https://leetcode.com/problems/reverse-words-in-a-string-ii/)|[LeetCode-186-Reverse-Words-in-a-String-II.java](src/LeetCode-186-Reverse-Words-in-a-String-II.java)|String|
 |[249. Group Shifted Strings](https://leetcode.com/problems/group-shifted-strings/)|[LeetCode-249-Group-Shifted-Strings.java](src/LeetCode-249-Group-Shifted-Strings.java)|String|
 |[344. Reverse String](https://leetcode.com/problems/reverse-string/)|[LeetCode-344-Reverse-String.java](src/LeetCode-344-Reverse-String.java)|String|
+|[383. Ransom Note](https://leetcode.com/problems/ransom-note/)|[LeetCode-383-Ransom-Note.java](src/LeetCode-383-Ransom-Note.java)|String|
 |[387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/)|[LeetCode-387-First-Unique-Character-in-a-String.java](src/LeetCode-387-First-Unique-Character-in-a-String.java)|String|
 |[443. String Compression](https://leetcode.com/problems/string-compression/)|[LeetCode-443-String-Compression.java](src/LeetCode-443-String-Compression.java)|String|
 |[557. Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii/)|[LeetCode-557-Reverse-Words-in-a-String-III.java](src/LeetCode-557-Reverse-Words-in-a-String-III.java)|String|
