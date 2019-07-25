@@ -490,7 +490,10 @@ https://leetcode.com/tag/stack/
 |[261. Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)|[LeetCode-261-Graph-Valid-Tree.java](src/LeetCode-261-Graph-Valid-Tree.java)|Graph, Union-Find, DFS, BFS|
 |[323. Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)|[LeetCode-323-Number-of-Connected-Components-in-an-Undirected-Graph.java](src/LeetCode-323-Number-of-Connected-Components-in-an-Undirected-Graph.java)|Graph, Union-Find, DFS, BFS|
 
-
+### Reservoir Sampling
+|Question|Solution|Tags|
+|--------|--------|----|
+|[382. Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/)|[LeetCode-382-Linked-List-Random-Node.java](src/LeetCode-382-Linked-List-Random-Node.java)|Reservoir Sampling|
 
 
 ### Design
