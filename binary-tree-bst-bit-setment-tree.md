@@ -74,5 +74,10 @@ public class BinaryIndexTree {
 ## Segment Tree
 
 https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/   
-https://www.geeksforgeeks.org/segment-tree-set-1-range-minimum-query/   
+https://www.geeksforgeeks.org/segment-tree-set-1-range-minimum-query/  
+https://www.youtube.com/watch?v=ZBHKZF5w4YU  
+https://www.youtube.com/watch?v=rYBtViWXYeI  
+
+
+
 
