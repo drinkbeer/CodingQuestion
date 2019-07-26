@@ -43,6 +43,13 @@ int updateBit(int i, int num, int v){
 3. 异或性质：交换律，0^a=a, a^a=0;
 4. 将常用字符、数字等均转为按位运算，可以节约空间。
 
+The notation '0b' in front of a number is used as an indicator that what follows is represented in binary.    
+"0b" - binary （二进制）   
+"0" - octal (八进制)   
+"0x" - hexadecimal （十六进制）    
+
+
+
 #### 191. Number of 1 Bits
 https://leetcode.com/problems/number-of-1-bits/
 
