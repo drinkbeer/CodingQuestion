@@ -1,5 +1,12 @@
 
 
+Usually Knacpack problem could be solved by:
+1. DFS
+2. DFS with Memorization Optimization
+3. DP (2D Array)
+4. DP (1D Array)
+5. DP (convert to subset sum problem, and use 2D or 1D array)
+
 #### 494. Target Sum
 https://leetcode.com/problems/target-sum/
 
