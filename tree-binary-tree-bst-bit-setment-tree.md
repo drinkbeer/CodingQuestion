@@ -1,4 +1,20 @@
 
+#### 315. Count of Smaller Numbers After Self
+https://leetcode.com/problems/count-of-smaller-numbers-after-self/
+
+```
+
+```
+
+#### 493. Reverse Pairs
+https://leetcode.com/problems/reverse-pairs/
+
+```
+
+```
+
+
+
 ## Binary Search Tree
 
 ## Binary Index Tree (Fenwick Tree)
