@@ -473,6 +473,9 @@ Operations between strings, between big numbers(larger than RAM: First external 
 |[201. Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/)|[LeetCode-201-Bitwise-AND-of-Numbers-Range.java](src/LeetCode-201-Bitwise-AND-of-Numbers-Range.java)|Bit Manipulation|
 |[260.Single Number III](https://leetcode.com/problems/single-number-iii/)|[LeetCode-260-Single-Number-III.java](src/LeetCode-260-Single-Number-III.java)|Bit Manipulation|
 |[318. Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)|[LeetCode-318-Maximum-Product-of-Word-Lengths.java](src/LeetCode-318-Maximum-Product-of-Word-Lengths.java)|Math|
+|[393. UTF-8 Validation](https://leetcode.com/problems/utf-8-validation/)|[LeetCode-393-UTF-8-Validation.java](src/LeetCode-393-UTF-8-Validation.java)|Math|
+
+
 
 ### Stack
 
