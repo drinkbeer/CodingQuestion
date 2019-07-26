@@ -17,6 +17,10 @@ https://leetcode.com/problems/reverse-pairs/
 
 ## Binary Search Tree
 
+```
+
+```
+
 ## Binary Index Tree (Fenwick Tree)
 https://www.youtube.com/watch?v=CWDQJGaN1gY  
 https://www.youtube.com/watch?v=WbafSgetDDk  
