@@ -9,8 +9,77 @@ https://leetcode.com/problems/count-of-smaller-numbers-after-self/
 #### 493. Reverse Pairs
 https://leetcode.com/problems/reverse-pairs/
 
+Build Binary Search Tree:
 ```
-
+    // 2. Build BST from left to right of array + search elements > 2L * element value  (TLE)
+    private class Node {
+        int val;        // value of current Node
+        int count;      // count of nodes' value >= val
+        Node left, right;
+        
+        public Node(int val) {
+            this.val = val;
+            this.count = 1;
+        }
+    }
+    
+    private class BinarySearchTree {
+        Node root;
+        public BinarySearchTree () {
+            this.root = null;       // init the BST to be empty tree
+        }
+        
+        // search the number of elements that is > val
+        public int searchLargerCount(long val) {
+            return searchLargerCount(val, root);
+        }
+        
+        private int searchLargerCount(long val, Node curr) {
+            if (curr == null) {
+                return 0;   // search in an empty (sub) tree, we just return 
+            } else if (curr.val > val) {
+                // count curr count (num of nodes >= curr.val) and search in left tree
+                return curr.count + searchLargerCount(val, curr.left);
+            } else {
+                return searchLargerCount(val, curr.right);
+            }
+        }
+        
+        private void insert(int val) {
+            if (root == null) {
+                root = new Node(val);
+                return;
+            }
+            insert(val, root);
+        }
+        
+        private Node insert(int val, Node curr) {
+            if (curr == null) {
+                return new Node(val);
+            } else if (val == curr.val) {
+                curr.count++;
+            } else if (val < curr.val) {
+                curr.left = insert(val, curr.left);
+            } else {
+                // insert in right sub-tree
+                curr.count++;
+                curr.right = insert(val, curr.right);
+            }
+            return curr;
+        }
+    }
+    
+    public int reversePairs(int[] nums) {
+        BinarySearchTree bst = new BinarySearchTree();
+        
+        int res = 0;
+        for (int v : nums) {
+            // System.out.println("v: " + v + "  res: " + res + "  bst.searchLargerCount(2L * v): " + bst.searchLargerCount(2L * v));
+            res += bst.searchLargerCount(2L * v);   // search in the existing tree that the val > 2L * v. as we are inserting from left to right, so we are search in range [0, curr_idx)
+            bst.insert(v);
+        }
+        return res;
+    }
 ```
 
 
