@@ -82,6 +82,108 @@ Build Binary Search Tree:
     }
 ```
 
+Build Binary Index Tree:
+```
+    // 3. Binary Index Tree
+    /*
+    https://leetcode.com/problems/reverse-pairs/discuss/97268/General-principles-behind-problems-similar-to-%22Reverse-Pairs%22
+    http://pavelsimo.blogspot.com/2012/09/counting-inversions-in-array-using-BIT.html
+    https://www.cnblogs.com/grandyang/p/6657956.html
+    
+    
+    nums: [2, 4, 3, 5, 1]    copy: [1, 2, 3, 4, 5]  BitArr: [0, 0, 0, 0, 0, 0]  nums[i]: 1  idx1: 0  idx2: 0  Query Result in BIT: 0
+    nums: [2, 4, 3, 5, 1]    copy: [1, 2, 3, 4, 5]  BitArr: [0, 1, 1, 0, 1, 0]  nums[i]: 5  idx1: 2  idx2: 4  Query Result in BIT: 1
+    nums: [2, 4, 3, 5, 1]    copy: [1, 2, 3, 4, 5]  BitArr: [0, 1, 1, 0, 1, 1]  nums[i]: 3  idx1: 1  idx2: 2  Query Result in BIT: 1
+    nums: [2, 4, 3, 5, 1]    copy: [1, 2, 3, 4, 5]  BitArr: [0, 1, 1, 1, 2, 1]  nums[i]: 4  idx1: 1  idx2: 3  Query Result in BIT: 1
+    nums: [2, 4, 3, 5, 1]    copy: [1, 2, 3, 4, 5]  BitArr: [0, 1, 1, 1, 3, 1]  nums[i]: 2  idx1: 0  idx2: 1  Query Result in BIT: 0
+    */
+    private class BinaryIndexTree {
+        private int[] arr;
+        public BinaryIndexTree(int n) {
+            arr = new int[n + 1];
+        }
+        
+        public void update(int i) {
+            i = i + 1;
+            while (i < arr.length) {
+                arr[i]++;
+                i += getLowBit(i);
+            }
+        }
+        
+        public int query(int i) {
+            // i = i + 1;
+            int res = 0;
+            while (i > 0) {
+                res += arr[i];
+                i -= getLowBit(i);
+            }
+            return res;
+        }
+        
+        private int getLowBit(int x) {
+            return x & (-x);
+        }
+        
+        public int[] getBitArr() {
+            return arr;
+        }
+    }
+    
+    public int reversePairs(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+        
+        int n = nums.length;
+        int[] copy = nums.clone();
+        Arrays.sort(copy);
+        
+        BinaryIndexTree bit = new BinaryIndexTree(n);
+        
+        int res = 0;
+        for (int i = n - 1; i >= 0; i--) {
+            int num = nums[i];
+            int idx1 = search(copy, 1.0 * num / 2);
+            
+            res += bit.query(idx1);
+            int idx2 = search(copy, num);
+            // System.out.println(1.0 * num / 2);
+            // System.out.println("nums: " + Arrays.toString(nums) + "    copy: " + Arrays.toString(copy) + "  BitArr: " + Arrays.toString(bit.getBitArr()) + "  nums[i]: " + nums[i] + "  idx1: " + idx1 + "  idx2: " + idx2 + "  Query Result in BIT: " + bit.query(idx1));
+            
+            bit.update(idx2);
+        }
+        return res;
+    }
+    
+    // find the first position in the arr that has arr[i] >= val
+    // private int search(int[] arr, double val) {
+    //     int lo = 0, hi = arr.length - 1;
+    //     while (lo + 1 < hi) {
+    //         int mid = lo + (hi - lo) / 2;
+    //         if (arr[mid] < val) {
+    //             lo = mid;
+    //         } else {
+    //             hi = mid;
+    //         }
+    //     }
+    //     if (arr[lo] >= val) return lo;
+    //     return hi;
+    // }
+    
+    // find the first index that has nums[i] >= val. i could exceed the boundary, for example: [-7, -4], when we search -3.5, then return 2
+    private int search(int[] arr, double val) {
+        int lo = 0, hi = arr.length;
+        while (lo < hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (arr[mid] < val) {
+                lo = mid + 1;
+            } else {
+                hi = mid;
+            }
+        }
+        
+        return lo;
+    }
+```
 
 
 ## Binary Search Tree
