@@ -185,6 +185,59 @@ Build Binary Index Tree:
     }
 ```
 
+Using Merge Sort (Divide & Conquer): 
+```
+    // Another approach to do Merge Sort without sorting
+    /*
+    https://www.youtube.com/watch?v=Uf-27aFXhHY
+    Time O(NlogN)
+    
+    Runtime: 37 ms, faster than 97.97% of Java online submissions for Reverse Pairs.
+    Memory Usage: 52 MB, less than 75.66% of Java online submissions for Reverse Pairs.
+    */
+    public int reversePairs(int[] nums) {
+        int[] temp = new int[nums.length];
+        return sort(nums, temp, 0, nums.length - 1);
+    }
+    
+    private int sort(int[] nums, int[] temp, int lo, int hi) {
+        if (lo >= hi) return 0;
+        int mid = lo + (hi - lo) / 2;
+        int count = 0;
+        count += sort(nums, temp, lo, mid);
+        count += sort(nums, temp, mid + 1, hi);
+        count += merge(nums, temp, lo, mid, hi);
+        return count;
+    }
+    
+    private int merge(int[] nums, int[] temp, int lo, int mid, int hi) {
+        for (int i = lo; i <= hi; i++) {
+            temp[i] = nums[i];
+        }
+        
+        int i = lo, j = mid + 1, count = 0;
+        while (i <= mid && j <= hi) {
+            if ((long) nums[i] > 2 * (long) nums[j]) {
+                count += mid - i + 1;
+                j++;
+            } else {
+                i++;
+            }
+        }
+        
+        i = lo;
+        j = mid + 1;
+        for (int k = lo; k <= hi; k++) {
+            if (j > hi || (i <= mid && temp[i] < temp[j])) {
+                nums[k] = temp[i++];
+            } else {
+                nums[k] = temp[j++];
+            }
+        }
+        
+        return count;
+    }
+```
 
 ## Binary Search Tree
 
