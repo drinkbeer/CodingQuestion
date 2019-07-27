@@ -73,7 +73,7 @@ Note:
 |[287.Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)|[LeetCode-287-Find-the-Duplicate-Number.java](src/LeetCode-287-Find-the-Duplicate-Number.java)|Array|  
 |[289. Game of Life](https://leetcode.com/problems/game-of-life/)|[LeetCode-289-Game-of-Life.java](src/LeetCode-289-Game-of-Life.java)|Array|  
 |[296. Best Meeting Point](https://leetcode.com/problems/best-meeting-point/)|[LeetCode-296-Best-Meeting-Point.java](src/LeetCode-296-Best-Meeting-Point.java)|Array|
-|[315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)|[LeetCode-315-Count-of-Smaller-Numbers-After-Self.java](src/LeetCode-315-Count-of-Smaller-Numbers-After-Self.java)|Array, MergeSort|
+|[★315. Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)|[LeetCode-315-Count-of-Smaller-Numbers-After-Self.java](src/LeetCode-315-Count-of-Smaller-Numbers-After-Self.java)|Array, MergeSort, BST, BIT|
 |[329. Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)|[LeetCode-329-Longest-Increasing-Path-in-a-Matrix.java](src/LeetCode-329-Longest-Increasing-Path-in-a-Matrix.java)|Array, DFS|
 |[339. Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)|[LeetCode-339-Nested-List-Weight-Sum.java](src/LeetCode-339-Nested-List-Weight-Sum.java)|Recursive|
 |[341. Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/)|[LeetCode-341-Flatten-Nested-List-Iterator.java](src/LeetCode-341-Flatten-Nested-List-Iterator.java)|Array|
@@ -88,6 +88,7 @@ Note:
 |[435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)|[LeetCode-435-Non-overlapping-Intervals.java](src/LeetCode-435-Non-overlapping-Intervals.java)|Iterative|
 |[463. Island Perimeter](https://leetcode.com/problems/island-perimeter/)|[LeetCode-463-Island-Perimeter.java](src/LeetCode-463-Island-Perimeter.java)|Recursive|
 |[448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)|[LeetCode-448-Find-All-Numbers-Disappeared-in-an-Array.java](src/LeetCode-448-Find-All-Numbers-Disappeared-in-an-Array.java)|Arraay|
+|[★493. Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)|[LeetCode-493-Reverse-Pairs.java](src/LeetCode-493-Reverse-Pairs.java)|Array, MergeSort, BST, BIT|
 |[540. Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)|[LeetCode-540-Single-Element-in-a-Sorted-Array.java](src/LeetCode-540-Single-Element-in-a-Sorted-Array.java)|Binary Search|
 |[560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)|[LeetCode-560-Subarray-Sum-Equals-K.java](src/LeetCode-560-Subarray-Sum-Equals-K.java)|Culmulative Sum|
 |[661. Image Smoother](https://leetcode.com/problems/image-smoother/)|[LeetCode-661-Image-Smoother.java](src/LeetCode-661-Image-Smoother.java)|Array|
