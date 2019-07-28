@@ -24,12 +24,8 @@ public class Solution {
             int from = prerequisites[i][1];
             int to = prerequisites[i][0];
             
-            if(!graph.containsKey(from)){
-                graph.put(from, new ArrayList<Integer>());
-            }
-            
             indegree[to]++;
-            graph.get(from).add(to);
+            graph.computeIfAbsent(from, k -> new ArrayList<>()).add(to);
         }
         
         Queue<Integer> queue = new LinkedList<Integer>();
@@ -38,10 +34,6 @@ public class Solution {
                 queue.offer(i);
             }
         }
-        
-        
-        // result[0] = 0;
-        // return result;
         
         int index = 0, count = 0;
         while(!queue.isEmpty()){
@@ -64,46 +56,41 @@ public class Solution {
     }
     
     // 2.DFS
-    // public int[] findOrder(int numCourses, int[][] prerequisites) {
-    //     if(prerequisites == null || prerequisites.length == 0) return null;
+//     public int[] findOrder(int numCourses, int[][] prerequisites) {
+//         if(prerequisites == null) return null;
         
-    //     HashMap<Integer, List<Integer>> graph = new HashMap<Integer, List<Integer>>();
-    //     for(int i = 0; i < prerequisites.length; i++){
-    //         int from = prerequisites[i][1];
-    //         int to = prerequisites[i][0];
+//         HashMap<Integer, List<Integer>> graph = new HashMap<Integer, List<Integer>>();
+//         for(int i = 0; i < prerequisites.length; i++){
+//             int from = prerequisites[i][1];
+//             int to = prerequisites[i][0];
             
-    //         if(!graph.containsKey(from)){
-    //             graph.put(from, new ArrayList<Integer>());
-    //         }
-            
-    //         List<Integer> list = graph.get(from);
-    //         list.add(to);
-    //         graph.put(from, list);
-    //     }
+//             graph.computeIfAbsent(from, k -> new ArrayList<>()).add(to);
+//         }
         
-    //     int[] visited = new int[numCourses];
-    //     for(int i = 0; i < numCourses; i++){
-    //         if(visited[i] == 0){
-    //             DFS();
-    //         }
-    //     }
+//         List<Integer> result = new ArrayList<Integer>();
+//         int[] visited = new int[numCourses];
+//         for(int from = 0; from < numCourses; from++){
+//             if(visited[from] == 0 && hasCycle(from, graph, visited, result)){
+//                 return new int[0];
+//             }
+//         }
         
-    //     List<Integer> result = new ArrayList<Integer>();
-        
-    // }
+//         return result.stream().mapToInt(i -> i).toArray();
+//     }
     
-    // private void DFS(int from, HashMap<Integer, List<Integer>> graph, int[] visited, List<Integer> result){
-    //     // end condition
-    //     if(visited.length == result.size()) return;
-    //     visited[from] = 1;
+//     private boolean hasCycle(int from, HashMap<Integer, List<Integer>> graph, int[] visited, List<Integer> result){
+//         // end condition
+//         if (visited[from] == 1) return true;
+//         visited[from] = 1;
+//         if(graph.containsKey(from)){
+//             for(int to : graph.get(from)){
+//                 if (visited[to] == 1) return true;
+//                 if (visited[to] == 0 && hasCycle(to, graph, visited, result)) return true;
+//             }
+//         }
         
-    //     if(graph.containsKey(from)){
-    //         for(int i : graph.get(from)){
-    //             if(visited[i] == 0){
-    //                 DFS(i, graph, visited, );
-    //             }
-    //         }
-            
-    //     }
-    // }
+//         result.add(0, from);
+//         visited[from] = -1;
+//         return false;
+//     }
 }
