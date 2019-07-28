@@ -216,6 +216,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)|[LeetCode-300-Longest-Increasing-Subsequence.java](src/LeetCode-300-Longest-Increasing-Subsequence.java)|DP, Binary Search|
 |[303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/)|[LeetCode-303-Range-Sum-Query-Immutable.java](src/LeetCode-303-Range-Sum-Query-Immutable.java)|DP|
 |[304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)|[LeetCode-304-Range-Sum-Query-2D-Immutable.java](src/LeetCode-304-Range-Sum-Query-2D-Immutable.java)|DP|
+|[316. Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/)|[LeetCode-316-Remove-Duplicate-Letters.java](src/LeetCode-316-Remove-Duplicate-Letters.java)|Greedy|
 |[★★★322. Coin Change](https://leetcode.com/problems/coin-change/)|[LeetCode-322-Coin-Change.java](src/LeetCode-322-Coin-Change.java)|DP|
 |[338. Counting Bits](https://leetcode.com/problems/counting-bits/)|[LeetCode-338-Counting-Bits.java](src/LeetCode-338-Counting-Bits.java)|DP, Math|
 |[375. Guess Number Higher or Lower II](https://leetcode.com/problems/guess-number-higher-or-lower-ii/)|[LeetCode-375-Guess-Number-Higher-or-Lower-II.java](src/LeetCode-375-Guess-Number-Higher-or-Lower-II.java)|DP|
