@@ -518,9 +518,10 @@ https://leetcode.com/tag/stack/
 |[346. Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream/)|[LeetCode-346-Moving-Average-from-Data-Stream.java](src/LeetCode-346-Moving-Average-from-Data-Stream.java)|LinkedList|
 |[348. Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/)|[LeetCode-348-Design-Tic-Tac-Toe.java](src/LeetCode-348-Design-Tic-Tac-Toe.java)|Array|
 |[353. Design Snake Game](https://leetcode.com/problems/design-snake-game/)|[LeetCode-353-Design-Snake-Game.java](src/LeetCode-353-Design-Snake-Game.java)|Array|
-|[362. Design Hit Counter](https://leetcode.com/problems/design-hit-counter/)|[LeetCode-362-Design-Hit-Counter.java](src/LeetCode-362-Design-Hit-Counter.java)|Deque, Array|
-|[380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)|[LeetCode-380-Insert-Delete-GetRandom-O(1).java](src/LeetCode-380-Insert-Delete-GetRandom-O(1).java)|LinkedList|
+|[★362. Design Hit Counter](https://leetcode.com/problems/design-hit-counter/)|[LeetCode-362-Design-Hit-Counter.java](src/LeetCode-362-Design-Hit-Counter.java)|Deque, Array|
+|[★380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)|[LeetCode-380-Insert-Delete-GetRandom-O(1).java](src/LeetCode-380-Insert-Delete-GetRandom-O(1).java)|LinkedList|
 |[381. Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)|[LeetCode-381-Insert-Delete-GetRandomO(1)-Duplicates-allowed.java](src/LeetCode-381-Insert-Delete-GetRandomO(1)-Duplicates-allowed.java)|LinkedList|
+|[★460. LFU Cache](https://leetcode.com/problems/lfu-cache/)|[LeetCode-460-LFU-Cache.java](src/LeetCode-460-LFU-Cache.java)|HashMap|
 |[706. Design HashMap](https://leetcode.com/problems/design-hashmap/)|[LeetCode-706-Design-HashMap.java](src/LeetCode-706-Design-HashMap.java)|HashMap|
 |[716. Max Stack](https://leetcode.com/problems/max-stack/)|[LeetCode-716-Max-Stack.java](src/LeetCode-716-Max-Stack.java)|Two Stacks|
 
