@@ -256,3 +256,8 @@ https://leetcode.com/problems/k-closest-points-to-origin/
 //         return res;
 //     }
 ```
+
+## Reference
+[K’th Smallest/Largest Element in Unsorted Array | Set 1](https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array/)   
+[K’th Smallest/Largest Element in Unsorted Array | Set 2 (Expected Linear Time)](https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-2-expected-linear-time/)   
+[K’th Smallest/Largest Element in Unsorted Array | Set 3 (Worst Case Linear Time)](https://www.geeksforgeeks.org/kth-smallestlargest-element-unsorted-array-set-3-worst-case-linear-time/)     
