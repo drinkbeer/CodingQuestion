@@ -393,6 +393,7 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 |--------|--------|----|
 |[208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)|[LeetCode-208-Implement-Trie-Prefix-Tree.java](src/LeetCode-208-Implement-Trie-Prefix-Tree.java)|Trie|
 |[212. Word Search II](https://leetcode.com/problems/word-search-ii/)|[LeetCode-212-Word-Search-II.java](src/LeetCode-212-Word-Search-II.java)|Trie|
+|[336. Palindrome Pairs](https://leetcode.com/problems/palindrome-pairs/)|[LeetCode-336-Palindrome-Pairs.java](src/LeetCode-336-Palindrome-Pairs.java)|Trie|
 |[720. Longest Word in Dictionary](https://leetcode.com/problems/longest-word-in-dictionary/)|[LeetCode-720-Longest-Word-in-Dictionary.java](src/LeetCode-720-Longest-Word-in-Dictionary.java)|Trie|
 
 
