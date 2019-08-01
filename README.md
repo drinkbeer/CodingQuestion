@@ -35,6 +35,7 @@ Note:
 |[46.Permutations](https://leetcode.com/problems/permutations/)|[LeetCode-46-Permutations.java](src/LeetCode-46-Permutations.java)|DFS, BFS|
 |[47.Permutations II](https://leetcode.com/problems/permutations-ii/)|[LeetCode-47-Permutations-II.java](src/LeetCode-47-Permutations-II.java)|DFS, BFS|
 |[48 Rotate Image](https://leetcode.com/problems/rotate-image/)|[LeetCode-48-Rotate-Image.java](src/LeetCode-48-Rotate-Image.java)|Array|
+|[51. N-Queens](https://leetcode.com/problems/n-queens/)|[LeetCode-51-N-Queens.java](src/LeetCode-51-N-Queens.java)|Array|
 |[54 Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)|[LeetCode-54-Spiral-Matrix.java](src/LeetCode-54-Spiral-Matrix.java)|Array|
 |[59 Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/)|[LeetCode-59-Spiral-Matrix-II.java](src/LeetCode-59-Spiral-Matrix-II.java)|Array|
 |[56.Merge Intervals](https://leetcode.com/problems/merge-intervals/)|[LeetCode-56-Merge-Intervals.java](src/LeetCode-56-Merge-Intervals.java)|Array|
