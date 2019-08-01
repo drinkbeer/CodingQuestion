@@ -32,46 +32,48 @@ public class Solution {
     // }
     
     // 2.DP
+    /*
+    subproblem
+    dp[i][j]  -   whether s1 [0, i], s2 [0, j] could interleaving and construct s3 [0, i + j + 2]
+    
+    recurrence relation:
+    dp[i][j] = dp[i - 1][j] or dp[i][j - 1] if s3.charAt(i + j + 2) == s1.charAt(i) || s3.charAt(i + j + 1) == s2.charAt(j)
+    
+    */
     public boolean isInterleave(String s1, String s2, String s3) {
-        if(s1 == null && s2 == null && s3 == null) return true;
-        if(s1.length() == 0 && s2.length() == 0 && s3.length()  == 0) return true;
-        if(s3.length() != s1.length() + s2.length()) return false;
+        if (s1 == null || s2 == null || s3 == null || s1.length() + s2.length() != s3.length()) return false;
         
-        // state
-        int len1 = s1.length();
-        int len2 = s2.length();
-        boolean[][] state = new boolean[len1 + 1][len2 + 1];
+        int l1 = s1.length(), l2 = s2.length(), l3 = s3.length();
         
-        // init state
-        state[0][0] = true;
-        for(int i = 0; i < len1; i++){
-            if(s1.charAt(i) == s3.charAt(i)){
-                state[i + 1][0] = state[i][0];
-            }
+        // subproblem
+        boolean[][] dp = new boolean[l1 + 1][l2 + 1];
+        
+        // init
+        dp[0][0] = true;
+        for (int i = 1; i <= l1; i++) {
+            dp[i][0] = dp[i - 1][0] && (s1.charAt(i - 1) == s3.charAt(i - 1));
         }
-        for(int j = 0; j < len2; j++){
-            if(s2.charAt(j) == s3.charAt(j)){
-                state[0][j + 1] = state[0][j];
-            }
+        for (int j = 1; j <= l2; j++) {
+            dp[0][j] = dp[0][j - 1] && (s2.charAt(j - 1) == s3.charAt(j - 1));
         }
         
-        // calculate state
-        for(int i = 1; i <= len1; i++){
-            for(int j = 1; j <= len2; j++){
-                char ch = s3.charAt(i + j - 1);
-                if(ch == s1.charAt(i - 1)){
-                    // ch == s1.charAt(i - 1) means curr char can mark from i+j-1 in s3, but the problem is if 
-                    // the previous char in s2 is equal to the previous char in s3? It's state[i-1][j] shows.
-                    state[i][j] = state[i - 1][j] || state[i][j];
+        // recurrence relation
+        for (int i = 1; i <= l1; i++) {
+            for (int j = 1; j <= l2; j++) {
+                // ch == s1.charAt(i - 1) means curr char can mark from i+j-1 in s3, but the problem is if 
+                // the previous char in s2 is equal to the previous char in s3? It's state[i-1][j] shows.
+                if (s1.charAt(i - 1) == s3.charAt(i + j - 1)) {
+                    dp[i][j] |= dp[i - 1][j];
                 }
-                if(ch == s2.charAt(j - 1)){
-                    // ch==s2.charAt(j-1) means curr char can mark from i+j-1 in s3, we need to make sure
-                    // the previous char in s1 is equal to the previous char in s3. state[i][j-1] shows this.
-                    state[i][j] = state[i][j - 1] || state[i][j];
+                // ch==s2.charAt(j-1) means curr char can mark from i+j-1 in s3, we need to make sure
+                // the previous char in s1 is equal to the previous char in s3. state[i][j-1] shows this.
+                if (s2.charAt(j - 1) == s3.charAt(i + j - 1)) {
+                    dp[i][j] |= dp[i][j - 1];
                 }
             }
         }
-        return state[len1][len2];
+        
+        return dp[l1][l2];
     }
     
 }
