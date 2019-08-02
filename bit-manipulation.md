@@ -54,6 +54,8 @@ https://javarevisited.blogspot.com/2015/02/difference-between-right-shift-and.ht
 Right Shift: `>>`   
 Unsigned Right Shift: `>>>`   
 
+If it's a negative number, `>>` will use 1 to fill left side, but `>>>` will use 0 to fill left side.
+
 
 #### 190. Reverse Bits
 https://leetcode.com/problems/reverse-bits/
