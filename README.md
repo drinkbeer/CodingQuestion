@@ -68,6 +68,8 @@ Note:
 |[243. Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance/)|[LeetCode-243-Shortest-Word-Distance.java](src/LeetCode-243-Shortest-Word-Distance.java)|Array|
 |[244. Shortest Word Distance II](https://leetcode.com/problems/shortest-word-distance-ii/)|[LeetCode-244-Shortest-Word-Distance-II.java](src/LeetCode-244-Shortest-Word-Distance-II.java)|Array, Design|
 |[245. Shortest Word Distance III](https://leetcode.com/problems/shortest-word-distance-iii/)|[LeetCode-245-Shortest-Word-Distance-III.java](src/LeetCode-245-Shortest-Word-Distance-III.java)|Array|
+|[252.Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)|[LeetCode-252-Meeting-Rooms.java](src/LeetCode-252-Meeting-Rooms.java)|Array, LC 56|
+|[253.Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)|[LeetCode-253-Meeting-Rooms-II.java](src/LeetCode-253-Meeting-Rooms-II.java)|Array, Heap, LC 56|
 |[268.Missing Number](https://leetcode.com/problems/missing-number/)|[LeetCode-268-Missing-Number.java](src/LeetCode-268-Missing-Number.java)|Array|  
 |[277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)|[LeetCode-277-Find-the-Celebrity.java](src/LeetCode-277-Find-the-Celebrity.java)|Array|
 |[283.Move Zeroes](https://leetcode.com/problems/move-zeroes/)|[LeetCode-283-Move-Zeroes.java](src/LeetCode-283-Move-Zeroes.java)|Array|
@@ -106,8 +108,7 @@ Note:
 
 |[★78.Subsets](https://leetcode.com/problems/subsets/)|[LeetCode-78-Subsets.java](src/LeetCode-78-Subsets.java)|DFS|
 |[90.Subsets II](https://leetcode.com/problems/subsets-ii/)|[LeetCode-90-Subsets-II.java](src/LeetCode-90-Subsets-II.java)|DFS|
-|[252.Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)|[LeetCode-252-Meeting-Rooms.java](src/LeetCode-252-Meeting-Rooms.java)|Array, similar to 56.Merge Intervals|
-|[253.Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)|[LeetCode-253-Meeting-Rooms-II.java](src/LeetCode-253-Meeting-Rooms-II.java)|Array, similar to 56.Merge Intervals|
+
 
 
 ### String 
