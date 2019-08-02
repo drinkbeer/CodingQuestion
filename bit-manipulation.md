@@ -55,6 +55,8 @@ Right Shift: `>>`
 Unsigned Right Shift: `>>>`   
 
 If it's a negative number, `>>` will use 1 to fill left side, but `>>>` will use 0 to fill left side.
+`>>>` is unsigned-shift; it'll insert 0. `>>` is signed, and will extend the sign bit.
+
 
 
 #### 190. Reverse Bits
