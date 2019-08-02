@@ -50,11 +50,12 @@ The notation '0b' in front of a number is used as an indicator that what follows
 
 #### Right Shift vs Unsigned Right Shift
 https://javarevisited.blogspot.com/2015/02/difference-between-right-shift-and.html
+https://stackoverflow.com/questions/2811319/difference-between-and
 
 Right Shift: `>>`   
 Unsigned Right Shift: `>>>`   
 
-If it's a negative number, `>>` will use 1 to fill left side, but `>>>` will use 0 to fill left side.
+If it's a negative number, `>>` will use 1 to fill left side, but `>>>` will use 0 to fill left side.    
 `>>>` is unsigned-shift; it'll insert 0. `>>` is signed, and will extend the sign bit.
 
 
