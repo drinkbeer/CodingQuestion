@@ -48,6 +48,12 @@ The notation '0b' in front of a number is used as an indicator that what follows
 "0" - octal (八进制)   
 "0x" - hexadecimal （十六进制）    
 
+#### Right Shift vs Unsigned Right Shift
+https://javarevisited.blogspot.com/2015/02/difference-between-right-shift-and.html
+
+Right Shift: `>>`   
+Unsigned Right Shift: `>>>`   
+
 
 #### 190. Reverse Bits
 https://leetcode.com/problems/reverse-bits/
