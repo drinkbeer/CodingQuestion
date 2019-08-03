@@ -1,7 +1,7 @@
 
-SQL is relational database stores data in rows and columns. Each row contains all the information about one entity and each column contains all the separate data points. Some of the most popular relational database are MySQL, Oracle, MS SQL Server, SQLite, Postgres.
+**SQL** is relational database stores data in rows and columns. Each row contains all the information about one entity and each column contains all the separate data points. Some of the most popular relational database are MySQL, Oracle, MS SQL Server, SQLite, Postgres.
 
-NoSQL includes:
+**NoSQL** includes:
 1. Key-Value Store: data is stored in an array of key-value pairs. Well-known KV stores include Redis, DynamoDB.
 2. Document Databases: data is stored in documents (instend of rows and columns in a table) and these documents are grouped together in collections. Each document can have an entirely different structure, like MongoDB, CouchDB.
 3. Wide-Column Databases: Instead of 'tables', columnar databases have column families, which are containers for rows. Each row doesn't have the same number of columns. Columnar databases are best suited for analyzing large datasets - big names include Cassandra and HBase.
