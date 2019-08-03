@@ -1,4 +1,6 @@
 
+# Key Characteristics
+
 ## Scalability
 
 Scalability is the capability of a system, process, or a network to grow and manage increased demand. Increased demand could be increased number of requests, increased data volumes, etc.
@@ -23,3 +25,13 @@ We usually use the following two standard measures of system efficiency:
 
 * Latency: response time of one request.
 * Throughput: number of items delivered or number of bytes processed in a given time unit (e.g. a second).
+
+# Key Components
+
+## Load Balancer
+
+Load Balancer is used to spread the traffic across a cluster of servers to improve responsiveness and availability of applications, website or databases. LB can track the status of all resources while distributing the requests. If a server is not available to take new requests or is not responding or has elevated error rate, LB will stop sending traffic to it.
+
+
+
+
