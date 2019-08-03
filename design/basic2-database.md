@@ -30,3 +30,18 @@ Reasons to use NoSQL:
 
 ## 2. SQL Data Partitioning
 
+Data Partitioning is the technique to break up a big database (DB) into many smaller parts. It is the process of splitting up a DB/table across multiple machines to improve the manageability, performance, availability, and local balancing of an application.
+
+#### Partitioning Methods
+
+a. Horizontal Partitioning: put different rows to different tables in different servers. For example, a range based partition could place ZIP code [0, 10000] rows into table 1, ZIP code [10001, 20000] into table 2. The range based partition must choose range carefully, otherwide it will cause unbalanced servers.
+
+b. Vertical Partitioning: divide columns to different tables based on the features of the columns. For example, if we build an Instagram, we need to store data related to users, photos, people they followed. We can place usuer profile on one DB server, friend lists on another DB, photos on a third serveer. With the growth of our service, when there are more and more photos, we probably need to further partition photo tables.
+
+c. Directory Based Partitioning: use a dedicated lookup service to store the partitioning schema and abstracts it away from the DB. So GET will look up in the lookup service to find the partition of the entity based on partitioning rule, and then do the query in DB.
+
+#### Horizontal Partitioning Criteria
+
+a. Hash-based partitioning: a simple approach is to calculate hash function based on key attributes in the entity, and get the partition number. For instance, we have 100 servers, we use `hash(entity) % 100` to get the partition number to determine which server to store the data. But once we change number of servers, it will require huge re-hashing load. Another approach is to use Consistent Hashing.
+
+b. Pre-defined List based partition: we pre-define the rule of partitioning. For example, we make one rule <NorthAmerican, <US, Canada, Mexican>>, and <Asia, <China>>, <Asia2, <Japan, Koren>>, <Asia3, <India>>, and store the rules in a loop-up service.
