@@ -521,6 +521,7 @@ https://leetcode.com/tag/stack/
 |[232.Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)|[LeetCode-232-Implement-Queue-using-Stacks.java](src/LeetCode-232-Implement-Queue-using-Stacks.java)|Stack|  
 |[251. Flatten 2D Vector](https://leetcode.com/problems/flatten-2d-vector/)|[LeetCode-251-Flatten-2D-Vector.java](src/LeetCode-251-Flatten-2D-Vector.java)|Two Pointers|
 |[281.Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/)|[LeetCode-281-Zigzag-Iterator.java](src/LeetCode-281-Zigzag-Iterator.java)|LinkedList|
+|[284.Peeking Iterator](https://leetcode.com/problems/peeking-iterator/)|[LeetCode-284-Peeking-Iterator.java](src/LeetCode-284-Peeking-Iterator.java)|Cache|  
 |[346. Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream/)|[LeetCode-346-Moving-Average-from-Data-Stream.java](src/LeetCode-346-Moving-Average-from-Data-Stream.java)|LinkedList|
 |[348. Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/)|[LeetCode-348-Design-Tic-Tac-Toe.java](src/LeetCode-348-Design-Tic-Tac-Toe.java)|Array|
 |[353. Design Snake Game](https://leetcode.com/problems/design-snake-game/)|[LeetCode-353-Design-Snake-Game.java](src/LeetCode-353-Design-Snake-Game.java)|Array|
@@ -535,7 +536,6 @@ https://leetcode.com/tag/stack/
 
 
 [173.Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)  
-[284.Peeking Iterator](https://leetcode.com/problems/peeking-iterator/)  
 
 
 
