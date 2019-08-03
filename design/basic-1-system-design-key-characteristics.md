@@ -1,5 +1,5 @@
 
-# Key Characteristics
+# 1. Key Characteristics
 
 ## Scalability
 
@@ -26,18 +26,18 @@ We usually use the following two standard measures of system efficiency:
 * Latency: response time of one request.
 * Throughput: number of items delivered or number of bytes processed in a given time unit (e.g. a second).
 
-# Key Components
+# 2.Key Components
 
 ## Load Balancer
 
 Load Balancer is used to spread the traffic across a cluster of servers to improve responsiveness and availability of applications, website or databases. LB can track the status of all resources while distributing the requests. If a server is not available to take new requests or is not responding or has elevated error rate, LB will stop sending traffic to it.
 
-## Benefit of Load Balancer
+#### Benefit of Load Balancer
 * User experience faster, uninterrupted service. Users won't have to wait for a single struggling server to finish the previous tasks.
 * Service providers experience less downtime and higher throughput.
 * Load balancing makes it easier for system administrators to handle incoming requests while decreasing wait time for users.
 
-## Load Balancer Algorithms
+#### Load Balancer Algorithms
 
 Load Balancer considers two factors before forwarding a request to a backend server. 
 1. The server is actually responding appropriately to requests
@@ -53,5 +53,6 @@ Several algorithms are used to select servers from healthy server list:
 5. Weighted Round Robin Method - This is used to process the servers with different capability. Each server is assigned a weight, and servers with higher weight will receive new connections before those with less weight, and servers with higher weight will receive more connections than those with less weight.
 6. IP Hash - Calculate the hash partition based on IP address of client, and use the hash partition to determine which server to process the request.
 
+## Caching
 
 
