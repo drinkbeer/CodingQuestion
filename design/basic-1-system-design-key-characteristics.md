@@ -79,4 +79,9 @@ Cache contents must be consistent with the data store (e.g. database). Approache
 2. Write-around cache: PUT request will write to data store directly. GET will read from cache, but there is 'cache miss', so read from data store, and write to cache, and then return to user. It will protect the cache from being flooded by a huge amount of write operations.
 3. Write-back cache: PUT will write to cache along, and immediately return back to customer. There will be backend process to periodically write the cache to data store. This schema has low latency and high through-put, however, the speed comes with the risk of data loss in case of a crash or power outage. We could overcome the power outage by using Uninterruptted Data Supply (UPS).
 
-
+#### Cache Eviction Policy
+1. First In First Out (FIFO).
+2. Last In First Out (LIFO).
+3. Least Recently Used (LRU). Discard the least recently used item first.
+4. Lease Frequently Used (LFU): Counts frequency of item being used, and discard the least frequently used item first.
+5. Random Replacement (RR): Discard the randomly selected item.
