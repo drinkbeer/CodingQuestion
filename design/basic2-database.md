@@ -1,4 +1,6 @@
 
+## 1. SQL vs. NoSQL
+
 **SQL** is relational database stores data in rows and columns. Each row contains all the information about one entity and each column contains all the separate data points. Some of the most popular relational database are MySQL, Oracle, MS SQL Server, SQLite, Postgres.
 
 **NoSQL** includes:
@@ -25,4 +27,6 @@ Reasons to use NoSQL:
 1. Storing large volumes of data that often has little or even no structure.
 2. Fast change the data structure. NoSQL is extremely useful for a rapidi development when we need quick iterations of our system. We could update the data structure without a long downtime.
 3. Easy horizontal scale up to make full use of CLoud Storage and Computing. Most NoSQL supports automatically horizontal scale up, in which case we could fully utilize the cloud computing and storage.
+
+## 2. SQL Data Partitioning
 
