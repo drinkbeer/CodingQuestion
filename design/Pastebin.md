@@ -177,5 +177,6 @@ We use a standalone **Key Generation Service (KGS)** to generate random six lett
 1. Metadata Storage: AWS RDS (MySQL)
 2. Object Storage: AWS S3
 
+![Pastebin Detailed](pic/Pastebin.Detailed.png "Pastebin.Detailed")
 
 
