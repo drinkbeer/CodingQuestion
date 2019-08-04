@@ -162,5 +162,18 @@ Videos and Photos could be stored in AWS S3.
 
 ## Detailed Design
 
+#### 1. Splitting APIs to independent WS
+The Read Photo API, Write Photo API, Read Video API, Write Photo API, Search API have totally different load, so we prefer to split these APIs to different Web Servers, so we could scale up based on loads. We could also do special optimization for different APIs independently.
+
+#### 2. Improve Reliability by introducing redundancy.
+
+We could use AWS Cross-Region Replica (CRR) service to improve the reliability of Object Storage.
+
+For metadata storage, we could use Database periodical backup to backup the database.
+
+#### How to generate Photo ID?
+
+
+
 
 
