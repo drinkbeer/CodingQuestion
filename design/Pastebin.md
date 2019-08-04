@@ -135,7 +135,7 @@ PK    |   api_dev_key: varchar(512)
 
 ## High Level Design
 
-![Pastebin Basic](design/pic/Pastebin.Basic.png "Pastebin.Basic")
+![Pastebin Basic](pic/Pastebin.Basic.png "Pastebin.Basic")
 
 
 ## Component Design
