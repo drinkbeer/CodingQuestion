@@ -105,6 +105,37 @@ deletePaste(api_dev_key, api_paste_key)
 
 ## Database Design
 
+A few observations about the nature of the data we are storing:
+1. Store billions of records.
+2. Paste metadata is small (less than 1 KB).
+3. Paste data size is medium (avg 10 KB, maximum 10 MB)
+4. Query structure is simple, no need transaction or complex query. No special relationship between records.
+5. Read-heavy, write-light.
+
+DB schema:
+
+Paste table:
+
+```
+PK    |   url_hash: varchar(16)
+      |   api_paste_key: varchar(512)
+FK    |   api_dev_key: varchar(512)
+      |   expiration_date: datetime
+      |   creation_date: datetime
+```
+
+User table:
+
+```
+PK    |   api_dev_key: varchar(512)
+      |   email: varchar(512)
+      |   creation_date: datetime
+      |   last_login_date: datetime
+```
+
+## High Level Design
+
+## Component Design
 
 
 
