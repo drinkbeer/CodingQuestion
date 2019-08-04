@@ -227,7 +227,7 @@ The News Feed Service will be a back-end service. It will continuously run in ba
 
 #### When pulling data from the followee's top 100 Photos/Videos, how to sort it?
 
-
+For Sorting/Ranking, No Good Solution Now.
 
 
 
