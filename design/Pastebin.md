@@ -143,7 +143,35 @@ Web Server: AWS EC2
 ![Pastebin Basic](pic/Pastebin.Basic.png "Pastebin.Basic")
 
 
-## Component Design
+## Detailed Design
+
+**Application Layer** will process the incoming and outgoing requests. The application layer will be talking to the backend data store.
+
+#### How a Write Request works?
+
+We use a standalone **Key Generation Service (KGS)** to generate random six letters strings beforehand and stores them in a database. Using a dedicated KGS will make use don't need to worry about the key duplication and collision. And also will make the write path simple and fast. KGS could have two tables, one for keys used, one for keys have not used. KGS can also cache some keys in memory so that whenever a server needs them, it can quickly provide keys. When keys get cached, it should be removed from unused table, to avoid collision. If KGS crashed, these keys will be wasted, but it's okay.
+
+**What if KGS be a single point of failure?** Yes. It could be a single point of failure. To solve this, we could have a standby replica of KGS and whenever the prrimary serveer dies it can take over to generate and provide keys.  
+
+**Can we move the cache layer from KGS to the memory of WS?** Yes. If the WS crashed, we will lose these keys, but it's okay, as our key space is 68 Billion.
+
+**Write Path**: Client -> LB -> WS           ->              LB          ->      Cache    ->  Object Storage
+                                 |                            |
+                                 v                            v          ->      Metadata Cache -> Metadata Storage
+                        KGS (or Cached Keys)
+                                 |
+                                 v
+         KeyDB (Not Used)  <-  KeyDB (Not Used)          
+
+
+**Read Path**: Client -> LB -> WS           ->              LB          ->      Cache    ->  Object Storage
+                                                             |
+                                                             v          ->      Metadata Cache -> Metadata Storage
+
+**Datastore Layer**
+
+1. Metadata Storage: AWS RDS (MySQL)
+2. Object Storage: AWS S3
 
 
 
