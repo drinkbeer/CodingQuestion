@@ -171,7 +171,20 @@ We could use AWS Cross-Region Replica (CRR) service to improve the reliability o
 
 For metadata storage, we could use Database periodical backup to backup the database.
 
-#### How to generate Photo ID?
+#### 3. How to generate global unique Photo ID? Using a independent KGS.
+We could use a dedicated Key Generation Service (KGS) to generate base64 encoded key, which are 6 bytes. So totally 64^6 keys in key space. To avoid single point of failure, we could have two databases, one generate even keys, one generate odd keys.
+
+LB -> KGS1 -> DB 1
+ |
+  --> KGS2 --> DB 2
+ 
+ DB 1 only generate odd keys, DB 2 only generate even keys.
+ 
+ We can put a LB in front of them to round robin to deal with downtime.
+ 
+#### With the global unique Photo ID, how could we do DB partition? Using Consistent Hashing.
+
+Using Base64 encoding algorithm to encode DB servers, and global photo id. Assign the photo metadata to the nearest next node in the clockwise in the Hash Ring.
 
 
 
