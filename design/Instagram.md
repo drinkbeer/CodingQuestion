@@ -159,6 +159,7 @@ Videos and Photos could be stored in AWS S3.
 
 ## High Level Design
 
+![Instagram Basic](pic/Instagram.Basic.png "Instagram.Basic")
 
 ## Detailed Design
 
@@ -229,6 +230,7 @@ The News Feed Service will be a back-end service. It will continuously run in ba
 
 For Sorting/Ranking, No Good Solution Now.
 
+![Instagram Detailed](pic/Instagram.Detailed.png "Instagram.Detailed")
 
 
 
