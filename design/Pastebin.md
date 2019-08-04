@@ -155,6 +155,7 @@ We use a standalone **Key Generation Service (KGS)** to generate random six lett
 
 **Can we move the cache layer from KGS to the memory of WS?** Yes. If the WS crashed, we will lose these keys, but it's okay, as our key space is 68 Billion.
 
+```
 **Write Path**: Client -> LB -> WS           ->              LB          ->      Cache    ->  Object Storage
                                  |                            |
                                  v                            v          ->      Metadata Cache -> Metadata Storage
@@ -162,11 +163,14 @@ We use a standalone **Key Generation Service (KGS)** to generate random six lett
                                  |
                                  v
          KeyDB (Not Used)  <-  KeyDB (Not Used)          
+```
 
-
+```
 **Read Path**: Client -> LB -> WS           ->              LB          ->      Cache    ->  Object Storage
                                                              |
                                                              v          ->      Metadata Cache -> Metadata Storage
+```
+
 
 **Datastore Layer**
 
