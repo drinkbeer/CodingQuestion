@@ -78,10 +78,84 @@ Peak will be 30 Gbps.
 
 ## API Design
 
+#### Read Photo/Video
 
+```
+getPhotos(user_id, photo_id)
+```
+
+```
+getVideos(user_id, video_id)
+```
+
+#### Write Photo/Video
+
+```
+putPhotos(user_id, expiration_data, public=False, desc=None)
+```
+
+```
+putVideos(user_id, expiration_data, public=False, desc=None)
+```
+
+#### Search Phot/Video
+
+```
+searchPhoto(key_word)
+```
+
+```
+searchVideo(key_word)
+```
 
 ## Database Design
 
+Some consideration for database design:
+1. Store billions of metadata.
+2. Each metadata is small.
+3. Read is about 10x of write.
+
+User Table
+
+```
+PK  | user_id: int
+    | name: varchar(30)
+    | email: varchar(30)
+    | date_of_birth: date
+    | creation_date: date
+    | last_login: date
+```
+
+Relation Table:
+```
+PK  | user_id: int
+PK  | user_id: int
+```
+
+Photo Table:
+```
+PK  | photo_id: int
+    | photo_path: varchar(100)
+    | photo_latitude: int
+    | photo_longitude: int
+    | user_latitude: int
+    | user_longitude: int
+    | creation_date: date
+```
+
+```
+PK  | video_id: int
+    | video_path: varchar(100)
+    | video_latitude: int
+    | video_longitude: int
+    | user_latitude: int
+    | user_longitude: int
+    | creation_date: date
+```
+
+Metadata is recommended to store in SQL, like AWS RDS (MySQL), because we need to do Join. We could discuss the data base scale up plan in later section.
+
+Videos and Photos could be stored in AWS S3.
 
 ## High Level Design
 
