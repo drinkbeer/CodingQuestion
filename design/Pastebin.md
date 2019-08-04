@@ -135,6 +135,11 @@ PK    |   api_dev_key: varchar(512)
 
 ## High Level Design
 
+Object storage: AWS S3  
+Metadata storage: AWS RDS (MySQL)  
+Web Server: AWS EC2  
+
+
 ![Pastebin Basic](pic/Pastebin.Basic.png "Pastebin.Basic")
 
 
