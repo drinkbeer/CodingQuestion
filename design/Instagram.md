@@ -196,7 +196,10 @@ We are using the global unique photo id KGS, and then do Consistent Hashing usin
 
 #### How to handle hot photos/videos? A video/photo has been visited by a large amount of people.
 
-We could use a global cache system to cache hot videos/photos based on trends.
+We could use a global cache system (Geographical CDN) to cache hot videos/photos. 
+The Cache policy is: Write-around cache (Write to S3 directly, when read the video, read to CDN first, and then supply through CDN)  
+The Cache Eviction Policy: Least Frequently Used (LFU)
+
 
 #### News Feed Genertion
 
