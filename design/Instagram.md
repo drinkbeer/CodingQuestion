@@ -76,6 +76,13 @@ One year, we need 370 PiB. We could use AWS S3 as object storage.
 
 Peak will be 30 Gbps.
 
+## API Design
+
+
+
+## Database Design
+
+
 ## High Level Design
 
 
