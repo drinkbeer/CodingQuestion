@@ -192,19 +192,40 @@ global unique id -> (encode) 6 bytes consistent hashing id in the ring
 
 using the 6 bytes consistent hashing id to find the cloest DB server in clockwise in the hash ring, and store the metadata in the server.
 
-#### How to handle hot user? A user uploads a large amount of photos and videos. 
+#### 5. How to handle hot user? A user uploads a large amount of photos and videos. 
 
 We are using the global unique photo id KGS, and then do Consistent Hashing using Base64 algorithm, so the distirbution of photos are evenly. A single use has a lot of photos/videos will not affect the performance.
 
-#### How to handle hot photos/videos? A video/photo has been visited by a large amount of people.
+#### 6. How to handle hot photos/videos? A video/photo has been visited by a large amount of people.
 
 We could use a global cache system (Geographical CDN) to cache hot videos/photos. 
 The Cache policy is: Write-around cache (Write to S3 directly, when read the video, read to CDN first, and then supply through CDN)  
 The Cache Eviction Policy: Least Frequently Used (LFU)
 
 
-#### News Feed Genertion
+#### 7. News Feed Genertion
 
+To create the News Feed for any given user, we need to fetch the latest, most popular and relevent photos of the people the user follows.
+
+For simplicity, let's assume we need to fetch top 100 photos for user's News Feed. The simple process is: Search Relation Table to get a list of people the user follows -> fetch the metadata of latest top 100 photos from each people -> put all these top 100 photos and videos into the ranking system, and generate top 100 photos/videos (based on recency, likeness, etc), and return to user.
+
+The problem with this approach has very high latency, as we have to query multiple tables, and perform sorting/merging/ranking on the results.
+
+#### Better approach: pre-generated News Feed
+
+We could have a dedicated News Feed service to continuously generate users' news feeds and storing them in a "UserNewsFeed" table. So whenever any user needs latest photos for their News Feed, they will simply query this table.
+
+The News Feed Service will be a back-end service. It will continuously run in backend. It will first fetch the timestamp of the last News Feed of the user, and fetch the news after the timestamp. It will do it incrementally.
+
+#### What are the different approaches for sending News Feed contents to the users?
+
+1. Pull. Clients can pull the News Feed contents from the server on a regular basis or manually whenever they need it.
+
+2. Push. Servers can push new photo/video to the users' News Feed as soon as it is available. The problem for this approach is, when a celebrity updated a photo/video, server has to push the photo/video to thousands of followers' News Feed.
+
+3. Hybrid. Move the celebrity with a large amount of followers to pull mode. Which means when it updated a photo/video, it will not push to it's followers' news feed. When follower try to retrieve News Feed, server will pull the celebrity's News. Another approach is, the serverr pushes the celebrity's updates to all the followers News Feed no more than a certain frequency.
+
+#### When pulling data from the followee's top 100 Photos/Videos, how to sort it?
 
 
 
