@@ -190,6 +190,17 @@ global unique id -> (encode) 6 bytes consistent hashing id in the ring
 
 using the 6 bytes consistent hashing id to find the cloest DB server in clockwise in the hash ring, and store the metadata in the server.
 
+#### How to handle hot user? A user uploads a large amount of photos and videos. 
+
+We are using the global unique photo id KGS, and then do Consistent Hashing using Base64 algorithm, so the distirbution of photos are evenly. A single use has a lot of photos/videos will not affect the performance.
+
+#### How to handle hot photos/videos? A video/photo has been visited by a large amount of people.
+
+We could use a global cache system to cache hot videos/photos based on trends.
+
+#### News Feed Genertion
+
+
 
 
 
