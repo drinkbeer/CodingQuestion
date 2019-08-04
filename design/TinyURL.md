@@ -10,14 +10,14 @@ https://www.educative.io/collection/page/5668639101419520/5649050225344512/56686
 * (Optional) Customize short URL
 * (Optional) Short URL should expire after a specific time
 
-### Non-Requirement
+#### Non-Requirement
 
 * Highly available. If the service is down, all short URL redirection will start failing.
 * Low latency. URL redirection should happen in real-time with minimal latency.
 * Short URL should not be guessable (not predictable).
 
 
-### QPS + Storage
+#### QPS + Storage
 
 1.询问面试官日活跃度
  * 约100M
@@ -41,7 +41,7 @@ https://www.educative.io/collection/page/5668639101419520/5649050225344512/56686
 * 100M * 1 * 20% = 20M requests
 * 20M * 100 bytes = 1.86 GiB
 
-### Service
+## Service
 
 1. Store <id, longUrl> pair in SQL DB
 
