@@ -80,6 +80,8 @@ Receive Message:
 * Client poll threads from `socket server` every 10 seconds.
 * If there is new threads, send a notification to user.
 
+![WhatsApp.Basic.png](pic/WhatsApp.Basic.png)
+
 ## Detailed Design
 
 #### Write Path
