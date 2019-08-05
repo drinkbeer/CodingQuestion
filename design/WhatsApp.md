@@ -66,7 +66,7 @@ PK  | user_id:int
     | create_time:datetime
 ```
 
-Message Table could be stored in NoSQL, as the message is mainly for read, and don't need update.
+Message Table could be stored in NoSQL, like AWS DynamoDB, as the message is mainly for read and write, and don't need update. DynamoDB also supports range query, which will make range based query easy.
 
 Thread Table use MySQL. We could index by 
 * `owner_id + thread_id` (primary key which could be used for searching).
