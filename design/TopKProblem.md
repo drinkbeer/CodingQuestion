@@ -97,10 +97,24 @@ The reason we aggregate few seconds of data in the buffer of Web Server, and do 
 
 For the fast path, we dump the data in the distributed Messaging System into a distributed storage system, e.g. AWS S3 or HDFS. We run two MapReduce jobs: Frequency Count Job, TopK MapReduce Job. We store the TopK MapReduce Job result in the Storage Host.
 
+* **Data Partitioner**: 1). Parse batches of events into individual events. 2). Hash Partitioning (e.g. Video Identifier + time window). 3). Deals with hot partitions.
 
-#### Write Path
+Then put each partition of data (a subset of data) into each Kafka topic. Kafka will take care of the replication. 
 
-#### Read Path
+* **Partition Processor**: Aggregate one partition data in memory over the time window of several minutes, and process the data in one partition using the Two MapReduce Job mentioned above.
+
+#### Discussion about the fast processor and slow processor
+
+If the accuracy is not important, we could just use the fast process, which is easy to implement. And we could merge the result of several seconds into large time window, e.g. one hour. But the One hour result is not accurage.
+
+If we need accurate ressult for one hour, we have to use Hadoop to process the data.
+
+#### Fast Path
+
+#### Slow Path
+
+
+![TopK.Slow.Path.png](pic/TopK.Slow.Path.png)
 
 
 
