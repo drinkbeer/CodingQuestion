@@ -63,8 +63,20 @@ A improved solution is to use multiple hosts to count frequency. It will be a hu
 
 ![TopK.Basic.png](pic/TopK.Basic.png)
 
+Algorithms:
+1. Randomly partitioning data into Processor Hosts.
+2. Each Processor Host collect the data, and get the TopK list in the host, and sort the list.
+3. Pass the sorted TopK list to the Storage Host, and do a K-way merge, to get the final TopK. Time: O(KlogK).
+
+This approach will have better scalability and throughput. Drawbacks:
+1. Data set could be streaming data, and no boundary (means infinite). 
+2. We need per 1 minutes TopK, 5 minute TopK, or even 1 hour TopK, we cannot store all the state in the memory of Processor Host.
 
 ## Detailed Design
+
+
+
+
 
 #### Write Path
 
