@@ -39,6 +39,34 @@ Assume 1 message is 30 bytes, total size one day:
 
 ## Database Design
 
+Message Table
+```
+PK  | msg_id:int
+    | thread_id:int
+    | from_user_id:int
+    | to_user_id:int
+    | content:varchar(300)
+    | create_time:datetime
+```
+
+Thread Table
+```
+PK  | thread_id:int
+    | owner_id:int
+    | participant_ids:text
+    | nickname: string
+    | create_time:datetime
+    | update_time:datetime
+```
+
+Message Table could be stored in NoSQL, as the message is mainly for read, and don't need update.
+
+Thread Table use MySQL. We could index by 
+* `owner_id + thread_id` (primary key which could be used for searching).
+* `owner_id + updated_time` (make the thread order by update time descending.
+NoSQL doesn't have good support for secondary index.
+
+
 ## High Level Design
 
 ## Detailed Design
