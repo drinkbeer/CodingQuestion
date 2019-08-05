@@ -120,5 +120,31 @@ redis> TTL <user_id>
 If we use the Fixed Sliding Window, then we don't update the expiration time of the entry when we update the timestamp. If we use the Rolling Sliding Window, we could update the expiration of the HashMap each time, and remove the timestamp that older than one hour by ourself. (as we are sure that the size of the hashmap is less than 3600, so the remove algorithm is quite efficient.)
 
 
+#### Components
+1. JobScheduler
+* Starts/Stops scheduler (e.g. ScheduledExecutorService)
+* Runs RetrieveRulesTask periodically
+
+2. RulesCache
+* Stores token bucket objects
+* Map / ConcurrentHashMap / Google Guava Cache
+
+3. ClientIdentifier
+* Retrieves client identity
+* Information from request context
+
+4. RateLimiter: TokenBucketRateLimiter
+* Retrieve token bucket from cache
+* Calls allowRequest() on the bucket
+
+5. RetrieveRulesTask
+* Makes a remote call to Rules service
+* Creates token buckets and loads them into cache
+
+
+
+
+
+
 ## Reference
 * https://www.youtube.com/watch?v=FU4WlwfS3G0
