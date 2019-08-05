@@ -6,6 +6,10 @@ MapReduce is also not enough, as the requests are keep on going, the top 100 is 
 
 ## Requirement
 
+Some questions could ask to define the problem?
+1. How large is the data set? Infinite streaming data.
+2. How accuracy the system required? As accurate as possible, but we also need to have the result as fast as possible. So there is a balance between accuracy and speed.
+
 #### Functional Requirement
 1. Return the list of Top 100 shared links in the past 1 minute, 5 minutes, 15 minutes, 60 minutes.
 
@@ -120,6 +124,7 @@ https://soulmachine.gitbooks.io/system-design/cn/bigdata/heavy-hitters.html
 
 #### How big is the K?
 
+#### What is the drawbacks of this architecture?
 
 
 #### Fast Path
