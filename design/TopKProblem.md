@@ -38,6 +38,24 @@ topK(k, start_time, end_time)
 
 ## High Level Design
 
+Hashtable, singlehost
+
+```
+Input Data:
+A B C A A D C A B C
+
+Hashtable:
+C: 3
+D: 1
+A: 4
+B: 2
+
+Use Heap:
+Time: O(NlogK) - K is number of top K we required, N is total links
+A: 4
+C: 3
+
+```
 
 
 ## Detailed Design
