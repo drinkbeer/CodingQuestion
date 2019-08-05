@@ -69,6 +69,17 @@ NoSQL doesn't have good support for secondary index.
 
 ## High Level Design
 
+The basic idea for high level design.
+
+Send Message:
+* Client send a message to server
+* Server creates a message in Message Table.
+* Server creates one thread for all participant in the Thread Table (include sender and receivers)
+
+Receive Message:
+* Client poll threads from `socket server` every 10 seconds.
+* If there is new threads, send a notification to user.
+
 ## Detailed Design
 
 #### Write Path
