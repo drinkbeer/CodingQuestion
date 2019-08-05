@@ -141,7 +141,9 @@ Client A send a text message to Message Server
 -> Message Server send to Channel Service if it's group chatting or Supplier Service if it's single person chatting 
 -> Channel Service or Supplier Service will forward the message to the Socket Server
 -> Socket Server will build Socket Conneciton if the connection doesn't exist 
--> Send message to client.
+-> Send message to Client B.
+-> Send ACK to Message Server
+-> Message Server send ACK to Client A.
 ```
 
 ![WhatsApp.Detailed.png](pic/WhatsApp.Detailed.png)
