@@ -117,10 +117,7 @@ redis> EXPIRE <user_id> 3600
 redis> TTL <user_id>
 ```
 
-If we use the Fixed Sliding Window, then we don't update the expiration time of the entry when we update the timestamp. If we use the Rolling Sliding Window, we could update the expiration of the HashMap each time, and remove the timestamp that older than one hour by ourself.
+If we use the Fixed Sliding Window, then we don't update the expiration time of the entry when we update the timestamp. If we use the Rolling Sliding Window, we could update the expiration of the HashMap each time, and remove the timestamp that older than one hour by ourself. (as we are sure that the size of the hashmap is less than 3600, so the remove algorithm is quite efficient.)
 
 
-#### Write Path
-
-#### Read Path
 
