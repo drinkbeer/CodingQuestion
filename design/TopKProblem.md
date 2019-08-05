@@ -82,7 +82,7 @@ Analysis of the problem:
 
 ![TopK.Count.Min.Sketch.png](pic/TopK.Count.Min.Sketch.png)
 
-
+We use Count-min sketch to count the frequency of each element to avoid hash collision, and we maintain a TopK heap to get the TopK. So in memory, there is only Count-min sketch and a max heap.
 
 
 
