@@ -61,7 +61,7 @@ Single host solution is not scalable, and will become single point of failures.
 
 A improved solution is to use multiple hosts to count frequency. It will be a huge hash table in memory.
 
-![TopK.Basic.png](TopK.Basic.png)
+![TopK.Basic.png](pic/TopK.Basic.png)
 
 
 ## Detailed Design
