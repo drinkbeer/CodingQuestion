@@ -78,6 +78,12 @@ Analysis of the problem:
 1. We need the whole data set in the particular time period (e.g. one day). But one day dateset is too large to hold in memory of a single host. Solution to this problem: store the dataset in disk, and only process one chunk of data in memory, get TopK of the chunk, and finally merge the TopK of all chunks to get the final TopK. This is the MapReduce counting idea.
 2. The complexity of the solution. Every time we introduce data partitioning, we need to deal with data replication, so data in each partition are stored in multiple nodes.
 
+#### How to count the number of each element in the data stream? Count-min sketch
+
+![TopK.Count.Min.Sketch.png](pic/TopK.Count.Min.Sketch.png)
+
+
+
 
 
 #### Write Path
