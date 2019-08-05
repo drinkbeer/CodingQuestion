@@ -109,6 +109,19 @@ If the accuracy is not important, we could just use the fast process, which is e
 
 If we need accurate ressult for one hour, we have to use Hadoop to process the data.
 
+#### The first step is aggregate the data in the API Gateway. What if we are processing the TopK exceptions, but the API Gateway host doesn't have enough CPU or memory to process the logs?
+
+As we are finally send the logs to a dedicated storage host. We could process the logs in a dedicated cluster.
+
+#### Any alternativee to Count-min sketch?
+
+We could use Lossy Counting Algorithm, Space Saving Algorithm to replace Count-min Sketch.
+https://soulmachine.gitbooks.io/system-design/cn/bigdata/heavy-hitters.html
+
+#### How big is the K?
+
+
+
 #### Fast Path
 ![TopK.Fast.Path.png](pic/TopK.Fast.Path.png)
 
