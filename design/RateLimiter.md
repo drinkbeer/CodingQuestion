@@ -7,7 +7,7 @@
 
 #### Non-Functional Requirement
 1. Low Latency. Rate Limiter should not introduce substantial latencies affecting customer experience.
-2. High Availabile. The Rate Limiter should always work to protect our services from overwhelming.
+2. High Available. The Rate Limiter should always work to protect our services from overwhelming.
 
 ## Analysis
 
