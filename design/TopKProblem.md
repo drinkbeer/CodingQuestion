@@ -110,6 +110,7 @@ If the accuracy is not important, we could just use the fast process, which is e
 If we need accurate ressult for one hour, we have to use Hadoop to process the data.
 
 #### Fast Path
+![TopK.Fast.Path.png](pic/TopK.Fast.Path.png)
 
 #### Slow Path
 
