@@ -84,6 +84,17 @@ Receive Message:
 
 ## Detailed Design
 
+In the High Level Design, we are letting client to poll message every 10 seconds, it's not a real-time communication, and could have as most as 10 seconds delay. It's better to build a long-running Socket Connection between client and Socket Server. Whenever message server receives a message, it will find the Socket Server which is responsible for the thread of the receiver, and pass message to receiver through the long-running socket connection.
+
+#### How to maintain the long-running socket connection between client and Socket Server?
+If a socket connection has been inactive for 10 minutes, we interrupt the connection. If the socket connection is interrupted, and if there is a new message comes in, socket server builds a new socket connection to client.
+
+#### What's the main difference betwen a Socket Connection and HTTP request?
+* HTTP request could only be client send request to server, and server response back. (Pull message)
+* Socket connection is long-running, and server could send the message back to client on it's own initiative. (Push message)
+
+
+
 #### Write Path
 
 #### Read Path
