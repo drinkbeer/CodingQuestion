@@ -38,6 +38,7 @@ topK(k, start_time, end_time)
 
 ## High Level Design
 
+A naive solution: 
 Hashtable, singlehost
 
 ```
