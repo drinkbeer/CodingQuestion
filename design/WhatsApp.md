@@ -93,13 +93,15 @@ If a socket connection has been inactive for 10 minutes, we interrupt the connec
 * HTTP request could only be client send request to server, and server response back. (Pull message)
 * Socket connection is long-running, and server could send the message back to client on it's own initiative. (Push message)
 
-#### How to do group chat?
+#### How to do group chat? Using a Channel Service.
 
 If sending a message in a group of 500 people, only 10 people are online, with the existing architecture, we will do 500 query in Hash Ring, and message server will connect to 500 socket server. But only 10 socket server has active socket connection. 490 of the communication is waste.
 
 Solution is to add a Channel Service. Channel Service is like a subscribe service of the threads of the group. When customer is online, it will first subscribe in the Channel Service in order to be able to receive the message to be pushed.
 
 When sender sends a message in the group, it will first connect to Channel Service, and then Channel Service push to the Socket Server that subcribes the channel.
+
+We could just store the channel subscriber information in the memory of channel service. It's like a cache. If it is crashed, we could just rebuild it using the information in the socket servers.
 
 #### How to scale up the socket servers?
 
