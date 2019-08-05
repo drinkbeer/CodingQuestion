@@ -135,3 +135,6 @@ Then client use the IP to build socket connection to the socket server.
 ```
 Client A send a text message to Message Server -> Message Server insert the messsage to the Message Table -> Message Server insert a new thread to all participants in the thread table (if there is no existing threads) -> Message Server send to Channel Service if it's group chatting or Supplier Service if it's single person chatting -> Channel Service or Supplier Service will forward the message to the Socket Server -> Socket Server will build Socket Conneciton if the connection doesn't exist -> Send message to client.
 ```
+
+![WhatsApp.Detailed.png](pic/WhatsApp.Detailed.png)
+
