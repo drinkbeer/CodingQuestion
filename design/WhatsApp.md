@@ -109,6 +109,22 @@ Using Consistent Hash Ring by hashing the user_id. Each online user are assigned
 
 User ID is stored in User Table.
 
-#### Write Path
+#### How to maintain the online status of users? Using heartbeat.
 
-#### Read Path
+So we are making the Socket Connection session to be 10 minutes life. How to track that customer is not active after 10 minutes? Using client to send heartbeat to server every 5 seconds. If the socket server has not received the heartbeat for more than 10 minutes, then interrupt the socket connection.
+
+For a message sender, its client will pull the status of the friends from it's message server every 5 seconds.
+
+#### Building Connection Path
+
+```
+Client -> Message Server (HTTP Server> -> Channel Service -> Socket Server (return the IP of the socket server to client).
+
+Then client use the IP to build socket connection to the socket server.
+```
+
+#### Send Message Path
+
+```
+Client A send a text message to Message Server -> Message Server insert the messsage to the Message Table -> Message Server insert a new thread to all participants in the thread table (if there is no existing threads) -> Message Server send to Channel Service if it's group chatting or Supplier Service if it's single person chatting -> Channel Service or Supplier Service will forward the message to the Socket Server -> Socket Server will build Socket Conneciton if the connection doesn't exist -> Send message to client.
+```
