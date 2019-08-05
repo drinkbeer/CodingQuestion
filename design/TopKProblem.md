@@ -84,7 +84,13 @@ Analysis of the problem:
 
 We use Count-min sketch to count the frequency of each element to avoid hash collision, and we maintain a TopK heap to get the TopK. So in memory, there is only Count-min sketch and a max heap.
 
-
+Components:
+* Web Server: the entry point for all clients, aggregate data on the fly or via a dedicated backend process that processes logs (if it's count TopK exception, we could have a backend process to collect exceptions in logs; if it's count TopK shared links, we could aggretate the shared links on the fly). It will have a buffer in memory which contains Count-min sketch and max heap. If the buffer is full, we will flush the buffer to disk; if we reach a specific time period (e.g. 1 minute), we flush the buffer to disk even though it's not full.
+* Distributed Messaging System: could be Apache Kafka or AWS Kinesis, etc. It has random partitioning. Or we can define our own partition rule if we have any requirement about partitioning. 
+* Fast Path: process data in a short period of time (e.g. within 1 minute, or 10 seconds), we should ensure the data aggregated into memory could fit into the RAM of a single host.
+* Slow Path: process data with 15 minutes, 1 hr or even 1 day
+* Fast Processor: create Count-min sketch and aggregate data for 1 minute. For one minute data, we could directly put in memory of single machine, we don't need data partitioning. Data replication is nice to have, but may not be strictly required.
+* Slow Processor: 
 
 #### Write Path
 
