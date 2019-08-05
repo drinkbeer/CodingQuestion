@@ -59,6 +59,13 @@ PK  | thread_id:int
     | update_time:datetime
 ```
 
+User Table
+```
+PK  | user_id:int
+    | nickname:varchar(30)
+    | create_time:datetime
+```
+
 Message Table could be stored in NoSQL, as the message is mainly for read, and don't need update.
 
 Thread Table use MySQL. We could index by 
