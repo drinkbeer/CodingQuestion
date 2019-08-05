@@ -113,11 +113,10 @@ If we need accurate ressult for one hour, we have to use Hadoop to process the d
 ![TopK.Fast.Path.png](pic/TopK.Fast.Path.png)
 
 #### Slow Path
-
-
 ![TopK.Slow.Path.png](pic/TopK.Slow.Path.png)
 
-
+#### MapReduce Jobs
+![TopK.MapReduce.Jobs.png](pic/TopK.MapReduce.Jobs.png)
 
 ## Reference
 * https://www.youtube.com/watch?v=kx-XDoPjoHw
