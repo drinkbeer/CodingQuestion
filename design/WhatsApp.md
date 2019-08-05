@@ -125,7 +125,9 @@ For a message sender, its client will pull the status of the friends from it's m
 #### Building Connection Path
 
 ```
-Client -> Message Server (HTTP Server> -> Channel Service -> Socket Server (return the IP of the socket server to client).
+Client -> Message Server (HTTP Server> 
+
+-> Channel Service -> Socket Server (return the IP of the socket server to client).
 
 Then client use the IP to build socket connection to the socket server.
 ```
@@ -133,7 +135,13 @@ Then client use the IP to build socket connection to the socket server.
 #### Send Message Path
 
 ```
-Client A send a text message to Message Server -> Message Server insert the messsage to the Message Table -> Message Server insert a new thread to all participants in the thread table (if there is no existing threads) -> Message Server send to Channel Service if it's group chatting or Supplier Service if it's single person chatting -> Channel Service or Supplier Service will forward the message to the Socket Server -> Socket Server will build Socket Conneciton if the connection doesn't exist -> Send message to client.
+Client A send a text message to Message Server
+-> Message Server insert the messsage to the Message Table
+-> Message Server insert a new thread to all participants in the thread table (if there is no existing threads) 
+-> Message Server send to Channel Service if it's group chatting or Supplier Service if it's single person chatting 
+-> Channel Service or Supplier Service will forward the message to the Socket Server
+-> Socket Server will build Socket Conneciton if the connection doesn't exist 
+-> Send message to client.
 ```
 
 ![WhatsApp.Detailed.png](pic/WhatsApp.Detailed.png)
