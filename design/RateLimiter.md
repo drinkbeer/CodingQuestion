@@ -6,8 +6,8 @@
 2. The APIs are accessible through a cluster, so the rate limiter should be considered across different servers.
 
 #### Non-Functional Requirement
-1. High Availabile. The Rate Limiter should always work to protect our services from overwhelming.
-2. Rate Limiter should not introduce substantial latencies affecting customer experience.
+1. Low Latency. Rate Limiter should not introduce substantial latencies affecting customer experience.
+2. High Availabile. The Rate Limiter should always work to protect our services from overwhelming.
 
 ## Analysis
 
