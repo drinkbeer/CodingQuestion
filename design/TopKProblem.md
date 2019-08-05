@@ -10,6 +10,10 @@ MapReduce is also not enough, as the requests are keep on going, the top 100 is 
 1. Return the list of Top 100 shared links in the past 1 minute, 5 minutes, 15 minutes, 60 minutes.
 
 #### Non-Functional Requirement
+1. Scalable. It should be able to scale out together with increasing amount of data: videos, tweets, posts, etc.
+2. Highly Available. It should be able to survive hardware/network failures, no single point of failure.
+3. Highly Performant. few tens of milliseconds to return top 100 list.
+4. Accurate: as accurate as we can get
 
 ## Analysis
 
@@ -27,12 +31,22 @@ MapReduce is also not enough, as the requests are keep on going, the top 100 is 
 
 ## API Design
 
+```
+topK(k, start_time, end_time)
+```
 ## Database Design
 
 ## High Level Design
+
+
 
 ## Detailed Design
 
 #### Write Path
 
 #### Read Path
+
+
+
+## Reference
+* https://www.youtube.com/watch?v=kx-XDoPjoHw
