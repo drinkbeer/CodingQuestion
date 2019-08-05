@@ -1,1 +1,38 @@
+Design a system which returns the Top K heavy hitters. For example, find the 100 of the most searched keywords on google, the top 100 viewed videos on YouTube, 100 most played songs on Spotify, 100 most shares posts on Facebook, 100 most retweeted tweets on Twitter, 100 most liked photos on Instangram.
 
+For these services, there are hundred of thousands of requests per second. We cannot use distributed cache or database to store the sorted data.
+
+MapReduce is also not enough, as the requests are keep on going, the top 100 is updating very fast. And we need top 100 list for 1 minute, 5 minute, 15 minutes, 60 minutes.
+
+## Requirement
+
+#### Functional Requirement
+1. Return the list of Top 100 shared links in the past 1 minute, 5 minutes, 15 minutes, 60 minutes.
+
+#### Non-Functional Requirement
+
+## Analysis
+
+#### Total Users & DAU
+
+#### Write TPS
+
+#### Read TPS
+
+#### Storage
+
+#### Network
+
+#### Cache
+
+## API Design
+
+## Database Design
+
+## High Level Design
+
+## Detailed Design
+
+#### Write Path
+
+#### Read Path
