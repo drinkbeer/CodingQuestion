@@ -61,6 +61,7 @@ PK  | loc_id:varchar(8)
     | loc_name:varchar(30)
     | longitude:varchar(8)
     | latitude:varchar(8)
+    | geo_hash:varchar(12)
     | grid_id: varchar(8)
     | description:string
     | category:string
@@ -116,6 +117,24 @@ Google HQ: 9q9hvu7wbq2s
 Facebook HQ: 9q9j45zvr0se  
 
 "9q9" is the common prefix.
+
+So when I am in a location, I can just search using the prefix of my location's GeoHash code:
+
+[longitude, latitude] -> GeoHash
+
+Create Index to the GeoHash field in the Location Table, 
+
+```
+CREATE INDEX on getohash;
+```
+
+Using LIKE query:
+
+```
+SELECT * FROM location 
+WHERE 
+geohash LIKE '9q9hv%';
+```
 
 ## Detailed Design
 
