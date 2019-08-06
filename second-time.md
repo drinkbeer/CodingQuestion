@@ -1,13 +1,24 @@
+Hot Problems:
 
+word search12， word break12，word ladder12，
+
+LIS，sort color，
+
+LRU，LFU, insert & delete in O1，min/max heap
+
+rob house123，234sum这种题要达到闭眼秒杀的程度，
+
+bucket sort，topological sort，binary sort
+
+pre/in/post/level 遍历
+
+combination/permutation
 
 
 |Question		|Tags		|
 |---------------|-----------|
 |[1. Two Sum](https://leetcode.com/problems/two-sum/)|HashMap|
 |[2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|List, carry, dummy node|
-
-
-
 |[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|Two Pointers. array or HashSet to record|
 |[4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)|getKth smallest value|
 |[5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|from center to expand to get longest Palindrome|
