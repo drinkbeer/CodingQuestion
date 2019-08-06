@@ -99,6 +99,11 @@ PK  | user_id:int
 
 ## High Level Design
 
+#### Grids
+We can divide the map into smaller grids to group location into smaller sets. Each grid will store all the places residing within a specific range of lontitude and latitude. This scheme would enable us to query only a few grids to find nearby places. Based on a given location and radius, we can find all the neighboring gridds and then query these grids to find nearby locations (places).
+
+![Yelp.Grids.png](pic/Yelp.Grids.png)
+
 ## Detailed Design
 
 #### Write Path
