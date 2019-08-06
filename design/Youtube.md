@@ -140,6 +140,27 @@ Video metadata could be stored in MySQL or other relational database. We map the
 
 ## Detailed Design
 
+#### Split different APIs to different micro-services?
+Splitting different APIs to different micro-services could help us scale up the APIs based on load.
+
+#### We are using Key Generation Service to generate global unique keys, will this be single point of failures?
+Yes. It's possible to be single point of failures. We make KGS to be master-slave mode. Once the master is down, the slave will take over the leadership. We have two database to generate auto-increment keys. One is for odd keys, another one is for even keys. So any of databases is down will not affect the whole services.
+
+#### Encoding
+
+We use a dedicated encoding services to encode the videos. We temporarily put the videos into Kafka, and waiting the encoding services to process it. 
+
+#### Thumbnail
+
+We use a dedicated thumbnail service to generate thumbnails, and put the job into Kafka. We will store the thumbnail into the AWS S3.
+
+
+#### Search
+
+When customer search based on video titles or description, we are likely to query the whole MySQL servers in the Consistent Hash Ring. Is there any better way to do this? I will suggest to use a dedicated Inverted Index Table (or Elastic Search), to store the titles and the video ids. When customer search, we search the table using the key words, and find the most relevant videos, and return the top relevant video list to customer.
+
+ElasticSearch will aggregate the video titles/descriptions.
+
 #### Write Path
 
 #### Read Path
