@@ -1,7 +1,13 @@
+
+
+
 |Question		|Tags		|
 |---------------|-----------|
 |[1. Two Sum](https://leetcode.com/problems/two-sum/)|HashMap|
 |[2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|List, carry, dummy node|
+
+
+
 |[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)|Two Pointers. array or HashSet to record|
 |[4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)|getKth smallest value|
 |[5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|from center to expand to get longest Palindrome|
