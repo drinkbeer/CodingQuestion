@@ -100,23 +100,37 @@ PK  | user_id:int
 
 ## High Level Design
 
+
+
+## Detailed Design
 #### Grids
 We can divide the map into smaller grids to group location into smaller sets. Each grid will store all the places residing within a specific range of lontitude and latitude. This scheme would enable us to query only a few grids to find nearby places. Based on a given location and radius, we can find all the neighboring gridds and then query these grids to find nearby locations (places).
 
 ![Yelp.Grids.png](pic/Yelp.Grids.png)
 
 
-#### How to scale up the Location Table?
+#### How to scale up the Location Table? Using GeoHash to encode location, and using Cells to split the load as partitioning, and using Consistent Hash Ring to sharding the database servers.
 
 Use GeoHash Library to hash the location [longitude, latitude] to a 12 bytes string. It's using Base32 encoding algorithm to encode the location. Example, `Example: (-30.043800, -51.140220) → 6feth68y4tb0`.
 
 With the GeoHash, we could find that the closer the two locations, the longer the two geo hash will have in common prefix. For example:
 
+```
 LinkedIn HQ: 9q9hu3hhsjxx  
 Google HQ: 9q9hvu7wbq2s  
 Facebook HQ: 9q9j45zvr0se  
+```
 
 "9q9" is the common prefix.
+
+With GeoHash, we could map location to cells. We can create a Consistent Hash Ring, and do GeoHash to the Cell (using the center point location), map the cell's GeoHash to one point in the ring, and create a MySQL Server to that cell to store the Location Table in the cell.
+
+We have another dedicated Cell Table, which stores the GeoHash of the Cells in this area.
+
+```
+PK  | cell_id: varchar(12)
+    | cell_name: varchar(30)
+```
 
 So when I am in a location, I can just search using the prefix of my location's GeoHash code:
 
@@ -131,12 +145,21 @@ CREATE INDEX on getohash;
 Using LIKE query:
 
 ```
-SELECT * FROM location 
+SELECT * FROM cell 
 WHERE 
 geohash LIKE '9q9hv%';
 ```
 
-## Detailed Design
+We will get a small list of cells, and it's cell_id, which is also GeoHash. Using these cell_ids, we could go to the Consistent Hashing Ring, do the dedicated MySQL servers, and do the below LIKE query:
+
+```
+SELECT * FROM location
+WHERE
+geohash LIKE '9q9hv%';
+```
+
+and return return the list of result to location service, and merge and rank, and then return to customer.
+
 
 #### Write Path
 
