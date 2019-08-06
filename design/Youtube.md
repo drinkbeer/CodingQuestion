@@ -138,6 +138,8 @@ Video metadata could be stored in MySQL or other relational database. We map the
 5. Video Metadata Database: using Relational Database, but sharding based on video id.
 
 
+![Youtube.Basic.png](pic/Youtube.Basic.png)
+
 ## Detailed Design
 
 #### Split different APIs to different micro-services?
@@ -173,6 +175,8 @@ We will deploy CDN in different geographical location. We will only cache hot co
 #### Write Path
 
 #### Read Path
+
+![Youtube.Detailed.png](pic/Youtube.Detailed.png)
 
 #### Reference
 * Design Netflix: https://www.youtube.com/watch?v=psQzyFfsUGU
