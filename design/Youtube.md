@@ -124,7 +124,11 @@ PK  | user_id: int
 
 ## High Level Design
 
+#### How will the videos stored? 
+In distributed object storage system, like AWS S3 or HDFS.
 
+#### How will metadata be stored?
+Video metadata could be stored in MySQL or other relational database. We map the MySQL database to one chain in the Consistent Hashing Ring. We could encoding the database based on the global increment key using Base64 algorithm, and map the vid to one chain in the HashRing. Find the closest MySQL server in the clockwise in the Consistent Hashing Ring to store the metadata.
 
 
 ## Detailed Design
