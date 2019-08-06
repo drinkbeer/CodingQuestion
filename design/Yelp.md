@@ -66,7 +66,16 @@ PK  | loc_id:varchar(8)
     | create_time:datetime
 ```
 
-Each entity in the location table is: 100 bytes
+Each entity in the location table is: 100 bytes. Searching in a Location Table
+
+```
+SELECT * from LOC_TABLE
+WHERE
+    latitude >= curr_latitude - D AND
+    latitude <= curr_latitude + D AND
+    longitude >= curr_longitude - D AND
+    longitude <= curr_longitude + D;
+```
 
 Comment Table
 ```
