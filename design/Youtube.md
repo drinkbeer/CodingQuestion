@@ -130,6 +130,13 @@ In distributed object storage system, like AWS S3 or HDFS.
 #### How will metadata be stored?
 Video metadata could be stored in MySQL or other relational database. We map the MySQL database to one chain in the Consistent Hashing Ring. We could encoding the database based on the global increment key using Base64 algorithm, and map the vid to one chain in the HashRing. Find the closest MySQL server in the clockwise in the Consistent Hashing Ring to store the metadata.
 
+#### Some Components
+1. Encoder: encode uploaded videos to different format.
+2. Thumbnail generator: generate the thumbnail.
+3. Video and Thumbnail Storage: store videos and Thumbnail in distributed object storage system.
+4. User DB: just relational database
+5. Video Metadata Database: using Relational Database, but sharding based on video id.
+
 
 ## Detailed Design
 
