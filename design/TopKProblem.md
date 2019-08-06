@@ -138,3 +138,4 @@ https://soulmachine.gitbooks.io/system-design/cn/bigdata/heavy-hitters.html
 
 ## Reference
 * https://www.youtube.com/watch?v=kx-XDoPjoHw
+* Lossy Counting Algorithm: https://www.youtube.com/watch?v=w5B11B30mhA
