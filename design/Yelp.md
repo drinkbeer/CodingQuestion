@@ -160,7 +160,7 @@ geohash LIKE '9q9hv%';
 
 and return return the list of result to location service, and merge and rank, and then return to customer.
 
-![Yelp.Detailed.png](Yelp.Detailed.png)
+![Yelp.Detailed.png](pic/Yelp.Detailed.png)
 
 #### Write Path
 
