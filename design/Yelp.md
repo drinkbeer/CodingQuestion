@@ -61,8 +61,9 @@ PK  | loc_id:varchar(8)
     | loc_name:varchar(30)
     | longitude:varchar(8)
     | latitude:varchar(8)
+    | grid_id: varchar(8)
     | description:string
-    |category:string
+    | category:string
     | create_time:datetime
 ```
 
