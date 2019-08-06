@@ -109,6 +109,14 @@ We can divide the map into smaller grids to group location into smaller sets. Ea
 
 Use GeoHash Library to hash the location [longitude, latitude] to a 12 bytes string. It's using Base32 encoding algorithm to encode the location. Example, `Example: (-30.043800, -51.140220) → 6feth68y4tb0`.
 
+With the GeoHash, we could find that the closer the two locations, the longer the two geo hash will have in common prefix. For example:
+
+LinkedIn HQ: 9q9hu3hhsjxx  
+Google HQ: 9q9hvu7wbq2s  
+Facebook HQ: 9q9j45zvr0se  
+
+"9q9" is the common prefix.
+
 ## Detailed Design
 
 #### Write Path
