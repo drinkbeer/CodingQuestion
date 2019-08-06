@@ -173,3 +173,6 @@ We will deploy CDN in different geographical location. We will only cache hot co
 #### Write Path
 
 #### Read Path
+
+#### Reference
+* Design Netflix: https://www.youtube.com/watch?v=psQzyFfsUGU
