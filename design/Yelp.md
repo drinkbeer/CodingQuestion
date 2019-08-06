@@ -104,6 +104,11 @@ We can divide the map into smaller grids to group location into smaller sets. Ea
 
 ![Yelp.Grids.png](pic/Yelp.Grids.png)
 
+
+#### How to scale up the Location Table?
+
+Use GeoHash Library to hash the location [longitude, latitude] to a 12 bytes string. It's using Base32 encoding algorithm to encode the location. Example, `Example: (-30.043800, -51.140220) → 6feth68y4tb0`.
+
 ## Detailed Design
 
 #### Write Path
