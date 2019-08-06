@@ -95,6 +95,8 @@ PK  | vid:int
     | size: int
     | thumbnail: string
 FK  | user_id:int
+    | loc_bucket: string
+    | loc_filename: string
     | total_num_likes: int
     | total_num_dislikes: int
     | total_num_views: int
