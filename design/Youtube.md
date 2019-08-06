@@ -161,6 +161,15 @@ When customer search based on video titles or description, we are likely to quer
 
 ElasticSearch will aggregate the video titles/descriptions.
 
+#### Hot Metadata Cache Strategy
+Cache Strategy: Write-around cache. We write the Metadata Database directly, but when we are reading the metadata, we will cache the metadata in the Hot Metadata Cache.
+
+Eviction Strategy: we will use Least Frequently Used (LFU) to evict cache.
+
+#### CDN
+
+We will deploy CDN in different geographical location. We will only cache hot contents in that region (e.g. Videos watched more than 1000 in that region).
+
 #### Write Path
 
 #### Read Path
