@@ -21,4 +21,4 @@ What is a good concensus algorithm:
 
 ## Reference
 * https://www.jianshu.com/p/e70849987439
-* Raft Concensus Algorithm: https://www.youtube.com/watch?v=P9Ydif5_qvE
+* Raft Concensus Algorithm: https://www.youtube.com/watch?v=vYp4LYbnnW8
