@@ -415,6 +415,7 @@ PriorityQueue.
 |[347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)|[LeetCode-347-Top-K-Frequent-Elements.java](src/LeetCode-347-Top-K-Frequent-Elements.java)|Heap, Deque|
 |[373. Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/)|[LeetCode-373-Find-K-Pairs-with-Smallest-Sums.java](src/LeetCode-373-Find-K-Pairs-with-Smallest-Sums.java)|Heap|
 |[407. Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)|[LeetCode-407-Trapping-Rain-Water-II.java](src/LeetCode-407-Trapping-Rain-Water-II.java)|Heap|
+|[451. Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/)|[LeetCode-451-Sort-Characters-By-Frequency.java](src/LeetCode-451-Sort-Characters-By-Frequency.java)|String, Heap, Bucket Sort|
 |[692. Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)|[LeetCode-692-Top-K-Frequent-Words.java](src/LeetCode-692-Top-K-Frequent-Words.java)|Heap|
 |[729. My Calendar I](https://leetcode.com/problems/my-calendar-i/)|[LeetCode-729-My-Calendar-I.java](src/LeetCode-729-My-Calendar-I.java)|TreeMap|
 |[973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)|[LeetCode-973-K-Closest-Points-to-Origin.java](src/LeetCode-973-K-Closest-Points-to-Origin.java)|Heap, QuickSelect|
