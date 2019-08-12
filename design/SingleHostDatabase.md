@@ -21,6 +21,7 @@ What is a good concensus algorithm:
 
 ## Design a Single Host High Reliable KV Store
 
+```
 2. Design a single host high consistency KV store
 
 Some notes: the RAM is large enough to hold all <K, V>, but to make it high persistency, we have to periodically flush the data in to disk. We could assume the hardware are reliable (hard-driver will not broken). 
@@ -75,6 +76,7 @@ PUT(K, V) {
     Stripe_lock.release();
   }
 }
+```
 
 ## Reference
 * https://www.jianshu.com/p/e70849987439
