@@ -162,4 +162,9 @@ class Solution {
 //       */
 //       return false;
 //     }
+    
+    // 2. DP (Not finished)
+    /*
+    https://leetcode.com/problems/partition-to-k-equal-sum-subsets/discuss/335668/DP-with-Bit-Masking-Solution-%3A-Best-for-Interviews
+    */
 }
