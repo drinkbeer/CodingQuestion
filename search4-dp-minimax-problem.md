@@ -1,4 +1,6 @@
 
+https://leetcode.com/problems/can-i-win/discuss/95277/Java-solution-using-HashMap-with-detailed-explanation
+
 
 #### 375. Guess Number Higher or Lower II
 https://leetcode.com/problems/guess-number-higher-or-lower-ii/
