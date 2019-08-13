@@ -98,6 +98,7 @@ Note:
 |[674. Longest Continuous Increasing Subsequence](https://leetcode.com/problems/longest-continuous-increasing-subsequence/)|[LeetCode-674-Longest-Continuous-Increasing-Subsequence.java](src/LeetCode-674-Longest-Continuous-Increasing-Subsequence.java)|Array|
 |[670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)|[LeetCode-670-Maximum-Swap.java](src/LeetCode-670-Maximum-Swap.java)|Array|
 |[694. Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/)|[LeetCode-694-Number-of-Distinct-Islands.java](src/LeetCode-694-Number-of-Distinct-Islands.java)|Recursive|
+|[698. Partition to K Equal Sum Subsets](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)|[LeetCode-698-Partition-to-K-Equal-Sum-Subsets.java](src/LeetCode-698-Partition-to-K-Equal-Sum-Subsets.java)|Recursive|
 |[719. Find K-th Smallest Pair Distance](https://leetcode.com/problems/find-k-th-smallest-pair-distance/)|[LeetCode-719-Find-K-th-Smallest-Pair-Distance.java](src/LeetCode-719-Find-K-th-Smallest-Pair-Distance.java)|Array, Binary Search|
 |[724. Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)|[LeetCode-724-Find-Pivot-Index.java](src/LeetCode-724-Find-Pivot-Index.java)|Array|
 |[744. Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)|[LeetCode-744-Find-Smallest-Letter-Greater-Than-Target.java](src/LeetCode-744-Find-Smallest-Letter-Greater-Than-Target.java)|Array, Binary Search|
