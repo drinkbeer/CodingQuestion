@@ -317,6 +317,7 @@ public class BinaryIndexTree {
 
 ## Segment Tree
 
+https://leetcode.com/tag/segment-tree/  
 https://www.geeksforgeeks.org/segment-tree-set-1-sum-of-given-range/   
 https://www.geeksforgeeks.org/segment-tree-set-1-range-minimum-query/  
 https://www.youtube.com/watch?v=ZBHKZF5w4YU  
@@ -425,6 +426,13 @@ public class SegmentTree {
     }
 
 }
+
+```
+
+#### 715. Range Module
+https://leetcode.com/problems/range-module/
+
+```
 
 ```
 
