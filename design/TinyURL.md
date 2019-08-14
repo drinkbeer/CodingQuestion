@@ -1,4 +1,6 @@
-https://www.educative.io/collection/page/5668639101419520/5649050225344512/5668600916475904
+https://www.educative.io/collection/page/5668639101419520/5649050225344512/5668600916475904   
+https://leetcode.com/discuss/interview-question/124658/Design-a-URL-Shortener-(-TinyURL-)-System/   
+
 
 
 ## Requirements
