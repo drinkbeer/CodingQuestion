@@ -357,6 +357,7 @@ Search a required set, search Maximum/Minimu result
 |[654. Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree/)|[LeetCode-654-Maximum-Binary-Tree.java](src/LeetCode-654-Maximum-Binary-Tree.java)|Recursive, Deque|
 |[655. Print Binary Tree](https://leetcode.com/problems/print-binary-tree/)|[LeetCode-655-Print-Binary-Tree.java](src/LeetCode-655-Print-Binary-Tree.java)|BFS, DFS|
 |[671. Second Minimum Node In a Binary Tree](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/)|[LeetCode-671-Second-Minimum-Node-In-a-Binary-Tree.java](src/LeetCode-671-Second-Minimum-Node-In-a-Binary-Tree.java)|Recursive|
+|[701. Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)|[LeetCode-701-Insert-into-a-Binary-Search-Tree.java](src/LeetCode-701-Insert-into-a-Binary-Search-Tree.java)|Recursive, Iterative|
 |[958. Check Completeness of a Binary Tree](https://leetcode.com/problems/check-completeness-of-a-binary-tree/)|[LeetCode-958-Check-Completeness-of-a-Binary-Tree.java](src/LeetCode-958-Check-Completeness-of-a-Binary-Tree.java)|DFS|
 
 
