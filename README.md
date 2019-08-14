@@ -523,6 +523,11 @@ https://leetcode.com/tag/stack/
 |[382. Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/)|[LeetCode-382-Linked-List-Random-Node.java](src/LeetCode-382-Linked-List-Random-Node.java)|Reservoir Sampling|
 
 
+### Segment Tree
+|Question|Solution|Tags|
+|--------|--------|----|
+|[715. Range Module](https://leetcode.com/problems/range-module/)|[LeetCode-715-Range-Module.java](src/LeetCode-715-Range-Module.java)|Segment Tree, TreeMap|
+
 ### Design
 
 |Question|Solution|Tags|
