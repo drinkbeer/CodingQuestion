@@ -536,6 +536,7 @@ https://leetcode.com/tag/stack/
 |[★380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)|[LeetCode-380-Insert-Delete-GetRandom-O(1).java](src/LeetCode-380-Insert-Delete-GetRandom-O(1).java)|LinkedList|
 |[381. Insert Delete GetRandom O(1) - Duplicates allowed](https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/)|[LeetCode-381-Insert-Delete-GetRandomO(1)-Duplicates-allowed.java](src/LeetCode-381-Insert-Delete-GetRandomO(1)-Duplicates-allowed.java)|LinkedList|
 |[★460. LFU Cache](https://leetcode.com/problems/lfu-cache/)|[LeetCode-460-LFU-Cache.java](src/LeetCode-460-LFU-Cache.java)|HashMap|
+|[535. Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/)|[LeetCode-535-Encode-and-Decode-TinyURL.java](src/LeetCode-535-Encode-and-Decode-TinyURL.java)|HashMap|
 |[706. Design HashMap](https://leetcode.com/problems/design-hashmap/)|[LeetCode-706-Design-HashMap.java](src/LeetCode-706-Design-HashMap.java)|HashMap|
 |[716. Max Stack](https://leetcode.com/problems/max-stack/)|[LeetCode-716-Max-Stack.java](src/LeetCode-716-Max-Stack.java)|Two Stacks|
 
