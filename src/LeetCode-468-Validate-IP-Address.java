@@ -1,4 +1,5 @@
 class Solution {
+    // 1. Write a IP Parser
     public String validIPAddress(String IP) {
         if (IP.startsWith(".") || IP.endsWith(".") || IP.startsWith(":") || IP.endsWith(":")) return "Neither";
         
@@ -52,4 +53,9 @@ class Solution {
         }
         return true;
     }
+    
+    // 2. Write RegExpression
+    /*
+    https://leetcode.com/problems/validate-ip-address/discuss/95504/Java-Simple-Solution-with-RegExp
+    */
 }
