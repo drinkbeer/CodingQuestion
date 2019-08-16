@@ -45,7 +45,7 @@ topK(k, start_time, end_time)
 ## High Level Design
 
 A naive solution: 
-Hashtable, singlehost
+Hashtable + Max Heap, in singlehost. Using Hashtable to store <key, frequency> pair, Max Heap to store TopK Keys.
 
 ```
 Input Data:
@@ -61,9 +61,12 @@ Use Heap:
 Time: O(NlogK) - K is number of top K we required, N is total links
 A: 4
 C: 3
-
 ```
-Single host solution is not scalable, and will become single point of failures.
+Pros: 
+* Easy
+Cons:
+* Single host solution is not scalable
+* Have single point of failures.
 
 A improved solution is to use multiple hosts to count frequency. It will be a huge hash table in memory.
 
