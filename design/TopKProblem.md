@@ -62,6 +62,7 @@ Time: O(NlogK) - K is number of top K we required, N is total links
 A: 4
 C: 3
 ```
+
 Pros: 
 * Easy
 Cons:
