@@ -115,8 +115,10 @@ Algorithms:
 3. Pass the sorted TopK list to the Storage Host, and do a K-way merge, to get the final TopK. Time: O(KlogK).
 
 
+Pros:
+* Better scalability and throughput comparing to the single host solution
 
-This approach will have better scalability and throughput. Drawbacks:
+Cons:
 1. Data set could be streaming data, and no boundary (means infinite). 
 2. We need per 1 minutes TopK, 5 minute TopK, or even 1 hour TopK, we cannot store all the state in the memory of Processor Host. (We can assume that the memory of Processor Host can only hold 1 minute's data).
 
