@@ -99,6 +99,7 @@ public List<HeavyHitter> topK(String[] events, int k) {
 
 Pros: 
 * Easy
+
 Cons:
 * Single host solution is not scalable
 * Have single point of failures.
