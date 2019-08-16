@@ -44,8 +44,8 @@ topK(k, start_time, end_time)
 
 ## High Level Design
 
-A naive solution: 
-Hashtable + Min Heap, in singlehost. Using Hashtable to store <key, frequency> pair, Max Heap to store TopK Keys.
+#### A naive solution: Hashtable + Min Heap, in singlehost
+Using Hashtable to store <key, frequency> pair, Max Heap to store TopK Keys.
 
 ```
 Input Data:
@@ -63,13 +63,48 @@ A: 4
 C: 3
 ```
 
+Code: 
+```
+class HeavyHitter {
+  provate final String identifier;
+  private final int frequency;
+  
+  public HeavyHitter (String identifier, int frequency) {
+    this.identifier = identifier;
+    this.frequency = frequency;
+  }
+}
+
+public List<HeavyHitter> topK(String[] events, int k) {
+  Map<String, Integer> frequencyTable = new HashMap<>();
+  for (String e : events) {
+    frequencyTable.put(e, frequencyTable.getOrDefault(e, 0) + 1);
+  }
+  
+  PriorityQueue<HeavyHitter> heap = new PriorityQueue<>(Comparator.comparing(e -> e.getFrequency()));
+  
+  for (Map.Entry<String, Integer> e : frequencyTable.entrySet()) {
+    heap.offer(new HeavyHitter(e.getKey(), e.getValue()));
+    if (heap.size() > k) {
+      heap.poll();
+    }
+  }
+  
+  List<HeavyHitter> res = new ArrayList<>();
+  while (heap.size() > 0) {
+    res.add(heap.poll());
+  }
+}
+```
+
 Pros: 
 * Easy
 Cons:
 * Single host solution is not scalable
 * Have single point of failures.
 
-A improved solution is to use multiple hosts to count frequency. It will be a huge hash table in memory.
+#### An improved solution: use multiple hosts to count frequency, and Min Heap to get TopK
+It will be a huge hash table in memory of processor host.
 
 ![TopK.Basic.png](pic/TopK.Basic.png)
 
@@ -77,6 +112,8 @@ Algorithms:
 1. Randomly partitioning data into Processor Hosts.
 2. Each Processor Host collect the data, and get the TopK list in the host, and sort the list.
 3. Pass the sorted TopK list to the Storage Host, and do a K-way merge, to get the final TopK. Time: O(KlogK).
+
+
 
 This approach will have better scalability and throughput. Drawbacks:
 1. Data set could be streaming data, and no boundary (means infinite). 
