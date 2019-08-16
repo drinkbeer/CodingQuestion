@@ -45,7 +45,7 @@ topK(k, start_time, end_time)
 ## High Level Design
 
 A naive solution: 
-Hashtable + Max Heap, in singlehost. Using Hashtable to store <key, frequency> pair, Max Heap to store TopK Keys.
+Hashtable + Min Heap, in singlehost. Using Hashtable to store <key, frequency> pair, Max Heap to store TopK Keys.
 
 ```
 Input Data:
@@ -57,7 +57,7 @@ D: 1
 A: 4
 B: 2
 
-Use Heap:
+Use Min Heap:
 Time: O(NlogK) - K is number of top K we required, N is total links
 A: 4
 C: 3
