@@ -24,16 +24,22 @@ Some questions could ask to define the problem?
 ## Analysis
 
 #### Total Users & DAU
+NA
 
 #### Write TPS
+NA
 
 #### Read TPS
+NA
 
 #### Storage
+NA
 
 #### Network
+NA
 
 #### Cache
+NA
 
 ## API Design
 
@@ -41,6 +47,7 @@ Some questions could ask to define the problem?
 topK(k, start_time, end_time)
 ```
 ## Database Design
+NA
 
 ## High Level Design
 
@@ -128,10 +135,9 @@ Analysis of the problem:
 1. We need the whole data set in the particular time period (e.g. one day). But one day dateset is too large to hold in memory of a single host. Solution to this problem: store the dataset in disk, and only process one chunk of data in memory, get TopK of the chunk, and finally merge the TopK of all chunks to get the final TopK. This is the MapReduce counting idea.
 2. The complexity of the solution. Every time we introduce data partitioning, we need to deal with data replication, so data in each partition are stored in multiple nodes.
 
-### Count-min sketch to count frequency
+### Count-min Sketch to count frequency to improve count accuracy
 
 We use Count-min sketch to count the frequency of each element to avoid hash collision, and we maintain a TopK heap to get the TopK. So in memory, there is only Count-min sketch and a Min Heap.
-
 
 ![TopK.Count.Min.Sketch.png](pic/TopK.Count.Min.Sketch.png)
 
@@ -154,9 +160,11 @@ height = Math.ceil(-Math.log(1-d) / Math.log(2))
 #### Count-min sketch returns frequency count estimate for a single item. How do we get TopK list from Count-min sketch?
 Using Min Heap to maintain TopK elements.
 
+### Components
 
-#### Components:
-* **Web Server**: the entry point for all clients, aggregate data on the fly or via a dedicated backend process that processes logs (if it's count TopK exception, we could have a backend process to collect exceptions in logs; if it's count TopK shared links, we could aggretate the shared links on the fly). It will have a buffer in memory which contains Count-min sketch and max heap. If the buffer is full, we will flush the buffer to disk; if we reach a specific time period (e.g. 1 minute), we flush the buffer to disk even though it's not full.
+#### Web Server
+The entry point for all clients, aggregate data on the fly or via a dedicated backend process that processes logs (if it's count TopK exception, we could have a backend process to collect exceptions in logs; if it's count TopK shared links, we could aggretate the shared links on the fly). It will have a buffer in memory which contains Count-min sketch and max heap. If the buffer is full, we will flush the buffer to disk; if we reach a specific time period (e.g. 1 minute), we flush the buffer to disk even though it's not full.
+
 * **Distributed Messaging System**: could be Apache Kafka or AWS Kinesis, etc. It has random partitioning. Or we can define our own partition rule if we have any requirement about partitioning. 
 * **Fast Path**: process data in a short period of time (e.g. within 1 minute, or 10 seconds), we should ensure the data aggregated into memory could fit into the RAM of a single host.
 * **Slow Path**: process data with 15 minutes, 1 hr or even 1 day
