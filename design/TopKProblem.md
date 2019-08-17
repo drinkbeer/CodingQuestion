@@ -119,8 +119,8 @@ Pros:
 * Better scalability and throughput comparing to the single host solution
 
 Cons:
-1. Data set could be streaming data, and no boundary (means infinite). 
-2. We need per 1 minutes TopK, 5 minute TopK, or even 1 hour TopK, we cannot store all the state in the memory of Processor Host. (We can assume that the memory of Processor Host can only hold 1 minute's data).
+1. This solution is useful when data is bounded, and could be paritioned to small chunks to fit into the RAM of a single host. But the real data set could be streaming data, and no boundary (means infinite). We need per 1 minutes TopK, 5 minute TopK, or even 1 hour TopK, we cannot store all the state in the memory of Processor Host. (We can assume that the memory of Processor Host can only hold 1 minute's data). If we want the data in 1 hour, then this solution doesn't work. 
+2. Time period is one thing, how large is number K is another thing. As K is variable, and could be very large, and cannot fix into the RAM of one host.
 
 ## Detailed Design
 
