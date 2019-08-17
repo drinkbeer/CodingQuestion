@@ -167,23 +167,37 @@ Using Min Heap to maintain TopK elements.
 * Aggregate data on the fly or via a dedicated backend process that processes logs. It will have a buffer in memory which contains Count-min sketch and Min heap. Data is flushed based on either time or size. If the buffer is full, we will flush the buffer to disk; if we reach a specific time period (e.g. 1 minute), we flush the buffer to disk even though it's not full. (if it's count TopK exception, we could have a backend process to collect exceptions in logs, or we just aggregate the data, and send the logs to another cluster for further processing, based on the throughput; if it's count TopK shared links, we could aggretate the shared links on the fly)
 * Serialize data in a compact binary format (e.g. Apache Avro).
 
-* **Distributed Messaging System**: could be Apache Kafka or AWS Kinesis, etc. It has random partitioning. Or we can define our own partition rule if we have any requirement about partitioning. 
-* **Fast Path**: process data in a short period of time (e.g. within 1 minute, or 10 seconds), we should ensure the data aggregated into memory could fit into the RAM of a single host.
-* **Slow Path**: process data with 15 minutes, 1 hr or even 1 day
-* **Fast Processor**: create Count-min sketch and aggregate data for 1 minute. For one minute data, we could directly put in memory of single machine, we don't need data partitioning. Data replication is nice to have, but may not be strictly required.
-* **Slow Processor**: 
-* **Storage Host**: Every several seconds, flush data from Fast Processor into the storage host. The reason we flush every several seconds is because we don't want the result to be delayed for customer. It has a final count-min sketch, and has a Max Heap in buffer. Data replication is required to avoid data lose because of hardware issue. We could use SQL or NoSQL.
+#### Distributed Messaging System
+Could be Apache Kafka or AWS Kinesis, etc. It has random partitioning. Or we can define our own partition rule if we have any requirement about partitioning. 
+
+
+#### Fast Path
+Process data in a short period of time (e.g. within 1 minute, or 10 seconds), we should ensure the data aggregated into memory could fit into the RAM of a single host.
+
+#### Slow Path
+Process data with 15 minutes, 1 hr or even 1 day
+#### Fast Processor
+Create Count-min sketch and aggregate data for 1 minute. For one minute data, we could directly put in memory of single machine, we don't need data partitioning. Data replication is nice to have, but may not be strictly required.
+#### Slow Processor
+
+
+#### Storage Host
+
+Every several seconds, flush data from Fast Processor into the storage host. The reason we flush every several seconds is because we don't want the result to be delayed for customer. It has a final count-min sketch, and has a Max Heap in buffer. Data replication is required to avoid data lose because of hardware issue. We could use SQL or NoSQL.
 
 The reason we aggregate few seconds of data in the buffer of Web Server, and do Count-sketch, and MaxHeap, is because we want to decrease the number of data go to Kafka. So we are sure that the data in Fast Processor is much smaller than the data in Web Server. After the Fast Processor, there are only a small fraction of data in the Storage Host to process.
 
 For the fast path, we dump the data in the distributed Messaging System into a distributed storage system, e.g. AWS S3 or HDFS. We run two MapReduce jobs: Frequency Count Job, TopK MapReduce Job. We store the TopK MapReduce Job result in the Storage Host.
 
-* **Data Partitioner**: 1). Parse batches of events into individual events. 2). Hash Partitioning (e.g. Video Identifier + time window). 3). Deals with hot partitions.
+#### Data Partitioner
+1). Parse batches of events into individual events. 2). Hash Partitioning (e.g. Video Identifier + time window). 3). Deals with hot partitions.
 
 Then put each partition of data (a subset of data) into each Kafka topic. Kafka will take care of the replication. 
 
-* **Partition Processor**: Aggregate one partition data in memory over the time window of several minutes, and process the data in one partition using the Two MapReduce Job mentioned above.
+#### Partition Processor
+Aggregate one partition data in memory over the time window of several minutes, and process the data in one partition using the Two MapReduce Job mentioned above.
 
+### FAQ
 #### Discussion about the fast processor and slow processor
 
 If the accuracy is not important, we could just use the fast process, which is easy to implement. And we could merge the result of several seconds into large time window, e.g. one hour. But the One hour result is not accurage.
