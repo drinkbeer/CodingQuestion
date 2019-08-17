@@ -4,6 +4,8 @@ Design a time-based task dispatcher.
 
 #### Understand how Java DelayQueue works
 
+DelayQueue is a PriorityBlockingQueue ordered based on the delay times.
+
 ```
 public class DelayQueue<E extends Delayed> extends AbstractQueue<E>
     implements BlockingQueue<E> {
@@ -38,10 +40,9 @@ public class DelayQueue<E extends Delayed> extends AbstractQueue<E>
     
     /**
      * Inserts the specified element into this delay queue.
-     *
-     * @param e the element to add
-     * @return {@code true}
-     * @throws NullPointerException if the specified element is null
+     * If q.peek() equals to e, which means the queue is empty() before this put, and all other threads should be 
+     * sleeping. Now we empty leader, and signal all threads through available. These threads will try to become leader
+     * and call take() method.
      */
     public boolean offer(E e) {
         final ReentrantLock lock = this.lock;
@@ -58,12 +59,17 @@ public class DelayQueue<E extends Delayed> extends AbstractQueue<E>
         }
     }
     
-        /**
+    /**
      * Retrieves and removes the head of this queue, waiting if necessary
      * until an element with an expired delay is available on this queue.
      *
-     * @return the head of this queue
-     * @throws InterruptedException {@inheritDoc}
+     * Try to get the head of the queue. If get (queue is not empty), check if the expiration time eclapsed.
+     * If yes, then return the head for current thread to execute.
+     * If no, means delayed time has not eclapsed. Now check the if the leader is empty, if not empty which means there is 
+     * another thread has already been waiting for executing this head task, make current thread sleep.
+     * If leader is empty, make current thread to be leader, and wait the pending wait time. Once the pending wait time 
+     * elapsed, call take() again to execute the task. If finished executing the task, it will empty the leader, and signal 
+     * all other consumer to race to become leader to execute next jobs.
      */
     public E take() throws InterruptedException {
         final ReentrantLock lock = this.lock;
@@ -100,3 +106,10 @@ public class DelayQueue<E extends Delayed> extends AbstractQueue<E>
     }
 }
 ```
+
+One scenario: Thread A become a Leader of Task 1 (delay time: curr + 50ms). Thread B - D are awaiting now. At curr + 10ms, producer offered a new Task 2, which has delay curr + 10 ms (this curr is the original curr + 10, so this deleay time is original curr + 20 ms, which is higher than the original Task 1), and become a new head. Now producer found Task 2 is the same as the task he enqueued, so he signals all Thread A - D, and let them race for the job. (be careful that when Thread A is waiting "available.awaitNanos(delay);", it will release the leader at the finally block, so that other threads could race for leader).
+
+```
+
+```
+
