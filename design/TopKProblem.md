@@ -132,7 +132,10 @@ Analysis of the problem:
 
 ![TopK.Count.Min.Sketch.png](pic/TopK.Count.Min.Sketch.png)
 
-We use Count-min sketch to count the frequency of each element to avoid hash collision, and we maintain a TopK heap to get the TopK. So in memory, there is only Count-min sketch and a max heap.
+#### Why we need multiple hash function rather than single hash function?
+* Reduce hash collision to improve the accuracy of counting
+
+We use Count-min sketch to count the frequency of each element to avoid hash collision, and we maintain a TopK heap to get the TopK. So in memory, there is only Count-min sketch and a Min Heap.
 
 #### Components:
 * **Web Server**: the entry point for all clients, aggregate data on the fly or via a dedicated backend process that processes logs (if it's count TopK exception, we could have a backend process to collect exceptions in logs; if it's count TopK shared links, we could aggretate the shared links on the fly). It will have a buffer in memory which contains Count-min sketch and max heap. If the buffer is full, we will flush the buffer to disk; if we reach a specific time period (e.g. 1 minute), we flush the buffer to disk even though it's not full.
