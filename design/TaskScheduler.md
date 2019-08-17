@@ -230,5 +230,13 @@ public class TaskScheduler {
 
 ```
 
+## HashedWheelTimer
+
+Netty's implementation of HashedWheelTimer: http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/tip/src/share/classes/java/util/concurrent/ScheduledThreadPoolExecutor.java
+
+
 #### Understand Redis ZSet and Skiplist
 https://zsr.github.io/2017/07/03/redis-zset%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/
+
+## Reference
+* https://soulmachine.gitbooks.io/system-design/cn/task-scheduler.html
