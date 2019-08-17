@@ -163,7 +163,7 @@ Using Min Heap to maintain TopK elements.
 ### Components
 
 #### Web Server
-* The entry point for all clients, 
+* The entry point for all clients, it is a huge cluster contains thousands of hosts.
 * Aggregate data on the fly or via a dedicated backend process that processes logs. It will have a buffer in memory which contains Count-min sketch and Min heap. Data is flushed based on either time or size. If the buffer is full, we will flush the buffer to disk; if we reach a specific time period (e.g. 1 minute), we flush the buffer to disk even though it's not full. (if it's count TopK exception, we could have a backend process to collect exceptions in logs, or we just aggregate the data, and send the logs to another cluster for further processing, based on the throughput; if it's count TopK shared links, we could aggretate the shared links on the fly)
 * Serialize data in a compact binary format (e.g. Apache Avro).
 
@@ -173,6 +173,10 @@ Could be Apache Kafka or AWS Kinesis, etc. It has random partitioning. Or we can
 
 #### Fast Path
 Process data in a short period of time (e.g. within 1 minute, or 10 seconds), we should ensure the data aggregated into memory could fit into the RAM of a single host.
+
+```
+WebServer (aggregate data on the fly & do Count-min Sketch + Min Heap to reduce data flow into Kafka) -> Kafka -> Fast Processor (Count-min sketch + Min Heap) -> Storage (final Count-min Sketch + Min Heap, require replication)
+```
 
 #### Fast Processor
 * Create Count-min sketch and aggregate data for a short period of time, e.g. 1 minute. 
