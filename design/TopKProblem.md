@@ -135,6 +135,9 @@ Analysis of the problem:
 #### Why we need multiple hash function rather than single hash function?
 * Reduce hash collision to improve the accuracy of counting
 
+#### How is data retrieved? For example, what is the returned value of A in the above Count-min stretch?
+Find the minimum of all the counters for the element, and return it as final authorative result. For the value A, the result is 3.
+
 #### How do we choose width (length of hash space) and heighth (# of hash function) in the Count-min sketch?
 
 ```
