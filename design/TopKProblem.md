@@ -172,7 +172,7 @@ Could be Apache Kafka or AWS Kinesis, etc. It has random partitioning. Or we can
 
 
 #### Fast Path
-Process data in a short period of time (e.g. within 1 minute, or 10 seconds), we should ensure the data aggregated into memory could fit into the RAM of a single host.
+Process data in a short period of time (e.g. within 1 minute, or 10 seconds), we should ensure the data aggregated into memory could fit into the RAM of a single host. This is near real-time processing data workflow.
 
 ```
 WebServer (aggregate data on the fly & do Count-min Sketch + Min Heap to reduce data flow into Kafka) -> Kafka -> Fast Processor (Count-min sketch + Min Heap) -> Storage (final Count-min Sketch + Min Heap, require replication)
@@ -191,26 +191,29 @@ WebServer (aggregate data on the fly & do Count-min Sketch + Min Heap to reduce 
 
 
 #### Slow Path
-Process data with 15 minutes, 1 hr or even 1 day
+Process data with 15 minutes, 1 hr or even 1 day with high accuracy. We run MapRedduce job (Count Frequency Job & TopK Job) to get the TopK of data set in a relatively long period, e.g. 1 day. This is time consuming because the data set is large. So this is a async process.
 
 
 #### Slow Processor
 
+#### Data Partitioner
+1) Parse batches of events into individual events. 
+2) Hash Partitioning (e.g. Video Identifier + time window). 
+3) Deals with hot partitions.
 
-#### Storage Host
+Then put each partition of data (a subset of data) into each Kafka topic. Kafka will take care of the replication. 
+
+#### Partition Processor
+Aggregate one partition data in memory over the time window of several minutes, and process the data in one partition using the Two MapReduce Job mentioned above.
+
+#### Storage Host for Slow Path
 
 
 The reason we aggregate few seconds of data in the buffer of Web Server, and do Count-sketch, and MaxHeap, is because we want to decrease the number of data go to Kafka. So we are sure that the data in Fast Processor is much smaller than the data in Web Server. After the Fast Processor, there are only a small fraction of data in the Storage Host to process.
 
 For the fast path, we dump the data in the distributed Messaging System into a distributed storage system, e.g. AWS S3 or HDFS. We run two MapReduce jobs: Frequency Count Job, TopK MapReduce Job. We store the TopK MapReduce Job result in the Storage Host.
 
-#### Data Partitioner
-1). Parse batches of events into individual events. 2). Hash Partitioning (e.g. Video Identifier + time window). 3). Deals with hot partitions.
 
-Then put each partition of data (a subset of data) into each Kafka topic. Kafka will take care of the replication. 
-
-#### Partition Processor
-Aggregate one partition data in memory over the time window of several minutes, and process the data in one partition using the Two MapReduce Job mentioned above.
 
 ### FAQ
 #### Discussion about the fast processor and slow processor
