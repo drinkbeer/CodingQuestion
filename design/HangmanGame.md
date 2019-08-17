@@ -82,8 +82,10 @@ FK  | user_id: int
 ```
 
 ## High Level Design
+![Hangman.Basic.png](pic/Hangman.Basic.png)
 
 ## Detailed Design
+![Hangman.Detailed.png](pic/Hangman.Detailed.png)
 
 #### Write Path
 
