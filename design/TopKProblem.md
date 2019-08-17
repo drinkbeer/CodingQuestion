@@ -174,16 +174,27 @@ Could be Apache Kafka or AWS Kinesis, etc. It has random partitioning. Or we can
 #### Fast Path
 Process data in a short period of time (e.g. within 1 minute, or 10 seconds), we should ensure the data aggregated into memory could fit into the RAM of a single host.
 
+#### Fast Processor
+* Create Count-min sketch and aggregate data for a short period of time, e.g. 1 minute. 
+* For one minute data, we could directly put in memory of single machine, we don't need data partitioning. 
+* Data replication is nice to have, but may not be strictly required.
+
+#### Storage Host for Fast Path
+* Every several seconds, flush data from Fast Processor into the storage host. The reason we flush every several seconds is because we don't want the result to be delayed for customer. It has a final count-min sketch, and has a Max Heap in buffer. 
+* Data replication is **required** to avoid data lose because of hardware issue. 
+* We could use SQL or NoSQL.
+
+
+
 #### Slow Path
 Process data with 15 minutes, 1 hr or even 1 day
-#### Fast Processor
-Create Count-min sketch and aggregate data for 1 minute. For one minute data, we could directly put in memory of single machine, we don't need data partitioning. Data replication is nice to have, but may not be strictly required.
+
+
 #### Slow Processor
 
 
 #### Storage Host
 
-Every several seconds, flush data from Fast Processor into the storage host. The reason we flush every several seconds is because we don't want the result to be delayed for customer. It has a final count-min sketch, and has a Max Heap in buffer. Data replication is required to avoid data lose because of hardware issue. We could use SQL or NoSQL.
 
 The reason we aggregate few seconds of data in the buffer of Web Server, and do Count-sketch, and MaxHeap, is because we want to decrease the number of data go to Kafka. So we are sure that the data in Fast Processor is much smaller than the data in Web Server. After the Fast Processor, there are only a small fraction of data in the Storage Host to process.
 
