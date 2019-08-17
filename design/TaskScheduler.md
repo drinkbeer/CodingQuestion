@@ -109,7 +109,126 @@ public class DelayQueue<E extends Delayed> extends AbstractQueue<E>
 
 One scenario: Thread A become a Leader of Task 1 (delay time: curr + 50ms). Thread B - D are awaiting now. At curr + 10ms, producer offered a new Task 2, which has delay curr + 10 ms (this curr is the original curr + 10, so this deleay time is original curr + 20 ms, which is higher than the original Task 1), and become a new head. Now producer found Task 2 is the same as the task he enqueued, so he signals all Thread A - D, and let them race for the job. (be careful that when Thread A is waiting "available.awaitNanos(delay);", it will release the leader at the finally block, so that other threads could race for leader).
 
+Task: 
 ```
+package TaskDispatcher;
+
+import java.util.concurrent.Delayed;
+import java.util.concurrent.TimeUnit;
+
+public class Task implements Delayed {
+
+    private String name;
+    private long startTime;
+
+    public Task(String name, long delay) {
+        this.name = name;
+        this.startTime = System.currentTimeMillis() + delay;
+    }
+
+    @Override
+    public long getDelay(TimeUnit unit) {
+        long diff = startTime - System.currentTimeMillis();
+        return unit.convert(diff, TimeUnit.MILLISECONDS);
+    }
+
+    @Override
+    public int compareTo(Delayed o) {
+        return (int) (this.startTime - ((Task) o).getStartTime());
+    }
+
+    private long getStartTime() {
+        return this.startTime;
+    }
+
+
+    @Override
+    public String toString() {
+        return "task: " + name + " at " + startTime;
+    }
+}
 
 ```
 
+Producer:
+```
+package TaskDispatcher;
+
+import java.util.Random;
+import java.util.UUID;
+import java.util.concurrent.DelayQueue;
+
+public class TaskProducer implements Runnable{
+
+    private final Random rand = new Random();
+    private DelayQueue<Task> queue;
+
+    public TaskProducer(DelayQueue<Task> queue) {
+        this.queue = queue;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            try {
+                int delay = rand.nextInt(10000);
+                Task task = new Task(UUID.randomUUID().toString(), delay);
+                System.out.println("Put " + task);
+                queue.offer(task);
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+```
+
+Consumer
+```
+package TaskDispatcher;
+
+import java.util.concurrent.DelayQueue;
+
+public class TaskConsumer implements Runnable {
+
+    private DelayQueue<Task> queue;
+
+    public TaskConsumer(DelayQueue<Task> queue) {
+        this.queue = queue;
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            try {
+                Task task = queue.take();
+                System.out.println("Take " + task);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+```
+
+Scheduler:
+```
+package TaskDispatcher;
+
+import java.util.concurrent.DelayQueue;
+
+public class TaskScheduler {
+    public static void main(String[] args) {
+        DelayQueue<Task> queue = new DelayQueue<>();
+        new Thread(new TaskProducer(queue), "Producer Thread").start();
+        new Thread(new TaskConsumer(queue), "Consumer Thread").start();
+    }
+}
+
+```
+
+#### Understand Redis ZSet and Skiplist
+https://zsr.github.io/2017/07/03/redis-zset%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0/
