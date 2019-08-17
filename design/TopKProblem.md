@@ -163,7 +163,9 @@ Using Min Heap to maintain TopK elements.
 ### Components
 
 #### Web Server
-The entry point for all clients, aggregate data on the fly or via a dedicated backend process that processes logs (if it's count TopK exception, we could have a backend process to collect exceptions in logs; if it's count TopK shared links, we could aggretate the shared links on the fly). It will have a buffer in memory which contains Count-min sketch and max heap. If the buffer is full, we will flush the buffer to disk; if we reach a specific time period (e.g. 1 minute), we flush the buffer to disk even though it's not full.
+* The entry point for all clients, 
+* Aggregate data on the fly or via a dedicated backend process that processes logs (if it's count TopK exception, we could have a backend process to collect exceptions in logs; if it's count TopK shared links, we could aggretate the shared links on the fly). It will have a buffer in memory which contains Count-min sketch and max heap. If the buffer is full, we will flush the buffer to disk; if we reach a specific time period (e.g. 1 minute), we flush the buffer to disk even though it's not full.
+* Serialize data in a compact binary format (e.g. Apache Avro).
 
 * **Distributed Messaging System**: could be Apache Kafka or AWS Kinesis, etc. It has random partitioning. Or we can define our own partition rule if we have any requirement about partitioning. 
 * **Fast Path**: process data in a short period of time (e.g. within 1 minute, or 10 seconds), we should ensure the data aggregated into memory could fit into the RAM of a single host.
