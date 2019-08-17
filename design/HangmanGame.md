@@ -92,3 +92,7 @@ FK  | user_id: int
 #### Read Path
 
 
+## Reference:
+* https://github.com/FreemanZhang/system-design/blob/master/linkedin/hangmanGame.md
+* https://www.1point3acres.com/bbs/thread-294114-1-1.html
+* https://www.1point3acres.com/bbs/thread-212481-1-1.html
