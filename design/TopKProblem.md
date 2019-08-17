@@ -135,6 +135,16 @@ Analysis of the problem:
 #### Why we need multiple hash function rather than single hash function?
 * Reduce hash collision to improve the accuracy of counting
 
+#### How do we choose width (length of hash space) and heighth (# of hash function) in the Count-min sketch?
+
+```
+e - accuracy we want to have
+d - probability with which we get the the exact accurate counting
+
+width = Math.ceil(2.0/e)
+height = Math.ceil(-Math.log(1-d) / Math.log(2))
+```
+
 We use Count-min sketch to count the frequency of each element to avoid hash collision, and we maintain a TopK heap to get the TopK. So in memory, there is only Count-min sketch and a Min Heap.
 
 #### Components:
