@@ -232,7 +232,7 @@ public class TaskScheduler {
 
 ## HashedWheelTimer
 
-Netty's implementation of HashedWheelTimer: http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/tip/src/share/classes/java/util/concurrent/ScheduledThreadPoolExecutor.java
+Netty's implementation of HashedWheelTimer: https://github.com/netty/netty/blob/4.1/common/src/main/java/io/netty/util/HashedWheelTimer.java
 
 
 #### Understand Redis ZSet and Skiplist
