@@ -31,6 +31,18 @@ We store **1st degree** relationship in a KV database (with replica and properly
 
 ## API Design
 
+```
+getConnections()  -  sorted list of 1st degree friends
+```
+
+```
+getSharedConnection(X, Y)  - get the sorted connection list of X, Y, and do intersection, and return result.
+```
+
+```
+getDistance    -  input is source member ID and a set of destination member IDs, then returns the network distance between the source to destination up to 3 degrees.
+```
+
 ## Database Design
 
 ## High Level Design
@@ -39,11 +51,12 @@ We store **1st degree** relationship in a KV database (with replica and properly
 ![GraphArchitectureDiagram.png](pic/GraphArchitectureDiagram.png)
 
 * GraphDB: a KV database storing edges in the graph. It is horizontally scaled up, so that one member's entire adjacency list is stored in one physical node. It also has replicas.
-* Network Cache Service (NCS): communicate with GraphDB to calculate 2nd degree distances. 80% of 2nd degree calls could be cached in the NCS.
+* Network Cache Service (NCS): a consistent hashing cache to store 2nd degree friends. It communicates with GraphDB to calculate 2nd degree distances. 80% of 2nd degree calls could be cached in the NCS.
+* API layer: entry point for clients.
 
 As 80% of the 2nd degree could be retrieved in NCS, the tough part is calculate the 20% 2nd degree cache miss case in highly scale and low latency. What we can do is retrieve 1st degree friend list of the member, and the 2nd degree friends are gathered from each node, and we do merge in the GraphDB host in parallel. 
 
-Here is a trade-off, we could do merge in either NCS or GraphDB host. If we do it in NCS, it will consume a lot of Network Bandwidth, and CPU resources. If we do it in GraphDB, it will consume less Bandwidth, and the same amount of CPU.
+Here is a trade-off, we could do merge and deduplicate in either NCS or GraphDB host. If we do it in NCS, it will consume a lot of Network Bandwidth, and CPU resources. If we do it in GraphDB, it will consume less Bandwidth, and the same amount of CPU.
 
 As the merging list is consuming a lot of CPU resources, we have to find a efficient way to find out the smallest subsets to cover the maximum number of uncovered points in a large set. We use an algothrim called **Greedy Set Cover algorithm**.
 
