@@ -40,7 +40,7 @@ getSharedConnection(X, Y)  - get the sorted connection list of X, Y, and do inte
 ```
 
 ```
-getDistance    -  input is source member ID and a set of destination member IDs, then returns the network distance between the source to destination up to 3 degrees. Using BFS will be O(N^2) Time complexity.
+getDistance(X, Y)    -  input is source member ID and a set of destination member IDs, then returns the network distance between the source to destination up to 3 degrees. Using BFS will be O(N^2) Time complexity.
 ```
 
 ## Database Design
@@ -53,6 +53,9 @@ getDistance    -  input is source member ID and a set of destination member IDs,
 * **GraphDB**: a KV database storing edges in the graph. It is horizontally scaled up, so that one member's entire adjacency list is stored in one physical node. It also has replicas.
 * **Network Cache Service (NCS)**: a consistent hashing cache to store 2nd degree friends. It communicates with GraphDB to calculate 2nd degree distances. 80% of 2nd degree calls could be cached in the NCS.
 * **API layer**: entry point for clients.
+
+Example of `getDistance(X, Y)`: we want to get the distance of X and Y. We found get the 2nd degree list of X in the NCS, and check if Y is in the list. If Yes, then Y is 2nd degree. If not, we do a `getConnect(Y)` list, and use Y's 1st degree list to intersect X's 2nd degree list. If there is intersection, which mean Y is X's 3rd degree friend. If no intersection, which means they are not friends. (We don't consider relationship > 3 layers here).
+
 
 As 80% of the 2nd degree could be retrieved in NCS, the tough part is calculate the 20% 2nd degree cache miss case in highly scale and low latency. What we can do is retrieve 1st degree friend list of the member, and the 2nd degree friends are gathered from each node, and we do merge in the GraphDB host in parallel. 
 
