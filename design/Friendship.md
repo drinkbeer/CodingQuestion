@@ -140,6 +140,7 @@ The algorithm is as follows:
 2. Select R23 as it covers 3 and 6, and remove it from L, and remove 3 and 6 from K.
 3. Finally select R12, as it covers 4, and remove it from L, and remove 4 from K.
 
+With the Greedy Set Cover algorithm, we are reducing the GraphDB nodes merging and deduplication by 50%.
 
 ## Detailed Design
 
