@@ -78,6 +78,15 @@ PUT(K, V) {
 }
 ```
 
+If the V is very large that we cannot hold in memory, how to design it?
+```
+We store V in disk sequentially. We store <K, Loc> in HashMap. As it's a KV store, HashMap could be very fast query a K exists or not.
+
+But if it's a data storage engine, if we want the K query supports other operators like, ranged query "<=", ">=", "LIKE", it's better to use B-tree as Index algorithm.
+More details: https://dev.mysql.com/doc/refman/5.5/en/index-btree-hash.html
+
+```
+
 ## Reference
 * https://www.jianshu.com/p/e70849987439
 * Raft Concensus Algorithm: https://www.youtube.com/watch?v=vYp4LYbnnW8
