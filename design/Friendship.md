@@ -50,9 +50,9 @@ getDistance    -  input is source member ID and a set of destination member IDs,
 
 ![GraphArchitectureDiagram.png](pic/GraphArchitectureDiagram.png)
 
-* GraphDB: a KV database storing edges in the graph. It is horizontally scaled up, so that one member's entire adjacency list is stored in one physical node. It also has replicas.
-* Network Cache Service (NCS): a consistent hashing cache to store 2nd degree friends. It communicates with GraphDB to calculate 2nd degree distances. 80% of 2nd degree calls could be cached in the NCS.
-* API layer: entry point for clients.
+* **GraphDB**: a KV database storing edges in the graph. It is horizontally scaled up, so that one member's entire adjacency list is stored in one physical node. It also has replicas.
+* **Network Cache Service (NCS)**: a consistent hashing cache to store 2nd degree friends. It communicates with GraphDB to calculate 2nd degree distances. 80% of 2nd degree calls could be cached in the NCS.
+* **API layer**: entry point for clients.
 
 As 80% of the 2nd degree could be retrieved in NCS, the tough part is calculate the 20% 2nd degree cache miss case in highly scale and low latency. What we can do is retrieve 1st degree friend list of the member, and the 2nd degree friends are gathered from each node, and we do merge in the GraphDB host in parallel. 
 
