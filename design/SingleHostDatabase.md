@@ -90,4 +90,6 @@ More details: https://dev.mysql.com/doc/refman/5.5/en/index-btree-hash.html
 ## Reference
 * https://www.jianshu.com/p/e70849987439
 * https://soulmachine.gitbooks.io/system-design/cn/key-value-store.html
+* https://mr-dai.github.io/spinnaker/
+* https://blog.csdn.net/salyty/article/details/83106237
 * Raft Concensus Algorithm: https://www.youtube.com/watch?v=vYp4LYbnnW8
