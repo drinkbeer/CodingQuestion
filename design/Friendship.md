@@ -59,9 +59,9 @@ Example of `getDistance(X, Y)`: we want to get the distance of X and Y. We found
 
 As 80% of the 2nd degree could be retrieved in NCS, the tough part is calculate the 20% 2nd degree cache miss case in highly scale and low latency. What we can do is retrieve 1st degree friend list of the member, and the 2nd degree friends are gathered from each node, and we do merge in the GraphDB host in parallel. 
 
-Here is a trade-off, we could do merge and deduplicate in either NCS or GraphDB host. If we do it in NCS, it will consume a lot of Network Bandwidth, and CPU resources. If we do it in GraphDB, it will consume less Bandwidth, and the same amount of CPU.
+Here is a trade-off, we could do merge and deduplicate in either NCS or GraphDB host. If we do it in NCS, it will consume a lot of Network Bandwidth, and CPU resources. If we do it in GraphDB, it will consume less Bandwidth, and the same amount of CPU. The final idea is to do Merge and Deduplication on both GraphDB and NCS. In GraphDB, we do merge and deduplication in parallel, whereas a single NCS machine merges and deduplicate all intermediate results into a complete sorted array that can be both CPU intensive and time consuming.
 
-As the merging list is consuming a lot of CPU resources, we have to find a efficient way to find out the smallest subsets to cover the maximum number of uncovered points in a large set. We use an algothrim called **Greedy Set Cover algorithm**.
+As the merging list is consuming a lot of CPU resources, we have to find a efficient way to find out the smallest subsets (the least number of GraphDB nodes) to cover the maximum number of uncovered points in a large set. We use an algothrim called **Greedy Set Cover algorithm**.
 
 #### GraphDB Partitioning and Replication
 We use `partition_id = hash(member_id)` to calculate the partition_id, which is used to determine which GraphDB node to store the member's 1st degree relationship. And the each member's 1st degree friends are sorted by ID and stored in one single GraphDB.
@@ -74,6 +74,8 @@ To prevent Hot Partition, if two partitions are stored on the same machine in on
 
 #### Greedy Set Cover algorithm
 https://www.geeksforgeeks.org/set-cover-problem-set-1-greedy-approximate-algorithm/
+
+Given a set `K={1,2,..,m}` and `L={S1, S2, ..., SN}` whose union is K, the classic set cover algorithm is to find a minimum number of sets from L whose union contains all elements in K. Itj's a NP-hard problem, but we could use a Greedy algorithm to offer a boundary of the computing to solve the problem. (Though Greedy algorithms doesn't always result into a final most optimized solution).
 
 Example:
 ```
@@ -128,6 +130,16 @@ The per new element cost for S2 = Cost(S2)/|S2 – I| = 10/1
 Note that S2 adds only 5 to I.
 
 The greedy algorithm provides the optimal solution for above example, but it may not provide optimal solution all the time.
+
+
+![3rd.Degree.Friendship.png](pic/3rd.Degree.Friendship.png)
+
+`K={1,2,3,4,6}`, `L={R11, R112, R13, R21, R22, R23}`.
+The algorithm is as follows:
+1. Select R11 as it covers 1 and 2, and remove it from L, and remove 1 and 2 from K.
+2. Select R23 as it covers 3 and 6, and remove it from L, and remove 3 and 6 from K.
+3. Finally select R12, as it covers 4, and remove it from L, and remove 4 from K.
+
 
 ## Detailed Design
 
