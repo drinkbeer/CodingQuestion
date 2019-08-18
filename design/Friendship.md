@@ -11,7 +11,11 @@ Follow-up: how to improve efficiency of shared data?
 
 ## Analysis
 
-Friendship relationship is 
+Friendship relationship in social network is the graph distance problem. 
+
+We store 1st degree relationship in a KV database (with replica and properly sharding).  
+2nd degree relationship: Using a common BFS to get the 2nd degree relationship. Time `O(n^2)`  
+3rd degree relationship: Using the 2nd degree relationship and the 1st degree relationship of the 2nd degree friends to merge them and get 3rd degree friends.  
 
 #### Total Users & DAU
 
@@ -30,6 +34,8 @@ Friendship relationship is
 ## Database Design
 
 ## High Level Design
+
+
 
 ![GraphArchitectureDiagram.png](pic/GraphArchitectureDiagram.png)
 
