@@ -154,3 +154,5 @@ With the Greedy Set Cover algorithm, we are reducing the GraphDB nodes merging a
 ## Reference
 * https://engineering.linkedin.com/real-time-distributed-graph/using-set-cover-algorithm-optimize-query-latency-large-scale-distributed
 * http://0b4af6cdc2f0c5998459-c0245c5c937c5dedcca3f1764ecc9b2f.r43.cf2.rackcdn.com/11567-hotcloud13-wang.pdf
+* https://github.com/tim-hr/stuff/wiki/System-design:-Calculate-degrees-of-separation
+* http://stevekrenzel.com/finding-friends-with-mapreduce
