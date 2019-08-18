@@ -32,15 +32,15 @@ We store **1st degree** relationship in a KV database (with replica and properly
 ## API Design
 
 ```
-getConnections()  -  sorted list of 1st degree friends
+getConnections()  -  sorted list of 1st degree friends. I think it's O(1) Time Complexity.
 ```
 
 ```
-getSharedConnection(X, Y)  - get the sorted connection list of X, Y, and do intersection, and return result.
+getSharedConnection(X, Y)  - get the sorted connection list of X, Y, and do intersection, and return result. Time: O(N) by doing the intersection of X, and Y's connection list.
 ```
 
 ```
-getDistance    -  input is source member ID and a set of destination member IDs, then returns the network distance between the source to destination up to 3 degrees.
+getDistance    -  input is source member ID and a set of destination member IDs, then returns the network distance between the source to destination up to 3 degrees. Using BFS will be O(N^2) Time complexity.
 ```
 
 ## Database Design
@@ -59,6 +59,15 @@ As 80% of the 2nd degree could be retrieved in NCS, the tough part is calculate 
 Here is a trade-off, we could do merge and deduplicate in either NCS or GraphDB host. If we do it in NCS, it will consume a lot of Network Bandwidth, and CPU resources. If we do it in GraphDB, it will consume less Bandwidth, and the same amount of CPU.
 
 As the merging list is consuming a lot of CPU resources, we have to find a efficient way to find out the smallest subsets to cover the maximum number of uncovered points in a large set. We use an algothrim called **Greedy Set Cover algorithm**.
+
+#### GraphDB Partitioning and Replication
+We use `partition_id = hash(member_id)` to calculate the partition_id, which is used to determine which GraphDB node to store the member's 1st degree relationship. And the each member's 1st degree friends are sorted by ID and stored in one single GraphDB.
+
+Each partition node is replicated on R different machines (R could be 3). Each physical machine could hold P partitions (to save physical machine resources). If N is total number of members, the # of machines is: `Z = (N * R) / P`.
+
+To prevent Hot Partition, if two partitions are stored on the same machine in one replica, they will be stored on different machines in other replicas.
+
+
 
 #### Greedy Set Cover algorithm
 https://www.geeksforgeeks.org/set-cover-problem-set-1-greedy-approximate-algorithm/
