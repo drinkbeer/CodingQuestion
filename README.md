@@ -241,6 +241,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[605. Can Place Flowers](https://leetcode.com/problems/can-place-flowers/)|[LeetCode-605-Can-Place-Flowers.java](src/LeetCode-605-Can-Place-Flowers.java)|Greedy|
 |[621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)|[LeetCode-621-Task-Scheduler.java](src/LeetCode-621-Task-Scheduler.java)|Greedy|
 |[647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)|[LeetCode-647-Palindromic-Substrings.java](src/LeetCode-647-Palindromic-Substrings.java)|DP|
+|[730. Count Different Palindromic Subsequences](https://leetcode.com/problems/count-different-palindromic-subsequences/)|[LeetCode-730-Count-Different-Palindromic-Subsequences.java](src/LeetCode-730-Count-Different-Palindromic-Subsequences.java)|DP|
 |[805. Split Array With Same Average](https://leetcode.com/problems/split-array-with-same-average/)|[LeetCode-805-Split-Array-With-Same-Average.java](src/LeetCode-805-Split-Array-With-Same-Average.java)|DP|
 |[968. Binary Tree Cameras](https://leetcode.com/problems/binary-tree-cameras/)|[LeetCode-968-Binary-Tree-Cameras.java](src/LeetCode-968-Binary-Tree-Cameras.java)|DP, Greedy|
 |[★★★983. Minimum Cost For Tickets](https://leetcode.com/problems/minimum-cost-for-tickets/)|[LeetCode-983-Minimum-Cost-For-Tickets.java](src/LeetCode-983-Minimum-Cost-For-Tickets.java)|DP|
