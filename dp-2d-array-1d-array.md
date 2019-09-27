@@ -83,3 +83,75 @@ https://leetcode.com/problems/longest-palindromic-substring/
     }
 ```
 
+### 10. Regular Expression Matching
+https://leetcode.com/problems/regular-expression-matching/
+
+```
+public boolean isMatch(String s, String p) {
+        // subproblem
+        boolean[][] dp = new boolean[s.length() + 1][p.length() + 1];
+
+        // init
+        dp[0][0] = true;
+        for (int j = 0; j < p.length(); j++) {
+            if (p.charAt(j) == '*' && dp[0][j - 1]) {
+                dp[0][j + 1] = true;
+            }
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < p.length(); j++) {
+                if (p.charAt(j) == '.' || p.charAt(j) == s.charAt(i)) {
+                    dp[i + 1][j + 1] = dp[i][j];
+                }
+
+                if (p.charAt(j) == '*') {
+                    if (p.charAt(j - 1) != '.' && p.charAt(j - 1) != s.charAt(i)) {
+                        dp[i + 1][j + 1] = dp[i + 1][j - 1];
+                    } else {
+                        dp[i + 1][j + 1] = (dp[i + 1][j] || dp[i + 1][j - 1] || dp[i][j + 1]);
+                    }
+                }
+            }
+        }
+
+        return dp[s.length()][p.length()];
+    }
+```
+
+### 44. Wildcard Matching
+https://leetcode.com/problems/wildcard-matching/
+
+```
+// Similar to: https://leetcode.com/problems/regular-expression-matching/
+    public boolean isMatch(String s, String p) {
+        boolean[][] dp = new boolean[s.length() + 1][p.length() + 1];
+
+        // init
+        dp[0][0] = true;
+        for (int i = 0; i < s.length(); i++) {
+            dp[i + 1][0] = false;
+        }
+        for (int j = 0; j < p.length(); j++) {
+            if (p.charAt(j) == '*') {
+                dp[0][j + 1] = true;
+            } else {
+                break;
+            }
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < p.length(); j++) {
+                if (p.charAt(j) == '?' || p.charAt(j) == s.charAt(i)) {
+                    dp[i + 1][j + 1] = dp[i][j];
+                }
+
+                if (p.charAt(j) == '*') {
+                    dp[i + 1][j + 1] = dp[i][j + 1] || dp[i + 1][j];
+                }
+            }
+        }
+
+        return dp[s.length()][p.length()];
+    }
+```
