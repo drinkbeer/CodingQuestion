@@ -1,3 +1,8 @@
+DFS, BFS, BinarySearch, Two Pointers, 
+Data Structure: Heap, List, Tree, Union Find
+
+DP 和 Greedy一般比较好的公司都要面的。如果想去GG和FB，DP一定会考。
+
 Hot Problems:
 
 word search12， word break12，word ladder12，
