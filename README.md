@@ -606,8 +606,9 @@ Analysis:
 刷题总结：
 http://joshuablog.herokuapp.com/Leetcode-%E6%80%BB%E7%BB%93.html
 
-###Reference
+### Reference
 [LeetCode](https://leetcode.com/)   |   [LintCode](http://www.lintcode.com/)    |   [JiuZhang](http://www.jiuzhang.com/)  
 [Top 10 Algorithms for Coding Interview](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)  
 [Top 10 algorithms in Interview Questions(G4G)](http://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)  
 [Simple Java](http://www.programcreek.com/simple-java/)
+[Data Structure Summary](https://www.1point3acres.com/bbs/thread-699816-1-1.html)
