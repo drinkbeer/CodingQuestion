@@ -26,6 +26,8 @@ size();             // return size of the cache
 
 tail <- prev <- Node -> next -> head
 */
+
+// 1. Using Node class
 class LRUCache {
     private class Node {
         int key;
@@ -103,6 +105,40 @@ class LRUCache {
         head.next = node;
         node.prev = head;
         head = head.next;
+    }
+}
+
+// 2. Using LinkedHashMap
+class LRUCache {
+    
+    Map<Integer, Integer> map;
+    int capacity;
+
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        this.map = new LinkedHashMap<>(capacity);
+    }
+    
+    public int get(int key) {
+        if (map.containsKey(key)) {
+            int value = map.remove(key);
+            map.put(key, value);
+            return value;
+        }
+        return -1;
+    }
+    
+    public void put(int key, int value) {
+        if(map.containsKey(key)) {
+            map.remove(key);
+            map.put(key, value);
+            return;
+        }
+        map.put(key, value);
+        if(map.size() > capacity) {
+            int eldestKey = map.keySet().iterator().next();
+            map.remove(eldestKey);
+        }
     }
 }
 
