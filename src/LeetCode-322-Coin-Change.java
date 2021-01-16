@@ -1,29 +1,49 @@
 class Solution {
     // 1. Doesn't work
-//     public int coinChange(int[] coins, int amount) {
-//         Arrays.sort(coins);
-//         reverse(coins);
-        
-//         int count = 0;
-//         for (int coin : coins) {
-//             count += amount / coin;
-//             amount = amount % coin;
-//         }
-        
-//         if (amount != 0) return -1;
-//         return count;
-//     }
+    /**
+    Input:
+    [186,419,83,408]
+    6249
     
-//     private void reverse(int[] arr) {
-//         int lo = 0, hi = arr.length - 1;
-//         while (lo < hi) {
-//             int temp = arr[lo];
-//             arr[lo] = arr[hi];
-//             arr[hi] = temp;
-//             lo++;
-//             hi--;
-//         }
-//     }
+    Output: -1
+    
+    Expected: 20
+    
+    Analysis: 
+    Based on this approach
+    Coin    Num
+    419     14      5866    383
+    408     0
+    186     2       372     11
+    83
+    
+    So the strategy that always select large coins doesn't work in a DP problem.
+    */
+    public int coinChange(int[] coins, int amount) {
+        Arrays.sort(coins);
+        reverse(coins);
+        
+        int count = 0;
+        for (int coin : coins) {
+            if (amount < coin) continue;
+            count += amount / coin;
+            amount = amount % coin;
+        }
+        
+        if (amount != 0) return -1;
+        return count;
+    }
+    
+    private void reverse(int[] arr) {
+        int lo = 0, hi = arr.length - 1;
+        while (lo < hi) {
+            int temp = arr[lo];
+            arr[lo] = arr[hi];
+            arr[hi] = temp;
+            lo++;
+            hi--;
+        }
+    }
     
     // 1.DFS
 //     public int coinChange(int[] coins, int amount) {
