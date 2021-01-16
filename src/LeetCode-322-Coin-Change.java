@@ -45,31 +45,42 @@ class Solution {
         }
     }
     
-    // 1.DFS
-//     public int coinChange(int[] coins, int amount) {
-//         Arrays.sort(coins);
-        
-//         int[] res = new int[1];
-//         res[0] = Integer.MAX_VALUE;
-        
-//         helper(coins, coins.length - 1, amount, res, 0);
-//         return res[0] == Integer.MAX_VALUE ? -1 : res[0];
-//     }
+    // 2.DFS
+    /**
+    Test cases:
+    [1]
+    0
+    Expected: 0
     
-//     private void helper(int[] coins, int start, int amount, int[] res, int count) {
-//         if (start < 0) return;
-//         if (amount % coins[start] == 0) {
-//             // we get an answer, but not sure if it's the minumum answer
-//             res[0] = Math.min(res[0], count + amount / coins[start]);
-//             return;
-//         }
+    [1,2147483647]
+    2
+    Expected: 2
+
+    */
+    public int coinChange(int[] coins, int amount) {
+        Arrays.sort(coins);
         
-//         for (int i = amount / coins[start]; i >= 0; i--) {
-//             if (count + i >= res[0]) return;
+        int[] res = new int[1];
+        res[0] = Integer.MAX_VALUE;
+        
+        helper(coins, coins.length - 1, amount, res, 0);
+        return res[0] == Integer.MAX_VALUE ? -1 : res[0];
+    }
+    
+    private void helper(int[] coins, int start, int amount, int[] res, int count) {
+        if (start < 0) return;
+        if (amount % coins[start] == 0) {
+            // we get an answer, but not sure if it is the minimum answer
+            res[0] = Math.min(res[0], count + amount / coins[start]);
+            return;
+        }
+        
+        for (int i = amount / coins[start]; i >= 0; i--) {
+            if (count + i >= res[0]) return;
             
-//             helper(coins, start - 1, amount - coins[start] * i, res, count + i);
-//         }
-//     }
+            helper(coins, start - 1, amount - coins[start] * i, res, count + i);
+        }
+    }
     
     
 //     public int coinChange(int[] coins, int amount) {
@@ -131,7 +142,7 @@ class Solution {
 //     }
     
     
-    // 2.DP (pull)
+    // 3.DP (pull)
     /*
     https://www.cnblogs.com/grandyang/p/5138186.html
     https://leetcode.com/problems/coin-change/discuss/77360/C%2B%2B-O(n*amount)-time-O(amount)-space-DP-solution
