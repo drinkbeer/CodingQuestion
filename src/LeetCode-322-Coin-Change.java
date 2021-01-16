@@ -191,16 +191,20 @@ class Solution {
     if num of coins is <<<<< amount, then it's better to loop the coin outside.
     */
     public int coinChange(int[] coins, int amount) {
-        int[] state = new int[amount + 1];
-        Arrays.fill(state, amount + 1);
-        state[0] = 0;
-     
+        // subproblem
+        int[] dp = new int[amount + 1];
+        
+        // init
+        Arrays.fill(dp, amount + 1);
+        dp[0] = 0;
+        
         for (int coin : coins) {
             for (int i = coin; i <= amount; i++) {
-                state[i] = Math.min(state[i], state[i - coin] + 1);
+                dp[i] = Math.min(dp[i], dp[i - coin] + 1);
             }
         }
         
-        return state[amount] == amount + 1 ? -1 : state[amount];
+        // ans
+        return dp[amount] == amount + 1 ? -1 : dp[amount];
     }
 }
