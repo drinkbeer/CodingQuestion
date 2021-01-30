@@ -1,5 +1,23 @@
-## CodingQuestion
-Sharing common interview questions through this reporsity.
+# CodingQuestion
+Sharing some common interview questions through this reporsity.
+
+## General Strategy
+
+Strategies:
+1. Easy + Medium first, then hard.
+2. In preparation stage, categories based strategy; in final stage (one or two weeks before interviewing), company tag (or Interview Sharing) based.
+3. Think 10 - 20 minutes, if no clues, read the discussions. No more than 30 minutes for each problem.
+4. Write all solutions.
+5. Summarize similar problems.
+
+Categories:
+1. Array (two pointers, sort, sliding window), List, Tree (basic tree, BST, DFS, BFS, not include the advanced tree, e.g. BIT, Segment Tree), understand recursive.
+2. Basic Search (Binary Search) + Memorized Search + basic Dynamic Programming
+3. Advanced DP (knacpack, minimax)
+4. Frequently used Data Structure: Stack, Queue, Heap, Trie
+5. Advanced Tree (BIT, Segment Tree)
+6. Other hot topics: Union Find, Graph, Greedy
+
 
 ### Array
 Array includes N-Sum series, operation to array(rotate or pivot). DFS or BFS search a subset of array, e.g combination.  
