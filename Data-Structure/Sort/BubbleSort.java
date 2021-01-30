@@ -7,11 +7,14 @@ Time O(N^2)
 
 class BubbleSort {
 
+    /**
+     * Each loop gets the largest element to the right side.
+     * Most classic implementation.
+     */
     public static void bubbleSort(int[] arr){
         if(arr == null || arr.length == 0) return;
 
-        int N = arr.length;
-        for(int i = N - 1; i >= 0; i--){
+        for(int i = arr.length - 1; i >= 0; i--){
             for(int j = 0; j < i; j++){
                 if(arr[j] > arr[i]){
                     int temp = arr[j];
@@ -22,12 +25,13 @@ class BubbleSort {
         }
     }
 
+    // Each loop gets the smallest element to the left side.
     public static void bubbleSort5(int[] arr) {
         if (arr == null || arr.length == 0) return;
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = arr.length - 1; j > i; j--) {
-                if (arr[i] > arr[j]) {
+                if (arr[j] < arr[i]) {
                     int temp = arr[i];
                     arr[i] = arr[j];
                     arr[j] = temp;
