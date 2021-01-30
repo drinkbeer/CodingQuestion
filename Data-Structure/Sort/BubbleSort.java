@@ -1,3 +1,5 @@
+package Sort;
+
 /*
 Bubble Sort
 Time O(N^2)
@@ -15,6 +17,20 @@ class BubbleSort {
                     int temp = arr[j];
                     arr[j] = arr[i];
                     arr[i] = temp;
+                }
+            }
+        }
+    }
+
+    public static void bubbleSort5(int[] arr) {
+        if (arr == null || arr.length == 0) return;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = arr.length - 1; j > i; j--) {
+                if (arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
                 }
             }
         }
@@ -85,7 +101,7 @@ class BubbleSort {
 
     public static void main(String[] args){
         int[] arr = new int[]{5,2,4,6,1,3};
-        bubbleSort4(arr);
+        bubbleSort5(arr);
         for(int curr : arr){
             System.out.print(curr + " ");
         }

@@ -1,3 +1,5 @@
+package Queue;
+
 /*
 A basic implementation of a doubly linked list
 */
@@ -93,16 +95,13 @@ public class DoublyLinkedList {
     }
 
     public Node deleteEnd(){
-        try{
-            Node secondLastNode = this.head;
-            for(int i = 0; i < this.size - 1; i++){
-                secondLastNode = secondLastNode.next;
-            }
-            secondLastNode.next = null;
-            this.size -= 1;
-        }catch(NullPointerException e){
-            System.out.println("The list is empty");
+        Node secondLastNode = this.head;
+        for(int i = 0; i < this.size - 1; i++){
+            secondLastNode = secondLastNode.next;
         }
+        secondLastNode.next = null;
+        this.size -= 1;
+        return secondLastNode;
     }
 
     public void delete(Object item){
@@ -110,7 +109,7 @@ public class DoublyLinkedList {
             System.out.println("The list doesn't contain the item");
         }else{
             boolean findOne = false;
-            Node deleteNode = thie.head;
+            Node deleteNode = head;
             while(!findOne){
                 if(deleteNode.item.equals(item)){
                     if(deleteNode.prev != null){
@@ -162,11 +161,11 @@ public class DoublyLinkedList {
     public String toString(){
         String s = "";
         if(this.size == 0){
-            System.out.println(The list is empty);
+            System.out.println("The list is empty");
         }else{
             Node currNode = this.head;
             for(int i = 0; i < this.size; i++){
-                s += "[" + currNode.item.toString + "]";
+                s += "[" + currNode.item.toString() + "]";
                 currNode = currNode.next;
             }
         }

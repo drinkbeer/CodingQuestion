@@ -1,3 +1,4 @@
+package Queue;
 
 /*
 A basic implementation of a queue using an array
@@ -5,7 +6,7 @@ http://math.hws.edu/javanotes/c9/s3.html
 http://eddmann.com/posts/implementing-a-queue-in-java-using-arrays-and-linked-lists/
 
 */
-public class Queue{
+public class ArrayQueue{
     private Object[] array;     // store data in array
     private int front;
     private int rear;           //
@@ -41,7 +42,7 @@ public class Queue{
         }else{
             Object target = this.array[this.front];
             this.front = (this.front + 1) % this.maxSize;
-            return target
+            return target;
         }
     }
 
@@ -70,7 +71,7 @@ public class Queue{
     public String toString(){
         String s = "";
         int pointer = this.front;
-        if(isEmpty == false){
+        if(!isEmpty()){
             for(int i = 0; i <= size(); i++){
                 s += "[" + array[pointer].toString() + "]";
                 pointer = (pointer + 1) % this.maxSize;

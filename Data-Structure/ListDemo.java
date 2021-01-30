@@ -34,5 +34,7 @@ class ListDemo{
 			prev.next = newHead;
 			newHead = prev;
 		}
+
+		return newHead;
 	}
 }

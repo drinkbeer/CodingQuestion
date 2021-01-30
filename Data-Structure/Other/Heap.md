@@ -1,3 +1,5 @@
+package Other;
+
 /*
 A implementation of Heap
 */
@@ -5,7 +7,7 @@ public class Heap{
     Object[] array;
     int currentSize;
 
-    public Heap{
+    public Heap() {
         this.currentSize = 0;
         this.array = new Object[10];
     }
@@ -39,7 +41,7 @@ public class Heap{
     }
 
     public int rightIndex(int i){
-        reutrn i * 2 + 1;
+        return i * 2 + 1;
     }
 
     public void heapifyDown(int i){

@@ -1,3 +1,5 @@
+package LiveRamp;
+
 /*
 A small frog wants to get to the other side of a pond. The frog is initially located on 
 one bank of the pond (position 0) and wants to get to the other bank (posisiton X).

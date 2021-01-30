@@ -1,3 +1,7 @@
+package Queue;
+
+import Queue.DoublyLinkedList;
+
 /*
 A basic implementation of a queue using a doubly linked list.
 http://algs4.cs.princeton.edu/43mst/Queue.java.html
@@ -6,7 +10,7 @@ public class ListQueue {
     DoublyLinkedList list;
 
     public ListQueue(){
-        list = DoublyLinkedList();
+        list = new DoublyLinkedList();
     }
 
     public void enqueue(Object item){
@@ -36,7 +40,7 @@ public class ListQueue {
 
     //????
     public boolean isFull(){
-
+        throw new UnsupportedOperationException();
     }
 
     public String toString(){

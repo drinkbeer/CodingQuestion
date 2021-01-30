@@ -1,7 +1,7 @@
 import java.util.*;
 
 class TreeDemo{
-    private class TreeNode{
+    private static class TreeNode{
         int val;
         TreeNode left;
         TreeNode right;
@@ -167,7 +167,7 @@ class TreeDemo{
         Stack<TreeNode> stack = new Stack<TreeNode>();
         stack.push(root);
 
-        while(!isEmpty()){
+        while(!stack.isEmpty()){
             TreeNode curr = stack.peek();
             if(curr.left == null && curr.right == null){
                 // curr is a leaf
@@ -188,18 +188,18 @@ class TreeDemo{
 
     // 6. Level Traversal
     public static void levelTraversalIte(TreeNode root){
-        if(root == null)return;
-
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        queue.offer(root);
-
-        while(!queue.isEmpty()){
-            TreeNode curr = queue.pop();
-            System.out.print(curr.val + " ");
-
-            queue.offer(curr.left);
-            queue.offer(curr.right);
-        }
+//        if(root == null)return;
+//
+//        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+//        queue.offer(root);
+//
+//        while(!queue.isEmpty()){
+//            TreeNode curr = queue.pop();
+//            System.out.print(curr.val + " ");
+//
+//            queue.offer(curr.left);
+//            queue.offer(curr.right);
+//        }
     }
 
     // 7. Calculate the # of nodes in Kth Level
@@ -239,7 +239,7 @@ class TreeDemo{
         if(root == null) return 0;
 
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        stack.offer(root);
+        stack.push(root);
         int count = 0;
 
         while(!stack.isEmpty()){
@@ -252,6 +252,8 @@ class TreeDemo{
             if(curr.right != null) stack.push(curr);    // preorder must push right node first, as it needs pop left node first
             if(curr.left != null) stack.push(curr);
         }
+
+        return count;
     }
 
     public static int getNodeNumLeafRec(TreeNode root){
@@ -277,8 +279,8 @@ class TreeDemo{
 
         Stack<TreeNode> stack1 = new Stack<TreeNode>();
         Stack<TreeNode> stack2 = new Stack<TreeNode>();
-        stack1.offer(r1);
-        stack2.offer(r2);
+        stack1.push(r1);
+        stack2.push(r2);
 
         while(!stack1.isEmpty() && !stack2.isEmpty()){
             TreeNode n1 = stack1.pop();
@@ -288,12 +290,12 @@ class TreeDemo{
             if((n1.left == null && n2.left != null) || (n1.left != null && n2.left == null)) return false;
             if((n1.right == null && n2.right != null) || (n1.right != null && n2.right == null)) return false;
             if(n1.left != null && n2.left != null){
-                stack1.offer(n1.left);
-                stack2.offer(n2.left);
+                stack1.push(n1.left);
+                stack2.push(n2.left);
             }
             if(n1.right != null && n2.right != null){
-                stack1.offer(n1.right);
-                stack2.offer(n2.right);
+                stack1.push(n1.right);
+                stack2.push(n2.right);
             }
 
         }
@@ -307,8 +309,8 @@ class TreeDemo{
         if(root == null) return null;
 
         TreeNode temp = root.right;
-        TreeNode root.right = mirrowRec(root.left);
-        TreeNode root.left = mirrowRec(temp);
+        root.right = mirrowRec(root.left);
+        root.left = mirrowRec(temp);
 
         return root;
     }
@@ -404,21 +406,21 @@ class TreeDemo{
         s2.push(r2);
 
         while(!s1.isEmpty() && !s2.isEmpty()){
-            TreeNode curr1 = stack1.pop();
-            TreeNode curr2 = stack2.pop();
+            TreeNode curr1 = s1.pop();
+            TreeNode curr2 = s2.pop();
 
             if(curr1.val != curr2.val) return false;
 
             if(curr1.left != null && curr2.right != null){
-                stack1.push(curr1.left);
-                stack2.push(curr2.right);
+                s1.push(curr1.left);
+                s2.push(curr2.right);
             }else if(!(curr1.left == null && curr2 == null)){
                 return false;
             }
 
             if(curr1.right != null && curr2.left != null){
-                stack1.push(curr1.right);
-                stack2.push(curr2.left);
+                s1.push(curr1.right);
+                s2.push(curr2.left);
             }else if(!(curr1.right == null && curr2.left == null)){
                 return false;
             }
@@ -434,8 +436,8 @@ class TreeDemo{
 
         if(n1 == root || n2 == root) return root;
 
-        TreeNode left = LCARec(root.left, node1, node2);
-        TreeNode right = LCARec(root.right, node1, node2);
+        TreeNode left = LCARec(root.left, n1, n2);
+        TreeNode right = LCARec(root.right, n1, n2);
 
         // If not find in left tree, just return from right tree; not find in right tree, just return from left tree
         if(left == null) return right;
@@ -505,7 +507,7 @@ class TreeDemo{
         // If the node is in the left side.
         if(root != node && !LCAPathFinder(root.left, node, path) && !LCAPathFinder(root.right, node, path)){
             //Not find the node. remove the node added before
-            paht.remove(root);
+            path.remove(root);
             return false;
         }
 

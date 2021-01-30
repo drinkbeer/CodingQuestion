@@ -1,3 +1,5 @@
+package HashTable;
+
 /*
 This class implements each single bucket in HashTable
 
@@ -18,7 +20,7 @@ public class Bucket{
     public Bucket(Process p){
         this.key = p.getId();
         this.value = p;
-        this.lvie = true;
+        this.live = true;
     }
 
     public int getKey(){

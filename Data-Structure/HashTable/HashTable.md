@@ -1,3 +1,5 @@
+package HashTable;
+
 /*
 This class implements a HashTable to store Process (avoid collision)
 
