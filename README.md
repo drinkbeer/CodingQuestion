@@ -11,12 +11,32 @@ Strategies:
 5. Summarize similar problems.
 
 Categories:
+1. Array
+2. String
+3. Math
+4. Tree
+5. Backtracking
+6. Dynamic Programming
+7. LinkedList
+8. Binary Search
+9. Matrix
+10. DFS & BFS
+11. Stack & PriorityQueue
+12. Bit Manipulation
+13. Topological Sort
+14. Random
+15. Graph
+16. Union Find
+17. Trie
+18. Design
+
+Plans: 
 1. Array (two pointers, sort, sliding window), List, Tree (basic tree, BST, DFS, BFS, not include the advanced tree, e.g. BIT, Segment Tree), understand recursive.
 2. Basic Search (Binary Search) + Memorized Search + basic Dynamic Programming
 3. Advanced DP (knacpack, minimax)
-4. Frequently used Data Structure: Stack, Queue, Heap, Trie
+4. Frequently used Data Structure: Stack, Queue, Heap, Trie, PriorityQueue.
 5. Advanced Tree (BIT, Segment Tree)
-6. Other hot topics: Union Find, Graph, Greedy
+6. Other hot topics: Union Find, Graph, Greedy, Bit Manipulation， Topological Sort.
 
 
 ### Array
