@@ -1,7 +1,14 @@
-# CodingQuestion
-Sharing some common interview questions through this reporsity.
+# Interview Preparation
+Sharing some common interview preparation materials through this reporsity.
 
-## General Strategy
+## Preparation Areas
+1. Data Structure
+2. Algorithm
+3. Java Concepts, APIs, best practice, JVM mechanism & turning
+4. System Design && Object-Oriented Design
+5. Behavior Question & Project/Technical Knowledge Dive Deep
+
+## Data Structure & Algorithm Preparation Strategy
 
 Strategies:
 1. Easy + Medium first, then hard.
@@ -10,25 +17,26 @@ Strategies:
 4. Write all solutions.
 5. Summarize similar problems.
 
-Categories:
-1. Array
+Categories (Data Structure & Algorithms):
+1. Array & Matrix (2d array or higher dimension array)
 2. String
-3. Math
-4. Tree
+3. Tree
+4. LinkedList
 5. Backtracking
-6. Dynamic Programming
-7. LinkedList
-8. Binary Search
-9. Matrix
-10. DFS & BFS
+6. DFS & BFS
+7. Binary Search
+8. Dynamic Programming
+9. Graph
+10. Topological Sort
 11. Stack & PriorityQueue
-12. Bit Manipulation
-13. Topological Sort
-14. Random
-15. Graph
-16. Union Find
-17. Trie
-18. Design
+12. Trie
+13. Union Find
+
+Others (Algorithms & Design):
+1. Bit Manipulation
+2. Math
+3. Random
+4. Design
 
 Plans: 
 1. Array (two pointers, sort, sliding window), List, Tree (basic tree, BST, DFS, BFS, not include the advanced tree, e.g. BIT, Segment Tree), understand recursive.
@@ -36,7 +44,7 @@ Plans:
 3. Advanced DP (knacpack, minimax)
 4. Frequently used Data Structure: Stack, Queue, PriorityQueue, Deque; List, Map, HashTable; Heap, Trie.
 5. Advanced Tree (Binary Index Tree, Segment Tree, B+, AVL Tree, Segment Tree)
-6. Other hot topics: Union Find, Graph, Greedy, Bit Manipulation， Topological Sort.
+6. Stack hot topics: Union Find, Graph, Greedy, Bit Manipulation， Topological Sort.
 
 
 ### Array

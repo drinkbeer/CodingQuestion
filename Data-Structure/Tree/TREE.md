@@ -11,3 +11,20 @@
 + [Read-Black Tree]
 + [AVL Tree]
 + [Cartesian Tree]
++ [Trie - Dictionary Tree]
+
+## Heap
++ Idea
+
++ Analysis
+    - Time: `O(N^2)`
+    - Space: 
+
++ Application
+    - no
+
++ Implementation
+See [Sort.md - Heap Sort](../Sort/SORT.md), and [Heap.java](Heap.java)
+  
+## Trie
+See [trie.md](./trie.md)

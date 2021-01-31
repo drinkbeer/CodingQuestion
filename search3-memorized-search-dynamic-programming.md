@@ -347,3 +347,5 @@ https://leetcode.com/problems/reverse-pairs/
 
 ```
 
+# Reference
+1. Pack 9 talks (背包九讲）: https://github.com/tianyicui/pack

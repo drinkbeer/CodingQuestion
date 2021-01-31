@@ -213,7 +213,7 @@ public interface Shape{
 
 	      controller.updateView();
 
-	      controller.setStudentName("Other name");
+	      controller.setStudentName("Stack name");
 	      controller.updateView();
 	  }
     }

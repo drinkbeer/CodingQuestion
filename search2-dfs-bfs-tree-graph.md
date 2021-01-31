@@ -26,13 +26,30 @@ Depth First Traversals:
       Postorder Traversal : 4 5 2 3 1
 ```
 
-DFS
+## DFS
 Time Complexity: **O(N)**  
 Space Complexity: **O(H)** (H is the maximum height of the Tree. For a Binary Tree, the height is O(logN))
 
-BFS
+The follow types of problems can be solved by DFS:
+1. Return a series of data (an array, a list): return all possible results/paths.
+2. State change: from one node to another node, and the change can be revoked back. (In memory, using a Stack structure)
+
+BFS/DFS is most likely happens in Tree/Graph/Array/List, however it could also happens in String.
+
+Key:
+1. Optimization Strategy (Pruning)
+2. Memorization (using extra space)
+3. Divide & Conquer
+
+## BFS
 Time Complexity: **O(N)**  
 Space Complexity: **O(W)** (W is the maximum width of the Tree)
+
+Key:
+1. Extend BFS to level order traversal, unweighted shortest path (in Graph)
+2. BFS in Graph could extend to Shortest Path Faster Algorithm (SPFA), Dijkstra (with Heap).
+
+## Template
 
 ```
     private class Node {
@@ -285,3 +302,6 @@ class Solution {
     }
 }
 ```
+
+# Reference
+1. https://www.1point3acres.com/bbs/thread-556386-1-1.html

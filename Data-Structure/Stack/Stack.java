@@ -1,7 +1,8 @@
+package Stack;
+
 /*
 A basic implementation of Stack
 */
-
 public class Stack{
     // this array will store the data in the stack
     private Object[] array;

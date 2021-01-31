@@ -1,5 +1,12 @@
 Self-check Cheatsheet
 
+# Categories
+1. Data Structure
+2. Algorithm
+3. Java Concepts, knowledge, best practice, JVM mechanism & turning
+4. System Design && Object-Oriented Design
+5. Behavior Question & Project/Technical Knowledge Dive Deep
+
 // 1. Binary Tree vs. Hashtable, and when to use which
 
 // 2. regular expression, file parser
@@ -31,7 +38,7 @@ regular expression for phone numbers(\d{3}\-\d{3}\-\d{4})
 
 // 15. interface
 
-16. why amazon
+// 16. why our company?
 
 // 17. hashtable, hash function, collision
 
