@@ -3,6 +3,8 @@ package Sort;
 /**
  * Created by chen on 15/3/25.
  * Shell Sort
+ *
+ * https://www.programiz.com/dsa/shell-sort
  */
 public class ShellSort {
     public void sort(Comparable[] a) {

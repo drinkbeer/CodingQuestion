@@ -6,11 +6,10 @@ Selection Sort
 Time O(N^2)
 */
 class SelectionSort {
-    public static void selectionSort(int arr[]) {
-        int N = arr.length;
-        for (int i = 0; i < N; i++) {
+    public static void selectionSort(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
             int min = i;
-            for (int j = i + 1; j < N; j++){
+            for (int j = i + 1; j < arr.length; j++){
                 if (arr[j] < arr[min]) min = j;
             }
             if(min != i){

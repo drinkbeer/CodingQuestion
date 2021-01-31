@@ -4,7 +4,10 @@ package Sort;
 Created by chen on 15/4/2.
 QuickSort (Divide & Conquer)
 Time average O(NlogN)
-     worst O(N^2)    
+     worst O(N^2)
+
+Reference: https://runestone.academy/runestone/books/published/pythonds/SortSearch/TheQuickSort.html
+
 */
 class QuickSort {
 

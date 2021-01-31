@@ -2,11 +2,12 @@ package Sort;
 
 /*
 HeapSort
-Time: O()
+Time: O(NlogN)
 
 Ref: http://mushiqianmeng.blog.51cto.com/3970029/738164
     http://www.cnblogs.com/skywang12345/p/3602162.html
     http://www.cnblogs.com/jetpie/p/3971382.html
+    https://www.programiz.com/dsa/heap-sort
 */
 class HeapSort{
 

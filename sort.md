@@ -1,4 +1,4 @@
-
+# Sort Cheatsheet
 
 
 ### Bubble Sort
@@ -7,7 +7,21 @@ Each loop get the highest element to the right side.
 
 + Analysis
     - Time `O(N^2)`
+```
+    public static void bubbleSort(int[] arr){
+        if(arr == null || arr.length == 0) return;
 
+        for(int i = arr.length - 1; i >= 0; i--){
+            for(int j = 0; j < i; j++){
+                if(arr[j] > arr[i]){
+                    int temp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = temp;
+                }
+            }
+        }
+    }
+```
 
 ### Insertion Sort
 Each loop, let curr left move to the final position.

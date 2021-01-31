@@ -34,8 +34,8 @@ Plans:
 1. Array (two pointers, sort, sliding window), List, Tree (basic tree, BST, DFS, BFS, not include the advanced tree, e.g. BIT, Segment Tree), understand recursive.
 2. Basic Search (Binary Search) + Memorized Search + basic Dynamic Programming
 3. Advanced DP (knacpack, minimax)
-4. Frequently used Data Structure: Stack, Queue, Heap, Trie, PriorityQueue.
-5. Advanced Tree (BIT, Segment Tree)
+4. Frequently used Data Structure: Stack, Queue, PriorityQueue, Deque; List, Map, HashTable; Heap, Trie.
+5. Advanced Tree (Binary Index Tree, Segment Tree, B+, AVL Tree, Segment Tree)
 6. Other hot topics: Union Find, Graph, Greedy, Bit Manipulation， Topological Sort.
 
 

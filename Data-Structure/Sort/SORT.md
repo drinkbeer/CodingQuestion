@@ -28,7 +28,8 @@ Contents:
 
 ### Insertion Sort
 + Idea
-    - Each loop, let curr left move to the final position.
+    - Each loop, let curr left move to the position that will make left subarray the correct order.
+    - So the left subarray are always in the correct order. Each element in the left subarray is not necessary in the final position.
 
 + Implementation
 
@@ -41,7 +42,8 @@ Contents:
 
 ### Selection Sort
 + Idea
-    - Each loop, select the smallest ele in right subarray, and swap with curr.
+    - Each loop, select the smallest element in right subarray, and swap with curr.
+    - So the left subarray are always in the correct order. Each element in the left subarray is the final position.
 
 + Implementation
 
@@ -52,11 +54,10 @@ Contents:
     
 
 ### Merge Sort
-+ Idea
+* Idea
     - Using divide and conquer paradigm
-
-+ Implementation
-    - 
+    
+* Implementation
 
 + Analysis
     - Time: `O(NlogN)`
@@ -65,26 +66,26 @@ Contents:
 + Application
 
 
-### Quick Sort
-+ Idea
-    - 
-
-+ Implementation
-    - 
-
-+ Analysis
-    - Time: `O(NlogN)`
-    - Space: 
-
-+ Application
-
-
 ### Heap Sort
+
 + Idea
     - Using divide and conquer paradigm
 
-+ Implementation
-    - 
+* Implementation
+
+
++ Analysis
+    - Time: `O(NlogN)`
+    - Space:
+
++ Application
+
+
+### Quick Sort
+* Idea
+
+* Implementation
+
 
 + Analysis
     - Time: `O(NlogN)`
@@ -92,5 +93,29 @@ Contents:
 
 + Application
 
+
+## Counting Sort
+* Idea
+
+* Implementation
+
+
++ Analysis
+    - Time: `O(N + K)`, N is the number of elements, K is the range of elements.
+    - Space: `O(max_value)`
+
++ Application
+
+
+## Bucket Sort
+* Idea
+
+* Implementation
+
+* Analysis
+    - Time: `O(NlogN)`
+    - Space:
+
+* Application
 
 
