@@ -6,6 +6,8 @@ QuickSort (Divide & Conquer)
 Time average O(NlogN)
      worst O(N^2)
 
+"Kth element" can be solved with quick sort or quick select or heap.
+
 https://www.programcreek.com/2012/11/quicksort-array-in-java/
 Analysis of partion using the last element:
 Steps:

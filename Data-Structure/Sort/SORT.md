@@ -284,7 +284,7 @@ Answer: Apply external sort to nums2, and then find intersection chunk by chunk.
     - Space: `O(1)`
 
 + Application
-    - no
+    - "Kth element" problem can use "Quick Sort" or "Quick Select" (an transformation of quick sort) or heap to solve.
 
 + Implementation
 You can select any element as partition element. We select last element (easier to implement) or middle element as partition. See the code.
@@ -318,7 +318,7 @@ You can select any element as partition element. We select last element (easier 
 
 + Application
     - MapReduce (?)
-    - Top-K series problem could either use **PriorityQueue** or **Bucket Sort** or **Quick Select** to solve.
+    - "Top-K" series problem could either use **PriorityQueue** or **Bucket Sort** or **Quick Select** to solve.
 
 Examples:
 
@@ -331,6 +331,7 @@ https://www.geeksforgeeks.org/cartesian-tree-sorting/
 
 Cartesian Sort is an adaptive sorting as it sorts the data faster if data is partially sorted.
 
+Details of Cartesian Tree, please check [cartesian-tree.md](../Tree/cartesian-tree.md).
 
 ## Reference
 [Know Your Sorting Algorithm | Set 1 (Sorting Weapons used by Programming Languages)](https://www.geeksforgeeks.org/know-sorting-algorithm-set-1-sorting-weapons-used-programming-languages/)  

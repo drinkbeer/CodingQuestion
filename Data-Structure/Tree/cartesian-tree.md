@@ -5,6 +5,8 @@ A Cartesian tree is a tree data structure created from a set of data that obeys 
 * The tree obeys in the min (or max) heap property – each node is less (or greater) than its children.
 * An inorder traversal of the nodes yields the values in the same order in which they appear in the initial sequence.
 
+Please check Cartesian Tree Sorting in [SORT.md](../Sort/SORT.md).
+
 #### Construct a Cartesian Tree (Min or Max Heap)
 
 ```

@@ -225,7 +225,7 @@ The depth of a node is the length of the path to its root (i.e., its root path).
 
 
 
-![Hierarchy Diagram](/Data-Structure/java-collection-hierarchy.jpeg)
+![Hierarchy Diagram](/java-collection-hierarchy.jpeg)
 
 <a name = "ArrayList vs. LinkedList vs. Vector"/>
 ###1.[ArrayList vs. LinkedList vs. Vector](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)
