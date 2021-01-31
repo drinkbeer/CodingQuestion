@@ -1,7 +1,15 @@
 package Sort;
 
 /*
-HeapSort
+HeapSort visualizes an array as Heap (a special complete binary tree).
+
+Max Heap: Parent node >= children node
+Min Heap: Parent node <= children node
+
+In heap array, first parent index: heapSize/2 - 1
+So first left child: 2 * (heapSize/2 - 1) + 1
+First right child: 2 * (heapSize/2 - 1) + 2
+
 Time: O(NlogN)
 
 Ref: http://mushiqianmeng.blog.51cto.com/3970029/738164

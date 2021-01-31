@@ -20,7 +20,6 @@ class MergeSort {
     }
     
     public static void merge(int[] arr, int[] tmp, int lo, int mid, int hi) {
-
         for (int k = lo; k <= hi; k++) {
             tmp[k] = arr[k];
         }
@@ -39,7 +38,6 @@ class MergeSort {
                 arr[k] = tmp[j++];
             }
         }
-
     }
 
     public static void main(String[] args) {
