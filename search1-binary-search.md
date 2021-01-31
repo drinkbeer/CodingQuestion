@@ -17,7 +17,7 @@ public int search(int[] nums, int target) {
         else if (nums[mid] < target) lo = mid + 1;
         else hi = mid - 1;
     }
-    return lo;
+    return -1;
 }
 ```
 
@@ -37,11 +37,11 @@ public int searchInsert(int[] nums, int target) {
     
     if (nums[lo] >= target) return lo;
     if (nums[hi] >= target) return hi;
-    return hi + 1;
+    return -1;
 }
 ```
 
-In a sorted, duplicated array, search the last element >= target:  
+In a sorted, duplicated array, search the last element <= target:  
 Boundary: `[lo, hi]`
 
 ```
@@ -55,13 +55,13 @@ public int searchInsert(int[] nums, int target) {
         else hi = mid;
     }
     
-    if (nums[lo] >= target) return lo;
-    if (nums[hi] >= target) return hi;
-    return hi + 1;
+    if (nums[hi] <= target) return hi;
+    if (nums[lo] <= target) return lo;
+    return -1;
 }
 ```
 
-
+Example: 
 https://leetcode.com/problems/find-k-th-smallest-pair-distance/submissions/
 
 ```
@@ -89,6 +89,8 @@ Binary Search题目类型有三类：
 1. 有明确Target
 2. 没有明确Target
 3. 没有明确Target（可越界类型）
+
+Codes are in [BinarySearch.java](./Data-Structure/Search/BinarySearch.java).
 
 ### 第一类题：有明确Target的题型
 
