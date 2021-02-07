@@ -13,6 +13,8 @@ KEY POINT: must filter duplicates in all three pointers: i, lo, hi
     If P1+P2+P3 = 0, record the result. and continue(skip duplicate numbers)
     If P1+P2+P3 < 0, P2 right move, P3 not move
     If P1+P2+P3 > 0, P2 not move, P3 left move
+    
+Another way to dedup: use results.contains(list) to dedup. However, it will do a bit more unused computation.
 */
 public class Solution {
     
