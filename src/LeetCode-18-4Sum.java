@@ -66,44 +66,45 @@ public class Solution {
     // }
     
     
-        /*
+    // 2. Dedup through results. It's much simpler than the above one.
+    /*
     [1,0,-1,0,-2,2] -   [-2,-1,0,0,1,2]
     0
     */
     public List<List<Integer>> fourSum(int[] nums, int target) {
-        if (nums == null || nums.length <= 3) return new ArrayList<>();
-        List<List<Integer>> res = new ArrayList<>();
+        if (nums == null || nums.length < 4) return new ArrayList<>();
+        
+        List<List<Integer>> result = new ArrayList<>();
         
         Arrays.sort(nums);
-        
         for (int i = 0; i < nums.length - 3; i++) {
             for (int j = i + 1; j < nums.length - 2; j++) {
-                
-                int t = target - nums[i] - nums[j];
-                int l = j + 1, r = nums.length - 1;
-                
-                while (l < r) {
-                    if (t == nums[l] + nums[r]) {
-                        res.add(Arrays.asList(nums[i], nums[j], nums[l], nums[r]));
+                int lo = j + 1, hi = nums.length - 1, rest = target - nums[i] - nums[j];
+                while (lo < hi) {
+                    if (nums[lo] + nums[hi] == rest) {
+                        List<Integer> list = new ArrayList<>();
+                        list.add(nums[i]);
+                        list.add(nums[j]);
+                        list.add(nums[lo]);
+                        list.add(nums[hi]);
                         
-                        l++;
-                        r--;
+                        if (!result.contains(list)) {
+                            result.add(list);
+                        }
                         
-                        while (l < r && nums[l - 1] == nums[l]) l++;
-                        while (l < r && nums[r] == nums[r + 1]) r--;
-                    } else if (t > nums[l] + nums[r]) {
-                        l++;
+                        lo++;
+                        hi--;
+                    } else if (nums[lo] + nums[hi] < rest) {
+                        lo++;
                     } else {
-                        r--;
+                        hi--;
                     }
                 }
                 
-                while(j < nums.length - 2 && nums[j] == nums[j + 1]) j++;
             }
-            while(i < nums.length - 3 && nums[i] == nums[i + 1]) i++;
         }
         
-        return res;
+        return result;
     }
     
 }
