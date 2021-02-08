@@ -52,6 +52,14 @@ https://blog.csdn.net/NoMasp/article/details/49913627
 那么整个排列就成了：6 5 5 8 7 4 1
 
 然而最后一步将后面的8 7 4 1做一个递增。
+
+
+Some test cases:
+[1,2,3]
+[1,3,2]
+[2,3,1]
+[3,2,1] - [1,2,3]
+[1,5,1] - [5,1,1]
 */
 // public class Solution {
 //     public void nextPermutation(int[] nums) {
@@ -76,7 +84,6 @@ https://blog.csdn.net/NoMasp/article/details/49913627
 //         while(i < j) swap(nums, i++, j--);
 //     }
 // }
-
 
 class Solution {
     public void nextPermutation(int[] nums) {
