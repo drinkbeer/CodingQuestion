@@ -2,6 +2,9 @@
 https://discuss.leetcode.com/topic/30212/easiest-java-solution/2
 http://www.programcreek.com/2014/06/leetcode-next-permutation-java/
 
+What is lexicographically ordered Permutation?
+For instance, 'ABC' have 3*2*1=6 permutations, the lexicographically ordered permutation is “ABC, ACB, BAC, BCA, CAB, CBA”.
+
 The steps to solve this problem:
 1) scan from right to left, find the first element that is less than its previous one.
 
