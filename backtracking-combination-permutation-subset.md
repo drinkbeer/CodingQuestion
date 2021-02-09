@@ -3,6 +3,11 @@ https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-t
 
 # Combination
 
+Some key points of Combination problem:
+1. Is there any duplicates in the array?
+2. Is the array sorted?
+3. Are there negative elements?
+
 Combination Sum : https://leetcode.com/problems/combination-sum/
 
 ```
