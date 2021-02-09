@@ -1,6 +1,8 @@
 
 https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partitioning)
 
+# Combination
+
 Combination Sum : https://leetcode.com/problems/combination-sum/
 
 ```
@@ -56,6 +58,8 @@ public void backtrack(int[] nums, int target, int start, List<List<Integer>> res
     }
 }
 ```
+
+# Permutation
 
 Permutations : https://leetcode.com/problems/permutations/
 ```
@@ -178,6 +182,8 @@ public List<List<Integer>> permuteUnique(int[] nums) {
 }
 ```
 
+# Subset
+
 Subsets : https://leetcode.com/problems/subsets/
 ```
 public List<List<Integer>> subsets(int[] nums) {
@@ -267,6 +273,8 @@ public List<List<Integer>> subsetsWithDup(int[] nums) {
     return result;
 }
 ```
+
+# Palindrome
 
 Palindrome Partitioning : https://leetcode.com/problems/palindrome-partitioning/
 ```
