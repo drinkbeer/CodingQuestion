@@ -8,6 +8,8 @@ Some key points of Combination problem:
 2. Is the array sorted?
 3. Are there negative elements?
 
+The answer to the above questions determines how we (1) dedup; (2) do we need sort the array first.
+
 Combination Sum : https://leetcode.com/problems/combination-sum/
 
 ```
