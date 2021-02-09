@@ -68,6 +68,9 @@ public void backtrack(int[] nums, int target, int start, List<List<Integer>> res
 
 # Permutation
 
+Some key questions to ask?
+1. Is there any duplicates in the array?
+
 Permutations : https://leetcode.com/problems/permutations/
 ```
 public List<List<Integer>> permute(int[] nums) {
