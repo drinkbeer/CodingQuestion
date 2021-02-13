@@ -180,7 +180,7 @@ public List<List<Integer>> permuteUnique(int[] nums) {
             for (List<Integer> sub : result) {
                 List<Integer> row = new ArrayList<>(sub);
                 row.add(insertPos, nums[i]);
-                if (result.contains(row) || tempResult.contains(row)) continue; // skip duplicate
+                if (tempResult.contains(row)) continue; // skip duplicate
                 tempResult.add(row);
             }
 
