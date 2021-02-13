@@ -4,10 +4,10 @@ https://leetcode.com/problems/combination-sum/discuss/16502/A-general-approach-t
 # Combination
 
 Some key points of Combination problem:
-1. Is there any duplicates in the array?
-2. Is the array sorted?
-3. Are there negative elements?
-4. Can we reuse the same number?
+1. Is there any duplicates in the array? (1) No, then don't need sort and dedup; (2) Yes, then need sort and dedup.
+2. Is the array sorted? No
+3. Are there negative elements? If yes, in each backtracking, the target could be negative. The problem become more complicate. It can be a follow-up question.
+4. Can we reuse the same number? Yes. Combination can re-use the same number, so in each backtrack, the start number is `i`.
 
 The answer to the above questions determines how we (1) dedup; (2) do we need sort the array first.
 
@@ -70,9 +70,10 @@ public void backtrack(int[] nums, int target, int start, List<List<Integer>> res
 # Permutation
 
 Some key questions to ask?
-1. Is there any duplicates in the array?
-2. Is the array sorted?
-3. Can we reuse the same number? (Not Applicable, you cannot reuse the same number in a Permutation)
+1. Is there any duplicates in the array? (1) No. Then no need sort, and dedup; (2) Yes. Then need sort, and dedup.
+2. Is the array sorted? No.
+3. Can we reuse the same number? Not Applicable, you cannot reuse the same number in a Permutation.
+4. Is there negative element? Positive or negative element will not affect the result.
 
 Permutations : https://leetcode.com/problems/permutations/
 ```
@@ -196,6 +197,12 @@ public List<List<Integer>> permuteUnique(int[] nums) {
 ```
 
 # Subset
+
+1. Is there any duplicates in the array? (1) No, then don't need sort and dedup; (2) Yes, then need sort and dedup.
+2. Is the array sorted? No
+3. Are there negative elements? Not applicable. Negative or positive will not affect the result.
+4. Can we reuse the same number? No. Subset cannot re-use the same number, so in each backtrack, the start number is `i+1`.
+
 
 Subsets : https://leetcode.com/problems/subsets/
 ```
