@@ -71,6 +71,8 @@ public void backtrack(int[] nums, int target, int start, List<List<Integer>> res
 
 Some key questions to ask?
 1. Is there any duplicates in the array?
+2. Is the array sorted?
+3. Can we reuse the same number? (Not Applicable, you cannot reuse the same number in a Permutation)
 
 Permutations : https://leetcode.com/problems/permutations/
 ```
