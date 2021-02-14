@@ -26,6 +26,15 @@ Depth First Traversals:
       Postorder Traversal : 4 5 2 3 1
 ```
 
+BFS：
+1.用来判断可行解的存在性问题(存在一个解，任务完成)
+2.可行解的解空间的最小性问题(我们会像Binary Tree 的BFS的过程，也是得到了一个path，BFS可以用来处理path的最小长度，Leetcode - 127 Word Ladder就是一个很好的例子)
+
+DFS：
+用来在全部的解空间中寻找所有的可行解(或许需要满足一定性质的可行解)
+
+即DFS侧重于解的完备性，BFS侧重解的存在性与长度最短(当然对于遍历数据结构这样不求解的过程其实没什么差异)
+
 ## DFS
 Time Complexity: **O(N)**  
 Space Complexity: **O(H)** (H is the maximum height of the Tree. For a Binary Tree, the height is O(logN))
