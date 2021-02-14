@@ -69,7 +69,8 @@ class Solution {
         int maxLeft = Integer.MIN_VALUE, maxRight = Integer.MIN_VALUE;
         
         int sum = 0;
-        while (l <= r) {
+        while (l < r) {
+            // "l <= r" or "l < r" doesn't matter here, beceuse last element must be the highest one, and must have already collected before. So I prefer "l < r", because we don't need run in "l == r".
             if (height[l] < height[r]) {
                 // this means the pointer lo must have at least one pointer in its right side which is higher than lo
                 // then we are safe to collect water in pointer lo
