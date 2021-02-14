@@ -62,6 +62,32 @@ public class Solution {
         
 //         return nums.length + 1;
 //     }
+        
+
+        // Bit Manipulation solution: doesn't work because Int big can maximum 2^32, however, the array length can > 32.
+//     public int firstMissingPositive(int[] nums) {
+//         if (nums == null || nums.length == 0) return 1;
+        
+//         int marker = 0;
+//         int len = nums.length;
+//         int max = 1;
+//         for (int num : nums) {
+//             if (num <= len && num > 0) {
+//                 marker = marker | (1 << num);
+//                 max = Math.max(max, num);
+//             }
+//         }
+//         System.out.println(marker);
+        
+//         for (int i = 0; i <= len; i++) {
+//             int res = (marker & 1L);
+//             if (res == 0 && i > 0) return i;
+//             marker = marker >> 1;
+//         }
+//                 System.out.println(marker);
+
+//         return max + 1;
+//     }
     
     // 1.Brute Force, using a HashSet, Space O(N)
     public int firstMissingPositive(int[] nums) {
@@ -87,16 +113,14 @@ public class Solution {
         
 //         int i = 0;
 //         while (i < nums.length) {
-//             if (nums[i] <= 0 || nums[i] > nums.length || nums[i] == i + 1){
+//             if (nums[i] <= 0 || nums[i] > nums.length || nums[i] == i + 1 || nums[nums[i] - 1] - 1 == nums[i] - 1){
 //                 i++;
-//             } else if (nums[nums[i] - 1] != nums[i]) {
+//             } else {
 //                 // check if the destination (nums[i] - 1) is eligible for swapping
 //                 // if the destination already has the value to be nums[i], then we don't swap it.
 //                 // Destination Index: nums[i] - 1, destination target value: nums[i]
+//                 // An example: [0,2,2,3,1], if we don't have "nums[nums[i] - 1] - 1 == nums[i] - 1", the third "2" will be in the loop forever, cause TLE.
 //                 swap(nums, i, nums[i] - 1);
-//             } else {
-//                 // which means the destination has already been in the correct value, we just "continue" here.
-//                 i++;
 //             }
 //         }
         
