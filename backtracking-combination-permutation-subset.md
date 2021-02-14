@@ -416,7 +416,32 @@ Palindrome Partitioning : https://leetcode.com/problems/palindrome-partitioning/
     }
 ```
 
-
+Palindrome Partitioning II: https://leetcode.com/problems/palindrome-partitioning-ii/
+DP solution: 
+```
+class Solution {
+    public int minCut(String s) {
+        if (s == null || s.length() == 0) return 0;
+        
+        int len = s.length();
+        boolean[][] dp = new boolean[len][len];
+        int[] f = IntStream.range(0, len).toArray();
+        
+        for (int r = 0; r < len; r++) {
+            for (int l = 0; l <= r; l++) {
+                if (s.charAt(l) != s.charAt(r)) continue;
+                if (r - l > 2 && !dp[l + 1][r - 1]) continue;
+                
+                dp[l][r] = true;
+                if (l > 0) f[r] = Math.min(f[r], f[l - 1] + 1);
+                else f[r] = 0;
+            }
+        }
+        
+        return f[len - 1];
+    }
+}
+```
 
 BFS：
 1.用来判断可行解的存在性问题(存在一个解，任务完成)
