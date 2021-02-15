@@ -30,19 +30,19 @@ class Solution {
 //         if(nums.length <= 1) return true;
         
 //         // means if curr pace can be reached
-//         boolean[] state = new boolean[nums.length];
-//         state[0] = true;
+//         boolean[] dp = new boolean[nums.length];
+//         dp[0] = true;
         
 //         for(int i = 1; i < nums.length; i++){
 //             for (int j = 0; j <= i; j++) {
-//                 if (state[j] && j + nums[j] >= i) {
-//                     state[i] = true;
+//                 if (dp[j] && j + nums[j] >= i) {
+//                     dp[i] = true;
 //                     break;
 //                 }
 //             }
 //         }
         
-//         return state[nums.length - 1];
+//         return dp[nums.length - 1];
 //     }
     
     // 2. DP (backward)
@@ -57,17 +57,17 @@ class Solution {
 //         if(nums.length <= 1) return true;
         
 //         // means if curr pace can be reached
-//         boolean[] state = new boolean[nums.length];
-//         state[0] = true;
+//         boolean[] dp = new boolean[nums.length];
+//         dp[0] = true;
         
 //         for(int i = 0; i < nums.length; i++){
 //             for (int j = i + 1; j <= i + nums[i] && j < nums.length; j++) {
 //                 // means the jth block is reachable from ith, but we must ensure ith block itself is reachable.
-//                 state[j] = state[i];
+//                 dp[j] = dp[i];
 //             }
 //         }
         
-//         return state[nums.length - 1];
+//         return dp[nums.length - 1];
 //     }
     
     // 3.DP
@@ -75,17 +75,17 @@ class Solution {
 //         if(nums == null || nums.length == 0) return false;
 //         if(nums.length <= 1) return true;
         
-//         // state: means the max pace can be covered
-//         int[] state = new int[nums.length];
-//         state[0] = nums[0];
+//         // dp: means the max pace can be covered
+//         int[] dp = new int[nums.length];
+//         dp[0] = nums[0];
         
 //         for (int i = 1; i < nums.length; i++) {
-//             if (i > state[i - 1]) return false;  // ensure i is reachable
-//             state[i] = Math.max(state[i - 1], i + nums[i]);  // update state matrix with the max place block i can reach
-//             if (state[i] >= nums.length - 1) return true;
+//             if (i > dp[i - 1]) return false;  // ensure i is reachable
+//             dp[i] = Math.max(dp[i - 1], i + nums[i]);  // update dp matrix with the max place block i can reach
+//             if (dp[i] >= nums.length - 1) return true;
 //         }
         
-//         return state[nums.length - 1] >= nums.length - 1;
+//         return dp[nums.length - 1] >= nums.length - 1;
 //     }
     
     // 4.Greedy
