@@ -116,8 +116,8 @@ class Solution {
     
     end condition is:
     1.end >= nums.length - 1
-    2.fastest <= end
-    3.fastest >= nums.length - 1
+    2.max <= end
+    3.max >= nums.length - 1
     
     */
     public boolean canJump(int[] nums) {
@@ -126,18 +126,18 @@ class Solution {
         
         int start = 0, end = 0;
         while (end < nums.length - 1) {
-            int fastest = end;
+            int max = end;
             for (int i = start; i <= end; i++) {
-                fastest = Math.max(fastest, i + nums[i]);
+                max = Math.max(max, i + nums[i]);
             }
             
             // before proceed to next new [start, end], let's check the end condition.
-            if (fastest <= end) return false; // means no step forward, we are blocking in current run
-            if (fastest >= nums.length - 1) return true;
+            if (max <= end) return false; // means no step forward, we are blocking in current run
+            if (max >= nums.length - 1) return true;
             
             // proceed to next new [start, end]
             start = end + 1;
-            end = fastest;
+            end = max;
         }
         
         return true;
