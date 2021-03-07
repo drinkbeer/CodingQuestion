@@ -58,7 +58,26 @@ Unsigned Right Shift: `>>>`
 If it's a negative number, `>>` will use 1 to fill left side, but `>>>` will use 0 to fill left side.    
 `>>>` is unsigned-shift; it'll insert 0. `>>` is signed, and will extend the sign bit.
 
+#### 169. Majority Element
+https://leetcode.com/problems/majority-element/
 
+```
+    // 4. Bit Manipulation
+    public int majorityElement(int[] nums) {
+        int[] bit = new int[32];
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < 32; j++) {
+                bit[j] += (nums[i] >> j) & 1;
+            }
+        }
+        int majority = 0;
+        for (int j = 0; j < 32; j++) {
+            bit[j] = bit[j] > (nums.length / 2)? 1 : 0;
+            majority += bit[j] << j;
+        }
+        return majority;
+    }
+```
 
 #### 190. Reverse Bits
 https://leetcode.com/problems/reverse-bits/
