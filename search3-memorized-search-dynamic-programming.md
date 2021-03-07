@@ -159,6 +159,23 @@ https://leetcode.com/problems/longest-palindromic-substring/
     // DP (1D array) (best DP solution)
     /*
     Optimization: substring() is costy. It's better to record start index and length, and do one substring finally.
+    
+    "abcba"
+    j = 4
+    - - - - T
+    
+    j = 3
+    - - - T F
+    
+    j = 2
+    _ _ T F F
+    
+    j = 1
+    _ T F T F
+    
+    j = 0
+    T F F F T   <-  the last "True" is the one with maximum length
+    
     */
     public String longestPalindrome(String s) {
         int n = s.length();
@@ -174,7 +191,8 @@ https://leetcode.com/problems/longest-palindromic-substring/
         int start = 0, maxLen = 0;
         for (int i = n - 1; i >= 0; i--) {
             for (int j = n - 1; j >= i; j--) {
-                dp[j] = s.charAt(i) == s.charAt(j) && (j - i <= 2 || dp[j - 1]);
+	    // for (int j = i; j < len; j++) {    // doesn't work, because the dp array records the [i + 1, j] palindomic information. If we scan j from i to len - 1, the information will be overwritten.
+                dp[j] = s.charAt(i) == s.charAt(j) && (j - i < 3 || dp[j - 1]);
                 if (dp[j] && maxLen < j - i + 1) {
                     start = i;
                     maxLen = j - i + 1;
