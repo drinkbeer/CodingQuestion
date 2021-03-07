@@ -39,7 +39,7 @@ Others (Algorithms & Design):
 4. Design
 
 Plans: 
-1. Array (two pointers, sort, sliding window), List, Tree (basic tree, BST, DFS, BFS, not include the advanced tree, e.g. BIT, Segment Tree), understand recursive.
+1. Array (two pointers, sort, binary search, sliding window), List, Tree (basic tree, BST, DFS, BFS, not include the advanced tree, e.g. BIT, Segment Tree), understand recursive.
 2. Basic Search (Binary Search) + Memorized Search + basic Dynamic Programming
 3. Advanced DP (knacpack, minimax)
 4. Frequently used Data Structure: Stack, Queue, PriorityQueue, Deque; List, Map, HashTable; Heap, Trie.
