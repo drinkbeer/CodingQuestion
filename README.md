@@ -43,8 +43,8 @@ Plans:
 2. Basic Search (Binary Search) + Memorized Search + basic Dynamic Programming
 3. Advanced DP (knacpack, minimax)
 4. Frequently used Data Structure: Stack, Queue, PriorityQueue, Deque; List, Map, HashTable; Heap, Trie.
-5. Advanced Tree (Binary Index Tree, Segment Tree, B+, AVL Tree, Segment Tree)
-6. Stack hot topics: Union Find, Graph, Greedy, Bit Manipulation， Topological Sort.
+5. Advanced Tree (Binary Index Tree, Segment Tree, B/B+, AVL Tree, Red-black Tree)
+6. Hot topics: Union Find, Graph, Greedy, Bit Manipulation，Topological Sort.
 
 
 ### Array
