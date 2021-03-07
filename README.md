@@ -20,8 +20,8 @@ Strategies:
 Categories (Data Structure & Algorithms):
 1. Array & Matrix (2d array or higher dimension array)
 2. String
-3. Tree
-4. LinkedList
+3. LinkedList
+4. Tree
 5. Backtracking
 6. DFS & BFS
 7. Binary Search
@@ -39,7 +39,7 @@ Others (Algorithms & Design):
 4. Design
 
 Plans: 
-1. Array (two pointers, sort, binary search, sliding window), List, Tree (basic tree, BST, DFS, BFS, not include the advanced tree, e.g. BIT, Segment Tree), understand recursive and iterative.
+1. Array (two pointers, sort, binary search, sliding window), String, List, Tree (basic tree, BST, DFS, BFS, not include the advanced tree, e.g. BIT, Segment Tree), understand recursive and iterative.
 2. Basic Search (Binary Search) + Memorized Search + basic Dynamic Programming
 3. Advanced DP (knacpack, minimax)
 4. Frequently used Data Structure: Stack, Queue, PriorityQueue, Deque; List, Map, HashTable; Heap, Trie.
