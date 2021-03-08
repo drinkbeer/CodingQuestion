@@ -43,7 +43,7 @@ Analysis:
 public class Solution {
     public String convert(String s, int numRows) {
         if(s == null || s.length() == 0 || numRows < 1) return "";
-        if(numRows == 1) return s;
+        if(numRows == 1) return s;  // this is important, because if numRows is 1, the step is 0, the loop will be dead loop.
         
         StringBuilder sb = new StringBuilder();
         int step = 2 * numRows - 2;
