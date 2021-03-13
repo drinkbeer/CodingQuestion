@@ -50,28 +50,40 @@ public class Solution {
     //         list.remove(list.size() - 1);
     //     }
     // }
-    // 2.BFS(not finish)
-    // public List<String> letterCombinations(String digits) {
-    //     List<String> result = new ArrayList<String>();
-    //     if(digits == null || digits.length() == 0) return result;
+    
+    // 2. BFS
+//     public List<String> letterCombinations(String digits) {
+//         if (digits == null || digits.length() == 0) return new ArrayList<>();
         
-    //     HashMap<Integer, String> map = new HashMap<Integer, String>();
-    //     map.put(2, "abc");
-    //     map.put(3, "def");
-    //     map.put(4, "ghi");
-    //     map.put(5, "jkl");
-    //     map.put(6, "mno");
-    //     map.put(7, "pqrs");
-    //     map.put(8, "tuv");
-    //     map.put(9, "wxyz");
-    //     map.put(0, "");
+//         HashMap<Character, String> map = new HashMap<>();
+//         map.put('2', "abc");
+//         map.put('3', "def");
+//         map.put('4', "ghi");
+//         map.put('5', "jkl");
+//         map.put('6', "mno");
+//         map.put('7', "pqrs");
+//         map.put('8', "tuv");
+//         map.put('9', "wxyz");
         
+//         List<String> result = new ArrayList<>();
+//         result.add("");
         
-        
-    //     for(int i = 0; i < digits.length(); i++){
+//         for(char c : digits.toCharArray()) {
+//             List<String> temp = new ArrayList<>();
             
-    //     }
-    // }
+//             String str = map.get(c);
+            
+//             for (char c2 : str.toCharArray()) {
+//                 for (String s : result) {
+//                     temp.add(s + c2);
+//                 }
+//             }
+            
+//             result = temp;
+//         }
+        
+//         return result;
+//     }
     
     // 3.add string to result circle by circle
     public List<String> letterCombinations(String digits) {
