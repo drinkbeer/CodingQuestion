@@ -62,4 +62,32 @@ public class Solution {
 //         }
 //     }
     
+    // 3
+    public void reverseWords(char[] s) {
+        int begin = 0, end = 0;
+        while (end < s.length) {
+            while (end < s.length && s[end] != ' ') end++;
+            
+            if (begin != end) {
+                reverse(s, begin, end - 1);
+            }
+            
+            while (end < s.length && s[end] == ' ') end++;
+            begin = end;
+        }
+        
+        reverse(s, 0, s.length - 1);
+    }
+    
+    private void reverse(char[] s, int l, int r) {
+        while (l < r) {
+            char temp = s[l];
+            s[l] = s[r];
+            s[r] = temp;
+            
+            l++;
+            r--;
+        }
+    }
+    
 }
