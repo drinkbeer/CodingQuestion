@@ -56,7 +56,7 @@ public class Solution {
             if(s.charAt(i) != t.charAt(i)) return s.substring(i + 1).equals(t.substring(i)) || s.substring(i + 1).equals(t.substring(i + 1));
             i++;
         }
-        //t reach end
+        // i points to the end of t
         return m - n == 1;
     }
 }
