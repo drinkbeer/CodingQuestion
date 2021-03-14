@@ -42,43 +42,40 @@ public class Solution {
     }
     
     // 2.
-//     public String addBinary(String a, String b) {
-//         int[] sum = new int[Math.max(a.length(), b.length())];
-//         int k = sum.length - 1;
-//         int carry = 0;
+    public String addBinary(String a, String b) {
+        int carry = 0;
+        int i = a.length() - 1, j = b.length() - 1;
+        StringBuilder sb = new StringBuilder();
+        while (i >= 0 && j >= 0) {
+            int aNum = a.charAt(i) - '0';
+            int bNum = b.charAt(j) - '0';
+            int sum = aNum + bNum + carry;
+            sb.insert(0, sum % 2);
+            carry = sum / 2;
+            
+            i--;
+            j--;
+        }
         
-//         int i = a.length() - 1, j = b.length() - 1;
-//         while (i >= 0 && j >= 0) {
-//             int first = a.charAt(i) - '0';
-//             int second = b.charAt(j) - '0';
-//             int s = first + second + carry;
-//             carry = s / 2;
-//             sum[k--] = s % 2;
-//             i--;
-//             j--;
-//         }
+        while (i >= 0) {
+            int aNum = a.charAt(i) - '0';
+            int sum = aNum + carry;
+            sb.insert(0, sum % 2);
+            carry = sum / 2;
+            
+            i--;
+        }
         
-//         while (i >= 0) {
-//             int first = a.charAt(i) - '0';
-//             int s = first + carry;
-//             carry = s / 2;
-//             sum[k--] = s % 2;
-//             i--;
-//         }
+        while (j >= 0) {
+            int bNum = b.charAt(j) - '0';
+            int sum = bNum + carry;
+            sb.insert(0, sum % 2);
+            carry = sum / 2;
+            
+            j--;
+        }
         
-//         while (j >= 0) {
-//             int second = b.charAt(j) - '0';
-//             int s = second + carry;
-//             carry = s / 2;
-//             sum[k--] = s % 2;
-//             j--;
-//         }
-        
-//         String res = "";
-//         for (int num : sum) res += num;
-//         if (carry > 0) {
-//             res = carry + res;
-//         }
-//         return res;
-//     }
+        if (carry != 0) sb.insert(0, carry);
+        return sb.toString();
+    }
 }
