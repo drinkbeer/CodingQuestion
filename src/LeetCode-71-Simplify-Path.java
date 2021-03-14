@@ -13,26 +13,28 @@ First, split path by "/"
 public class Solution {
     // 1.Using List
     public String simplifyPath(String path) {
-        if(path == null || path.length() <= 1) return path;
+        if (path == null || path.length() <= 1) return path;
         
-        String result = "/";
+        StringBuilder sb = new StringBuilder();
+        sb.append("/");
+        
         String[] stubs = path.split("/");
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         
-        for(String s : stubs){
-            if(s.equals(".") || s.equals("") || s.equals("/")) continue;
-            if(s.equals("..")){
-                if(list.size() > 0) list.remove(list.size() - 1);
+        for (String s : stubs) {
+            if (s.equals(".") || s.equals("/") || s.equals("")) continue;
+            if (s.equals("..")) {
+                if (list.size() > 0) list.remove(list.size() - 1);
                 continue;
             }
             list.add(s);
         }
         
-        for(String s : list) result += s + "/";
+        for (String s : list) sb.append(s).append("/");
         
-        if(result.length() > 1) return result.substring(0, result.length() - 1);
+        if (sb.length() > 1) sb.deleteCharAt(sb.length() - 1);  // remove last "/"
         
-        return result;
+        return sb.toString();
     }
     
     // 2.Using stack
