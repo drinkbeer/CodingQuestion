@@ -48,6 +48,31 @@ public class Solution {
         return true;
     }
     
+    // Another Two Pointers
+    public boolean isPalindrome(String s) {
+        int lo = 0, hi = s.length() - 1;
+        while (lo < hi) {
+            while(lo < hi && !isValid(s.charAt(lo))) lo++;
+            while(lo < hi && !isValid(s.charAt(hi))) hi--;
+            
+            if (lo < hi) {
+                if (!isPalindrome(s.charAt(lo), s.charAt(hi))) return false;
+            }
+            
+            lo++;
+            hi--;
+        }
+        return true;
+    }
+    
+    private boolean isValid(char c) {
+        return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9');
+    }
+    
+    private boolean isPalindrome(char c1, char c2) {
+        return Character.toLowerCase(c1) == Character.toLowerCase(c2);
+    }
+    
     // 3.Reverse and Compare
     // https://leetcode.com/problems/valid-palindrome/discuss/39981/My-three-line-java-solution
     // public boolean isPalindrome(String s) {
