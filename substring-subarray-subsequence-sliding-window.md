@@ -1,5 +1,5 @@
 
-## Template
+# Template
 ```Java
 int findSubstring(string s){
     vector<int> map(128,0);
@@ -188,7 +188,7 @@ public class Solution {
                 begin = leftMost + 1;
             }
             
-            maxLen = Math.max(maxLen, end - begin);
+            maxLen = Math.max(maxLen, end - begin);  // end is exclusive here
         }
         return maxLen == Integer.MIN_VALUE ? 0 : maxLen;
     }
