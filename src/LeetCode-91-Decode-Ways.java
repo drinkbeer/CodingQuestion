@@ -46,20 +46,20 @@ public class Solution {
     public int numDecodings(String s) {
         if (s == null || s.length() == 0) return 0;
         
-        int[] state = new int[s.length() + 1];
-        state[0] = 1;
-        state[1] = s.charAt(0) != '0' ? 1 : 0;
+        int[] dp = new int[s.length() + 1];     // index is the end of substring (exclusive). S.substring(start, i)
+        dp[0] = 1;
+        dp[1] = s.charAt(0) != '0' ? 1 : 0;     // 1 -> substring(0, 1), the first character is '0' or a valid number
+        
         
         for (int i = 2; i <= s.length(); i++) {
             int one = Integer.parseInt(s.substring(i - 1, i));
             int two = Integer.parseInt(s.substring(i - 2, i));
-            System.out.println("one: " + one + " two: " + two);
             
-            if (one >= 1 && one <= 9) state[i] += state[i - 1]; 
-            if (two >= 10 && two <= 26) state[i] += state[i - 2];
+            if (one >= 1 && one <= 9) dp[i] += dp[i - 1];
+            if (two >= 10 && two <= 26) dp[i] += dp[i - 2];
         }
         
-        return state[s.length()];
+        return dp[dp.length - 1];
     }
     
     // 3. DP Time O(N), Space O(1)    
