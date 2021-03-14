@@ -24,4 +24,40 @@ public class Solution {
         }
         return 0;
     }
+    
+    // Another version
+    public int compareVersion(String version1, String version2) {
+        String[] stubs1 = version1.split("\\.");
+        String[] stubs2 = version2.split("\\.");
+        
+        int i = 0, j = 0;
+        while(i < stubs1.length && j < stubs2.length) {
+            int comp = compareSubVersion(stubs1[i], stubs2[j]);
+            if (comp != 0) return comp;
+            
+            i++;
+            j++;
+        }
+        
+        while (i < stubs1.length) {
+            int comp = compareSubVersion(stubs1[i], "0");
+            if (comp != 0) return comp;
+            i++;
+        }
+        
+        while (j < stubs2.length) {
+            int comp = compareSubVersion("0", stubs2[j]);
+            if (comp != 0) return comp;
+            j++;
+        }
+        
+        return 0;
+    }
+    
+    public int compareSubVersion(String s1, String s2) {
+        int v1 = Integer.valueOf(s1);
+        int v2 = Integer.valueOf(s2);
+        
+        return Integer.compare(v1, v2);
+    }
 }
