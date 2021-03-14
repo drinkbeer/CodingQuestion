@@ -47,16 +47,37 @@ public class Solution extends Reader4 {
      */
     public int read(char[] buf, int n) {
         int total = 0;
-        char[] temp = new char[4];
+        char[] buf4 = new char[4];
         while (total < n) {
-            int count = read4(temp);
+            int count = read4(buf4);
             count = Math.min(count, n - total);
             
             int k = 0;
-            while (total < n && k < count) buf[total++] = temp[k++];
+            while(total < n && k < count) buf[total++] = buf4[k++];
             
-            if (count < 4) break; // means we reached the EOF
+            if (count < 4) break;       // means we reached the EOF
         }
+        
+        return total;
+    }
+      
+    // Another way
+    public int read(char[] buf, int n) {
+        int total = 0;
+        
+        char[] buf4 = new char[4];
+        int len4 = read4(buf4);
+        while (len4 > 0) {
+            if (total >= n) break;
+            len4 = Math.min(len4, n - total);
+            
+            int k = 0;
+            while(total < n && k < len4) buf[total++] = buf4[k++];
+            
+            buf4 = new char[4];
+            len4 = read4(buf4);
+        }
+        
         return total;
     }
 }
