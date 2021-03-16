@@ -8,7 +8,7 @@ Usually Knacpack problem could be solved by:
 5. DP (convert to subset sum problem, and use 2D or 1D array)
 
 
-# 1. ZeroOneKnapsackProblem
+# 1. Zero-One Knapsack Problem
 https://www.acwing.com/problem/content/description/2/
 https://leetcode-cn.com/problems/coin-change/solution/bei-bao-wen-ti-zhi-01bei-bao-wen-ti-ke-pu-wen-ji-c/
 https://www.acwing.com/solution/content/1644/
@@ -107,7 +107,12 @@ public class Main{
 }
 ```
 
+# 2. Complete Knapsack Problem
+https://www.acwing.com/problem/content/3/
 
+
+
+# Problems
 
 #### 494. Target Sum
 https://leetcode.com/problems/target-sum/
