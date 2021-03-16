@@ -9,9 +9,9 @@ Usually Knacpack problem could be solved by:
 
 
 # 1. Zero-One Knapsack Problem
-https://www.acwing.com/problem/content/description/2/
-https://leetcode-cn.com/problems/coin-change/solution/bei-bao-wen-ti-zhi-01bei-bao-wen-ti-ke-pu-wen-ji-c/
-https://www.acwing.com/solution/content/1644/
+https://www.acwing.com/problem/content/description/2/  
+https://leetcode-cn.com/problems/coin-change/solution/bei-bao-wen-ti-zhi-01bei-bao-wen-ti-ke-pu-wen-ji-c/  
+https://www.acwing.com/solution/content/1644/  
 
 ```Java
 import java.util.Scanner;
@@ -108,8 +108,9 @@ public class Main{
 ```
 
 # 2. Complete Knapsack Problem
-https://www.acwing.com/problem/content/3/
-https://www.acwing.com/solution/content/36299/
+https://www.acwing.com/problem/content/3/  
+https://www.acwing.com/solution/content/36299/  
+https://www.acwing.com/solution/content/5345/  
 
 ```Java
 import java.util.Scanner;
