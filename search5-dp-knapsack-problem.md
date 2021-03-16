@@ -109,7 +109,85 @@ public class Main{
 
 # 2. Complete Knapsack Problem
 https://www.acwing.com/problem/content/3/
+https://www.acwing.com/solution/content/36299/
 
+```Java
+import java.util.Scanner;
+
+class Main {
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();  // N items
+        int V = scanner.nextInt();  // Pack capacity
+        int[] v = new int[N + 1];   // ith item capacity
+        int[] w = new int[N + 1];   // ith item value
+        
+        for (int i = 1; i <= N; i++) {
+            v[i] = scanner.nextInt();
+            w[i] = scanner.nextInt();
+        }
+        scanner.close();
+        // System.out.println(completePackExecutor1(N, V, v, w));
+        // System.out.println(completePackExecutor2(N, V, v, w));
+        System.out.println(completePackExecutor3(N, V, v, w));
+    }
+    
+    private static int completePackExecutor1(int N, int V, int[] v, int[] w) {
+        // state
+        int[][] dp = new int[N + 1][V + 1];
+        
+        // init
+        dp[0][0] = 0;
+        
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= V; j++) {
+                for (int k = 0; k * v[i] <= j; k++) {
+                    dp[i][j] = Math.max(dp[i][j], dp[i - 1][j - k * v[i]] + k * w[i]);
+                }
+            }
+        }
+        
+        return dp[N][V];
+    }
+    
+    // Optimize time
+    private static int completePackExecutor2(int N, int V, int[] v, int[] w) {
+        // state
+        int[][] dp = new int[N + 1][V + 1];
+        
+        // init
+        dp[0][0] = 0;
+        
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= V; j++) {
+                dp[i][j] = dp[i - 1][j];
+                if (j >= v[i]) dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - v[i]] + w[i]);
+            }
+        }
+        
+        return dp[N][V];
+    }
+    
+    // Optimize time
+    private static int completePackExecutor3(int N, int V, int[] v, int[] w) {
+        // state
+        int[] dp = new int[V + 1];
+        
+        // init
+        dp[0] = 0;
+        
+        for (int i = 1; i <= N; i++) {
+            for (int j = v[i]; j <= V; j++) {
+                dp[j] = Math.max(dp[j], dp[j - v[i]] + w[i]);
+            }
+        }
+        
+        return dp[V];
+    }
+}
+
+```
 
 
 # Problems
