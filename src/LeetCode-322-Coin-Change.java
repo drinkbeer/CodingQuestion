@@ -157,42 +157,109 @@ class Solution {
     [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6]
     [0, 1, 1, 2, 2, 1, 2, 2, 3, 3, 2, 3]
+    
+    Time Complexity: O(N * amount * k)
+    Time: 638 ms
     */
-    public int coinChange(int[] coins, int amount) {
-        if (amount == 0) return 0;
+//     public int coinChange(int[] coins, int amount) {
+//         int N = coins.length;
         
-        int N = coins.length;
+//         int[][] dp = new int[N + 1][amount + 1];
         
-        int[][] dp = new int[N + 1][amount + 1];
+//         for (int i = 0; i <= N; i++) {
+//             for (int j = 0; j <= amount; j++) {
+//                 dp[i][j] = amount + 1;
+//             }
+//         }
+//         for (int i = 0; i <= N; i++) {
+//             dp[i][0] = 0;
+//         }
         
-        for (int i = 0; i <= N; i++) {
-            for (int j = 0; j <= amount; j++) {
-                dp[i][j] = amount + 1;
-            }
-        }
-        for (int i = 0; i <= N; i++) {
-            dp[i][0] = 0;
-        }
-        
-        for (int i = 1; i <= N; i++) {
-            for (int j = 1; j <= amount; j++) {
-                for (int k = 0; k * coins[i - 1] <= j; k++) {
-                    if (dp[i - 1][j - k * coins[i - 1]] < amount + 1) {
-                        dp[i][j] = Math.min(dp[i][j], dp[i - 1][j - k * coins[i - 1]] + k);
-                    }
-                }
-            }
-        }
+//         for (int i = 1; i <= N; i++) {
+//             for (int j = 1; j <= amount; j++) {
+//                 for (int k = 0; k * coins[i - 1] <= j; k++) {
+//                     if (dp[i - 1][j - k * coins[i - 1]] < amount + 1) {
+//                         dp[i][j] = Math.min(dp[i][j], dp[i - 1][j - k * coins[i - 1]] + k);
+//                     }
+//                 }
+//             }
+//         }
         
         
-        // printArray(dp);
-        return dp[N][amount] == amount + 1 ? -1 : dp[N][amount];
-    }
+//         // printArray(dp);
+//         return dp[N][amount] == amount + 1 ? -1 : dp[N][amount];
+//     }
     
     private void printArray(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.println(Arrays.toString(arr[i]));
         }
+    }
+    
+    // Optimize time
+    /**
+    
+    dp:
+    [0, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
+    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6]
+    [0, 1, 1, 2, 2, 1, 2, 2, 3, 3, 2, 3]
+    
+    Time Complexity: O(N * amount)
+    Time: 35 ms
+    
+    */
+//     public int coinChange(int[] coins, int amount) {
+//         int N = coins.length;
+        
+//         // sub problem
+//         int[][] dp = new int[N + 1][amount + 1];
+        
+//         // init
+//         for (int i = 0; i <= N; i++) {
+//             for (int j = 0; j <= amount; j++) {
+//                 dp[i][j] = amount + 1;
+//             }
+//         }
+//         // if amount = 0, the result is always 0
+//         for (int i = 0; i <= N; i++) {
+//             dp[i][0] = 0;
+//         }
+        
+//         for (int i = 1; i <= N; i++) {
+//             for (int j = 1; j <= amount; j++) {
+//                 dp[i][j] = dp[i - 1][j];
+//                 if (j >= coins[i - 1]) dp[i][j] = Math.min(dp[i][j], dp[i][j - coins[i - 1]] + 1);
+//             }
+//         }
+        
+//         // printArray(dp);
+//         return dp[N][amount] == amount + 1 ? -1 : dp[N][amount];
+//     }
+    
+    // Optimize Space
+    /**
+    dp:
+    [0, 1, 1, 2, 2, 1, 2, 2, 3, 3, 2, 3]
+    
+    Time Complexity: O(N * amount)
+    Time: 10 ms
+    */
+    public int coinChange(int[] coins, int amount) {
+        int N = coins.length;
+        
+        // sub problem
+        int[] dp = new int[amount + 1];
+        for (int i = 1; i <= amount; i++) dp[i] = amount + 1;
+        
+        for (int i = 0; i < N; i++) {
+            for (int j = 1; j <= amount; j++) {
+                if (j >= coins[i]) dp[j] = Math.min(dp[j], dp[j - coins[i]] + 1);
+            }
+        }
+        
+        // System.out.println(Arrays.toString(dp));
+        return dp[amount] == amount + 1 ? -1 : dp[amount];
     }
     
     
