@@ -218,8 +218,8 @@ class Main {
 ```
 
 # Multiple Pack
-https://www.acwing.com/problem/content/4/
-https://www.acwing.com/solution/content/36327/
+https://www.acwing.com/problem/content/4/  
+https://www.acwing.com/solution/content/36327/  
 
 ```
 import java.util.Scanner;
