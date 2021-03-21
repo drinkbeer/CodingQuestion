@@ -13,6 +13,11 @@ https://www.acwing.com/problem/content/description/2/
 https://leetcode-cn.com/problems/coin-change/solution/bei-bao-wen-ti-zhi-01bei-bao-wen-ti-ke-pu-wen-ji-c/  
 https://www.acwing.com/solution/content/1644/  
 
+Transformation: 
+```
+dp[i][j] = max(dp[i - 1][j] , dp[i - 1][j - v] + w)
+```
+
 ```Java
 import java.util.Scanner;
 
@@ -111,6 +116,28 @@ public class Main{
 https://www.acwing.com/problem/content/3/  
 https://www.acwing.com/solution/content/36299/  
 https://www.acwing.com/solution/content/5345/  
+
+Transformation:
+```
+dp[i][j] = max(dp[i - 1][j] ,   dp[i - 1][j - v] + w ,  dp[i - 1][j - 2 * v] + 2 * w , ..... ,  dp[i - 1][j - s * v] + s * w) //假设j - s * v > 0)
+dp[i][j-v] = max(               dp[i - 1][j - v] ,      dp[i - 1][j - 2 * v] + w , ..... ,      dp[i - 1][j - s * v] + s * w) //假设j - s * v > 0)
+dp[i][j-v] + w = max(           dp[i - 1][j - v] + w,   dp[i - 1][j - 2 * v] + 2 * w , ..... ,  dp[i - 1][j - s * v] + s * w) //假设j - s * v > 0)
+```
+So we got:
+```
+dp[i][j] = max(dp[i - 1][j] ,   dp[i][j-v] + w)
+```
+
+Optimize space (use 1-d array):
+```
+dp[j] = max(dp[j] , dp[j - v] + w , dp[j - 2 * v] + 2 * w , ..... , dp[j - s * v] + s * w) //假设j - s * v > 0)
+dp[j-v] = max(      dp[j - v] ,     dp[j - 2 * v] + w , ..... ,     dp[j - s * v] + s * w) //假设j - s * v > 0)
+dp[j-v]+ w = max(   dp[j - v] + w,  dp[j - 2 * v] + 2 * w , ..... , dp[j - s * v] + s * w) //假设j - s * v > 0)
+```
+So we got:
+```
+dp[j] = max(dp[j] , dp[j-v]+ w)
+```
 
 ```Java
 import java.util.Scanner;
