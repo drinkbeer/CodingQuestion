@@ -190,6 +190,74 @@ class Main {
 
 ```
 
+# Multiple Pack
+https://www.acwing.com/problem/content/4/
+https://www.acwing.com/solution/content/36327/
+
+```
+import java.util.Scanner;
+
+class Main {
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();  // N items
+        int V = scanner.nextInt();  // Pack capacity
+        int[] v = new int[N + 1];
+        int[] w = new int[N + 1];
+        int[] s = new int[N + 1];
+        
+        for (int i = 1; i <= N; i++) {
+            v[i] = scanner.nextInt();
+            w[i] = scanner.nextInt();
+            s[i] = scanner.nextInt();
+        }
+        scanner.close();
+        
+        // System.out.println(multiplePack1(N, V, v, w, s));
+        System.out.println(multiplePack2(N, V, v, w, s));
+
+    }
+    
+    private static int multiplePack1(int N, int V, int[] v, int[] w, int[] s) {
+        // state
+        int[][] dp = new int[N + 1][V + 1];
+        
+        // init
+        dp[0][0] = 0;
+        
+        for (int i = 1; i <= N; i++) {
+            for (int j = 1; j <= V; j++) {
+                for (int k = 0; k <= s[i] && k * v[i] <= j; k++) {
+                    dp[i][j] = Math.max(dp[i][j], dp[i - 1][j - k * v[i]] + k * w[i]);
+                }
+            }
+        }
+        
+        return dp[N][V];
+    }
+    
+    // Optimize space
+    private static int multiplePack2(int N, int V, int[] v, int[] w, int[] s) {
+        // state
+        int[] dp = new int[V + 1];
+        
+        // init
+        dp[0] = 0;
+        
+        for (int i = 1; i <= N; i++) {
+            for (int j = V; j >= 0; j--) {
+                for (int k = 0; k <= s[i] && k * v[i] <= j; k++) {
+                    dp[j] = Math.max(dp[j], dp[j - k * v[i]] + k * w[i]);
+                }
+            }
+        }
+        
+        return dp[V];
+    }
+    
+}
+```
 
 # Problems
 
