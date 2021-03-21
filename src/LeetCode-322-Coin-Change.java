@@ -245,8 +245,32 @@ class Solution {
     Time Complexity: O(N * amount)
     Time: 10 ms
     */
+//     public int coinChange(int[] coins, int amount) {
+//         int N = coins.length;
+        
+//         // sub problem
+//         int[] dp = new int[amount + 1];
+//         for (int i = 1; i <= amount; i++) dp[i] = amount + 1;
+        
+//         for (int i = 0; i < N; i++) {
+//             for (int j = 1; j <= amount; j++) {
+//                 if (j >= coins[i]) dp[j] = Math.min(dp[j], dp[j - coins[i]] + 1);
+//             }
+//         }
+        
+//         // System.out.println(Arrays.toString(dp));
+//         return dp[amount] == amount + 1 ? -1 : dp[amount];
+//     }
+    
+    /**
+    Follow-up: Could output the list of coins that has minimum coins to make up the amount?
+    */
+    // Print the list of coins that has minimum coins to make up the amount
     public int coinChange(int[] coins, int amount) {
         int N = coins.length;
+        
+        int[] coinsPos = new int[amount + 1];
+        for (int i = 0; i < N; i++) coinsPos[i] = coins[i];
         
         // sub problem
         int[] dp = new int[amount + 1];
@@ -254,11 +278,23 @@ class Solution {
         
         for (int i = 0; i < N; i++) {
             for (int j = 1; j <= amount; j++) {
-                if (j >= coins[i]) dp[j] = Math.min(dp[j], dp[j - coins[i]] + 1);
+                if (j >= coins[i]) {
+                    if (dp[j] > dp[j - coins[i]] + 1) {
+                        dp[j] = dp[j - coins[i]] + 1;
+                        coinsPos[j] = coins[i];
+                    }
+                }
             }
         }
         
-        // System.out.println(Arrays.toString(dp));
+        List<Integer> list = new ArrayList<>();
+        int pos = amount;
+        while (pos > 0) {
+            list.add(0, coinsPos[pos]);
+            pos -= coinsPos[pos];
+        }
+        System.out.println(Arrays.toString(coinsPos));
+        System.out.println(list);
         return dp[amount] == amount + 1 ? -1 : dp[amount];
     }
     
