@@ -339,7 +339,6 @@ Search a required set, search Maximum/Minimu result
 |[216.Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)|[LeetCode-216-Combination-Sum-III.java](src/LeetCode-216-Combination-Sum-III.java)|Not yet|
 |[77.Combinations](https://leetcode.com/problems/combinations/)|[LeetCode-77-Combinations.java](src/LeetCode-77-Combinations.java)|DFS|
 |[278.First Bad Version](https://leetcode.com/problems/first-bad-version/)|[LeetCode-278-First-Bad-Version.java](src/LeetCode-278-First-Bad-Version.java)|Binary Search|
-|[86.Partition List](https://leetcode.com/problems/partition-list/)|[LeetCode-86-Partition-List.java](src/LeetCode-86-Partition-List.java)|Two Pointers|
 |[205.Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)|[LeetCode-205-Isomorphic-Strings.java](src/LeetCode-205-Isomorphic-Strings.java)|HashMap|
 |[290.Word Pattern](https://leetcode.com/problems/word-pattern/)|[LeetCode-290-Word-Pattern.java](src/LeetCode-290-Word-Pattern.java)|HashMap|
 |[291.Word Pattern II](https://leetcode.com/problems/word-pattern-ii/)|[LeetCode-291-Word-Pattern-II.java](src/LeetCode-291-Word-Pattern-II.java)|Not yet, hard|
@@ -440,6 +439,7 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 |[61 Rotate List](https://leetcode.com/problems/rotate-list/)|[LeetCode-61-Rotate-List.java](src/LeetCode-61-Rotate-List.java)|Two Pointers|
 |[83.Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)|[LeetCode-83-Remove-Duplicates-from-Sorted-List.java](src/LeetCode-83-Remove-Duplicates-from-Sorted-List.java)|LinkedList|
 |[82.Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)|[LeetCode-82-Remove-Duplicates-from-Sorted-List-II.java](src/LeetCode-82-Remove-Duplicates-from-Sorted-List-II.java)|LinkedList|
+|[86.Partition List](https://leetcode.com/problems/partition-list/)|[LeetCode-86-Partition-List.java](src/LeetCode-86-Partition-List.java)|Two Pointers|
 |[92.Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)|[LeetCode-92-Reverse-Linked-List-II.java](src/LeetCode-92-Reverse-Linked-List-II.java)|LinskedList|
 |[138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)|[LeetCode-138-Copy-List-with-Random-Pointer.java](src/LeetCode-138-Copy-List-with-Random-Pointer.java)|LinkedList|
 |[141.Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[LeetCode-141-Linked-List-Cycle.java](src/LeetCode-141-Linked-List-Cycle.java)|Two Pointers|
