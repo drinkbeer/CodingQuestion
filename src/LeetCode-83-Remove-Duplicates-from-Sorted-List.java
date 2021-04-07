@@ -18,34 +18,18 @@ Analysis:
  */
 public class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        if(head == null || head.next == null) return head;
+        if (head == null) return head;
         
-        ListNode lo = head, hi = head.next;
-        while(hi != null){
-            if(lo.val == hi.val) lo.next = hi.next;
-            else {
-                lo = hi;
-            }
-            hi = hi.next;
-        }
-        return head;
-    }
-    
-    public ListNode deleteDuplicates(ListNode head) {
-        ListNode dummy = new ListNode(-1);
-        dummy.next = head;
-        ListNode prev = dummy, curr = prev.next;
-        
-        while (curr != null) {
-            while (curr != null && curr.val == prev.next.val) curr = curr.next;
-            
-            if (prev.next.next == curr) {
-                prev = prev.next;
+        ListNode curr = head;
+        while (curr.next != null) {
+            ListNode next = curr.next;
+            if (curr.val == next.val) {
+                curr.next = next.next;
             } else {
-                prev.next = curr;
+                curr = curr.next;
             }
         }
         
-        return dummy.next;
+        return head;
     }
 }
