@@ -17,20 +17,18 @@ Analysis:
  */
 public class Solution {
     public ListNode partition(ListNode head, int x) {
-        if(head == null || head.next == null) return head;
+        if (head == null || head.next == null) return head;
         
-        ListNode small = new ListNode(0);
-        small.next = head;
-        ListNode smallhead = small;
-        ListNode big = new ListNode(0);
-        big.next = head;
-        ListNode bighead = big;
+        ListNode smallDummy = new ListNode(-1);
+        ListNode small = smallDummy;
+        ListNode bigDummy = new ListNode(-1);
+        ListNode big = bigDummy;
         
-        while(head != null){
-            if(head.val < x){
+        while (head != null) {
+            if (head.val < x) {
                 small.next = head;
                 small = small.next;
-            }else{
+            } else {
                 big.next = head;
                 big = big.next;
             }
@@ -38,8 +36,8 @@ public class Solution {
         }
         
         big.next = null;
-        small.next = bighead.next;
+        small.next = bigDummy.next;
         
-        return smallhead.next;
+        return smallDummy.next;
     }
 }
