@@ -31,13 +31,11 @@ Memory Usage: 36.8 MB, less than 99.99% of Java online submissions for Linked Li
 public class Solution {
     
     public boolean hasCycle(ListNode head) {
-        if(head == null) return false;
+        if (head == null) return false;
         
         ListNode slow = head, fast = head.next;
-        while (slow != null && fast != null && fast.next != null) {
-            if (slow.val == fast.val) return true;
-            // this line is not necessary
-            // if (slow.next == null || fast.next == null || fast.next.next == null) return false;
+        while (fast != null && fast.next != null) {
+            if (slow == fast) return true;
             
             slow = slow.next;
             fast = fast.next.next;
