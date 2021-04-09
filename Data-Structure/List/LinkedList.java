@@ -1,4 +1,4 @@
-/*
+package List;/*
 Source: Data Structure and Algorithm Analysis in Java
 This is the implementation of LinkedList generic class. LinkedList implemented as a doubly linked list, we need to maintain references to both ends of the list. Doing so allows us to maintain constant time per operation.
     1.LinkedList class contains links to both ends, size, and methods.
@@ -88,7 +88,7 @@ public class LinkedList<E> implements Iterable<E>{
         }else{
             p = end;
             for(int i = size(); i > index; i--){
-                p = p.next;
+                p = p.prev;
             }
         }
         return p;

@@ -1,8 +1,8 @@
 
 Comparision
-- [ArrayList vs. LinkedList vs. Vector](#ArrayList vs. LinkedList vs. Vector)
-- [HashSet vs. TreeSet vs. LinkedHashSet](#HashSet vs. TreeSet vs. LinkedHashSet)
-- [HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap](#HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap)
+- [ArrayList vs. LinkedList vs. Vector](#1arraylist-vs-linkedlist-vs-vectorhttpwwwprogramcreekcom201303arraylist-vs-linkedlist-vs-vector)
+- [HashSet vs. TreeSet vs. LinkedHashSet](#2hashset-vs-treeset-vs-linkedhashsethttpwwwprogramcreekcom201303hashset-vs-treeset-vs-linkedhashset)
+- [HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap](#3hashmap-vs-treemap-vs-hashtable-vs-linkedhashmaphttpwwwprogramcreekcom201303hashmap-vs-treemap-vs-hashtable-vs-linkedhashmap)
 
 The major characteristics of the top level interfaces in Java Collections Framwork (under java.util)
 
@@ -14,7 +14,7 @@ The major characteristics of the top level interfaces in Java Collections Framwo
 |Set       |N|At most one|Dependent|HashSet, LinkedHashSet, TreeSet|
 |Map       |N(Keys),Y(Values)|Y(Key, null<=1), Y(Value)|Dependent|HashMap, LinkedHashMap, TreeMap|
 
-###ArrayList
+### ArrayList
 + Implemented by array
 + Advantage
     - Randomly access(get and set) is constant time
@@ -25,7 +25,7 @@ The major characteristics of the top level interfaces in Java Collections Framwo
     - Randomly access(get and set): O(1)
     - Insertion(add to front) and removal: O(n)
 
-###LinkedList
+### LinkedList
 + Implemented by list of nodes
 + Advantage
     - Modification(add and remove) is constant time, when position if known
@@ -37,8 +37,8 @@ The major characteristics of the top level interfaces in Java Collections Framwo
     - Randomly access(get, set): O(n)
     - Add, remove: O(1)
 
-###Stack
-+ FIFO: operation is all in top of stack. (push and pop)
+### Stack
++ FILO: operation is all in top of stack. (push and pop)
 + Could be implemented by LinkedList, ArrayList
     - List: push to front of list, pop is remove front node of list
     - Array: use a pointer top(initilized as -1), push is arr[++top], pop is arr[top--]  (use top==-1 to check is empty)
@@ -50,47 +50,42 @@ The major characteristics of the top level interfaces in Java Collections Framwo
     + Postfix expression
     + Method calls
 
-###Queue
-+ FILO: offer() is at end, poll() is at front
+### Queue
++ FIFO: offer() is at end, poll() is at front
 + Could be implemented by DoubleLinkedList, array
     - List: Not finished
 + Complexity:
     - Enqueue: O(1)
     - Dequeue: O(1)
 
-###Set
-#####Overview
+### Set
 + A collection of non-duplicate values
-
-#####Type
-+ TreeSet(Sorted Set): value is sorted. Worst time O(logN)
-
++ Application
+    - TreeSet(Sorted Set): value is sorted. Worst time O(logN)
 
 ###Map
-#####Overview
 + A collection of entries, entry is Key-Value pair.
 + Key is unique, value could duplicate
 + Map itself doesn't provide iterator, but could iterate through Key Set/Value Set/Entry Set's iterator
-
-#####Type
-+ TreeMap(Sorted Map): keep keys in sorted order
++ Application
+    - TreeMap(Sorted Map): keep keys in sorted order
 
 
 ### HashTable/[HashMap](http://www.cnblogs.com/skywang12345/p/3310835.html)
 
-#####Overview
+##### Overview
 + Perform **insert, delete, search in average O(1)**
 + Print in sorted order in O(n) not supported
 + Load factor: ratio of # of elements in hash table to table size
 
-#####Hash Function
+##### Hash Function
 + Determinism: given same input, always generate same hash code
 + Uniformity: map inputs as evenly as possible over its output range
 + Defined range: desirable that outputs has fixed size
 + Continuity: two inputs differing a little should be mapped to nearly equal hash values
 + Non-invertible: impossible to reconstruct input from hash code
 
-#####Collision
+##### Collision
 + Different input map to the same hash code
 + Solution: **Separate Chaining HashTable(keep a list of elements that hash to same hashcode)**
     - insert: first check if list exists based on hashcode, if exist, insert into the front of the list; if not, create a new list. If element exists in list, we do nothing.(Why insert into front? Because recently inserted elements are more likely to be used in the near future.)
@@ -114,7 +109,7 @@ The major characteristics of the top level interfaces in Java Collections Framwo
 + Solution: **Double hashing**
     - f(i) = i*hash_2(x)
 
-#####Rehash
+##### Rehash
 + When # of elements in hash table beyond load factor, we enlarge hash table (mostly to the twice size)
 + Solution: build another table with *twice size*, copy elements to new table
 
@@ -124,9 +119,9 @@ The major characteristics of the top level interfaces in Java Collections Framwo
 + BST can get elements in a range, HashTable cannot
 + Search Time: BST O(logN), HashTable O(1)
 
-###PriorityQueue(Heap)
+### PriorityQueue(Heap)
 
-#####Overview
+##### Overview
 + Heap is a complete binary tree(completely filled except bottom level)
 + average height: O(logN)
 + implement by an `array`, for element in array index i
@@ -138,12 +133,12 @@ The major characteristics of the top level interfaces in Java Collections Framwo
     - remove(Object) and contains(Object): O(1)
     - retrieval methods (peek, element, and size): O(1)
 
-#####Property
+##### Property
 + Smallest element at root(Min Heap) or largest at root(Max Heap)
 + min Heap: parent <= two children; max Heap: parent >= two children
 + findMin() in Min Heap is O(1)
 
-#####Operations
+##### Operations
 + insert()
     - create a hole in next available position, if order not violated, done; Otherwise, heapify up
     - time: O(logN)
@@ -169,13 +164,13 @@ The major characteristics of the top level interfaces in Java Collections Framwo
     - insert takes O(1) average, O(logN) worst
     - build takes O(N) average, O(NlogN) worst
 
-#####Application: Kth smallest elements
+##### Application: Kth smallest elements
 + Build a min heap, delete k times
 + Build heap O(N), delete min O(logN), so total O(N + klogN)
 
 
 
-###Binary Tree
+### Binary Tree
 General Tree(From Java API-String)  
 ```Java
 public class Tree<T> {
@@ -204,11 +199,11 @@ class BinaryNode{
 }
 ````
 
-#####Overview
+##### Overview
 + Average depth: O(sqrt(N)), worst depth: N-1
 
 Binary Search Tree
-#####Overview
+##### Overview
 + Average depth: O(logN)
 + Values in left subtree <= root value
 + Values in right subtree >= root value
@@ -223,12 +218,11 @@ The height of a node is the length of the longest downward path from that node t
 The depth of a node is the length of the path to its root (i.e., its root path).  
 
 
+![Hierarchy Diagram](./java-collection-hierarchy.jpeg)
 
+# Comparison
 
-![Hierarchy Diagram](/java-collection-hierarchy.jpeg)
-
-<a name = "ArrayList vs. LinkedList vs. Vector"/>
-###1.[ArrayList vs. LinkedList vs. Vector](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)
+### 1.[ArrayList vs. LinkedList vs. Vector](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)
 
 They all implement List interface. They are very similar to use. Their main difference is their implementation which causes different performance for different operations.
 
@@ -256,14 +250,13 @@ Note: The default initial capacity of an ArrayList is pretty small. It is a good
 
 + LinkedList has O(n) time complexity for arbitrary indices of add/remove, but O(1) for operation at end/beginning of list(add)
 
-![arraylist-vs-linkedlist-performance](/Data-Structure/arraylist-vs-linkedlist-performance.png/)
+![arraylist-vs-linkedlist-performance](./arraylist-vs-linkedlist-performance.png)
 
 Difference of performance is obvious. LinkedList is faster in add and remove, but slower in get. In brief, LinkedList is preferred if:
 + there are no large number of random access of element
 + there are a large number of add/remove operations
 
-<a name = "HashSet vs. TreeSet vs. LinkedHashSet"/>
-###2.[HashSet vs. TreeSet vs. LinkedHashSet](http://www.programcreek.com/2013/03/hashset-vs-treeset-vs-linkedhashset/)
+### 2.[HashSet vs. TreeSet vs. LinkedHashSet](http://www.programcreek.com/2013/03/hashset-vs-treeset-vs-linkedhashset/)
 
 A Set contains no duplicate elements.
 
@@ -278,13 +271,12 @@ TreeSet is implemented using a tree structure(red-black tree in algorithm book).
 
 LinkedHashSet is between HashSet and TreeSet. It is implemented as a hash table with a linked list running through it, so it provides the order of insertion. The time complexity of basic methods is O(1).
 
-![hashset-treeset-linkedhashset-performance](/Data-Structure/hashset-treeset-linkedhashset-performance.png/)
+![hashset-treeset-linkedhashset-performance](./hashset-treeset-linkedhashset-performance.png)
 
 TreeSet is much slower because it is sorted.
 
-<a name = "HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap"/>
-###3.[HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap](http://www.programcreek.com/2013/03/hashmap-vs-treemap-vs-hashtable-vs-linkedhashmap/)
-![Map Hierarchy](/Data-Structure/java-map-hierarchy.jpg/)
+### 3.[HashMap vs. TreeMap vs. Hashtable vs. LinkedHashMap](http://www.programcreek.com/2013/03/hashmap-vs-treemap-vs-hashtable-vs-linkedhashmap/)
+![Map Hierarchy](./java-map-hierarchy.jpg)
 
 + HashMap
     - implemented as a hash table
@@ -314,8 +306,6 @@ TreeMap is
 
 
 ###Reference
-[Java Collections Framework summary table](http://www.codejava.net/java-core/collections/java-collections-framework-summary-table)
-
-[How to Check if an Array Contains a Value in Java Efficiently?](http://www.programcreek.com/2014/04/check-if-array-contains-a-value-java/)
-
-[Big O Cheat Sheet](http://www.bigocheatsheet.com/)
+1. [Java Collections Framework summary table](http://www.codejava.net/java-core/collections/java-collections-framework-summary-table)
+2. [How to Check if an Array Contains a Value in Java Efficiently?](http://www.programcreek.com/2014/04/check-if-array-contains-a-value-java/)
+3. [Big O Cheat Sheet](http://www.bigocheatsheet.com/)
