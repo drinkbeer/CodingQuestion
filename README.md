@@ -445,7 +445,8 @@ Find the middle of a list: fast-slow pointers, one run one step, another run two
 |[141.Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)|[LeetCode-141-Linked-List-Cycle.java](src/LeetCode-141-Linked-List-Cycle.java)|Two Pointers|
 |[142.Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)|[LeetCode-142-Linked-List-Cycle-II.java](src/LeetCode-142-Linked-List-Cycle-II.java)|Two Pointers|
 |[143. Reorder List](https://leetcode.com/problems/reorder-list/)|[LeetCode-143-Reorder-List.java](src/LeetCode-143-Reorder-List.java)|Two Pointers|
-|[147. Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/)|[LeetCode-147-Insertion-Sort-List.java](src/LeetCode-147-Insertion-Sort-List.java)|Two Pointers|
+|[147. Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/)|[LeetCode-147-Insertion-Sort-List.java](src/LeetCode-147-Insertion-Sort-List.java)|Insertion Sort|
+|[148. Sort List](https://leetcode.com/problems/sort-list/)|[LeetCode-148-Sort-List.java](src/LeetCode-148-Sort-List.java)|Merge Sort|
 |[160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)|[LeetCode-160-Intersection-of-Two-Linked-Lists.java](src/LeetCode-160-Intersection-of-Two-Linked-Lists.java)|Two Pointers|
 |[203.Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)|[LeetCode-203-Remove-Linked-List-Elements.java](src/LeetCode-203-Remove-Linked-List-Elements.java)|LinkedList|
 |[206.Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)|[LeetCode-206-Reverse-Linked-List.java](src/LeetCode-206-Reverse-Linked-List.java)|LinskedList|
