@@ -46,25 +46,29 @@ public class Solution {
     }
     
     // 2.Two Pointers
-//     public ListNode detectCycle(ListNode head) {
-//         if(head == null || head.next == null) return null;
+    public ListNode detectCycle(ListNode head) {
+        if (head == null) return null;
         
-//         ListNode slow = head, fast = head;
+        ListNode slow = head, fast = head;
         
-//         while(fast != null && fast.next != null){
-//             slow = slow.next;
-//             fast = fast.next.next;
-//             if(slow == fast) break;
-//         }
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            
+            if (slow == fast) {
+                System.out.println(slow.val);
+                break;
+            }
+        }
         
-//         if(fast == null || fast.next == null) return null;
+        if (fast.next == null || fast.next.next == null) return null;
         
-//         while(head != slow){
-//             head = head.next;
-//             slow = slow.next;
-//         }
+        while (head != slow) {
+            head = head.next;
+            slow = slow.next;
+        }
         
-//         return head;
-//     }
+        return head;
+    }
     
 }
