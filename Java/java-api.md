@@ -412,7 +412,7 @@ s = s.replaceAll("[^a-zA-Z0-9]", "");
 ```
 
 <a name="Type Convertor">
-```Java
+```
 Object to int
 HashSet<Integer> set = new HashSet<Integer>();
 Iterator iter = set.iterator();
@@ -422,14 +422,13 @@ while(iter.hasNext()){
 
 String to int
 int num = Integer.parseInt(iter.next());
-
-
-
-
 ```
 
 
-###Reference
+
+
+
+### Reference
 
 [Top 10 questions about Java Collections](http://www.programcreek.com/2013/09/top-10-questions-for-java-collections/)
 

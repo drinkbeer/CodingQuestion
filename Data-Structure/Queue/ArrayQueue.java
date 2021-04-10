@@ -1,90 +1,116 @@
 package Queue;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 /*
 A basic implementation of a queue using an array
 http://math.hws.edu/javanotes/c9/s3.html
 http://eddmann.com/posts/implementing-a-queue-in-java-using-arrays-and-linked-lists/
-
+https://algs4.cs.princeton.edu/13stacks/ResizingArrayQueue.java.html
 */
-public class ArrayQueue{
-    private Object[] array;     // store data in array
-    private int front;
-    private int rear;           //
-    private int maxSize;
+public class ArrayQueue<Item> implements Iterable<Item> {
+  private static final int INIT_CAPACITY = 8;
 
-    public ArrayQueue(){
-        this.array = new Object[4];
-        this.front = 0;
-        this.rear = 0;
-        this.maxSize = 4;
+  private Item[] q; // queue elements
+  private int n; // number of elements on queue
+  private int first; // index of first element of queue
+  private int last; // index of next available slot
+
+  public ArrayQueue() {
+    q = (Item[]) new Object[INIT_CAPACITY];
+    n = 0;
+    first = 0;
+    last = 0;
+  }
+
+  public ArrayQueue(int capacity) {}
+
+  public void enqueue(Item item) {
+    if (n == q.length) resize(2 * q.length); // double size of array if necessary
+    q[last++] = item;
+    if (last == q.length) last = 0; // wrap-around
+    n++;
+  }
+
+  public Item dequeue() {
+    if (isEmpty()) throw new NoSuchElementException("Queue underflow");
+    Item item = q[first];
+    q[first] = null;
+    n--;
+    first++;
+    if (first == q.length) first = 0; // wrap-around
+    if (n > 0 && n == q.length / 4) resize(q.length / 2); // shrink size of array if necessary
+    return item;
+  }
+
+  public Item peek() {
+    if (isEmpty()) throw new NoSuchElementException("Queue underflow");
+    return q[first];
+  }
+
+  public int size() {
+    return n;
+  }
+
+  public boolean isEmpty() {
+    return n == 0;
+  }
+
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    for (Item item : this) {
+        sb.append(item);
+        sb.append(' ');
+    }
+    return sb.toString();
+  }
+
+  private void resize(int capacity) {
+    assert capacity >= n;
+    Item[] copy = (Item[]) new Object[capacity];
+    for (int i = 0; i < n; i++) {
+      copy[i] = q[(first + i) % q.length];
+    }
+    q = copy;
+    first = 0;
+    last = n;
+  }
+
+  @Override
+  public Iterator<Item> iterator() {
+    return new ArrayIterator();
+  }
+
+  // an iterator, doesn't implement remove() since it's optional
+  private class ArrayIterator implements Iterator<Item> {
+    private int i = 0;
+
+    public boolean hasNext() {
+      return i < n;
     }
 
-    public ArrayQueue(int capacity){
-        this.maxSize = capacity;
-        this.array = new Object[maxSize];
-        this.front = 0;
-        this.rear = 0;
+    public void remove() {
+      throw new UnsupportedOperationException();
     }
 
-    public void enqueue(Object item){
-        if(isFull() == true){
-            System.out.println("The queue is full");
-        }else{
-            this.array[this.rear] = item;
-            this.rear = (this.rear + 1) % this.maxSize;     // Use mod to make full use of available space
-        }
+    public Item next() {
+      if (!hasNext()) throw new NoSuchElementException();
+      Item item = q[(i + first) % q.length];
+      i++;
+      return item;
     }
+  }
 
-    public Object dequeue(){
-        if(isEmpty() == true){
-            System.out.println("The queue is empty");
-            return null;
-        }else{
-            Object target = this.array[this.front];
-            this.front = (this.front + 1) % this.maxSize;
-            return target;
-        }
-    }
-
-    public int size(){
-        if(this.front < this.rear){
-            return this.rear - this.front;
-        }else if(this.front > this.rear){
-            return maxSize - this.front + this.rear;
-        }else{
-            if(this.array[this.front] == null){
-                return 0;
-            }else{
-                return this.maxSize;
-            }
-        }
-    }
-
-    public boolean isEmpty(){
-        return size() == 0;
-    }
-
-    public boolean isFull(){
-        return this.size() == this.maxSize;
-    }
-
-    public String toString(){
-        String s = "";
-        int pointer = this.front;
-        if(!isEmpty()){
-            for(int i = 0; i <= size(); i++){
-                s += "[" + array[pointer].toString() + "]";
-                pointer = (pointer + 1) % this.maxSize;
-            }
-            // new line and indent
-            s += "\n\t";
-            // add information about current queue size, front and rear
-            s += "The current size of the queue is " + size() + ".";
-            s += "The front is at index " + this.front + " and the rear is at index " + this.rear + ".";
-        }else{
-            s += "The queue is empty";
-        }
-        return s;
-    }
-
+  public static void main(String[] args) {
+    ArrayQueue<String> queue = new ArrayQueue<>();
+    queue.enqueue("Item1");
+    queue.enqueue("Item2");
+    queue.enqueue("Item3");
+    queue.enqueue("Item4");
+    queue.enqueue("Item5");
+    queue.enqueue("Item6");
+    System.out.println("(" + queue.size() + " left on queue)");
+    System.out.println(queue.toString());
+  }
 }
