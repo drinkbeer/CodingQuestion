@@ -24,7 +24,7 @@ public class Heap {
         for (int i = 0; i < arr.length; i++) {
             array[i] = arr[i];
         }
-        buildHeap();
+//        buildHeap();
     }
 
     public int getSize() {
