@@ -331,7 +331,7 @@ https://www.geeksforgeeks.org/cartesian-tree-sorting/
 
 Cartesian Sort is an adaptive sorting as it sorts the data faster if data is partially sorted.
 
-Details of Cartesian Tree, please check [cartesian-tree.md](../Tree/cartesian-tree.md).
+Details of Cartesian Tree, please check [cartesian-tree.md](../BinarySearchTree/cartesian-tree.md).
 
 ## Reference
 [Know Your Sorting Algorithm | Set 1 (Sorting Weapons used by Programming Languages)](https://www.geeksforgeeks.org/know-sorting-algorithm-set-1-sorting-weapons-used-programming-languages/)  

@@ -10,11 +10,10 @@
 - [Queue](#Queue)
 - [PriorityQueue](#PriorityQueue)
 
-<a name="String"/>
-###[String](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
+### [String](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html)
 [Top 10 questions of Java Strings](http://www.programcreek.com/2013/09/top-10-faqs-of-java-strings/)
 
-```Java
+```text
 int     indexOf(int ch)             //first occurance index
 int     lastIndexOf(int ch)         //last occurance index
 int     length()
@@ -35,10 +34,9 @@ static String   valueOf(X i)        //convert char[], Integer, Object... to Stri
 int n = Integer.parseInt("10");     //convert string to int
 ```
 
-<a name="Array"/>
-###[Array](http://www.programcreek.com/2013/09/top-10-methods-for-java-arrays/)
+### [Array](http://www.programcreek.com/2013/09/top-10-methods-for-java-arrays/)
 
-```Java
+```text
 0.Declare an array
 String[] aArray = new String[5];
 String[] bArray = {"a","b","c", "d", "e"};
@@ -72,14 +70,13 @@ arrayList.toArray(stringArr);
 Set<String> set = new HashSet<String>(Arrays.asList(stringArray));
 System.out.println(set);    //[d, e, b, c, a]
 ```
-<a name="ArrayList"/>
-###[ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
+### [ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html)
 
 implementation: array. ArrayList is not thread-safe; Vector is thread-safe.
 
 [ArrayList Tutorial](http://www.cnblogs.com/skywang12345/p/3308556.html)
 
-```Java
+```text
 List<Integer> result = new ArrayList<Integer>();
 result.add(a);
 
@@ -112,14 +109,13 @@ int             size()
 Object[]        toArray()
 ```
 
-<a name="LinkedList"/>
-###[LinkedList](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
+### [LinkedList](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html)
 
 implementation: Double Linked List
 
 [LinkedList Tutorial](http://www.cnblogs.com/skywang12345/p/3308807.html)
 
-```Java
+```text
 LinkedList list = new LinkedList();
 
 Iterator iter = list.iterator();
@@ -150,13 +146,12 @@ pop()        removeFirst()
 peek()       peekFirst()
 ```
 
-<a name="HashMap"/>
-###[HashMap](https://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html)
+### [HashMap](https://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html)
 [Top 9 questions about Java Maps](http://www.programcreek.com/2013/09/top-9-questions-for-java-map/)
 
 No order in keys and values.
 
-```Java
+```text
 HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 map.put(key, value);    //If key exists, overwrite the former one
 System.out.println(map.size());
@@ -247,8 +242,8 @@ Collection<V>       values()
 int     size()
 boolean isEmpty()
 ```
-<a name="TreeMap"/>
-###[TreeMap](https://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html)
+
+### [TreeMap](https://docs.oracle.com/javase/7/docs/api/java/util/TreeMap.html)
 Order based on key. (Must ensure key has a comparator)
 ```Java
 /*
@@ -304,9 +299,9 @@ public class TreeMapDemo2{
 
 ```
 
-<a name="HashTable"/>
-###[HashTable](https://docs.oracle.com/javase/7/docs/api/java/util/Hashtable.html)
-```Java
+### [HashTable](https://docs.oracle.com/javase/7/docs/api/java/util/Hashtable.html)
+
+```text
 Hashtable<String, Integer> numbers = new Hashtable<String, Integer>();
 numbers.put("one", 1);
 numbers.put("two", 2);
@@ -314,9 +309,9 @@ numbers.put("three", 3);
 Integer n = numbers.get("two");
 ```
 
-<a name="HashSet"/>
-###[HashSet](https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html)
-```Java
+### [HashSet](https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html)
+
+```text
 HashSet<Dog> dset = new HashSet<Dog>();
 dset.add(new Dog(2));
 dset.add(new Dog(1));
@@ -337,9 +332,8 @@ int     size()
 Iterator<E> iterator()
 ```
 
-<a name="Stack"/>
-###[Stack](https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html)
-```Java
+### [Stack](https://docs.oracle.com/javase/7/docs/api/java/util/Stack.html)
+```text
 Stack<Integer> stack = new Stack<Integer>();
 
 boolean empty()
@@ -348,9 +342,8 @@ E       pop()   //get first and remove
 E       push(E item)
 ```
 
-<a name="Queue"/>
-###[Queue](https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html)
-```Java
+### [Queue](https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html)
+```text
 Queue<TreeNode> currLevel = new LinkedList<TreeNode>();
 int len = currLevel.size();
 
@@ -361,9 +354,8 @@ E       poll()      //remove top and then return it
 E       remove()    //remove top and then return it
 ```
 
-<a name="PriorityQueue"/>
-###[PriorityQueue(Heap)](http://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html)
-```Java
+### [PriorityQueue(Heap)](http://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html)
+```text
 boolean add(E e)
 boolean offer(E e)
 boolean contains(Object o)
@@ -389,7 +381,7 @@ private Comparator<ListNode> listNodeComparator = new Comparator<ListNode>(){
 ```
 
 Comparator interface
-```Java
+```text
 https://leetcode.com/problems/merge-intervals/
 
 java.util.Collections.sort(intervals, new IntervalComparator());
@@ -402,17 +394,15 @@ private class IntervalComparator implements Comparator<Interval>{
 }
 ```
 
-<a name="Regular Express"/>
-###[Regular Express](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
+### [Regular Express](https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
 [Top 10 Questions for Java Regular Expression](http://www.programcreek.com/2013/10/top-10-questions-for-java-regular-expression/)
 
-```Java
+```text
 // \s is whitespace in regex, and we need \\ to express \ 
 s = s.replaceAll("[^a-zA-Z0-9]", "");
 ```
 
-<a name="Type Convertor">
-```
+```text
 Object to int
 HashSet<Integer> set = new HashSet<Integer>();
 Iterator iter = set.iterator();

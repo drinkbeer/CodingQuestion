@@ -24,10 +24,10 @@
     - no
 
 + Implementation
-See [Sort.md - Heap Sort](../Sort/SORT.md), and [Heap.java](Heap.java)
+See [Sort.md - Heap Sort](../Sort/SORT.md), and [Heap.java](../PriorityQueue/Heap.java)
   
 ## Trie
-See [trie.md](./trie.md)
+See [trie.md](../String/TRIE.md)
 
 
 # Reference
