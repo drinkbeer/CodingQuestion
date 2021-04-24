@@ -297,5 +297,6 @@ public int findMin(int[] nums) {
 
 ### Reference
 [[二分/排序/搜索] Binary Search的总结帖](https://www.1point3acres.com/bbs/thread-432793-1-1.html)  
+[[二分/排序/搜索] Binary Search for Beginners，最不易出错的 Binary Search写法和总结](https://www.1point3acres.com/bbs/thread-747061-1-1.html)  
 [LeetCode Binary Search Summary 二分搜索法小结](https://www.cnblogs.com/grandyang/p/6854825.html)  
-
+[Binary Search 101](https://leetcode.com/problems/binary-search/discuss/423162/Binary-Search-101-The-Ultimate-Binary-Search-Handbook)  

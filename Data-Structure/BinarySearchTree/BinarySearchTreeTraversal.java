@@ -2,6 +2,11 @@ package BinarySearchTree;
 
 import java.util.Stack;
 
+/**
+ * Morris Traversal: https://leetcode.com/problems/binary-tree-postorder-traversal/discuss/45628/Morris-Traversal-Time-O(n)-Space-O(1)-inorder-preorder-postorder/182754/
+ * The problem: https://www.1point3acres.com/bbs/thread-751052-1-1.html
+ * Release a tree without extra sapce. (Solution: using Morris Post-order traversal)
+ */
 public class BinarySearchTreeTraversal {
 
   private static class Node {
@@ -44,11 +49,63 @@ public class BinarySearchTreeTraversal {
     if (root.right != null) dfsInOrder(root.right);
   }
 
+  /*
+
+                     0
+                  /    \
+                 1      5
+               /  \    /  \
+              2    3  6    7
+               \          /  \
+               4         8    9
+
+  curr - <stack>
+  0 - <>
+  1 - <0>
+  2 - <0,1>
+  null - <0,1,2>
+  pop & process 2, curr = 4, <0,1>
+  4, <0,1>
+  null, <0,1,4>
+  pop & process 4, curr = null, <0,1>
+  pop & process 1, curr = 3, <0>
+  3, <0>
+  null, <0, 3>
+  pop & process 3, curr = null, <0>
+  pop & process 0, curr = 5, <>
+  5, <>
+  6, <5>
+  null, <5, 6>
+  pop & process 6, curr = null, <5>
+  null, <5>
+  pop & process 5, curr = 7, <>
+  7, <>
+  8, <7>
+  null, <7,8>
+  pop & process 8, curr = null, <7>
+  null, <7>
+  pop & process 7, curr = 9, <>
+  9, <>
+  null, <9>
+  pop & process 9, curr = null, <>
+
+  So finally result is: 2 4 1 3 0 6 5 8 7 9
+  */
   private static void dfsInOrderUsingStack(Node root) {
     Stack<Node> stack = new Stack<>();
     Node curr = root;
 
-
+    while (curr != null || !stack.isEmpty()) {
+      if (curr != null) {
+        stack.push(curr);
+        curr = curr.left;
+      } else {
+        curr = stack.pop();
+        // process curr
+        System.out.print(curr.val + " ");
+        curr = curr.right;
+      }
+    }
   }
 
   ////////// DFS PostOrder Traversal //////////
@@ -58,6 +115,24 @@ public class BinarySearchTreeTraversal {
     System.out.print(root.val + " ");
   }
 
+  private static void dfsPostOrderUsingTwoStacks(Node root) {
+    Stack<Node> stack = new Stack<>();
+    Stack<Node> out = new Stack<>();
+    stack.push(root);
+
+    while (!stack.isEmpty()) {
+      Node curr = stack.pop();
+      out.push(curr);
+
+      if (curr.left != null) stack.push(curr.left);
+      if (curr.right != null) stack.push(curr.right);
+    }
+
+    while (!out.isEmpty()) {
+      Node curr = out.pop();
+      System.out.print(curr.val + " ");
+    }
+  }
 
   /*
 
@@ -98,17 +173,23 @@ public class BinarySearchTreeTraversal {
   public static void main(String[] args) {
     Node root = buildTree();
 
-    System.out.print("\nDFS PreOrder: \n");
+    System.out.print("\n\nDFS PreOrder: \n");
     dfsPreOrder(root);
 
-    System.out.print("\nDFS PreOrder Using Stack: \n");
+    System.out.print("\n\nDFS PreOrder Using Stack: \n");
     dfsPreOrderUsingStack(root);
 
-    System.out.print("\nDFS InOrder: \n");
+    System.out.print("\n\nDFS InOrder: \n");
     dfsInOrder(root);
 
+    System.out.print("\n\nDFS InOrder Using Stack: \n");
+    dfsInOrderUsingStack(root);
 
-    System.out.print("\nDFS PostOrder: \n");
+    System.out.print("\n\nDFS PostOrder: \n");
     dfsPostOrder(root);
+
+    System.out.print("\n\nDFS PostOrder Using Two Stacks: \n");
+    dfsPostOrderUsingTwoStacks(root);
   }
+
 }
