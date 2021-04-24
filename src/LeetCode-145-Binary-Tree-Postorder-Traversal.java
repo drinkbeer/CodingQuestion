@@ -33,7 +33,7 @@ public class Solution {
     //     result.add(root.val);
     // }
     
-    // 2.DFS(Recursive)
+    // DFS(Recursive)
     // public List<Integer> postorderTraversal(TreeNode root) {
     //     List<Integer> result = new ArrayList<Integer>();
     //     if(root == null) return result;
@@ -45,7 +45,7 @@ public class Solution {
     //     return result;
     // }
     
-    // 3.BFS
+    // 2.
     // public List<Integer> postorderTraversal(TreeNode root) {
     //     List<Integer> result = new ArrayList<Integer>();
     //     if(root == null) return result;
@@ -76,7 +76,7 @@ public class Solution {
     //     return result;
     // }
     
-    // 4.BFS
+    // 3.DFS
     public List<Integer> postorderTraversal(TreeNode root){
         List<Integer> result = new ArrayList<Integer>();
         if(root == null) return result;
@@ -98,6 +98,40 @@ public class Solution {
         while(!out.isEmpty()) result.add(out.pop().val);
         
         return result;
+    }
+
+    // 4. Morris Postorder Traversal
+    public List<Integer> postorderTraversal(TreeNode root) {
+        Deque<Integer> result = new ArrayDeque<>();
+        if (root == null) return new ArrayList<>(result);
+
+        TreeNode curr = root;
+        while (curr != null) {
+            if (curr.right == null) {
+                result.addFirst(curr.val);
+                curr = curr.left;
+            } else {
+                // find the successor of the curr node in right tree
+                TreeNode p = curr.right;
+                while (p.left != null && p.left != curr) {
+                    p = p.left;
+                }
+
+                if (p.left == null) {
+                    // find the successor, starts to process right tree
+                    result.addFirst(curr.val);
+                    p.left = curr;
+                    curr = curr.right;
+                } else {
+                    // find the successor, finished traverse right tree
+                    // reset the successor's left node
+                    p.left = null;
+                    curr = curr.left;
+                }
+            }
+        }
+
+        return new ArrayList<>(result);
     }
     
 }

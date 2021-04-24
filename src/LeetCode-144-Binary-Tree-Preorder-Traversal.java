@@ -40,8 +40,20 @@ public class Solution {
     //     DFS(root.left, result);
     //     DFS(root.right, result);
     // }
-    
-    // 2.Divid and conquer
+
+    // Another way of preorder traversal
+//     public List<Integer> preorderTraversal(TreeNode root) {
+//         List<Integer> result = new ArrayList<>();
+//         if (root == null) return result;
+
+//         result.add(root.val);
+//         if (root.left != null) result.addAll(preorderTraversal(root.left));
+//         if (root.right != null) result.addAll(preorderTraversal(root.right));
+
+//         return result;
+//     }
+
+    // Divid and conquer
     // public List<Integer> preorderTraversal(TreeNode root) {
     //     List<Integer> result = new ArrayList<Integer>();
     //     if(root == null) return result;
@@ -56,21 +68,55 @@ public class Solution {
     //     return result;
     // }
     
-    // 3.DFS Using a Stack
+    // 2.DFS Using a Stack
+//    public List<Integer> preorderTraversal(TreeNode root) {
+//        List<Integer> result = new ArrayList<Integer>();
+//        if(root == null) return result;
+//
+//        Stack<TreeNode> stack = new Stack<TreeNode>();
+//        stack.push(root);
+//        while(!stack.isEmpty()){
+//            TreeNode curr = stack.pop();
+//            result.add(curr.val);
+//
+//            if(curr.right != null) stack.push(curr.right);
+//            if(curr.left != null) stack.push(curr.left);
+//        }
+//
+//        return result;
+//    }
+
+    // 3. Morris Preorder Traversal
     public List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> result = new ArrayList<Integer>();
-        if(root == null) return result;
-        
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        stack.push(root);
-        while(!stack.isEmpty()){
-            TreeNode curr = stack.pop();
-            result.add(curr.val);
-            
-            if(curr.right != null) stack.push(curr.right);
-            if(curr.left != null) stack.push(curr.left);
+        List<Integer> result = new ArrayList<>();
+        if (root == null) return result;
+
+        TreeNode curr = root;
+        while (curr != null) {
+            if (curr.left == null) {
+                result.add(curr.val);
+                curr = curr.right;
+            } else {
+                // find the predecessor of the curr node
+                TreeNode pre = curr.left;
+                while (pre.right != null && pre.right != curr) {
+                    pre = pre.right;
+                }
+
+                if (pre.right == null) {
+                    // find the predecessor of the curr node. First handle the curr node, then move to left tree
+                    result.add(curr.val);
+                    pre.right = curr;
+                    curr = curr.left;
+                } else {
+                    // reached the predecessor, finished processing all nodes in left tree
+                    // reset the predecessor's right node, and move right
+                    pre.right = null;
+                    curr = curr.right;
+                }
+            }
         }
-        
+
         return result;
     }
 }
