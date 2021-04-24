@@ -3,7 +3,7 @@ package BinarySearchTree;
 import java.util.NoSuchElementException;
 
 /** https://algs4.cs.princeton.edu/32bst/BST.java.html */
-public class BinarySearchTree<Key extends Comparable<Key>, Value> {
+public class BinaryTreeBasic<Key extends Comparable<Key>, Value> {
   private Node root;
 
   private class Node {
@@ -19,7 +19,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
   }
 
-  public BinarySearchTree() {}
+  public BinaryTreeBasic() {}
 
   public boolean isEmpty() {
     return size() == 0;
