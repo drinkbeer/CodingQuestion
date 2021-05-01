@@ -346,6 +346,7 @@ Search a required set, search Maximum/Minimu result
 |[95.Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/)|[LeetCode-95-Unique-Binary-Search-Trees-II.java](src/LeetCode-95-Unique-Binary-Search-Trees-II.java)|DFS|
 |[96.Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/)|[LeetCode-96-Unique-Binary-Search-Trees.java](src/LeetCode-96-Unique-Binary-Search-Trees.java)|DP|
 |[98.Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)|[LeetCode-98-Validate-Binary-Search-Tree.java](src/LeetCode-98-Validate-Binary-Search-Tree.java)|DFS, BFS|
+|[99. Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/)|[LeetCode-99-Recover-Binary-Search-Tree.java](src/LeetCode-99-Recover-Binary-Search-Tree.java)|Traversal|
 |[100.Same Tree](https://leetcode.com/problems/same-tree/)|[LeetCode-100-Same-Tree.java](src/LeetCode-100-Same-Tree.java)||
 |[101.Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|[LeetCode-101-Symmetric-Tree.java](src/LeetCode-101-Symmetric-Tree.java)|Recursive, Iterative|
 |[★102.Binary Tree Level Order Traversal I](https://leetcode.com/problems/binary-tree-level-order-traversal/)|[LeetCode-102-Binary-Tree-Level-Order-Traversal-I.java](src/LeetCode-102-Binary-Tree-Level-Order-Traversal-I.java)|BFS, DFS|
