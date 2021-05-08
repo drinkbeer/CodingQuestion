@@ -6,51 +6,6 @@ ProgramCreek: http://www.programcreek.com/2014/06/leetcode-construct-binary-tree
 
 Analysis: 
 
-*/
-
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-public class Solution {
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
-        if(preorder.length != inorder.length) return null;
-        
-        return DFS(preorder, 0, preorder.length - 1, inorder, 0, inorder.length - 1);
-    }
-    
-    private TreeNode DFS(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd){
-        // end condition
-        if(preStart > preEnd || inStart > inEnd) return null;
-        
-        int val = preorder[preStart];
-        TreeNode node = new TreeNode(val);
-        
-        // get node position in inorder[]
-        int position = findPosition(inorder, inStart, inEnd, val);
-        
-        node.left = DFS(preorder, preStart + 1, preStart + position - inStart, inorder, inStart, position - 1);
-        node.right = DFS(preorder, preStart + position - inStart + 1, preEnd, inorder, position + 1, inEnd);
-        return node;
-    }
-    
-    private int findPosition(int[] arr, int start, int end, int target){
-        for(int i = start; i <= end; i++){
-            if(arr[i] == target){
-                return i;
-            }
-        }
-        return -1;
-    }
-}
-
-
-/*
 Three types of order:
 
 Inorder:        left subtree | root | right subtree
@@ -71,6 +26,25 @@ Preorder:   root | left subtree | right subtree
 Postorder: left subtree | right subtree | root 
 
 可见root是preorder序列的第一个节点，也是postorder的最后一个节点。所以给定这两个序列的任意一个我们即知道了root->val。通过搜索inorder序列，可以定位root所在的位置，从而也得到了left subtree和right subtree的节点数。
+
+in-order:   4 2 5 (1) 6 7 3 8
+pre-order: (1) 2 4 5  3 7 6 8
+
+Pos - the position of root node in in-order traversal array
+L = pos - inStart, pos exclusive
+
+pre-order left tree: [preStart + 1, preStart + 1 + L - 1]
+                    = [preStart + 1, preStart + pos - inStart]
+pre-order right tree: [preStart + 1 + L, preEnd]
+                    = [preStart + pos - inStart + 1, preEnd]
+
+in-order left tree: [inStart, inStart + L - 1]
+                    = [inStart, inStart + pos - inStart - 1]
+                    = [inStart, pos - 1]
+in-order right tree: [inStart + L + 1, inEnd]
+                    = [inStart + pos - inStart + 1, inEnd]
+                    = [pos + 1, inEnd]
+
 
 2. 递归构建
 
