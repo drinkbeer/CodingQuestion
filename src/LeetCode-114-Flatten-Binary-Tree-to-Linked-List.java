@@ -3,48 +3,6 @@ LeetCode: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
 LintCode: http://www.lintcode.com/problem/flatten-binary-tree-to-linked-list/
 JiuZhang: http://www.jiuzhang.com/solutions/flatten-binary-tree-to-linked-list/
 ProgramCreek: http://www.programcreek.com/2013/01/leetcode-flatten-binary-tree-to-linked-list/
-
-Analysis: 
-
-*/
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-public class Solution {
-    // 1. BFS or pre-order traversal
-    public void flatten(TreeNode root) {
-        if(root == null) return;
-        
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        stack.push(root);
-        TreeNode prev = null;
-        
-        while(!stack.isEmpty()){
-            TreeNode curr = stack.pop();
-            if(curr.right != null) stack.push(curr.right);
-            if(curr.left != null) stack.push(curr.left);
-            if(prev != null){
-                prev.left = null;
-                prev.right = curr;
-            }
-            prev = curr;
-        }
-        
-    }
-    
-}
-
-/*
-LeetCode: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
-LintCode: http://www.lintcode.com/problem/flatten-binary-tree-to-linked-list/
-JiuZhang: http://www.jiuzhang.com/solutions/flatten-binary-tree-to-linked-list/
-ProgramCreek: http://www.programcreek.com/2013/01/leetcode-flatten-binary-tree-to-linked-list/
 Analysis: 
 
 Just doing a pre-order traversal. Using one additional 'prev' node to indicate the parent it should connnect to.
@@ -85,26 +43,38 @@ class Solution {
 //     }
     
     
-    // 2. BFS Space: O(1)
-    // https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/36977/My-short-post-order-traversal-Java-solution-for-share
-//     public void flatten(TreeNode root) {
-//         if(root == null) return;
+    // 2. Pre-order Morris traversal
+    /*
+    Analysis:
+    pre-order traversal: root | left subtree | right subtree
+    So the order is: root | left root -> ... -> predecessor | right root -> ... -> right most
+    
+    The pseudo code:
+    predecessor.right = root.right
+    root.right = root.left
+    root.left = null
+    
+    https://leetcode.com/problems/flatten-binary-tree-to-linked-list/discuss/37010/Share-my-simple-NON-recursive-solution-O(1)-space-complexity!
+    */
+    public void flatten(TreeNode root) {
+        if (root == null) return;
         
-//         while(root != null){
-//             if(root.left == null){
-//                 root = root.right;
-//                 continue;
-//             }
-//             TreeNode predecessor = root.left;
-//             while(predecessor != null) {
-//                 if(predecessor.right == null) break;
-//                 predecessor = predecessor.right;
-//             }
-//             predecessor.right = root.right;
-//             root.right = root.left;
-//             root.left = null;
-//         }
-//     }
+        TreeNode curr = root;
+        while(curr != null) {
+            if (curr.left == null) {
+                curr = curr.right;
+            } else {
+                TreeNode predecessor = curr.left;
+                while (predecessor.right != null) {
+                    predecessor = predecessor.right;
+                }
+                predecessor.right = curr.right;
+                curr.right = curr.left;
+                curr.left = null;
+                curr = curr.right;
+            }
+        }
+    }
     
     // 3.DFS (write by myself, but it doesn't work)
 //     public void flatten(TreeNode root) {
