@@ -10,7 +10,7 @@ Analysis: 4 solutions
 
 2.Iterative
 
-Using BFS to do inorder Traversal, and compare the order is ascending.
+Do inorder Traversal, and compare the order is ascending.
 To compare the order is ascending, we need another TreeNode variable to record the previous node, and compare the prev and curr.
 
 

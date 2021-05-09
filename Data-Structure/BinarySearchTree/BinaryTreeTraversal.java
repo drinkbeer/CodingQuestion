@@ -3,7 +3,9 @@ package BinarySearchTree;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -294,6 +296,45 @@ public class BinaryTreeTraversal {
     return new ArrayList<>(result);
   }
 
+  ////////// BFS LevelOrder Traversal //////////
+  private static List<Integer> levelOrder(Node root) {
+    List<Integer> result = new ArrayList<>();
+    if (root == null) return result;
+
+    Queue<Node> queue = new LinkedList<>();
+    queue.offer(root);
+
+    while (!queue.isEmpty()) {
+      Node curr = queue.poll();
+      result.add(curr.val);
+      if (curr.left != null) queue.offer(curr.left);
+      if (curr.right != null) queue.offer(curr.right);
+    }
+
+    return result;
+  }
+
+  private static List<Integer> levelOrder2(Node root) {
+    List<Integer> result = new ArrayList<>();
+    if (root == null) return result;
+
+    Queue<Node> queue = new LinkedList<>();
+    queue.offer(root);
+
+    while (!queue.isEmpty()) {
+      int size = queue.size();
+
+      for (int i = 0; i < size; i++) {
+        Node curr = queue.poll();
+        result.add(curr.val);
+        if (curr.left != null) queue.offer(curr.left);
+        if (curr.right != null) queue.offer(curr.right);
+      }
+    }
+
+    return result;
+  }
+
   /*
 
                      0
@@ -362,6 +403,12 @@ public class BinaryTreeTraversal {
 
     System.out.print("\n\nDFS PostOrder Morris: \n");
     printList(morrisPostOrder(root));
+
+    System.out.print("\n\nLevelOrder: \n");
+    printList(levelOrder(root));
+
+    System.out.print("\n\nLevelOrder2: \n");
+    printList(levelOrder2(root));
   }
 
   private static void printList(List<Integer> list) {
