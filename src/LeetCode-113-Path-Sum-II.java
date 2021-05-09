@@ -6,6 +6,11 @@ ProgramCreek: http://www.programcreek.com/2014/05/leetcode-path-sum-ii-java/
 
 Analysis:
 DFS. Notice, the value the of sum, should - root.val.
+
+The value could be negative value, e.g.
+[-2,null,-3]
+-5
+
 */
 /**
  * Definition for a binary tree node.
