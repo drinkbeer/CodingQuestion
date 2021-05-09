@@ -82,6 +82,7 @@ public class Solution {
   
   // DFS
     public Node cloneGraph(Node node) {
+        if (node == null) return null;
         HashMap<Node, Node> map = new HashMap<>();
         Node copy = new Node(node.val, new ArrayList<>());
         map.put(node, copy);
