@@ -16,32 +16,58 @@ class Node {
     }
 };
 */
+
 class Solution {
     // BFS
     // Do level order traversal, the same solution as  (https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
-    public Node connect(Node root) {
-        if (root == null) return null;
+//     public Node connect(Node root) {
+//         if (root == null) return root;
         
-        Queue<Node> queue = new LinkedList<>();
-        queue.add(root);
+//         Queue<Node> queue = new LinkedList<>();
+//         queue.offer(root);
         
-        while(!queue.isEmpty()) {
-            Node prev = null;
-            int size = queue.size();
+//         while (!queue.isEmpty()) {
+//             int size = queue.size();
+//             Node prev = null;
             
-            for (int i = 0; i < size; i++) {
-                Node curr = queue.poll();
-                if (prev != null) {
-                    prev.next = curr;
+//             for (int i = 0; i < size; i++) {
+//                 Node curr = queue.poll();
+//                 if (prev != null) {
+//                     prev.next = curr;
+//                 }
+//                 prev = curr;
+                
+//                 if (curr.left != null) queue.offer(curr.left);
+//                 if (curr.right != null) queue.offer(curr.right);
+//             }
+//         }
+        
+//         return root;
+//     }
+    
+    // Level order traversal
+    public Node connect(Node root) {
+        if (root == null) return root;
+        
+        Node levelCurr = root;
+        while (levelCurr != null) {
+            Node dummy = new Node(-1);
+            Node prev = dummy;
+            
+            while (levelCurr != null) {
+                if (levelCurr.left != null) {
+                    prev.next = levelCurr.left;
+                    prev = prev.next;
                 }
-                prev = curr;
+                if (levelCurr.right != null) {
+                    prev.next = levelCurr.right;
+                    prev = prev.next;
+                }
                 
-                if (curr.left != null) queue.add(curr.left);
-                if (curr.right != null) queue.add(curr.right);
-                
-                curr.next = null;
+                levelCurr = levelCurr.next;
             }
             
+            levelCurr = dummy.next;
         }
         
         return root;
