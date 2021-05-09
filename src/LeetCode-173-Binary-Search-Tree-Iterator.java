@@ -51,3 +51,50 @@ class BSTIterator {
  * int param_1 = obj.next();
  * boolean param_2 = obj.hasNext();
  */
+
+
+/**
+Morris pre-order traversal
+
+Space: O(1)
+Time: O(N)
+*/
+class BSTIterator {
+    TreeNode curr;
+
+    public BSTIterator(TreeNode root) {
+        curr = root;
+    }
+    
+    public int next() {
+        int next = 0;
+        while (curr != null) {
+            if (curr.left == null) {
+                next = curr.val;
+                curr = curr.right;
+                break;
+            } else {
+                TreeNode predecessor = curr.left;
+                while (predecessor.right != null && predecessor.right != curr) {
+                    predecessor = predecessor.right;
+                }
+                
+                if (predecessor.right == null) {
+                    predecessor.right = curr;
+                    curr = curr.left;
+                } else {
+                    next = curr.val;
+                    predecessor.right = null;
+                    curr = curr.right;
+                    break;
+                }
+            }
+        }
+        return next;
+        
+    }
+    
+    public boolean hasNext() {
+        return curr != null;
+    }
+}
