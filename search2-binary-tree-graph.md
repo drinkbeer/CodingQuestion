@@ -189,29 +189,54 @@ https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
 
 Building a graph represented by HashMap<Integer, List<Integer>>.
 ```
-    private HashMap<Integer, List<Integer>> buildGraph(int[][] prerequisites) {
-        // Construct graph
-        HashMap<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
-        for (int i = 0; i < prerequisites.length; i++) {
-            int from = prerequisites[i][1];
-            int to = prerequisites[i][0];
+  private static void addEdge(Map<Integer, List<Integer>> graph, int u, int v)
+  {
+    graph.putIfAbsent(u, new ArrayList<>());
+    graph.putIfAbsent(v, new ArrayList<>());
+    graph.get(u).add(v);
+    graph.get(v).add(u);
+  }
 
-            if (!map.containsKey(from)) {
-                map.put(from, new ArrayList<Integer>());
-            }
+  public static Map<Integer, List<Integer>> buildGraphWithAdjList()
+  {
+    Map<Integer, List<Integer>> graph = new HashMap<>();
+    addEdge(graph, 0, 1);
+    addEdge(graph, 0, 4);
+    addEdge(graph, 1, 2);
+    addEdge(graph, 1, 3);
+    addEdge(graph, 1, 4);
+    addEdge(graph, 2, 3);
+    addEdge(graph, 3, 4);
 
-            List<Integer> list = map.get(from);
-            list.add(to);
-            map.put(from, list);
-        }
-
-        return map;
-    }
+    return graph;
+  }
 ```
 
 Building a graph represented by int[][] array.
 ```
+  private static void addEdge(int[][] graph, int u, int v)
+  {
+    assert u >= 0 && u <= graph.length && u <= graph[0].length;
+    assert v >= 0 && v <= graph.length && v <= graph[0].length;
 
+    graph[u][v] = 1;
+    graph[v][u] = 1;
+  }
+
+  public static int[][] buildGraphWithAdjMatrix()
+  {
+    int V = 5;
+    int[][] graph = new int[V][V];
+    addEdge(graph, 0, 1);
+    addEdge(graph, 0, 4);
+    addEdge(graph, 1, 2);
+    addEdge(graph, 1, 3);
+    addEdge(graph, 1, 4);
+    addEdge(graph, 2, 3);
+    addEdge(graph, 3, 4);
+
+    return graph;
+  }
 ```
 
 #### 785. Is Graph Bipartite?
