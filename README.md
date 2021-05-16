@@ -411,6 +411,8 @@ Search a required set, search Maximum/Minimu result
 |[701. Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)|[LeetCode-701-Insert-into-a-Binary-Search-Tree.java](src/LeetCode-701-Insert-into-a-Binary-Search-Tree.java)|Recursive, Iterative|
 |[958. Check Completeness of a Binary Tree](https://leetcode.com/problems/check-completeness-of-a-binary-tree/)|[LeetCode-958-Check-Completeness-of-a-Binary-Tree.java](src/LeetCode-958-Check-Completeness-of-a-Binary-Tree.java)|DFS|
 |[1644. Lowest Common Ancestor of a Binary Tree II](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/)|[LeetCode-1644-Lowest-Common-Ancestor-of-a-Binary-Tree-II.java](src/LeetCode-1644-Lowest-Common-Ancestor-of-a-Binary-Tree-II.java)|DFS|
+|[1650. Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)|[LeetCode-1650-Lowest-Common-Ancestor-of-a-Binary-Tree-III.java](src/LeetCode-1650-Lowest-Common-Ancestor-of-a-Binary-Tree-III.java)|DFS|
+|[1676. Lowest Common Ancestor of a Binary Tree IV](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/)|[LeetCode-1676-Lowest-Common-Ancestor-of-a-Binary-Tree-IV.java](src/LeetCode-1676-Lowest-Common-Ancestor-of-a-Binary-Tree-IV.java.java)|DFS|
 
 
 
