@@ -17,7 +17,49 @@ KEY POINT: must filter duplicates in all three pointers: i, lo, hi
 Another way to dedup: use results.contains(list) to dedup. However, it will do a bit more unused computation.
 */
 public class Solution {
+
+    // O(N^2*LogN)
+    public List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        if (nums.length < 3) return result;
+        
+        Arrays.sort(nums);
+        
+        for (int l = 0; l < nums.length - 2; l++) {
+            if (l > 0 && nums[l - 1] == nums[l]) continue;
+            
+            for (int r = nums.length - 1; r > l; r--) {
+                if (r < nums.length - 1 && nums[r] == nums[r + 1]) continue;
+                
+                int remainder = 0 - nums[l] - nums[r];
+                
+                int lo = l + 1, hi = r - 1;
+                while (lo <= hi) {
+                    int mid = lo + (hi - lo) / 2;
+
+                    if (nums[mid] == remainder) {
+                        List<Integer> list = new ArrayList<>();
+                        list.add(nums[l]);
+                        list.add(nums[mid]);
+                        list.add(nums[r]);
+                        result.add(list);
+                        break;
+                    } else if (nums[mid] < remainder) {
+                        lo = mid + 1;
+                    } else {
+                        hi = mid - 1;
+                    }
+
+                }
+                
+            }
+        }
+        
+        
+        return result;
+    }
     
+    // O(N^2)
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (nums == null || nums.length < 3) return result;
