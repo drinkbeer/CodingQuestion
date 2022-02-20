@@ -110,4 +110,99 @@ public class Solution {
         
         return result;
     }
+
+    // Another implementation (easier to understand)
+    public List<String> fullJustify(String[] words, int maxWidth) {
+        List<String> result = new ArrayList<>();
+        
+        List<String> list = new ArrayList<>();
+        int len = 0;
+        for (int i = 0; i < words.length; ) {
+            int tempLen = len + words[i].length();
+            if (list.size() > 0) {
+                tempLen += 1;
+            }
+            
+            if (tempLen > maxWidth) {
+                buildString(result, list, maxWidth);
+                list = new ArrayList<>();
+                len = 0;
+                continue;
+            }
+            
+            if (list.size() > 0) {
+                len += 1;
+            }
+            len += words[i].length();
+            list.add(words[i]);
+            i++;
+        }
+        
+        if (list.size() > 0) {
+            // Add last line
+            buildLastString(result, list, maxWidth);
+        }
+        
+        return result;
+    }
+    
+    private void buildString(List<String> result, List<String> list, int maxWidth) {
+        int n = list.size() - 1;
+        
+        int lenWords = 0, lenSpace = 0;
+        for (String str : list) {
+            lenWords += str.length();
+        }
+        lenSpace = maxWidth - lenWords;
+        
+        StringBuilder sb = new StringBuilder();
+        sb.append(list.get(0));
+        
+        // Edge Case 1: the line only has one word, all the spaces left are spaces append to the end
+        if (list.size() == 1) {
+            int lenEachSpace = lenSpace;
+            for (int j = 0; j < lenEachSpace; j++) {
+                sb.append(" ");
+            }
+            result.add(sb.toString());
+            return;
+        }
+        
+        // Normal case
+        int lenEachSpace = lenSpace / n;
+        int nEachSpace = lenSpace % n;
+        
+        for (int i = 1; i < list.size(); i++) {
+            // Add space
+            for (int j = 0; j < lenEachSpace; j++) {
+                sb.append(" ");
+            }
+            if (nEachSpace > 0) {
+                sb.append(" ");
+                nEachSpace--;
+            }
+            
+            // Add word
+            sb.append(list.get(i));
+        }
+        
+        result.add(sb.toString());
+    }
+    
+    private void buildLastString(List<String> result, List<String> list, int maxWidth) {
+        // Edge Case 2: the last line
+        StringBuilder sb = new StringBuilder();
+        sb.append(list.get(0));
+        
+        for (int i = 1; i < list.size(); i++) {
+            sb.append(" ");
+            sb.append(list.get(i));
+        }
+        
+        int lenSpace = maxWidth - sb.length();
+        for (int i = 0; i < lenSpace; i++) {
+            sb.append(" ");
+        }
+        result.add(sb.toString());
+    }
 }

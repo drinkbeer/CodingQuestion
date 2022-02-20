@@ -31,9 +31,9 @@ class Solution {
     private void DFS(int[] nums, boolean[] visited, List<List<Integer>> result, List<Integer> set){
         // end condition
         if(set.size() == nums.length){
-            if(!result.contains(set)){
+            // if(!result.contains(set)){
                 result.add(new ArrayList<Integer>(set));
-            }
+            // }
             return;
         }
         
@@ -70,7 +70,7 @@ class Solution {
 //                 for (List<Integer> sub : result) {
 //                     List<Integer> row = new ArrayList<>(sub);
 //                     row.add(insertPos, nums[i]);
-//                     if (result.contains(row) || tempResult.contains(row)) continue;
+//                     if (tempResult.contains(row)) continue;
 //                     tempResult.add(row);
 //                 }
                 
