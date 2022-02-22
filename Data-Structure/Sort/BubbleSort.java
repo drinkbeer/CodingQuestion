@@ -1,4 +1,4 @@
-package Sort;
+
 
 /*
 Bubble Sort
@@ -27,17 +27,21 @@ class BubbleSort {
 
     // Each loop gets the smallest element to the left side.
     public static void bubbleSort5(int[] arr) {
-        if (arr == null || arr.length == 0) return;
+        if (arr == null || arr.length <= 1) return;
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = arr.length - 1; j > i; j--) {
-                if (arr[j] < arr[i]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    swap(arr, i, j);
                 }
             }
         }
+    }
+
+    private static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     // keep swapping in pairs until there is no need to swap
@@ -86,9 +90,7 @@ class BubbleSort {
         if(arr == null || arr.length == 0) return;
 
         int N = arr.length;
-        boolean swap = true;
         while(N != 0){
-            swap = false;
             int lastSwap = 0;
 
             for(int i = 1; i < N; i++){

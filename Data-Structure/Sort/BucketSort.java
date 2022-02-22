@@ -1,4 +1,4 @@
-package Sort;
+
 
 /**
  * Split elements into Buckets, and sort elements in Buckets using other sorting algorithms, finally merge the sorted buckets.
@@ -9,6 +9,8 @@ package Sort;
  * 2. there are floating point values
  *
  * https://www.programiz.com/dsa/bucket-sort
+ * https://zhuanlan.zhihu.com/p/125737294
+ * 
  */
 public class BucketSort {
 }

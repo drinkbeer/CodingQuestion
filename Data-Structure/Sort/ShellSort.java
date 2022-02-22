@@ -1,10 +1,10 @@
-package Sort;
 
 /**
  * Created by chen on 15/3/25.
  * Shell Sort
  *
  * https://www.programiz.com/dsa/shell-sort
+ * https://zhuanlan.zhihu.com/p/122632213
  */
 public class ShellSort {
     public void sort(Comparable[] a) {

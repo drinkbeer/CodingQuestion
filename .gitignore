@@ -21,3 +21,6 @@ out
 
 gradle*
 .gradle*
+
+# VS Code
+.vscode/
