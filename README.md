@@ -2,50 +2,45 @@
 Sharing some common interview preparation materials through this reporsity.
 
 ## Preparation Areas
-1. Data Structure
-2. Algorithm
-3. Java Concepts, APIs, best practice, JVM mechanism & turning
-4. System Design && Object-Oriented Design
-5. Behavior Question & Project/Technical Knowledge Dive Deep
+1. Data Structure and Algorithm
+2. System Design && Object-Oriented Design
+3. Computer Science and programming language knowledge, APIs, best practice, JVM mechanism & turning
+4. Behavior Question & Project/Technical Knowledge Dive Deep
 
-## Data Structure & Algorithm Preparation Strategy
+## Preparation
 
 Strategies:
-1. Easy + Medium first, then hard.
-2. In preparation stage, categories based strategy; in final stage (one or two weeks before interviewing), company tag (or Interview Sharing) based.
-3. Think 10 - 20 minutes, if no clues, read the discussions. No more than 30 minutes for each problem.
+1. Easy + Medium first, then Hard. Focus on Medium level.
+2. In preparation stage, categories based; in final stage (one or two weeks before interviewing), company tag based.
+3. Think 10 - 20 minutes, if no clues, read the discussions. Do not spend more than 30 minutes on each problem.
 4. Write all solutions.
 5. Summarize similar problems.
 
 Categories (Data Structure & Algorithms):
-1. Array & Matrix (2d array or higher dimension array)
-2. String
-3. LinkedList
-4. Tree
-5. Backtracking
-6. DFS & BFS
-7. Binary Search
-8. Dynamic Programming
-9. Graph
-10. Topological Sort
-11. Stack & PriorityQueue
-12. Trie
-13. Union Find
+1. Sort
+     * Quick Sort, Merge Sort
+     * Quick Select
+2. LinkedList
+3. Heap (or Priority Queue), Stack, Queue, Hash (HashMap, HashSet)
+4. Binary Search
+5. 2 Pointers
+     * 2 Pointers
+     * Sliding Window
+6. BFS
+7. DFS
+8. DP
 
-Others (Algorithms & Design):
-1. Bit Manipulation
-2. Math
-3. Random
-4. Design
-
-Plans: 
-1. Array (two pointers, sort, binary search, sliding window), String, List, Tree (basic tree, BST, DFS, BFS, not include the advanced tree, e.g. BIT, Segment Tree), understand recursive and iterative.
-2. Basic Search (Binary Search) + Memorized Search + basic Dynamic Programming
-3. Advanced DP (knacpack, minimax)
-4. Frequently used Data Structure: Stack, Queue, PriorityQueue, Deque; List, Map, HashTable; Heap, Trie.
-5. Advanced Tree (Binary Index Tree, Segment Tree, B/B+, AVL Tree, Red-black Tree)
-6. Hot topics: Union Find, Graph, Greedy, Bit Manipulation，Topological Sort.
-
+Others (Data Structure & Algorithms & Design):
+1. Union Find
+2. Trie
+3. Monotone Stack / Queue
+4. Sweep Line
+5. TreeMap
+7. Bit Manipulation
+8. Math
+9. Random
+10. Design
+11. Prefix Sum
 
 ### Array
 Array includes N-Sum series, operation to array(rotate or pivot). DFS or BFS search a subset of array, e.g combination.  

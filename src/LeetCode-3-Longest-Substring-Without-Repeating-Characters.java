@@ -11,26 +11,26 @@ Use two pointers.
 */
 public class Solution {
     // 1.Two Pointers, using a int[] as mask.
-    // public int lengthOfLongestSubstring(String s) {
+    public int lengthOfLongestSubstring(String s) {
         
-    //     int[] map = new int[256];   // map from character's ASCII to if it's visited
-    //     java.util.Arrays.fill(map, -1);
+        int[] map = new int[256];   // map from character's ASCII to if it's visited
+        java.util.Arrays.fill(map, -1);
         
-    //     int slow = 0, result = 0;
+        int slow = 0, result = 0;
         
-    //     for(int fast = 0; fast < s.length(); fast++){
-    //         int ch = s.charAt(fast);
-    //         if(map[ch] >= slow){
-    //             // map[ch]>=slow, means curr ch has visited, so distance is (fast-1)-slow+1 = fast-slow
-    //             // if not visited, map[ch]==-1, must < slow
-    //             result = Math.max(result, fast - slow);
-    //             slow = map[ch] + 1; //slow record the pos of 'last repeat ch' pos + 1
-    //         }
-    //         map[ch] = fast;
-    //     }
+        for(int fast = 0; fast < s.length(); fast++){
+            int ch = s.charAt(fast);
+            if(map[ch] >= slow){
+                // map[ch]>=slow, means curr ch has visited, so distance is (fast-1)-slow+1 = fast-slow
+                // if not visited, map[ch]==-1, must < slow
+                result = Math.max(result, fast - slow);
+                slow = map[ch] + 1; //slow record the pos of 'last repeat ch' pos + 1
+            }
+            map[ch] = fast;
+        }
         
-    //     return Math.max(result, s.length() - slow);
-    // }
+        return Math.max(result, s.length() - slow);
+    }
     
     // 2. Two Pointers, similar to JiuZhang's algorithm, using a int[] as mask.
     public int lengthOfLongestSubstring(String s) {

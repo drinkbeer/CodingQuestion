@@ -18,6 +18,7 @@ https://www.programiz.com/dsa/bellman-ford-algorithm
 
 ## Dijkstra (Greedy)
 https://www.programiz.com/dsa/dijkstra-algorithm
+https://zhuanlan.zhihu.com/p/409121513
 
 ## Kruskal's Algorithm (Greedy)
 https://www.programiz.com/dsa/kruskal-algorithm

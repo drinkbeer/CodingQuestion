@@ -317,3 +317,4 @@ https://leetcode.com/problems/subarray-sum-equals-k/
 [O(N)  template for Minimum Size Subarray Sum & Minimum Window Substring & Longest Substring Without Repeating Characters
 ](https://leetcode.com/problems/minimum-size-subarray-sum/discuss/59110/O(N)-template-for-Minimum-Size-Subarray-Sum-and-Minimum-Window-Substring-and-Longest-Substring-Without-Repeating-Characters)  
 [Sliding Window algorithm template to solve all the Leetcode substring search problem](https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/discuss/49708/Sliding-Window-algorithm-template-to-solve-all-the-Leetcode-substring-search-problem.)  
+[ZhiHu Sliding Window Template](https://zhuanlan.zhihu.com/p/390570255)
