@@ -83,7 +83,8 @@ class Solution {
 //             if (j > hi || (i <= mid && tmp[i].val <= tmp[j].val)) {
 //                 pairs[k] = tmp[i];
 //                 // System.out.println("i: " + i + "  j: " + j + "  tmp[i].idx: " + tmp[i].idx + "  tmp[i].val: " + tmp[i].val + "  lo: " + lo + "  hi: " + hi);
-//                 // mid + 1 is the init index of the right array. j - (mid + 1) is the length of the subarray of right array that each element smaller than current i.
+//                 // mid + 1 is the init index of the right array. j is the first element in the right array that is >= tmp[i] (exclusive).
+//                 //   so j - (mid + 1) is the length of the subarray of right array that each element smaller than current i.
 //                 res[tmp[i].idx] += j - (mid + 1);
 //                 i++;
 //             } else {

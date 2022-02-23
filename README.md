@@ -38,9 +38,10 @@ Others (Data Structure & Algorithms & Design):
 5. TreeMap
 7. Bit Manipulation
 8. Math
-9. Random
+9. Randomized
 10. Design
 11. Prefix Sum
+12. Segment Tree, Binary Index Tree, Minimum Spanning Tree
 
 ### Array
 Array includes N-Sum series, operation to array(rotate or pivot). DFS or BFS search a subset of array, e.g combination.  
