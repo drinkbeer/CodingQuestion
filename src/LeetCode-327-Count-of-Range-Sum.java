@@ -111,4 +111,22 @@ class Solution {
     }
     
     
+    // BST
+    /*
+    https://leetcode.com/problems/count-of-range-sum/discuss/78003/Java-BST-solution-averagely-O(nlogn)
+    */
+    
+    
+    // Binary Index Tree
+    /*
+    https://leetcode.com/problems/count-of-range-sum/discuss/78006/Summary-of-the-Divide-and-Conquer-based-and-Binary-Indexed-Tree-based-solutions
+    */
+    
+    
+    // Segment Tree
+    /*
+    https://leetcode.com/problems/count-of-range-sum/discuss/77987/Java-SegmentTree-Solution-36ms
+    */
+    
+    
 }
