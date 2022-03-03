@@ -9,40 +9,40 @@
 public class Solution {
     
     // 1. Iterative
-    // public ListNode reverseKGroup(ListNode head, int k) {
-    //     if(head == null || head.next == null || k <= 1) return head;
+    public ListNode reverseKGroup(ListNode head, int k) {
+        if(head == null || head.next == null || k <= 1) return head;
         
-    //     ListNode dummy = new ListNode(0);
-    //     dummy.next = head;
-    //     ListNode curr = dummy.next;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode prev = dummy;
         
-    //     while(curr.next != null) curr = reverseNextK(curr, k);
+        while(prev.next != null) prev = reverseNextK(prev, k);
         
-    //     return dummy.next;
-    // }
+        return dummy.next;
+    }
     
-    // private ListNode reverseNextK(ListNode head, int k){
-    //     // check if there is enough k nodes
-    //     ListNode temp = head;
-    //     for(int i = 0; i < k; i++){
-    //         if(temp.next == null) return temp;
-    //         temp = temp.next;
-    //     }
+    private ListNode reverseNextK(ListNode prev, int k){
+        // check if there is enough k nodes
+        ListNode temp = prev;
+        for(int i = 0; i < k; i++){
+            if(temp.next == null) return temp;
+            temp = temp.next;
+        }
         
-    //     ListNode prev = null;
-    //     ListNode curr = head;
+        ListNode curr = prev.next;
+        ListNode result = prev.next;
 
-    //     for(int i = 0; i < k; i++){
-    //         ListNode next = curr.next;
-    //         curr.next = prev;
-    //         prev = curr;
-    //         curr = next;
-    //     }
+        for(int i = 0; i < k; i++){
+            ListNode next = curr.next;
+            curr.next = prev.next;
+            prev.next = curr;
+            curr = next;
+        }
         
-    //     head.next = curr;
+        result.next = curr;
         
-    //     return curr;
-    // }
+        return result;
+    }
     
     // 2.Iterative
     public ListNode reverseKGroup(ListNode head, int k) {
