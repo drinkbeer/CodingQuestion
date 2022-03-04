@@ -93,4 +93,30 @@ class Solution {
         
         return last;
     }
+
+    // 3. Similar to reverse next K nodes
+    public ListNode reverseBetween(ListNode head, int left, int right) {
+        ListNode dummy = new ListNode(-1);
+        dummy.next = head;
+        ListNode prev = dummy;
+        
+        for (int i = 0; i < left - 1; i++) {
+            prev = prev.next;
+        }
+        
+        // reverse next (right - left + 1) nodes
+        int len = right - left + 1;
+        ListNode curr = prev.next;
+        ListNode last = prev.next;
+        for (int i = 0; i < len && curr != null; i++) {
+            ListNode next = curr.next;
+            curr.next = prev.next;
+            prev.next = curr;
+            curr = next;
+        }
+        
+        last.next = curr;
+        return dummy.next;
+    }
+    
 }
