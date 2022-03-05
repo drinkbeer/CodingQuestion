@@ -181,6 +181,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[★20.Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|[LeetCode-20-Valid-Parentheses.java](src/LeetCode-20-Valid-Parentheses.java)|HashMap, Stack|
 |[★22.Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)|[LeetCode-22-Generate-Parentheses.java](src/LeetCode-22-Generate-Parentheses.java)|DFS, BFS|
 |[28.Implement strStr()](https://leetcode.com/problems/implement-strstr/)|[LeetCode-28-Implement-strStr.java](src/LeetCode-28-Implement-strStr.java)|String, Two Pointers|
+|[★32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)|[LeetCode-32-Longest-Valid-Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|String, Stack, DP|
 |[38 Count and Say](https://leetcode.com/problems/count-and-say/)|[LeetCode-38-Count-and-Say.java](src/LeetCode-38-Count-and-Say.java)|String|
 |[44. Wildcard Matching](https://leetcode.com/problems/wildcard-matching/)|[LeetCode-44-Wildcard-Matching.java](src/LeetCode-44-Wildcard-Matching.java)|String|
 |[49.Group Anagrams](https://leetcode.com/problems/anagrams/)|[LeetCode-49-Group-Anagrams.java](src/LeetCode-49-Group-Anagrams.java)|String, HashMap|
