@@ -80,7 +80,8 @@ class MinStack {
     }
     
     public void pop(){
-        if(stack.peek() == minStack.peek())minStack.pop();
+        // if(stack.peek() == minStack.peek())minStack.pop();   // this is wrong because you cannot compare two different elements (Integer) using == in Java.
+        if (stack.peek().equals(minStack.peek())) minStack.pop();
         stack.pop();
     }
     
