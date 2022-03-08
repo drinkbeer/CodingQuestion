@@ -562,6 +562,7 @@ https://leetcode.com/tag/stack/
 
 |Question|Solution|Tags|
 |--------|--------|----|
+|[224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)|[LeetCode-224-Basic-Calculator.java](src/LeetCode-224-Basic-Calculator.java)|Stack|
 |[394. Decode String](https://leetcode.com/problems/decode-string/)|[LeetCode-394-Decode-String.java](src/LeetCode-394-Decode-String.java)|Stack|
 |[636. Exclusive Time of Functions](https://leetcode.com/problems/exclusive-time-of-functions/)|[LeetCode-636-Exclusive-Time-of-Functions.java](src/LeetCode-636-Exclusive-Time-of-Functions.java)|Stack|
 |[946. Validate Stack Sequences](https://leetcode.com/problems/validate-stack-sequences/)|[LeetCode-946-Validate-Stack-Sequences.java](src/LeetCode-946-Validate-Stack-Sequences.java)|Stack|
