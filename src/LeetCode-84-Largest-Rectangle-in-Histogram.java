@@ -55,11 +55,16 @@ class Solution {
 //         return maxArea;
 //     }
     
-    // 2. Using a Stack
+    // 2. Using a Monotonic Stack
     /*
     https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/28900/O(n)-stack-based-JAVA-solution
     
     Store the index in the stacks to be ascending order. Whenever we detect a bar's height is smaller than the stack.peek() height, we start the backtrack the index in the stacks one by one, and calculate the max area based on the backtracked index in the stack.
+    The max area is the 'height_of_left * (current_index - stack.peek())'.
+    (stack.peek(), current_index) is the width of the rectangle, both are exclusive.
+
+    Runtime: 207 ms, faster than 23.22% of Java online submissions for Largest Rectangle in Histogram.
+    Memory Usage: 90.9 MB, less than 18.03% of Java online submissions for Largest Rectangle in Histogram.
     */
     public int largestRectangleArea(int[] heights) {
         if (heights == null || heights.length == 0) return 0;

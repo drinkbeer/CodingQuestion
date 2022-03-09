@@ -16,7 +16,17 @@ https://www.programcreek.com/2014/06/leetcode-trapping-rain-water-java/
 Cumulative each bar. Use maxLeft to record the max height of left side of current bar, maxRight records max height of right side of curr bar. For curr bar, the water can store in curr bar is maxRight - curr, or maxRight - curr. Accumulate each bar's water.
 */
 class Solution {
-    // 1.Using Stack
+    // 1.Using Monotonic Stack
+    /*
+    https://leetcode.com/problems/trapping-rain-water/discuss/435850/Java-Solution-using-monotonic-stack
+    There is only one situation that water can be trapped, that is the bar forms (high low high). In this way, we can use a decreasing monotonic stack to represent the first 2 (high low), if we meet a higher height[i] that is bigger than the peek of the stack, it will trigger water trapped. (about monotonic stack, can refer to #84 https://leetcode.com/problems/largest-rectangle-in-histogram/)
+
+    When we find a bigger value than the peek of the stack, we can get the peek as the bottom of the trap, since it is the smallest value by so far (it is the low in "high low high"). And we need to define the height by finding the smaller one of left bound(height[stack.peek()]) and right bound(height[i]) and use the smaller one - the bottom of the trap.
+
+    Finally, we multiply the height with width (i-s.peek()-1) and get the area.
+
+    We need to notice that when we find a bigger value than the peek of the stack, there may be only one element in the stack. In this situation, it means there is no left bound, so it cannot form a water trap, we can skip directly.
+    */
     // public int trap(int[] height) {
     //     if(height == null) return 0;
         
@@ -32,6 +42,22 @@ class Solution {
     //         }
     //     }
     //     return maxWater;
+    // }
+
+    // Monotonic Stack
+    // public int trap(int[] height) {
+    //     Stack<Integer> stack = new Stack<>();
+    //     int i = 0, n = height.length, res = 0;
+    //     while (i < n) {
+    //         if (stack.isEmpty() || height[i] <= height[stack.peek()]) {
+    //             stack.push(i++);
+    //         } else {
+    //             int t = stack.pop();
+    //             if (stack.isEmpty()) continue;
+    //             res += (Math.min(height[i], height[stack.peek()]) - height[t]) * (i - stack.peek() - 1);
+    //         }
+    //     }
+    //     return res;
     // }
     
     // 2. Two Way scanning. Scanning from left view and scanning from right view
