@@ -5,14 +5,16 @@ class Solution {
     
     The basic idea is to find out the smallest result letter by letter (one letter at a time). Here is the thinking process for input "cbacdcbc":
 
-    find out the last appeared position for each letter;
-    c - 7
-    b - 6
-    a - 2
-    d - 4
-    find out the smallest index from the map in step 1 (a - 2);
-    the first letter in the final result must be the smallest letter from index 0 to index 2;
-    repeat step 2 to 3 to find out remaining letters.
+    Step 1: find out the last appeared position for each letter;
+        c - 7
+        b - 6
+        a - 2
+        d - 4
+    Step 2: find out the smallest index from the map in step 1 (a - 2);
+    Step 3: the first letter in the final result must be the smallest letter from index 0 to index 2;
+    Step 4: repeat step 2 to 3 to find out remaining letters.
+    
+    So finally: 
     the smallest letter from index 0 to index 2: a
     the smallest letter from index 3 to index 4: c
     the smallest letter from index 4 to index 4: d
@@ -58,30 +60,64 @@ class Solution {
 //         return min;
 //     }
     
+    // Monotonic Stack
     /*
+    Using StringBuidler as stack: 
     https://leetcode.com/problems/remove-duplicate-letters/discuss/76769/Java-solution-using-Stack-with-comments
     */
+//     public String removeDuplicateLetters(String s) {
+//         int[] count = new int[26];
+//         for (char c : s.toCharArray()) {
+//             count[c - 'a']++;
+//         }
+        
+//         StringBuilder sb = new StringBuilder();
+//         boolean[] visited = new boolean[26];
+//         for (char c : s.toCharArray()) {
+//             count[c - 'a']--;
+//             if (visited[c - 'a']) continue;
+            
+//             while (sb.length() > 0 && c < sb.charAt(sb.length() - 1) && count[sb.charAt(sb.length() - 1) - 'a'] != 0) {
+//                 visited[sb.charAt(sb.length() - 1) - 'a'] = false;
+//                 sb.deleteCharAt(sb.length() - 1);
+//             }
+            
+//             sb.append(c);
+//             visited[c - 'a'] = true;
+//         }
+        
+//         return sb.toString();
+//     }
+    
+    // Monotonic Stack (the best solution I think)
+    /*
+    Using real stack: 
+    https://leetcode.com/problems/remove-duplicate-letters/discuss/128235/Java-Stack
+    */
     public String removeDuplicateLetters(String s) {
-        int[] count = new int[26];
-        for (char c : s.toCharArray()) {
-            count[c - 'a']++;
+        // Build frequency array to remember how many a char is left in the string when iterate each char
+        int[] freq = new int[26];
+        for (char ch : s.toCharArray()) {
+            freq[ch - 'a']++;
         }
         
-        StringBuilder sb = new StringBuilder();
-        boolean[] visited = new boolean[26];
-        for (char c : s.toCharArray()) {
-            count[c - 'a']--;
-            if (visited[c - 'a']) continue;
+        Stack<Character> stack = new Stack<>();
+        for (char ch : s.toCharArray()) {
+            freq[ch - 'a']--;
+            if (stack.contains(ch)) continue;
             
-            while (sb.length() > 0 && c < sb.charAt(sb.length() - 1) && count[sb.charAt(sb.length() - 1) - 'a'] != 0) {
-                visited[sb.charAt(sb.length() - 1) - 'a'] = false;
-                sb.deleteCharAt(sb.length() - 1);
+            while (!stack.isEmpty() && stack.peek() > ch && freq[stack.peek() - 'a'] > 0) {
+                stack.pop();
             }
-            
-            sb.append(c);
-            visited[c - 'a'] = true;
+            stack.push(ch);
         }
         
+        // Build results from stack
+        StringBuilder sb = new StringBuilder();
+        while (!stack.isEmpty()) {
+            sb.insert(0, stack.pop());
+        }
         return sb.toString();
     }
+    
 }
