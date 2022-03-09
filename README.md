@@ -567,7 +567,12 @@ https://leetcode.com/tag/stack/
 |[636. Exclusive Time of Functions](https://leetcode.com/problems/exclusive-time-of-functions/)|[LeetCode-636-Exclusive-Time-of-Functions.java](src/LeetCode-636-Exclusive-Time-of-Functions.java)|Stack|
 |[946. Validate Stack Sequences](https://leetcode.com/problems/validate-stack-sequences/)|[LeetCode-946-Validate-Stack-Sequences.java](src/LeetCode-946-Validate-Stack-Sequences.java)|Stack|
 
+### Monotonic Stack
+https://leetcode.com/tag/monotonic-stack/
 
+|Question|Solution|Tags|
+|--------|--------|----|
+|[85. Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)|[LeetCode-85-Maximal-Rectangle.java](src/LeetCode-85-Maximal-Rectangle.java)|Stack|
 
 ### Union-Find
 
