@@ -573,6 +573,8 @@ https://leetcode.com/tag/monotonic-stack/
 |Question|Solution|Tags|
 |--------|--------|----|
 |[85. Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)|[LeetCode-85-Maximal-Rectangle.java](src/LeetCode-85-Maximal-Rectangle.java)|Stack|
+|[1762. Buildings With an Ocean View](https://leetcode.com/problems/buildings-with-an-ocean-view/)|[LeetCode-1762-Buildings-With-an-Ocean-View.java](src/LeetCode-1762-Buildings-With-an-Ocean-View.java)|Stack|
+
 
 ### Union-Find
 
