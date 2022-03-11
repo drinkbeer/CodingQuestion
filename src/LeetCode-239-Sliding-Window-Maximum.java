@@ -1,4 +1,5 @@
 class Solution {
+    // PriorityQueue, TLE
     /*
     Time O(logN)
     */
@@ -20,6 +21,7 @@ class Solution {
 //         return res;
 //     }
     
+    // Descending Monotonic Queue
     /*
     https://leetcode.com/problems/sliding-window-maximum/discuss/65884/Java-O(n)-solution-using-deque-with-explanation
     
