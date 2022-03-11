@@ -75,24 +75,24 @@ public class ZigzagIterator {
 //         return cnt1 < v1.size() || cnt2 < v2.size();
 //     }
     
-    // 3. Also appliable for k-vector
-    
-    LinkedList<Iterator> poll;
+    // 3. Queue. Also appliable for k-vector
+    Queue<Iterator> queue;
     public ZigzagIterator(List<Integer> v1, List<Integer> v2) {
-        poll = new LinkedList<>();
-        if (!v1.isEmpty()) poll.add(v1.iterator());
-        if (!v2.isEmpty()) poll.add(v2.iterator());
+        queue = new LinkedList<>();
+        if (!v1.isEmpty()) queue.offer(v1.iterator());
+        if (!v2.isEmpty()) queue.offer(v2.iterator());
     }
 
     public int next() {
-        Iterator curr = poll.remove();
-        int res = (Integer) curr.next();
-        if (curr.hasNext()) poll.add(curr);
+        Iterator<Integer> iter = queue.poll();
+        int res = iter.next();
+        if (iter.hasNext()) queue.offer(iter);
+        
         return res;
     }
 
     public boolean hasNext() {
-        return poll.size() != 0;
+        return !queue.isEmpty();
     }
 }
 
