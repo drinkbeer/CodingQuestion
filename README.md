@@ -575,6 +575,15 @@ https://leetcode.com/tag/monotonic-stack/
 |[85. Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)|[LeetCode-85-Maximal-Rectangle.java](src/LeetCode-85-Maximal-Rectangle.java)|Stack|
 |[1762. Buildings With an Ocean View](https://leetcode.com/problems/buildings-with-an-ocean-view/)|[LeetCode-1762-Buildings-With-an-Ocean-View.java](src/LeetCode-1762-Buildings-With-an-Ocean-View.java)|Stack|
 
+### Queue
+
+https://leetcode.com/tag/queue/
+
+|Question|Solution|Tags|
+|--------|--------|----|
+|[379. Design Phone Directory](https://leetcode.com/problems/design-phone-directory/)|[LeetCode-379-Design-Phone-Directory.java](src/LeetCode-379-Design-Phone-Directory.java)|Queue|
+
+
 
 ### Union-Find
 
