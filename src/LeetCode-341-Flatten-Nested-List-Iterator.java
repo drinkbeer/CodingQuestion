@@ -51,37 +51,108 @@ Space: O(N)
 //     }
 // }
 
+// 1. Load when initializing
+// public class NestedIterator implements Iterator<Integer> {
+    
+//     Queue<Integer> queue;
+//     public NestedIterator(List<NestedInteger> nestedList) {
+//         queue = new LinkedList<>();
+//         enqueue(nestedList, queue);
+//     }
+    
+//     private void enqueue(List<NestedInteger> nestedList, Queue<Integer> queue) {
+//         for (NestedInteger ni : nestedList) {
+//             if (ni.isInteger()) {
+//                 queue.offer(ni.getInteger());
+//             } else {
+//                 enqueue(ni.getList(), queue);
+//             }
+//         }
+//     }
+
+//     @Override
+//     public Integer next() {
+//         return queue.poll();
+//     }
+
+//     @Override
+//     public boolean hasNext() {
+//         return !queue.isEmpty();
+//     }
+// }
+
+
 // 2. Lazy Load
 /*
 There are 1000000000 Integers in nestedList and the user only calls next() once. -> You have to put 1000000000 Integers into stack, but the user only takes the 1st one. Instead, we should push to stack "lazy".
 
 */
-public class NestedIterator implements Iterator<Integer> {
+// public class NestedIterator implements Iterator<Integer> {
 
-    Stack<NestedInteger> stack;
+//     Stack<NestedInteger> stack;
+//     public NestedIterator(List<NestedInteger> nestedList) {
+//         stack = new Stack<>();
+//         recursive(nestedList, stack);
+//     }
+
+//     @Override
+//     public Integer next() {
+//         if (!hasNext()) throw new java.util.NoSuchElementException();
+//         return stack.pop().getInteger();
+//     }
+
+//     @Override
+//     public boolean hasNext() {
+//         while (!stack.isEmpty() && !stack.peek().isInteger()) {
+//             recursive(stack.pop().getList(), stack);
+//         }
+        
+//         return !stack.isEmpty();
+//     }
+    
+//     private void recursive(List<NestedInteger> list, Stack<NestedInteger> stack) {
+//         for (int i = list.size() - 1; i >= 0; i--) {
+//             stack.push(list.get(i));
+//         }
+//     }
+// }
+
+// 2. Another implementation of Lazy Loading. Lazy loading when calling `hasNext()`
+public class NestedIterator implements Iterator<Integer> {
+    
+    Queue<Integer> queue;
+    List<NestedInteger> nestedList;
     public NestedIterator(List<NestedInteger> nestedList) {
-        stack = new Stack<>();
-        recursive(nestedList, stack);
+        this.queue = new LinkedList<>();
+        this.nestedList = nestedList;
     }
 
     @Override
     public Integer next() {
-        if (!hasNext()) throw new java.util.NoSuchElementException();
-        return stack.pop().getInteger();
+        return queue.poll();
     }
 
     @Override
     public boolean hasNext() {
-        while (!stack.isEmpty() && !stack.peek().isInteger()) {
-            recursive(stack.pop().getList(), stack);
+        if (queue.isEmpty() && nestedList.isEmpty()) return false;
+        
+        while (queue.isEmpty() && nestedList.size() != 0) {
+            NestedInteger ni = nestedList.remove(0);
+            List<NestedInteger> list = new LinkedList<>();
+            list.add(ni);
+            enqueue(list, queue);
         }
         
-        return !stack.isEmpty();
+        return !queue.isEmpty();
     }
     
-    private void recursive(List<NestedInteger> list, Stack<NestedInteger> stack) {
-        for (int i = list.size() - 1; i >= 0; i--) {
-            stack.push(list.get(i));
+    private void enqueue(List<NestedInteger> nestedList, Queue<Integer> queue) {
+        for (NestedInteger ni : nestedList) {
+            if (ni.isInteger()) {
+                queue.offer(ni.getInteger());
+            } else {
+                enqueue(ni.getList(), queue);
+            }
         }
     }
 }
