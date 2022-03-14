@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Graph
+public class DirectedGraph
 {
   private static void addEdge(Map<Integer, List<Integer>> graph, int u, int v)
   {

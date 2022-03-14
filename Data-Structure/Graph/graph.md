@@ -2,9 +2,16 @@ Graph is a special Tree that (1) allows circle; (2) allows disconnection.
 
 # Contents
 Must understand:
++ [Constructing Directed Graphs](#constructing-directed-acyclic-graphs)
 + [DFS]
 + [BFS]
-+ [Topological Sort]
++ [Topological Sort](#topological-sort)
+
+## Constructing Directed Acyclic Graphs
+
+
+## Topological Sort
+
 
 Highly-recommended:
 Google really like Graph Theory related problems.

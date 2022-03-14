@@ -45,6 +45,10 @@ Analysis:
 public class Solution {
     
     // 1.Divide & Conquer (Recursive)
+    /*
+    Time: O(N)
+    Space: O(1)
+     */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if(root == null) return null;
 
@@ -55,9 +59,11 @@ public class Solution {
         TreeNode right = lowestCommonAncestor(root.right, p, q);
         
         // Conquer
-        if(left != null && right != null) return root;
-        if(left != null) return left;
-        if(right != null) return right;
-        return null;
+//        if(left != null && right != null) return root;
+//        if(left != null) return left;
+//        if(right != null) return right;
+//        return null;
+
+        return left != null && right != null ? root : left != null ? left : right;
     }
 }
