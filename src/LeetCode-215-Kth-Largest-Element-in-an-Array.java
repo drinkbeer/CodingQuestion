@@ -24,6 +24,10 @@ public class Solution {
     // }
     
     // 2.put into max heap
+    /*
+    Time: O(NlogN)
+    Space: O(N)
+    */
     // public int findKthLargest(int[] nums, int k) {
     //     if(nums == null || nums.length == 0) return 0;
         
@@ -47,8 +51,35 @@ public class Solution {
     //         return i2 - i1;
     //     }
     // }
+
+    // Min Priority Queue. Better than above one.
+    /*
+    Time: O(NLogK)
+    Space: O(K)
     
-    // 3.Quick Select
+    PQ time complexity:
+    * enqueue and dequeue methods (offer, poll, remove, add): O(logN), because need to rebuild the pq
+    * retrieval methods (peek, element, size): O(1), because only need to touch the head
+    
+    Build Min Heap of length K, average height is logK. The build heap operations perform N time, so time complexity is O(NlogK).
+    */
+    // public int findKthLargest(int[] nums, int k) {
+    //     if (nums == null || nums.length < k) return -1;
+        
+    //     PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> Integer.compare(a, b));
+        
+    //     for (int num : nums) {
+    //         pq.offer(num);
+    //         if (pq.size() > k) pq.poll();
+    //     }
+        
+    //     return pq.peek();
+    // }
+    
+    // 3.Quick Select (Best Solution)
+    /*
+    Time: O(logN)
+    */
     public int findKthLargest(int[] nums, int k) {
         if(nums == null || nums.length == 0 || k < 1 || k > nums.length) return 0;
         
