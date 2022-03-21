@@ -1,7 +1,8 @@
 class Solution {
-    // PriorityQueue, TLE
+    // Max PriorityQueue, TLE
     /*
-    Time O(logN)
+    Time: O((N-K)*log(N-K))
+    Space: O(N-K)
     */
 //     public int[] maxSlidingWindow(int[] nums, int k) {
 //         if (nums == null || nums.length == 0) return new int[0];
@@ -20,6 +21,26 @@ class Solution {
         
 //         return res;
 //     }
+
+    // Another implementation with Max PQ.
+    // public int[] maxSlidingWindow(int[] nums, int k) {
+    //     int n = nums.length;
+    //     int[] res = new int[n - k + 1];
+    //     PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> Integer.compare(b, a));
+        
+        
+    //     for (int i = 0; i < k - 1; i++) {
+    //         pq.offer(nums[i]);
+    //     }
+        
+    //     for (int i = k - 1; i < nums.length; i++) {
+    //         pq.offer(nums[i]);
+    //         res[i - k + 1] = pq.peek();
+    //         pq.remove(nums[i - k + 1]);
+    //     }
+        
+    //     return res;
+    // }
     
     // Descending Monotonic Queue
     /*

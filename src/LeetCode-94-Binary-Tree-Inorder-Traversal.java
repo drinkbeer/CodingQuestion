@@ -140,7 +140,7 @@ public class Solution {
                 result.add(curr.val);
                 curr = curr.right;
             } else {
-                // find the predecessor of curr node
+                // find the predecessor of curr node （the most right in left tree)
                 TreeNode pre = curr.left;
                 while (pre.right != null && pre.right != curr) {
                     pre = pre.right;

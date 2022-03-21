@@ -79,6 +79,10 @@ public class Solution {
     // 3.Quick Select (Best Solution)
     /*
     Time: O(logN)
+    Time complexity : O(N) in the average case, O(N^2) in the worst case.
+    Space complexity : O(1).
+
+    Hence the array is now split into two parts. If that would be a quicksort algorithm, one would proceed recursively to use quicksort for the both parts that would result in O(NlogN) time complexity. Here there is no need to deal with both parts since now one knows in which part to search for N - kth smallest element, and that reduces average time complexity to O(N).
     */
     public int findKthLargest(int[] nums, int k) {
         if(nums == null || nums.length == 0 || k < 1 || k > nums.length) return 0;

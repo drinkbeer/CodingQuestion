@@ -45,17 +45,16 @@
 https://leetcode.com/problems/find-median-from-data-stream/discuss/74047/JavaPython-two-heap-solution-O(log-n)-add-O(1)-find
 */
 class MedianFinder {
-    private PriorityQueue<Integer> small = new PriorityQueue<>(Collections.reverseOrder());
-    private PriorityQueue<Integer> large = new PriorityQueue<>();
-    private boolean even = true;
+    PriorityQueue<Integer> small;
+    PriorityQueue<Integer> large;
+    boolean even;
 
-    public double findMedian() {
-        if (even)
-            return (small.peek() + large.peek()) / 2.0;
-        else
-            return small.peek();
+    public MedianFinder() {
+        small = new PriorityQueue<>(Collections.reverseOrder());
+        large = new PriorityQueue<>();
+        even = true;
     }
-
+    
     public void addNum(int num) {
         if (even) {
             large.offer(num);
@@ -67,6 +66,13 @@ class MedianFinder {
         even = !even;
     }
     
+    public double findMedian() {
+        if (even) {
+            return (small.peek() + large.peek()) / 2.0;
+        } else {
+            return small.peek();
+        }
+    }
 }
 
 /**
