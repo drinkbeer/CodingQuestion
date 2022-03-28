@@ -409,6 +409,7 @@ Search a required set, search Maximum/Minimu result
 |[582. Kill Process](https://leetcode.com/problems/kill-process/)|[LeetCode-582-Kill-Process.java](src/LeetCode-582-Kill-Process.java)|BFS, DFS|
 |[654. Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree/)|[LeetCode-654-Maximum-Binary-Tree.java](src/LeetCode-654-Maximum-Binary-Tree.java)|Recursive, Deque|
 |[655. Print Binary Tree](https://leetcode.com/problems/print-binary-tree/)|[LeetCode-655-Print-Binary-Tree.java](src/LeetCode-655-Print-Binary-Tree.java)|BFS, DFS|
+|[662. Maximum Width of Binary Tree](https://leetcode.com/problems/maximum-width-of-binary-tree/)|[LeetCode-662-Maximum-Width-of-Binary-Tree.java](src/LeetCode-662-Maximum-Width-of-Binary-Tree.java)|Binary Tree, BFS|
 |[671. Second Minimum Node In a Binary Tree](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/)|[LeetCode-671-Second-Minimum-Node-In-a-Binary-Tree.java](src/LeetCode-671-Second-Minimum-Node-In-a-Binary-Tree.java)|Recursive|
 |[701. Insert into a Binary Search Tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/)|[LeetCode-701-Insert-into-a-Binary-Search-Tree.java](src/LeetCode-701-Insert-into-a-Binary-Search-Tree.java)|Recursive, Iterative|
 |[★863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)|[LeetCode-863-All-Nodes-Distance-K-in-Binary-Tree.java](src/LeetCode-863-All-Nodes-Distance-K-in-Binary-Tree.java)|Traversal, Convert Tree to Graph|
