@@ -219,6 +219,7 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[736. Parse Lisp Expression](https://leetcode.com/problems/parse-lisp-expression/)|[LeetCode-736-Parse-Lisp-Expression.java](src/LeetCode-736-Parse-Lisp-Expression.java)|String|
 |[748. Shortest Completing Word](https://leetcode.com/problems/shortest-completing-word/)|[LeetCode-748-Shortest-Completing-Word.java](src/LeetCode-748-Shortest-Completing-Word.java)|String|
 |[771. Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/)|[LeetCode-771-Jewels-and-Stones.java](src/LeetCode-771-Jewels-and-Stones.java)|String|
+|[791. Custom Sort String](https://leetcode.com/problems/custom-sort-string/)|[LeetCode-791-Custom-Sort-String.java](src/LeetCode-791-Custom-Sort-String.java)|String|
 |[796. Rotate String](https://leetcode.com/problems/rotate-string/)|[LeetCode-796-Rotate-String.java](src/LeetCode-796-Rotate-String.java)|String|
 |[804. Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/)|[LeetCode-804-Unique-Morse-Code-Words.java](src/LeetCode-804-Unique-Morse-Code-Words.java)|String|
 |[833. Find And Replace in String](https://leetcode.com/problems/find-and-replace-in-string/)|[LeetCode-833-Find-And-Replace-in-String.java](src/LeetCode-833-Find-And-Replace-in-String.java)|String|
