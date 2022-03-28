@@ -502,6 +502,11 @@ PriorityQueue.
 |[269. Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)|[LeetCode-269-Alien-Dictionary.java](src/LeetCode-269-Alien-Dictionary.java)|Graph, Topological Sort|
 |[785. Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/)|[LeetCode-785-Is-Graph-Bipartite.java](src/LeetCode-785-Is-Graph-Bipartite.java)|Graph, Topological Sort|
 
+### Prefix Sum
+
+|Question|Solution|Tags|
+|--------|--------|----|
+|[523. Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)|[LeetCode-523-Continuous-Subarray-Sum.java](src/LeetCode-523-Continuous-Subarray-Sum.java)|Prefix Sum, Array|
 
 
 ### Math
