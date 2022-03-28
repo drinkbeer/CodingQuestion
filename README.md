@@ -137,6 +137,7 @@ Note:
 |[463. Island Perimeter](https://leetcode.com/problems/island-perimeter/)|[LeetCode-463-Island-Perimeter.java](src/LeetCode-463-Island-Perimeter.java)|Recursive|
 |[448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)|[LeetCode-448-Find-All-Numbers-Disappeared-in-an-Array.java](src/LeetCode-448-Find-All-Numbers-Disappeared-in-an-Array.java)|Arraay|
 |[★493. Reverse Pairs](https://leetcode.com/problems/reverse-pairs/)|[LeetCode-493-Reverse-Pairs.java](src/LeetCode-493-Reverse-Pairs.java)|Array, MergeSort, BST, BIT|
+|[498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)|[LeetCode-498-Diagonal-Traverse.java](src/LeetCode-498-Diagonal-Traverse.jav)|Array|
 |[540. Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)|[LeetCode-540-Single-Element-in-a-Sorted-Array.java](src/LeetCode-540-Single-Element-in-a-Sorted-Array.java)|Binary Search|
 |[560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)|[LeetCode-560-Subarray-Sum-Equals-K.java](src/LeetCode-560-Subarray-Sum-Equals-K.java)|Culmulative Sum|
 |[661. Image Smoother](https://leetcode.com/problems/image-smoother/)|[LeetCode-661-Image-Smoother.java](src/LeetCode-661-Image-Smoother.java)|Array|
