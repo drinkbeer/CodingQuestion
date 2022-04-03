@@ -422,6 +422,11 @@ Search a required set, search Maximum/Minimu result
 
 
 
+### BFS
+
+|Question|Solution|Tags|
+|--------|--------|----|
+|[1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)|[LeetCode-1091-Shortest-Path-in-Binary-Matrix.java](src/LeetCode-1091-Shortest-Path-in-Binary-Matrix.java)|BFS, Matrix|
 
 
 
