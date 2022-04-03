@@ -232,7 +232,6 @@ String includes Parentheness series, Palindrome series, Anagram series, some sta
 |[242.Valid Anagram](https://leetcode.com/problems/valid-anagram/)|[LeetCode-242-Valid-Anagram.java](src/LeetCode-242-Valid-Anagram.java)|Sort, Array Map|
 |[32.Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)|[LeetCode-32-Longest-Valid-Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
 |[241.Different Ways to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/)|[LeetCode-241.Different Ways to Add Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
-|[301.Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)|[LeetCode-301.Remove Invalid Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|Not Yet|
 |[9 Palindrome Number](https://leetcode.com/problems/palindrome-number/)|[LeetCode-9-Palindrome-Number.java](src/LeetCode-9-Palindrome-Number.java)|Math|
 |[234.Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)|[LeetCode-234-Palindrome-Linked-List.java](src/LeetCode-234-Palindrome-Linked-List.java)|LinkedList|
 |[131.Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)|[LeetCode-131-Palindrome-Partitioning.java](src/LeetCode-131-Palindrome-Partitioning.java)|DFS|
@@ -421,6 +420,12 @@ Search a required set, search Maximum/Minimu result
 |[1650. Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)|[LeetCode-1650-Lowest-Common-Ancestor-of-a-Binary-Tree-III.java](src/LeetCode-1650-Lowest-Common-Ancestor-of-a-Binary-Tree-III.java)|DFS|
 |[1676. Lowest Common Ancestor of a Binary Tree IV](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/)|[LeetCode-1676-Lowest-Common-Ancestor-of-a-Binary-Tree-IV.java](src/LeetCode-1676-Lowest-Common-Ancestor-of-a-Binary-Tree-IV.java.java)|DFS|
 
+
+### DFS
+
+|Question|Solution|Tags|
+|--------|--------|----|
+|[301.Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)|[LeetCode-301.Remove Invalid Parentheses.java](src/LeetCode-32-Longest-Valid-Parentheses.java)|DFS, BFS, String|
 
 
 
@@ -651,7 +656,6 @@ https://leetcode.com/tag/queue/
 
 
 
-[301.Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)
 
 
 
