@@ -425,7 +425,7 @@ Search a required set, search Maximum/Minimu result
 
 |Question|Solution|Tags|
 |--------|--------|----|
-|[301.Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)|[LeetCode-301.Remove Invalid Parentheses.java](src/LeetCode-301.Remove Invalid Parentheses.java)|DFS, BFS, String|
+|[301.Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)|[LeetCode-301-Remove-Invalid-Parentheses.java](src/LeetCode-301-Remove-Invalid-Parentheses.java)|DFS, BFS, String|
 
 
 
