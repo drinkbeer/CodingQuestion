@@ -9,9 +9,10 @@ class Node {
 */
 
 class Solution {
+//     // 1. Two list to record the path
 //     public Node lowestCommonAncestor(Node p, Node q) {
-//         List<Node> pPath = new ArrayList<>();
-//         List<Node> qPath = new ArrayList<>();
+//         List<Node> pPath = new LinkedList<>();
+//         List<Node> qPath = new LinkedList<>();
         
 //         while (p != null) {
 //             pPath.add(0, p);
@@ -23,30 +24,47 @@ class Solution {
 //             q = q.parent;
 //         }
         
-//         int i = 0, j = 0;
 //         Node prev = null;
-//         while (i < pPath.size() && j < qPath.size()) {
-//             if (pPath.get(i) == qPath.get(j)) {
+//         for (int i = 0; i < pPath.size() && i < qPath.size(); i++) {
+//             if (pPath.get(i) == qPath.get(i)) {
 //                 prev = pPath.get(i);
 //             } else {
 //                 break;
 //             }
             
-//             i++;
-//             j++;
 //         }
         
 //         return prev;
 //     }
     
     
-    // 2. Find intersection in two list
+    // 2. One set to record the path
+//     public Node lowestCommonAncestor(Node p, Node q) {
+//         Set<Node> nodes = new HashSet<>();
+        
+//         while (p != null) {
+//             nodes.add(p);
+//             p = p.parent;
+//         }
+        
+//         while (q != null) {
+//             if (nodes.contains(q)) return q;
+//             q = q.parent;
+//         }
+        
+//         return null;
+//     }
+    
+    // 3. Find intersection of two path (LinkedList)
     public Node lowestCommonAncestor(Node p, Node q) {
         Node a = p, b = q;
         while (a != b) {
-            a = a != null ? a.parent : q;
-            b = b != null ? b.parent : p;
+            a = a.parent != null ? a.parent : q;
+            b = b.parent != null ? b.parent : p;
         }
+        
         return a;
     }
+    
+
 }
