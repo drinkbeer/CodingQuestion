@@ -433,6 +433,7 @@ Search a required set, search Maximum/Minimu result
 
 |Question|Solution|Tags|
 |--------|--------|----|
+|[317. Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings/)|[LeetCode-317-Shortest-Distance-from-All-Buildings.java](src/LeetCode-317-Shortest-Distance-from-All-Buildings.java)|BFS, Matrix|
 |[1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)|[LeetCode-1091-Shortest-Path-in-Binary-Matrix.java](src/LeetCode-1091-Shortest-Path-in-Binary-Matrix.java)|BFS, Matrix|
 
 
