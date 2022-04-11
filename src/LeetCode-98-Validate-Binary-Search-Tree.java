@@ -43,7 +43,7 @@ public class Solution {
 //         return isValidBST(root.left, min, root.val) && isValidBST(root.right, root.val, max);
 //     }
     
-    // 2.BFS (using Inorder Traversal)
+    // 2.DFS Iteration (using Inorder Traversal)
 //     public boolean isValidBST(TreeNode root) {
 //         if (root == null) return true;
         

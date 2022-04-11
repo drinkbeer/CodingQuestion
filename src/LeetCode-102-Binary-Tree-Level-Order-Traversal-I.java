@@ -63,10 +63,6 @@ public class Solution {
         
         result.get(level).add(node.val);
         
-        // return situation: when node is a leaf
-        if (node.left == null && node.right == null) {
-            return;
-        }
         if (node.left != null) levelOrder(node.left, level + 1, result);
         if (node.right != null) levelOrder(node.right, level + 1, result);
     }

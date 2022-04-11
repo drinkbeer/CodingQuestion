@@ -85,8 +85,8 @@ public class Solution {
         Stack<TreeNode> out = new Stack<TreeNode>();
         stack.push(root);
 
-        // The input order of "stack" is: root -> left -> right
-        // The input order of "out" is: right tree -> left tree -> curr (which is root)
+        // The input order of "stack" is: root -> left subtree -> right subtree
+        // The input order of "out" is: root -> right subtree -> left subtree
         while(!stack.isEmpty()){
             TreeNode curr = stack.pop();
             out.push(curr);
@@ -100,7 +100,8 @@ public class Solution {
         return result;
     }
 
-    // 4. Morris Postorder Traversal
+    // 4. Morris Postorder Traversal (Single Threaded Binary Tree Traversal)
+    // Process in an order of: curr -> right subtree -> left subtree, but addFirst to dequeue (add in an reverse order)
     public List<Integer> postorderTraversal(TreeNode root) {
         Deque<Integer> result = new ArrayDeque<>();
         if (root == null) return new ArrayList<>(result);
@@ -108,6 +109,7 @@ public class Solution {
         TreeNode curr = root;
         while (curr != null) {
             if (curr.right == null) {
+                // No right subtree, all value in "dqueue" are from left subtree, so add "curr" to the first in deque, and continue processing left subtree
                 result.addFirst(curr.val);
                 curr = curr.left;
             } else {
@@ -118,11 +120,13 @@ public class Solution {
                 }
 
                 if (p.left == null) {
+                    // Have not visited the right subtree, process curr, and then move to right subtree
                     // find the successor, starts to process right tree
                     result.addFirst(curr.val);
                     p.left = curr;
                     curr = curr.right;
                 } else {
+                    // Have visted the whole right subtree and curr, just move to left subtree
                     // find the successor, finished traverse right tree
                     // reset the successor's left node
                     p.left = null;

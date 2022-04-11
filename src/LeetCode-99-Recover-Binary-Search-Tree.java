@@ -18,6 +18,14 @@ class Solution {
     /*
     Space: O(N)
     Time: O(N)
+
+    https://leetcode.com/problems/recover-binary-search-tree/discuss/32535/No-Fancy-Algorithm-just-Simple-and-Powerful-In-Order-Traversal
+
+    In-order traversal: 6, 3, 4, 5, 2
+
+    first = 6
+    second = 2
+    swap(first, second)
     */
 //     public void recoverTree(TreeNode root) {
 //         if (root == null) return;

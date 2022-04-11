@@ -388,7 +388,6 @@ Search a required set, search Maximum/Minimu result
 |[285. Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/)|[LeetCode-285-Inorder-Successor-in-BST.java](src/LeetCode-285-Inorder-Successor-in-BST.java)|BFS|
 |[297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)|[LeetCode-297-Serialize-and-Deserialize-Binary-Tree.java](src/LeetCode-297-Serialize-and-Deserialize-Binary-Tree.java)|BFS, DFS|
 |[298. Binary Tree Longest Consecutive Sequence](https://leetcode.com/problems/binary-tree-longest-consecutive-sequence/)|[LeetCode-298-Binary-Tree-Longest-Consecutive-Sequence.java](src/LeetCode-298-Binary-Tree-Longest-Consecutive-Sequence.java)|DFS|
-|[314.Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)|[LeetCode-314-Binary-Tree-Vertical-Order-Traversal.java](src/LeetCode-314-Binary-Tree-Vertical-Order-Traversal.java)|not yet|
 |[333. Largest BST Subtree](https://leetcode.com/problems/largest-bst-subtree/)|[LeetCode-333-Largest-BST-Subtree.java](src/LeetCode-333-Largest-BST-Subtree.java)|DFS|
 |[337. House Robber III](https://leetcode.com/problems/house-robber-iii/)|[LeetCode-337-House-Robber-III.java](src/LeetCode-337-House-Robber-III.java)|DFS|
 |[366. Find Leaves of Binary Tree](https://leetcode.com/problems/find-leaves-of-binary-tree/)|[LeetCode-366-Find-Leaves-of-Binary-Tree.java.java](src/LeetCode-366-Find-Leaves-of-Binary-Tree.java.java)|DFS|
@@ -426,6 +425,8 @@ Search a required set, search Maximum/Minimu result
 |Question|Solution|Tags|
 |--------|--------|----|
 |[301.Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)|[LeetCode-301-Remove-Invalid-Parentheses.java](src/LeetCode-301-Remove-Invalid-Parentheses.java)|DFS, BFS, String|
+|[314.Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)|[LeetCode-314-Binary-Tree-Vertical-Order-Traversal.java](src/LeetCode-314-Binary-Tree-Vertical-Order-Traversal.java)|DFS, BFS, Traversal|
+|[987. Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)|[LeetCode-987-Vertical-Order-Traversal-of-a-Binary-Tree.java](src/LeetCode-987-Vertical-Order-Traversal-of-a-Binary-Tree.java)|DFS, BFS, Traversal|
 
 
 
