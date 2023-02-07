@@ -39,7 +39,7 @@
     - Balanced Binary Tree
         - A binary tree is balanced if the height of the tree is `O(logN)`. For Example, the AVL tree maintains O(Log n) height by making sure that the difference between the heights of the left and right subtrees is at most 1. Red-Black trees maintain O(Log n) height by making sure that the number of Black nodes on every root to leaf paths is the same and there are no adjacent red nodes. Balanced Binary Search trees are performance-wise good as they provide O(log n) time for search, insert and delete.
     - A degenerate (or pathological) tree
-        - A degenerate (or pathological) tree A Tree where every internal node has one child. Such trees are performance-wise same as linked list. 
+        - A degenerate (or pathological) tree A Tree where every internal node has one child. Such trees are performance-wise same as linked list.
 
 + Traversals
     - In-order traversal
@@ -101,7 +101,7 @@
         - Insert: `O(LogN)`
         - Delete: `O(LogN)`
         - Min Heap's Get Min: `O(1)`
-    - Space: 
+    - Space:
 
 + Application
     - no
